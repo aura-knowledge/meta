@@ -1,0 +1,126 @@
+name: Article proposal
+description: Propose a new knowledge-garden article
+title: "[article] "
+labels: ["article-proposal", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing an article. Everything filed here is public; review the [privacy contract](../docs/privacy-contract.md) before submitting.
+  - type: input
+    id: title
+    attributes:
+      label: Article title
+      description: A clear, specific title.
+    validations:
+      required: true
+  - type: input
+    id: slug
+    attributes:
+      label: Slug (optional)
+      description: Lowercase, kebab-case. Leave blank for auto-suggestion.
+  - type: textarea
+    id: thesis
+    attributes:
+      label: Thesis
+      description: One paragraph stating the article's central argument.
+    validations:
+      required: true
+  - type: dropdown
+    id: maturity
+    attributes:
+      label: Maturity
+      description: How developed is this idea?
+      options:
+        - seed
+        - sprout
+        - evergreen
+        - contested
+    validations:
+      required: true
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Audience
+      description: Who is this for?
+      multiple: true
+      options:
+        - researchers
+        - students
+        - agents
+        - builders
+        - policy
+        - general
+    validations:
+      required: true
+  - type: textarea
+    id: tags
+    attributes:
+      label: Tags
+      description: Comma-separated, lowercase, kebab-case tags.
+      placeholder: ai-agents, knowledge-graphs, privacy
+    validations:
+      required: true
+  - type: input
+    id: proposed_topic_stem
+    attributes:
+      label: Proposed topic stem (optional)
+      description: e.g. publishing/agent-auditable-research
+  - type: input
+    id: other_stem_proposed
+    attributes:
+      label: Suggest a new topic stem if none fits (optional)
+  - type: textarea
+    id: claims
+    attributes:
+      label: Claims
+      description: List the main claims the article will defend.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Public sources you plan to cite (title, URL, type, accessed date).
+    validations:
+      required: true
+  - type: textarea
+    id: related_articles
+    attributes:
+      label: Related Aura Knowledge articles (optional)
+      description: article:slug values, one per line.
+  - type: textarea
+    id: sanitized_summary
+    attributes:
+      label: Sanitized summary
+      description: What the article covers, with all project-specific details removed.
+    validations:
+      required: true
+  - type: textarea
+    id: abstraction_examples
+    attributes:
+      label: Abstraction examples
+      description: Show at least one concrete-to-abstract transformation to prove sanitization.
+      placeholder: |
+        Original: "We built X for ClientCo"
+        Abstracted: "We built X for a B2B SaaS company"
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy_acknowledgment
+    attributes:
+      label: Privacy acknowledgment
+      options:
+        - label: I confirm this submission contains no client, project, proprietary, or personal information.
+          required: true
+  - type: textarea
+    id: agent_involvement
+    attributes:
+      label: Agent involvement (optional)
+      description: Disclose any AI agent assistance in drafting this proposal.
+  - type: checkboxes
+    id: draft_available
+    attributes:
+      label: Draft available?
+      options:
+        - label: I have a draft and can open a PR with proposals/<slug>/README.md.

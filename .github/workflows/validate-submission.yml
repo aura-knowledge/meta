@@ -1,0 +1,54 @@
+name: Validate submission
+
+on:
+  pull_request:
+    paths:
+      - 'proposals/**'
+      - 'submissions/**'
+      - 'examples/**'
+      - 'schemas/**'
+      - '.github/ISSUE_TEMPLATE/**'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install ajv
+        run: npm install -g ajv-cli
+
+      - name: Validate example submissions against schemas
+        run: |
+          ruby -ryaml -rjson -e 'puts JSON.pretty_generate(YAML.load_file("examples/article-proposal-example.yaml"))' > /tmp/article-proposal-example.json
+          ruby -ryaml -rjson -e 'puts JSON.pretty_generate(YAML.load_file("examples/org-feedback-example.yaml"))' > /tmp/org-feedback-example.json
+          ajv validate --spec=draft2020 --strict=false -s schemas/article-proposal.schema.json -r schemas/provenance-bundle.schema.json -d /tmp/article-proposal-example.json
+          ajv validate --spec=draft2020 --strict=false -s schemas/org-feedback.schema.json -r schemas/provenance-bundle.schema.json -d /tmp/org-feedback-example.json
+
+      - name: Validate JSON submissions
+        run: |
+          shopt -s nullglob
+          article_files=(submissions/**/article-proposal.json)
+          org_files=(submissions/**/org-feedback.json)
+          if [ ${#article_files[@]} -gt 0 ]; then
+            ajv validate --spec=draft2020 --strict=false -s schemas/article-proposal.schema.json -r schemas/provenance-bundle.schema.json -d "${article_files[@]}"
+          fi
+          if [ ${#org_files[@]} -gt 0 ]; then
+            ajv validate --spec=draft2020 --strict=false -s schemas/org-feedback.schema.json -r schemas/provenance-bundle.schema.json -d "${org_files[@]}"
+          fi
+
+      - name: Check issue templates are valid YAML
+        run: |
+          for f in .github/ISSUE_TEMPLATE/*.yml; do
+            [ -f "$f" ] || continue
+            ruby -ryaml -e "YAML.load_file('$f')"
+          done

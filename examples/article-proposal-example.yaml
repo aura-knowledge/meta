@@ -1,0 +1,35 @@
+schemaVersion: 1
+title: "Agent-Native Memory Routing for Client Projects"
+slug: "agent-memory-routing"
+thesis: "Client projects need a small, auditable memory layer that agents can route through without leaking proprietary context, and the design patterns for that layer are reusable across engagements."
+audience:
+  - builders
+  - agents
+  - researchers
+tags:
+  - ai-agents
+  - memory
+  - privacy
+  - client-work
+maturity: seed
+claims:
+  - "Agent memory for client work should be project-scoped by default."
+  - "Memory retrieval should be mediated through a privacy-aware router."
+  - "The same memory-routing primitive can be reused across unrelated client projects."
+sources:
+  - title: "mem0 documentation"
+    url: "https://docs.mem0.ai"
+    type: product
+    accessed: "2026-06-17"
+related_articles:
+  - "article:agent-auditable-research"
+sanitized_summary: |
+  This article explores how to build a project-scoped memory layer for agent-assisted
+  client work. It abstracts away specific vendor APIs and focuses on the routing,
+  privacy, and provenance patterns that are reusable across projects.
+abstraction_examples:
+  - original: "We used the AcmeCorp CRM schema as the memory key structure."
+    abstracted: "We used a generic CRM entity model as the memory key structure."
+privacy_acknowledgment: true
+agent_involvement: "Drafted with AI agent assistance; human author retains final judgment."
+draft_available: false

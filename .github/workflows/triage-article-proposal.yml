@@ -1,0 +1,61 @@
+name: Triage article proposal
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    if: contains(github.event.issue.labels.*.name, 'article-proposal')
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate schema and run privacy scan
+        id: scan
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = context.payload.issue.body || '';
+            // Lightweight checks: required markers, email pattern, internal URL patterns, UUIDs, and high-entropy tokens.
+            const findings = [];
+            if (!body.includes('### Article title')) findings.push('Missing article title section');
+            if (!body.includes('### Thesis')) findings.push('Missing thesis section');
+            if (!body.includes('### Privacy acknowledgment')) findings.push('Missing privacy acknowledgment');
+            if (/\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/.test(body)) findings.push('Possible email address detected');
+            if (/https?:\/\/[^\s]+\.(internal|corp|local|lan|vpn)(?:\/|:|$)/i.test(body)) findings.push('Possible internal URL detected');
+            if (/\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\b/i.test(body)) findings.push('Possible UUID detected');
+            if (/\b[A-Za-z0-9_-]{32,}\b/.test(body)) findings.push('Possible high-entropy token detected');
+            if (!/Original:/.test(body) || !/Abstracted:/.test(body)) findings.push('Abstraction examples may be missing');
+            core.setOutput('findings', findings.join('\\n'));
+            core.setOutput('pass', findings.length === 0 ? 'true' : 'false');
+
+      - name: Apply labels and comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pass = '${{ steps.scan.outputs.pass }}' === 'true';
+            const findings = `${{ steps.scan.outputs.findings }}`;
+            const labels = pass
+              ? ['article-proposal', 'needs-review', 'privacy-check-passed']
+              : ['article-proposal', 'needs-review', 'privacy-check-failed'];
+            await github.rest.issues.setLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels
+            });
+            const body = pass
+              ? 'Thanks for the proposal. The automated privacy scan passed. A sibling-agent review is now requested; please address any review findings before the proposal is accepted.'
+              : `Thanks for the proposal. The automated privacy scan flagged the following issues. Please revise the proposal, or ask a maintainer to review the false positive out of band.\\n\\n${findings}`;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            });

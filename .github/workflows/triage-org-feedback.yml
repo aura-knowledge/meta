@@ -1,0 +1,56 @@
+name: Triage organization feedback
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    if: contains(github.event.issue.labels.*.name, 'org-feedback')
+    steps:
+      - name: Scan feedback body
+        id: scan
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = context.payload.issue.body || '';
+            const findings = [];
+            if (!body.includes('### Feedback type')) findings.push('Missing feedback type section');
+            if (!body.includes('### One-sentence summary')) findings.push('Missing summary section');
+            if (!body.includes('### Privacy acknowledgment')) findings.push('Missing privacy acknowledgment');
+            if (/\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/.test(body)) findings.push('Possible email address detected');
+            if (/https?:\/\/[^\s]+\.(internal|corp|local|lan|vpn)(?:\/|:|$)/i.test(body)) findings.push('Possible internal URL detected');
+            if (/\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\b/i.test(body)) findings.push('Possible UUID detected');
+            if (/\b[A-Za-z0-9_-]{32,}\b/.test(body)) findings.push('Possible high-entropy token detected');
+            core.setOutput('findings', findings.join('\\n'));
+            core.setOutput('pass', findings.length === 0 ? 'true' : 'false');
+
+      - name: Apply labels and comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pass = '${{ steps.scan.outputs.pass }}' === 'true';
+            const findings = `${{ steps.scan.outputs.findings }}`;
+            const labels = pass
+              ? ['org-feedback', 'needs-review', 'privacy-check-passed']
+              : ['org-feedback', 'needs-review', 'privacy-check-failed'];
+            await github.rest.issues.setLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels
+            });
+            const body = pass
+              ? 'Thanks for the feedback. The automated privacy scan passed. A maintainer or sibling agent will review it next.'
+              : `Thanks for the feedback. The automated privacy scan flagged the following issues. Please revise before this can be triaged.\\n\\n${findings}`;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            });
