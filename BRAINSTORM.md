@@ -1,7 +1,7 @@
 # Brainstorm Critique — Aura Knowledge `meta` Repository
 
-> Reviewer: sibling host agent  
-> Scope: concept-level review of `DESIGN.md` for `aura-knowledge/meta`  
+> Reviewer: sibling host agent
+> Scope: concept-level review of `DESIGN.md` for `aura-knowledge/meta`
 > Verdict section at the end.
 
 ---

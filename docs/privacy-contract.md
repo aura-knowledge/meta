@@ -1,6 +1,6 @@
 # Privacy Contract
 
-> Version: 1.0.0  
+> Version: 1.0.0
 > Applies to: all issues, PRs, discussions, and files in `aura-knowledge/meta`
 
 Everything in this repository is public. Before submitting anything, confirm that it contains no client-specific, proprietary, or personal information.

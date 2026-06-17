@@ -1,6 +1,6 @@
 # Final Design Review — Aura Knowledge `meta` Repository
 
-> Reviewer: sibling host agent  
+> Reviewer: sibling host agent
 > Scope: revised `DESIGN.md` against the six change requests in `BRAINSTORM.md`
 
 ---
