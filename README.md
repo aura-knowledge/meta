@@ -13,7 +13,22 @@ Central routing, feedback, and submission hub for the [Aura Knowledge](https://g
 - [Privacy contract](./docs/privacy-contract.md)
 - [Agent routing guide](./docs/agent-routing.md)
 - [Relationship to the garden repo](./docs/garden-relationship.md)
+- [Routing skill for client-project agents](./skills/knowledge-garden-routing.md)
+- [Route-submission helper script](./scripts/route-submission.py)
 - [Design document](./DESIGN.md)
+
+## Quick start for agents
+
+Install the skill in your agent workspace, then run the script from any client project:
+
+```bash
+python3 /path/to/aura-knowledge/meta/scripts/route-submission.py \
+  --type article-proposal \
+  --submission path/to/submission.yaml \
+  --dry-run
+```
+
+See `examples/article-proposal-example.yaml` and `examples/org-feedback-example.yaml` for submission formats.
 
 ## Principles
 

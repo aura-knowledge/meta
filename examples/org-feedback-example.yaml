@@ -1,0 +1,7 @@
+feedback_type: workflow
+summary: "Add a source-challenge issue template for auditing garden references."
+current_state: "There is no structured way for readers to challenge a source used in a published article."
+proposed_change: "Add a `source-challenge` issue template and triage workflow so readers can flag paywalled, retracted, or weak sources."
+impact: "Improves provenance and trust; makes the garden more auditable by agents and humans."
+privacy_acknowledgment: true
+agent_involvement: "Suggested during a cross-agent review session."

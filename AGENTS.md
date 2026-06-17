@@ -16,7 +16,7 @@ Everything here is public. Do not paste client names, project codenames, proprie
 
 ## Workflow
 
-1. **Capture in the private workspace first.** When you discover a finding in a client or personal project, draft it in that workspace and mark it `aura-export-candidate`.
+1. **Capture in the private workspace first.** When you discover a finding in a client or personal project, draft it in that workspace and mark it `aura-export-candidate`. Load the `knowledge-garden-routing` skill for the full checklist.
 2. **Sanitize.** Run the privacy contract checklist and produce `abstraction_examples`.
 3. **Cross-agent review.** Ask a sibling agent to check for leaks and structural fit.
 4. **Route.**
