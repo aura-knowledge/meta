@@ -1,0 +1,6 @@
+* @v-i-s-h-a-l
+
+# Schema, workflow, and privacy-contract changes require explicit review.
+schemas/ @v-i-s-h-a-l
+.github/workflows/ @v-i-s-h-a-l
+docs/privacy-contract.md @v-i-s-h-a-l

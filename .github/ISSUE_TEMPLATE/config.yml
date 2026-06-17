@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Aura Knowledge garden repo
+    url: https://github.com/aura-knowledge/aura-knowledge.github.io
+    about: The public knowledge garden that this meta repo feeds.
+  - name: Submission guide
+    url: https://github.com/aura-knowledge/meta/blob/main/docs/submission-guide.md
+    about: How to file article proposals and organization feedback.

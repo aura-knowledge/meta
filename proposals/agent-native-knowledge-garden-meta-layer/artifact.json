@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "id": "article:agent-native-knowledge-garden-meta-layer",
+  "slug": "agent-native-knowledge-garden-meta-layer",
+  "title": "A Meta Layer for Agent-Native Knowledge Gardens",
+  "canonicalPath": "/articles/agent-native-knowledge-garden-meta-layer/",
+  "sourcePath": "proposals/agent-native-knowledge-garden-meta-layer/README.md",
+  "agentBriefPath": "proposals/agent-native-knowledge-garden-meta-layer/README.md",
+  "thesis": "Public knowledge gardens need a separate meta layer that defines submission contracts, routes agent-discovered findings from private workspaces, and enforces privacy before publication.",
+  "status": "draft",
+  "maturity": "seed",
+  "publishedAt": "2026-06-17",
+  "updatedAt": "2026-06-17",
+  "audiences": ["researchers", "builders", "agents"],
+  "topics": ["ai-agents", "knowledge-gardens", "agentic-workflows", "privacy", "publishing"],
+  "claims": [
+    {
+      "id": "claim-001",
+      "claim": "Agent-discovered findings from client projects must be sanitized in a private workspace before entering a public garden.",
+      "confidence": "high",
+      "status": "core",
+      "evidence": ["source-privacy-contract-meta"],
+      "counterevidence": ["Small, fully public projects may not need private staging."]
+    },
+    {
+      "id": "claim-002",
+      "claim": "A meta repository can standardize both org-feedback and article-proposal inputs without requiring public users to be garden maintainers.",
+      "confidence": "medium-high",
+      "status": "proposal",
+      "evidence": ["source-issue-forms", "source-schema-design"],
+      "counterevidence": ["Low traffic may make a separate repo feel like overhead."]
+    },
+    {
+      "id": "claim-003",
+      "claim": "Machine-readable schemas and issue forms are dual-audience artifacts: humans fill them, agents route through them.",
+      "confidence": "medium-high",
+      "status": "design",
+      "evidence": ["source-aura-knowledge-design"],
+      "counterevidence": ["Overly strict schemas may discourage casual human contributors."]
+    },
+    {
+      "id": "claim-004",
+      "claim": "Folksonomy-first tagging prevents premature ontology bottlenecks while still allowing curated topic stems to emerge.",
+      "confidence": "medium",
+      "status": "argument",
+      "evidence": ["source-digital-gardens-appleton", "source-digital-gardens-qu"],
+      "counterevidence": ["A controlled vocabulary can improve search quality from day one."]
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-privacy-contract-meta",
+      "title": "Aura Knowledge Meta Privacy Contract",
+      "url": "https://github.com/aura-knowledge/meta/blob/main/docs/privacy-contract.md",
+      "type": "document",
+      "accessed": "2026-06-17"
+    },
+    {
+      "id": "source-issue-forms",
+      "title": "Aura Knowledge Meta Issue Templates",
+      "url": "https://github.com/aura-knowledge/meta/tree/main/.github/ISSUE_TEMPLATE",
+      "type": "document",
+      "accessed": "2026-06-17"
+    },
+    {
+      "id": "source-schema-design",
+      "title": "Aura Knowledge Meta Design Document",
+      "url": "https://github.com/aura-knowledge/meta/blob/main/DESIGN.md",
+      "type": "document",
+      "accessed": "2026-06-17"
+    },
+    {
+      "id": "source-aura-knowledge-design",
+      "title": "Knowledge Garden Design",
+      "url": "https://github.com/aura-knowledge/aura-knowledge.github.io/blob/main/docs/superpowers/specs/2026-06-17-knowledge-garden-design.md",
+      "type": "document",
+      "accessed": "2026-06-17"
+    },
+    {
+      "id": "source-digital-gardens-appleton",
+      "title": "A Brief History & Ethos of the Digital Garden",
+      "url": "https://maggieappleton.com/nontechnical-gardening",
+      "type": "design",
+      "accessed": "2026-06-17"
+    },
+    {
+      "id": "source-digital-gardens-qu",
+      "title": "Digital Gardens",
+      "url": "https://vivqu.com/blog/2020/10/18/digital-gardens/",
+      "type": "design",
+      "accessed": "2026-06-17"
+    }
+  ],
+  "related": [
+    { "type": "article", "id": "article:agent-auditable-research" }
+  ],
+  "agentInstructions": [
+    "Use claims as the retrieval unit.",
+    "Prefer public source IDs over inline citation guessing.",
+    "Treat maturity=seed as an explicit uncertainty marker.",
+    "When routing a finding to this article, run the privacy contract checklist first."
+  ],
+  "humanReview": {
+    "status": "reviewed-with-agent-input",
+    "reviewedAt": "2026-06-17",
+    "reviewers": ["Kimi host agent", "Sibling host agent"],
+    "notes": "Drafted through cross-agent review. Human author retains final judgment before publication."
+  },
+  "contentHash": "0000000000000000000000000000000000000000000000000000000000000000"
+}

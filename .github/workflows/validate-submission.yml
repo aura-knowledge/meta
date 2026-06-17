@@ -1,0 +1,39 @@
+name: Validate submission
+
+on:
+  pull_request:
+    paths:
+      - 'proposals/**'
+      - 'submissions/**'
+      - 'schemas/**'
+      - '.github/ISSUE_TEMPLATE/**'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install ajv
+        run: npm install -g ajv-cli
+
+      - name: Validate schemas
+        run: |
+          ajv validate -s schemas/article-proposal.schema.json -d "proposals/**/artifact.json" || true
+          ajv validate -s schemas/org-feedback.schema.json -d "submissions/**/org-feedback.json" || true
+
+      - name: Check issue templates are valid YAML
+        run: |
+          for f in .github/ISSUE_TEMPLATE/*.yml; do
+            [ -f "$f" ] || continue
+            ruby -ryaml -e "YAML.load_file('$f')"
+          done

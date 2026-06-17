@@ -1,0 +1,66 @@
+name: Organization feedback
+description: Suggest an improvement to the knowledge garden's structure, schemas, workflows, or governance
+title: "[org-feedback] "
+labels: ["org-feedback", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the garden. Everything filed here is public; review the [privacy contract](../docs/privacy-contract.md) before submitting.
+  - type: dropdown
+    id: feedback_type
+    attributes:
+      label: Feedback type
+      options:
+        - structure
+        - schema
+        - workflow
+        - topic-ontology
+        - privacy
+        - governance
+        - other
+    validations:
+      required: true
+  - type: input
+    id: summary
+    attributes:
+      label: One-sentence summary
+    validations:
+      required: true
+  - type: textarea
+    id: current_state
+    attributes:
+      label: Current state
+      description: What is painful or missing now?
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_change
+    attributes:
+      label: Proposed change
+      description: What should be different?
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Who benefits and how?
+    validations:
+      required: true
+  - type: input
+    id: proposed_topic_stem
+    attributes:
+      label: Related topic stem (optional)
+  - type: checkboxes
+    id: privacy_acknowledgment
+    attributes:
+      label: Privacy acknowledgment
+      options:
+        - label: I confirm this submission contains no client, project, proprietary, or personal information.
+          required: true
+  - type: textarea
+    id: agent_involvement
+    attributes:
+      label: Agent involvement (optional)
+      description: Disclose any AI agent assistance in drafting this feedback.
