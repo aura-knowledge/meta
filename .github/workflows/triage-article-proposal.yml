@@ -52,7 +52,7 @@ jobs:
             });
             const body = pass
               ? 'Thanks for the proposal. The automated privacy scan passed. A sibling-agent review is now requested; please address any review findings before the proposal is accepted.'
-              : `Thanks for the proposal. The automated privacy scan flagged the following issues. Please revise or add \`privacy-check-needed\` if you believe these are false positives.\\n\\n${findings}`;
+              : `Thanks for the proposal. The automated privacy scan flagged the following issues. Please revise the proposal, or ask a maintainer to review the false positive out of band.\\n\\n${findings}`;
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
