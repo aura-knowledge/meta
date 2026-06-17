@@ -18,7 +18,7 @@ Everything in this repository is public. Before submitting anything, confirm tha
 
 1. **Schema validation** — malformed submissions are rejected.
 2. **Abstraction examples** — submitters must show how concrete details were replaced with abstract examples.
-3. **Automated scan** — regex and entropy checks for emails, internal domains, UUIDs, high-entropy tokens, and internal URL patterns.
+3. **Automated scan** — lightweight regex checks for emails, internal domains, UUIDs, high-entropy tokens, and internal URL patterns.
 4. **Source-domain allow-list** — citations outside the allow-list require explicit justification (Phase 2a).
 5. **Cross-agent review** — a sibling agent checks whether someone could infer the client from the submission.
 6. **Versioned contract** — breaking changes bump the contract version; submitters acknowledge the current version.
@@ -41,4 +41,4 @@ Everything in this repository is public. Before submitting anything, confirm tha
 
 ## What to do if you are unsure
 
-File the issue as a draft and add the label `privacy-check-needed`. A maintainer or sibling agent will review it before it is made public.
+Do not file it publicly. Sanitize the draft in a private workspace first, or ask a maintainer out of band for help abstracting the sensitive details.

@@ -5,6 +5,7 @@ on:
     paths:
       - 'proposals/**'
       - 'submissions/**'
+      - 'examples/**'
       - 'schemas/**'
       - '.github/ISSUE_TEMPLATE/**'
 
@@ -26,10 +27,24 @@ jobs:
       - name: Install ajv
         run: npm install -g ajv-cli
 
-      - name: Validate schemas
+      - name: Validate example submissions against schemas
         run: |
-          ajv validate -s schemas/article-proposal.schema.json -d "proposals/**/artifact.json" || true
-          ajv validate -s schemas/org-feedback.schema.json -d "submissions/**/org-feedback.json" || true
+          ruby -ryaml -rjson -e 'puts JSON.pretty_generate(YAML.load_file("examples/article-proposal-example.yaml"))' > /tmp/article-proposal-example.json
+          ruby -ryaml -rjson -e 'puts JSON.pretty_generate(YAML.load_file("examples/org-feedback-example.yaml"))' > /tmp/org-feedback-example.json
+          ajv validate --spec=draft2020 --strict=false -s schemas/article-proposal.schema.json -r schemas/provenance-bundle.schema.json -d /tmp/article-proposal-example.json
+          ajv validate --spec=draft2020 --strict=false -s schemas/org-feedback.schema.json -r schemas/provenance-bundle.schema.json -d /tmp/org-feedback-example.json
+
+      - name: Validate JSON submissions
+        run: |
+          shopt -s nullglob
+          article_files=(submissions/**/article-proposal.json)
+          org_files=(submissions/**/org-feedback.json)
+          if [ ${#article_files[@]} -gt 0 ]; then
+            ajv validate --spec=draft2020 --strict=false -s schemas/article-proposal.schema.json -r schemas/provenance-bundle.schema.json -d "${article_files[@]}"
+          fi
+          if [ ${#org_files[@]} -gt 0 ]; then
+            ajv validate --spec=draft2020 --strict=false -s schemas/org-feedback.schema.json -r schemas/provenance-bundle.schema.json -d "${org_files[@]}"
+          fi
 
       - name: Check issue templates are valid YAML
         run: |

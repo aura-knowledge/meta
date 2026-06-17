@@ -66,4 +66,4 @@ python3 scripts/route-submission.py \
 
 ## Capability alias
 
-In stibdedlom/infra, route knowledge-garden work through `capability-knowledge-garden` (to be registered) or `capability-workflow-router`.
+If an agent platform supports named capabilities, register this skill as `capability-knowledge-garden-routing`.

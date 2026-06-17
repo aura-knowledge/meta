@@ -1,3 +1,4 @@
+schemaVersion: 1
 title: "Agent-Native Memory Routing for Client Projects"
 slug: "agent-memory-routing"
 thesis: "Client projects need a small, auditable memory layer that agents can route through without leaking proprietary context, and the design patterns for that layer are reusable across engagements."

@@ -32,7 +32,15 @@ PRIVACY_PATTERNS = [
     ("internal_url", re.compile(r"https?://[^\s]+\.(internal|corp|local|lan|vpn)(?:/|:|$)", re.I)),
     ("uuid", re.compile(r"\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\b", re.I)),
     ("aws_key", re.compile(r"AKIA[0-9A-Z]{16}")),
+    ("high_entropy_token", re.compile(r"\b[A-Za-z0-9_-]{32,}\b")),
 ]
+
+ARTICLE_AUDIENCES = {"researchers", "students", "agents", "builders", "policy", "general"}
+ARTICLE_MATURITIES = {"seed", "sprout", "evergreen", "contested"}
+ORG_FEEDBACK_TYPES = {"structure", "schema", "workflow", "topic-ontology", "privacy", "governance", "other"}
+KEBAB_RE = re.compile(r"^[a-z0-9-]+$")
+TOPIC_STEM_RE = re.compile(r"^[a-z0-9-/]+$")
+DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 
 def load_submission(path: str) -> dict:
@@ -41,10 +49,14 @@ def load_submission(path: str) -> dict:
     if p.suffix in (".yaml", ".yml"):
         if yaml is None:
             raise RuntimeError("PyYAML is required to read YAML submissions")
-        return yaml.safe_load(text)
+        data = yaml.safe_load(text)
     if p.suffix == ".json":
-        return json.loads(text)
-    raise ValueError(f"Unsupported submission format: {p.suffix}")
+        data = json.loads(text)
+    elif p.suffix not in (".yaml", ".yml"):
+        raise ValueError(f"Unsupported submission format: {p.suffix}")
+    if not isinstance(data, dict):
+        raise ValueError("Submission must be a mapping/object")
+    return data
 
 
 def validate_article_proposal(data: dict) -> list:
@@ -54,9 +66,60 @@ def validate_article_proposal(data: dict) -> list:
         "privacy_acknowledgment",
     ]
     errors = []
-    for field in required:
-        if field not in data or data[field] is None or data[field] == []:
-            errors.append(f"Missing required field: {field}")
+    _require_fields(data, required, errors)
+    if data.get("schemaVersion") != 1:
+        errors.append("schemaVersion must be 1")
+    if isinstance(data.get("title"), str) and len(data["title"]) < 8:
+        errors.append("title must be at least 8 characters")
+    if isinstance(data.get("thesis"), str) and len(data["thesis"]) < 80:
+        errors.append("thesis must be at least 80 characters")
+    if not _list_of_strings(data.get("audience")):
+        errors.append("audience must be a non-empty list of strings")
+    else:
+        invalid = sorted(set(data["audience"]) - ARTICLE_AUDIENCES)
+        if invalid:
+            errors.append(f"audience contains invalid value(s): {', '.join(invalid)}")
+    if not _list_of_strings(data.get("tags")):
+        errors.append("tags must be a non-empty list of strings")
+    else:
+        for tag in data["tags"]:
+            if not KEBAB_RE.match(tag):
+                errors.append(f"tag must be lowercase kebab-case: {tag}")
+    if data.get("slug") and not KEBAB_RE.match(str(data["slug"])):
+        errors.append("slug must be lowercase kebab-case")
+    if data.get("proposed_topic_stem") and not TOPIC_STEM_RE.match(str(data["proposed_topic_stem"])):
+        errors.append("proposed_topic_stem must use lowercase path-safe characters")
+    if data.get("maturity") not in ARTICLE_MATURITIES:
+        errors.append("maturity must be one of seed, sprout, evergreen, contested")
+    if not _list_of_strings(data.get("claims")):
+        errors.append("claims must be a non-empty list of strings")
+    else:
+        for i, claim in enumerate(data["claims"]):
+            if len(claim) < 24:
+                errors.append(f"claims[{i}] must be at least 24 characters")
+    if not isinstance(data.get("sources"), list) or not data["sources"]:
+        errors.append("sources must be a non-empty list")
+    else:
+        for i, source in enumerate(data["sources"]):
+            if not isinstance(source, dict):
+                errors.append(f"sources[{i}] must be an object")
+                continue
+            _require_fields(source, ["title", "url", "type", "accessed"], errors, prefix=f"sources[{i}].")
+            if source.get("accessed") and not DATE_RE.match(str(source["accessed"])):
+                errors.append(f"sources[{i}].accessed must be YYYY-MM-DD")
+    if isinstance(data.get("sanitized_summary"), str):
+        if len(data["sanitized_summary"]) < 80:
+            errors.append("sanitized_summary must be at least 80 characters")
+        if len(data["sanitized_summary"]) > 800:
+            errors.append("sanitized_summary must be at most 800 characters")
+    if not isinstance(data.get("abstraction_examples"), list) or not data["abstraction_examples"]:
+        errors.append("abstraction_examples must be a non-empty list")
+    else:
+        for i, example in enumerate(data["abstraction_examples"]):
+            if not isinstance(example, dict):
+                errors.append(f"abstraction_examples[{i}] must be an object")
+                continue
+            _require_fields(example, ["original", "abstracted"], errors, prefix=f"abstraction_examples[{i}].")
     if data.get("privacy_acknowledgment") is not True:
         errors.append("privacy_acknowledgment must be true")
     return errors
@@ -65,12 +128,34 @@ def validate_article_proposal(data: dict) -> list:
 def validate_org_feedback(data: dict) -> list:
     required = ["feedback_type", "summary", "current_state", "proposed_change", "impact", "privacy_acknowledgment"]
     errors = []
-    for field in required:
-        if field not in data or data[field] is None:
-            errors.append(f"Missing required field: {field}")
+    _require_fields(data, required, errors)
+    if data.get("schemaVersion") != 1:
+        errors.append("schemaVersion must be 1")
+    if data.get("feedback_type") not in ORG_FEEDBACK_TYPES:
+        errors.append("feedback_type contains an invalid value")
+    for field, minimum in {
+        "summary": 16,
+        "current_state": 40,
+        "proposed_change": 40,
+        "impact": 40,
+    }.items():
+        if isinstance(data.get(field), str) and len(data[field]) < minimum:
+            errors.append(f"{field} must be at least {minimum} characters")
+    if data.get("proposed_topic_stem") and not TOPIC_STEM_RE.match(str(data["proposed_topic_stem"])):
+        errors.append("proposed_topic_stem must use lowercase path-safe characters")
     if data.get("privacy_acknowledgment") is not True:
         errors.append("privacy_acknowledgment must be true")
     return errors
+
+
+def _require_fields(data: dict, required: list, errors: list, prefix: str = "") -> None:
+    for field in required:
+        if field not in data or data[field] is None or data[field] == []:
+            errors.append(f"Missing required field: {prefix}{field}")
+
+
+def _list_of_strings(value) -> bool:
+    return isinstance(value, list) and bool(value) and all(isinstance(item, str) and item for item in value)
 
 
 def privacy_scan(text: str, kind: str) -> list:
@@ -166,12 +251,10 @@ def main() -> int:
         errors = validate_article_proposal(data)
         title = f"[article] {data.get('title', 'Untitled proposal')}"
         labels = ["article-proposal", "needs-review"]
-        body = render_article_body(data)
     else:
         errors = validate_org_feedback(data)
         title = f"[org-feedback] {data.get('summary', 'Untitled feedback')}"
         labels = ["org-feedback", "needs-review"]
-        body = render_org_feedback_body(data)
 
     if errors:
         print("VALIDATION ERRORS:", file=sys.stderr)
@@ -179,14 +262,18 @@ def main() -> int:
             print(f"  - {e}", file=sys.stderr)
         return 1
 
+    if args.type == "article-proposal":
+        body = render_article_body(data)
+    else:
+        body = render_org_feedback_body(data)
+
     findings = privacy_scan(body, args.type)
     if findings:
         print("PRIVACY SCAN FINDINGS:", file=sys.stderr)
         for f in findings:
             print(f"  - {f}", file=sys.stderr)
-        print("\nResolve these before creating the issue. Use --create at your own risk.", file=sys.stderr)
-        if not args.create:
-            return 1
+        print("\nResolve these before creating the issue.", file=sys.stderr)
+        return 1
 
     print("=== RENDERED ISSUE BODY ===\n")
     print(body)

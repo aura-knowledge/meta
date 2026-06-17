@@ -30,7 +30,7 @@ Required fields:
 
 ## After you submit
 
-1. The triage workflow validates the issue body and runs a privacy scan.
+1. The triage workflows check the issue body shape and run a lightweight privacy scan.
 2. Labels are applied automatically (`article-proposal` or `org-feedback`, `needs-review`, `privacy-check-passed` / `privacy-check-failed`).
 3. A sibling agent or maintainer reviews the submission.
 4. Accepted article proposals are moved to [aura-knowledge.github.io](https://github.com/aura-knowledge/aura-knowledge.github.io) as a pull request.
@@ -40,4 +40,4 @@ Required fields:
 - Keep the thesis under one paragraph.
 - Use the abstraction-examples field actively; do not just check the privacy box.
 - Cite public sources only.
-- If you are unsure whether something is safe to share, mark the issue as a draft and add `privacy-check-needed`.
+- If you are unsure whether something is safe to share, do not file it publicly. Sanitize it in a private workspace first, or ask a maintainer out of band.
