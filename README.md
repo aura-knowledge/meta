@@ -14,6 +14,7 @@ Central routing, feedback, and submission hub for the [Aura Knowledge](https://g
 - [Agent routing guide](./docs/agent-routing.md)
 - [Relationship to the garden repo](./docs/garden-relationship.md)
 - [Routing skill for client-project agents](./skills/knowledge-garden-routing.md)
+- [Installable aura-export capability](./capabilities/aura-export/)
 - [Route-submission helper script](./scripts/route-submission.py)
 - [Design document](./DESIGN.md)
 
@@ -44,6 +45,7 @@ See `examples/article-proposal-example.yaml` and `examples/org-feedback-example.
 .github/workflows/         # triage and validation automation
 schemas/                   # JSON schemas for machine parsing
 routing/                   # executable router (Phase 2a)
+capabilities/aura-export/  # installable agent skill and CLI for sanitized exports
 docs/                      # human and agent guides
 proposals/                 # accepted article proposal drafts
 ```
