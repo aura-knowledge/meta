@@ -1,0 +1,63 @@
+# Default configuration for the aura-export skill.
+# Copy this file to ~/.config/aura-export/config.yaml and edit it for your system.
+
+meta:
+  owner: aura-knowledge
+  repo: meta
+  default_branch: main
+  issue_repo_url: https://github.com/aura-knowledge/meta/issues
+
+labels:
+  article_proposal: article-proposal
+  org_feedback: org-feedback
+  needs_review: needs-review
+  privacy_passed: privacy-check-passed
+  privacy_failed: privacy-check-failed
+  human_triage: human-triage
+
+# Source domains considered acceptable to cite without extra justification.
+# Add your own trusted public domains here.
+source_allow_list:
+  - github.com
+  - arxiv.org
+  - doi.org
+  - en.wikipedia.org
+  - docs.python.org
+  - developer.mozilla.org
+  - www.w3.org
+  - semver.org
+  - python.org
+  - pkg.go.dev
+  - docs.rs
+
+# Patterns that should trigger a privacy scan failure.
+# Each entry is a { name, pattern } object. Patterns are Python regex strings.
+sensitive_patterns:
+  - name: email
+    pattern: '\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+  - name: uuid
+    pattern: '\b[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\b'
+  - name: ipv4
+    pattern: '\b(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b'
+  - name: internal_url
+    pattern: 'https?://(?:internal|intranet|localhost|\d{1,3}(?:\.\d{1,3}){3}|[^/\s]+\.(?:local|lan|corp|internal|private))[^\s]*'
+  - name: high_entropy_token
+    pattern: '\b[A-Za-z0-9_\-]{32,}\b'
+  - name: slack_or_jira
+    pattern: 'https?://[^/\s]+\.(?:slack|atlassian|jira)\.com[^\s]*'
+
+# Project-specific terms that should be abstracted. Each entry is a { concrete, abstract }
+# pair. These are checked as an extra layer; add your own in your user config.
+abstraction_hints: []
+
+# Markers used to flag export candidates in source files.
+export_markers:
+  - '<!-- aura-export-candidate -->'
+  - '# aura-export-candidate'
+  - '// aura-export-candidate'
+  - '; aura-export-candidate'
+  - 'aura_export: true'
+
+# Where local drafts and provenance logs are stored relative to the project root.
+local_draft_dir: .aura-export/drafts
+local_provenance_dir: .aura-export/provenance
