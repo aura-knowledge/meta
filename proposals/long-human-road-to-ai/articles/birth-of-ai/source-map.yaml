@@ -1,0 +1,253 @@
+schemaVersion: 1
+article_slug: "birth-of-ai"
+status: canon-normalized
+accessed: "2026-06-19"
+provenance_note: >
+  This source map is normalized against the shared source canon for The Long
+  Human Road to AI and supports issue #8.
+
+claims:
+  - id: "CLAIM-BAI-001"
+    summary: "Dartmouth named and consolidated AI as a research field, but did not originate all machine-intelligence work."
+    claim_type: "historical-fact-with-boundary"
+    confidence: "high"
+    source_ids:
+      - "src-dartmouth-1955"
+      - "src-dartmouth-ai-coined"
+      - "src-sep-ai"
+      - "src-dick-ai-history"
+    boundaries:
+      - "Use birth as title language only with caveats."
+      - "Prefer naming, consolidation, or field-forming moment in explanatory prose."
+  - id: "CLAIM-BAI-002"
+    summary: "Early symbolic AI represented problems as formal structures and used search or inference over those structures."
+    claim_type: "technical-explanation"
+    confidence: "high"
+    source_ids:
+      - "src-logic-theory-machine"
+      - "src-chm-ai-robotics"
+      - "src-mccarthy-common-sense"
+      - "src-sep-logic-ai"
+    boundaries:
+      - "Do not reduce all early AI to logic alone."
+      - "Keep search, planning, language, and representation distinct."
+  - id: "CLAIM-BAI-003"
+    summary: "Early demonstrations were impressive because they made formal reasoning executable, but they were bounded by constrained domains."
+    claim_type: "historical-fact-plus-interpretation"
+    confidence: "medium-high"
+    source_ids:
+      - "src-logic-theory-machine"
+      - "src-gps-stanford"
+      - "src-chm-ai-robotics"
+      - "src-mccarthy-common-sense"
+    boundaries:
+      - "Avoid unqualified claims that early systems understood the world."
+  - id: "CLAIM-BAI-004"
+    summary: "Early AI optimism was amplified by technical progress, funding proposals, institutions, public demonstrations, and press narratives."
+    claim_type: "interpretation"
+    confidence: "medium"
+    source_ids:
+      - "src-dartmouth-1955"
+      - "src-dick-ai-history"
+      - "src-cornell-perceptron"
+      - "src-nilsson-quest-ai"
+    boundaries:
+      - "Explain period optimism without ridicule or presentism."
+  - id: "CLAIM-BAI-005"
+    summary: "The early field included multiple lineages, including symbolic reasoning, cybernetics, neural approaches, game-playing, and machine-intelligence philosophy."
+    claim_type: "historical-interpretation"
+    confidence: "medium-high"
+    source_ids:
+      - "src-turing-1950"
+      - "src-sep-ai"
+      - "src-dick-ai-history"
+      - "src-rosenblatt-1958"
+      - "src-chm-ai-robotics"
+    boundaries:
+      - "Foreground symbolic AI without making it the whole story."
+
+sources:
+  - id: "src-dartmouth-1955"
+    title: "A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence"
+    authors:
+      - "John McCarthy"
+      - "Marvin L. Minsky"
+      - "Nathaniel Rochester"
+      - "Claude E. Shannon"
+    year: 1955
+    url: "https://doi.org/10.1609/aimag.v27i4.1904"
+    authority: "primary"
+    source_type: "grant-proposal-reprint"
+    use_for:
+      - "Dartmouth proposal language"
+      - "field naming"
+      - "formalization conjecture"
+      - "funding and workshop framing"
+    caveats:
+      - "Use as a proposal, not as evidence that the goals were achieved."
+  - id: "src-dartmouth-ai-coined"
+    title: "Artificial Intelligence (AI) Coined at Dartmouth"
+    authors:
+      - "Dartmouth"
+    year: 2026
+    url: "https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth"
+    authority: "tertiary"
+    source_type: "institutional-summary"
+    use_for:
+      - "Dartmouth institutional framing"
+      - "public summary of the 1956 project"
+    caveats:
+      - "Institutional source; pair with primary proposal and critical secondary history."
+  - id: "src-dick-ai-history"
+    title: "Artificial Intelligence"
+    authors:
+      - "Stephanie Dick"
+    year: 2019
+    url: "https://hdsr.mitpress.mit.edu/pub/0aytgrau/release/3"
+    authority: "secondary"
+    source_type: "historical-essay"
+    use_for:
+      - "critique of over-simple Dartmouth origin narratives"
+      - "changing definitions of intelligence"
+      - "symbolic AI context"
+    caveats:
+      - "Use as interpretive secondary history, not as primary evidence for workshop details."
+  - id: "src-sep-ai"
+    title: "Artificial Intelligence"
+    authors:
+      - "Stanford Encyclopedia of Philosophy"
+    year: 2024
+    url: "https://plato.stanford.edu/entries/artificial-intelligence/"
+    authority: "tertiary"
+    source_type: "encyclopedia"
+    use_for:
+      - "high-level AI history"
+      - "Dartmouth as official start with precursors"
+      - "definition range"
+    caveats:
+      - "Good orientation source; verify specific claims with primary or specialist sources."
+  - id: "src-sep-logic-ai"
+    title: "Logic and Artificial Intelligence"
+    authors:
+      - "Stanford Encyclopedia of Philosophy"
+    year: 2018
+    url: "https://plato.stanford.edu/entries/logic-ai/"
+    authority: "tertiary"
+    source_type: "encyclopedia"
+    use_for:
+      - "role of logic in AI"
+      - "symbolic reasoning background"
+    caveats:
+      - "Use for conceptual framing, not as sole evidence for a historical event."
+  - id: "src-turing-1950"
+    title: "Computing Machinery and Intelligence"
+    authors:
+      - "Alan M. Turing"
+    year: 1950
+    url: "https://turingarchive.kings.cam.ac.uk/computing-machinery-and-intelligence"
+    authority: "primary"
+    source_type: "archive-record"
+    use_for:
+      - "pre-Dartmouth machine-intelligence question"
+      - "imitation-game framing"
+    caveats:
+      - "Archive record confirms publication context; use the Mind paper for detailed textual claims."
+  - id: "src-logic-theory-machine"
+    title: "The Logic Theory Machine: A Complex Information Processing System"
+    authors:
+      - "Allen Newell"
+      - "Herbert A. Simon"
+    year: 1956
+    url: "https://www.rand.org/pubs/papers/P868.html"
+    authority: "primary"
+    source_type: "research-paper"
+    use_for:
+      - "Logic Theorist"
+      - "heuristic search"
+      - "symbolic proof discovery"
+    caveats:
+      - "RAND notes that the paper series was less formal than reports and not peer reviewed."
+  - id: "src-gps-stanford"
+    title: "A Guide to the General Problem-Solver Program GPS-2-2"
+    authors:
+      - "Allen Newell"
+      - "J. C. Shaw"
+      - "Herbert A. Simon"
+    year: 1963
+    url: "https://stacks.stanford.edu/file/druid:zk239tp3547/zk239tp3547.pdf"
+    authority: "primary"
+    source_type: "technical-report"
+    use_for:
+      - "General Problem Solver"
+      - "means-ends analysis"
+      - "planning and problem-solving ambitions"
+    caveats:
+      - "Use for GPS program details; use secondary history for broader impact."
+  - id: "src-mccarthy-common-sense"
+    title: "Programs with Common Sense"
+    authors:
+      - "John McCarthy"
+    year: 1959
+    url: "https://jmc.stanford.edu/articles/mcc59/mcc59.pdf"
+    authority: "primary"
+    source_type: "conference-paper"
+    use_for:
+      - "Advice Taker"
+      - "formal language and common-sense reasoning"
+      - "symbolic AI ambitions"
+    caveats:
+      - "Treat as proposal and research agenda, not as a completed system."
+  - id: "src-chm-ai-robotics"
+    title: "AI and Robotics: Timeline of Computer History"
+    authors:
+      - "Computer History Museum"
+    year: 2026
+    url: "https://www.computerhistory.org/timeline/ai-robotics/"
+    authority: "tertiary"
+    source_type: "museum-timeline"
+    use_for:
+      - "Logic Theorist timeline"
+      - "Lisp timeline"
+      - "early AI and robotics chronology"
+    caveats:
+      - "Use for orientation and dates; pair causal claims with primary or secondary sources."
+  - id: "src-rosenblatt-1958"
+    title: "The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain"
+    authors:
+      - "Frank Rosenblatt"
+    year: 1958
+    url: "https://homepages.math.uic.edu/~lreyzin/papers/rosenblatt58.pdf"
+    authority: "primary"
+    source_type: "journal-paper-reprint"
+    use_for:
+      - "neural and pattern-recognition thread"
+      - "early optimism outside symbolic AI"
+    caveats:
+      - "Use as one lineage, not as proof that modern deep learning was inevitable."
+  - id: "src-cornell-perceptron"
+    title: "Professor's perceptron paved the way for AI - 60 years too soon"
+    authors:
+      - "Cornell Chronicle"
+    year: 2019
+    url: "https://news.cornell.edu/stories/2019/09/professors-perceptron-paved-way-ai-60-years-too-soon"
+    authority: "secondary"
+    source_type: "institutional-history"
+    use_for:
+      - "press and public narrative around perceptron claims"
+      - "optimism beyond the symbolic AI lineage"
+    caveats:
+      - "Use for public narrative context; use Rosenblatt's paper for technical perceptron claims."
+  - id: "src-nilsson-quest-ai"
+    title: "The Quest for Artificial Intelligence: A History of Ideas and Achievements"
+    authors:
+      - "Nils J. Nilsson"
+    year: 2010
+    url: "https://ai.stanford.edu/~nilsson/QAI/qai.pdf"
+    authority: "secondary"
+    source_type: "book-web-version"
+    use_for:
+      - "balanced historical synthesis"
+      - "early AI programs and institutional context"
+      - "source-canon alignment"
+    caveats:
+      - "Use as secondary synthesis; verify quoted details against primary sources."
