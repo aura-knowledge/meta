@@ -69,7 +69,7 @@ def write_card(proposal: Path, card: dict, work_package: str = "01-source-method
     card_path.write_text(yaml.safe_dump(card, sort_keys=False), encoding="utf-8")
 
 
-def test_validator_accepts_valid_source_canon_and_card(tmp_path: Path) -> None:
+def test_valid_canon_and_card(tmp_path: Path) -> None:
     proposal = copy_proposal(tmp_path)
     write_card(proposal, valid_card())
 
@@ -79,7 +79,7 @@ def test_validator_accepts_valid_source_canon_and_card(tmp_path: Path) -> None:
     assert "LHRA research validation passed" in result.stdout
 
 
-def test_validator_rejects_source_missing_required_metadata(tmp_path: Path) -> None:
+def test_missing_source_metadata(tmp_path: Path) -> None:
     proposal = copy_proposal(tmp_path)
     canon_path = proposal / "research" / "source-canon.yaml"
     canon = yaml.safe_load(canon_path.read_text(encoding="utf-8"))
@@ -92,7 +92,7 @@ def test_validator_rejects_source_missing_required_metadata(tmp_path: Path) -> N
     assert "sources[0] missing required field: authority" in result.stderr
 
 
-def test_validator_rejects_unknown_card_source_id(tmp_path: Path) -> None:
+def test_unknown_card_source(tmp_path: Path) -> None:
     proposal = copy_proposal(tmp_path)
     card = valid_card()
     card["source_ids"] = ["src-not-in-canon"]
@@ -104,7 +104,7 @@ def test_validator_rejects_unknown_card_source_id(tmp_path: Path) -> None:
     assert "unknown source id: src-not-in-canon" in result.stderr
 
 
-def test_validator_requires_limits_for_any_analogy_candidate(tmp_path: Path) -> None:
+def test_analogy_limits_required(tmp_path: Path) -> None:
     proposal = copy_proposal(tmp_path)
     card = valid_card()
     card["story_role"] = "analogy"
@@ -117,7 +117,7 @@ def test_validator_requires_limits_for_any_analogy_candidate(tmp_path: Path) -> 
     assert "analogy_limits is required when analogy_candidate, story_role, or claim_type uses analogy" in result.stderr
 
 
-def test_validator_requires_rights_metadata_for_reusable_visuals(tmp_path: Path) -> None:
+def test_visual_rights_metadata(tmp_path: Path) -> None:
     proposal = copy_proposal(tmp_path)
     card = valid_card()
     card["visual_candidates"] = [
