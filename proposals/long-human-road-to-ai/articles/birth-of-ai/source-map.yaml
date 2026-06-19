@@ -1,6 +1,6 @@
 schemaVersion: 1
 article_slug: "birth-of-ai"
-status: "provisional"
+status: canon-normalized
 accessed: "2026-06-19"
 provenance_note: >
   This source map is provisional and source-canon-compatible. It supports issue
@@ -13,10 +13,10 @@ claims:
     claim_type: "historical-fact-with-boundary"
     confidence: "high"
     source_ids:
-      - "source-dartmouth-proposal"
-      - "source-dartmouth-institutional"
-      - "source-sep-ai"
-      - "source-hdsr-dick-ai-history"
+      - "src-dartmouth-1955"
+      - "src-dartmouth-ai-coined"
+      - "src-sep-ai"
+      - "src-dick-ai-history"
     boundaries:
       - "Use birth as title language only with caveats."
       - "Prefer naming, consolidation, or field-forming moment in explanatory prose."
@@ -25,10 +25,10 @@ claims:
     claim_type: "technical-explanation"
     confidence: "high"
     source_ids:
-      - "source-rand-logic-theory-machine"
-      - "source-chm-ai-robotics"
-      - "source-mccarthy-common-sense"
-      - "source-sep-logic-ai"
+      - "src-logic-theory-machine"
+      - "src-chm-ai-robotics"
+      - "src-mccarthy-common-sense"
+      - "src-sep-logic-ai"
     boundaries:
       - "Do not reduce all early AI to logic alone."
       - "Keep search, planning, language, and representation distinct."
@@ -37,10 +37,10 @@ claims:
     claim_type: "historical-fact-plus-interpretation"
     confidence: "medium-high"
     source_ids:
-      - "source-rand-logic-theory-machine"
-      - "source-gps-stanford"
-      - "source-chm-ai-robotics"
-      - "source-mccarthy-common-sense"
+      - "src-logic-theory-machine"
+      - "src-gps-stanford"
+      - "src-chm-ai-robotics"
+      - "src-mccarthy-common-sense"
     boundaries:
       - "Avoid unqualified claims that early systems understood the world."
   - id: "CLAIM-BAI-004"
@@ -48,10 +48,10 @@ claims:
     claim_type: "interpretation"
     confidence: "medium"
     source_ids:
-      - "source-dartmouth-proposal"
-      - "source-hdsr-dick-ai-history"
-      - "source-cornell-perceptron-history"
-      - "source-nilsson-quest-ai"
+      - "src-dartmouth-1955"
+      - "src-dick-ai-history"
+      - "src-cornell-perceptron"
+      - "src-nilsson-quest-ai"
     boundaries:
       - "Explain period optimism without ridicule or presentism."
   - id: "CLAIM-BAI-005"
@@ -59,16 +59,16 @@ claims:
     claim_type: "historical-interpretation"
     confidence: "medium-high"
     source_ids:
-      - "source-turing-archive"
-      - "source-sep-ai"
-      - "source-hdsr-dick-ai-history"
-      - "source-cornell-rosenblatt"
-      - "source-chm-ai-robotics"
+      - "src-turing-1950"
+      - "src-sep-ai"
+      - "src-dick-ai-history"
+      - "src-rosenblatt-1958"
+      - "src-chm-ai-robotics"
     boundaries:
       - "Foreground symbolic AI without making it the whole story."
 
 sources:
-  - id: "source-dartmouth-proposal"
+  - id: "src-dartmouth-1955"
     title: "A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence"
     authors:
       - "John McCarthy"
@@ -86,7 +86,7 @@ sources:
       - "funding and workshop framing"
     caveats:
       - "Use as a proposal, not as evidence that the goals were achieved."
-  - id: "source-dartmouth-institutional"
+  - id: "src-dartmouth-ai-coined"
     title: "Artificial Intelligence (AI) Coined at Dartmouth"
     authors:
       - "Dartmouth"
@@ -99,7 +99,7 @@ sources:
       - "public summary of the 1956 project"
     caveats:
       - "Institutional source; pair with primary proposal and critical secondary history."
-  - id: "source-hdsr-dick-ai-history"
+  - id: "src-dick-ai-history"
     title: "Artificial Intelligence"
     authors:
       - "Stephanie Dick"
@@ -113,7 +113,7 @@ sources:
       - "symbolic AI context"
     caveats:
       - "Use as interpretive secondary history, not as primary evidence for workshop details."
-  - id: "source-sep-ai"
+  - id: "src-sep-ai"
     title: "Artificial Intelligence"
     authors:
       - "Stanford Encyclopedia of Philosophy"
@@ -127,7 +127,7 @@ sources:
       - "definition range"
     caveats:
       - "Good orientation source; verify specific claims with primary or specialist sources."
-  - id: "source-sep-logic-ai"
+  - id: "src-sep-logic-ai"
     title: "Logic and Artificial Intelligence"
     authors:
       - "Stanford Encyclopedia of Philosophy"
@@ -140,7 +140,7 @@ sources:
       - "symbolic reasoning background"
     caveats:
       - "Use for conceptual framing, not as sole evidence for a historical event."
-  - id: "source-turing-archive"
+  - id: "src-turing-1950"
     title: "Computing Machinery and Intelligence"
     authors:
       - "Alan M. Turing"
@@ -153,7 +153,7 @@ sources:
       - "imitation-game framing"
     caveats:
       - "Archive record confirms publication context; use the Mind paper for detailed textual claims."
-  - id: "source-rand-logic-theory-machine"
+  - id: "src-logic-theory-machine"
     title: "The Logic Theory Machine: A Complex Information Processing System"
     authors:
       - "Allen Newell"
@@ -168,7 +168,7 @@ sources:
       - "symbolic proof discovery"
     caveats:
       - "RAND notes that the paper series was less formal than reports and not peer reviewed."
-  - id: "source-gps-stanford"
+  - id: "src-gps-stanford"
     title: "A Guide to the General Problem-Solver Program GPS-2-2"
     authors:
       - "Allen Newell"
@@ -184,7 +184,7 @@ sources:
       - "planning and problem-solving ambitions"
     caveats:
       - "Use for GPS program details; use secondary history for broader impact."
-  - id: "source-mccarthy-common-sense"
+  - id: "src-mccarthy-common-sense"
     title: "Programs with Common Sense"
     authors:
       - "John McCarthy"
@@ -198,7 +198,7 @@ sources:
       - "symbolic AI ambitions"
     caveats:
       - "Treat as proposal and research agenda, not as a completed system."
-  - id: "source-chm-ai-robotics"
+  - id: "src-chm-ai-robotics"
     title: "AI and Robotics: Timeline of Computer History"
     authors:
       - "Computer History Museum"
@@ -212,7 +212,7 @@ sources:
       - "early AI and robotics chronology"
     caveats:
       - "Use for orientation and dates; pair causal claims with primary or secondary sources."
-  - id: "source-cornell-rosenblatt"
+  - id: "src-rosenblatt-1958"
     title: "The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain"
     authors:
       - "Frank Rosenblatt"
@@ -225,7 +225,7 @@ sources:
       - "early optimism outside symbolic AI"
     caveats:
       - "Use as one lineage, not as proof that modern deep learning was inevitable."
-  - id: "source-cornell-perceptron-history"
+  - id: "src-cornell-perceptron"
     title: "Professor's perceptron paved the way for AI - 60 years too soon"
     authors:
       - "Cornell Chronicle"
@@ -238,7 +238,7 @@ sources:
       - "optimism beyond the symbolic AI lineage"
     caveats:
       - "Use for public narrative context; use Rosenblatt's paper for technical perceptron claims."
-  - id: "source-nilsson-quest-ai"
+  - id: "src-nilsson-quest-ai"
     title: "The Quest for Artificial Intelligence: A History of Ideas and Achievements"
     authors:
       - "Nils J. Nilsson"
