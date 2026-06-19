@@ -2,15 +2,15 @@ schema_version: 1
 package_id: before-machines
 issue: "aura-knowledge/meta#6"
 status: canon-normalized
-provisional: true
-sync_required_with: "aura-knowledge/meta#5"
+provisional: false
+sync_required_with: null
 accessed: "2026-06-19"
 
 source_policy:
   public_sources_only: true
   no_private_sources: true
   visual_provenance_required: true
-  note: "IDs are provisional until the shared source canon is accepted."
+  note: "IDs are normalized against the shared source canon."
 
 sources:
   - id: src-chm-human-computers
@@ -366,7 +366,6 @@ claims:
     confidence: medium-high
     source_ids:
       - src-smg-babbage
-      - src-smg-babbage
       - src-sep-computing
     article_use: "Close the article by pointing to formal computation."
     boundary: "Keep designed, built, and later reconstructed machines distinct."
@@ -383,7 +382,7 @@ claims:
 
   - id: claim-procedure-bg
     claim: "Al-Khwarizmi is useful background for stepwise mathematical procedures and the later word algorithm."
-    claim_type: interpretation
+    claim_type: historical-context
     confidence: medium
     source_ids:
       - src-mactutor-alkhwarizmi
@@ -455,7 +454,7 @@ visual_candidates:
       provenance: original-table-required
 
 review_flags:
-  - "Sync provisional source IDs with issue #5 before final article drafting."
+  - "Source IDs are normalized against issue #5; keep any later additions aligned with the shared source canon."
   - "Avoid 'first computer' claims unless the sentence defines the sense of computer."
   - "Keep Antikythera, automata, and Jacquard examples contextual rather than deterministic."
   - "Add non-Western procedural history only where source-backed and relevant to the narrow article."
