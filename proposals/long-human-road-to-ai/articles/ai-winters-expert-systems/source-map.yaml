@@ -1,0 +1,261 @@
+schemaVersion: 1
+package: "ai-winters-expert-systems"
+series: "long-human-road-to-ai"
+generated: "2026-06-19"
+status: canon-normalized
+
+upstream_dependencies:
+  - issue: 4
+    name: "The Long Human Road to AI series charter"
+    status: "not present on this branch"
+    handling: "No branch-local series artifact was available; this package records the dependency for later reconciliation."
+  - issue: 5
+    name: "Source canon and historiography"
+    status: "merged"
+    handling: "Source IDs are normalized against the shared source canon."
+
+source_reconciliation:
+  local_namespace: null
+  future_rule: "Keep any later source additions aligned with the shared source canon without changing claim meanings. Preserve accessed dates and authority notes."
+  risky_claim_rule: "Funding contraction, AI-winter periodization, brittleness, and maintenance-cost claims require direct evidence or attributed historiographic phrasing."
+
+sources:
+  - id: "src-alpac-1966"
+    title: "Language and Machines: Computers in Translation and Linguistics"
+    author_or_editor: "National Research Council, Automatic Language Processing Advisory Committee"
+    year: 1966
+    url: "https://www.nationalacademies.org/read/9547"
+    type: "public-report"
+    authority: "primary"
+    accessed: "2026-06-19"
+    claim_usage:
+      - "Early machine translation evaluation and public usefulness standards."
+      - "AI-adjacent warning about cost, quality, and near-term deployment claims."
+    caution: "Do not treat ALPAC as a complete verdict on all AI research."
+
+  - id: "src-lighthill-1973"
+    title: "Artificial Intelligence: A General Survey"
+    author_or_editor: "Sir James Lighthill"
+    year: 1973
+    url: "https://www.chilton-computing.org.uk/inf/literature/reports/lighthill_report/p001.htm"
+    type: "public-report"
+    authority: "primary"
+    accessed: "2026-06-19"
+    claim_usage:
+      - "UK policy-review moment."
+      - "Disappointed expectations, combinatorial explosion, and limited-domain criticism."
+    caution: "Treat as Lighthill's review for the UK Science Research Council, not a universal explanation of global AI history."
+
+  - id: "src-agar-lighthill-2020"
+    title: "What is science for? The Lighthill report on artificial intelligence reinterpreted"
+    author_or_editor: "Jon Agar"
+    year: 2020
+    url: "https://doi.org/10.1017/S0007087420000230"
+    type: "historical-analysis"
+    authority: "secondary"
+    accessed: "2026-06-19"
+    claim_usage:
+      - "Historiographic context for why the Lighthill report mattered."
+      - "Fairness guardrail against one-cause winter narratives."
+    caution: "Use as interpretation, not as primary evidence for funding decisions."
+
+  - id: "src-nrc-ai-1999"
+    title: "Funding a Revolution: Government Support for Computing Research, Chapter 9: Development in Artificial Intelligence"
+    author_or_editor: "National Research Council"
+    year: 1999
+    url: "https://www.nationalacademies.org/read/6323/chapter/11"
+    type: "institutional-history"
+    authority: "secondary"
+    accessed: "2026-06-19"
+    claim_usage:
+      - "U.S. government research funding context."
+      - "DARPA, Strategic Computing, and changing funding styles."
+    caution: "Use exact funding figures only when quoting or paraphrasing the source closely."
+
+  - id: "src-feigenbaum-1977"
+    title: "The Art of Artificial Intelligence: I. Themes and Case Studies of Knowledge Engineering"
+    author_or_editor: "Edward A. Feigenbaum"
+    year: 1977
+    url: "https://stacks.stanford.edu/file/druid%3Abg342cm2034/bg342cm2034.pdf"
+    type: "conference-paper"
+    authority: "primary"
+    accessed: "2026-06-19"
+    claim_usage:
+      - "Knowledge engineering as a central expert-system idea."
+      - "Shift from abstract reasoning alone toward domain knowledge."
+    caution: "Use for expert-system optimism and method, not for later bust claims."
+
+  - id: "src-feigenbaum-acm"
+    title: "Edward A. Feigenbaum: A.M. Turing Award Laureate profile"
+    author_or_editor: "Association for Computing Machinery"
+    year: 1994
+    url: "https://amturing.acm.org/award_winners/feigenbaum_4167235.cfm"
+    type: "biographical-reference"
+    authority: "tertiary"
+    accessed: "2026-06-19"
+    claim_usage:
+      - "DENDRAL, MYCIN, PUFF, ONCOCIN, MOLGEN, CHRYSALIS, and EMYCIN context."
+      - "Concise source for Feigenbaum's knowledge-centered contribution."
+    caution: "Use for orientation; prefer primary program papers for detailed claims."
+
+  - id: "src-mycin-1984"
+    title: "Rule-Based Expert Systems: The MYCIN Experiments of the Stanford Heuristic Programming Project"
+    author_or_editor: "Bruce G. Buchanan and Edward H. Shortliffe, editors"
+    year: 1984
+    url: "https://www.shortliffe.net/Buchanan-Shortliffe-1984/MYCIN%20Book.htm"
+    type: "expert-system-retrospective"
+    authority: "primary-retrospective"
+    accessed: "2026-06-19"
+    claim_usage:
+      - "MYCIN architecture, rule-base construction, uncertainty, explanation, evaluation, and human-use lessons."
+      - "Evidence that expert systems required evaluation and user-centered design."
+    caution: "Medical performance claims require the evaluation chapters or related clinical papers, not summary memory."
+
+  - id: "src-r1-1980"
+    title: "R1: An Expert in the Computer Systems Domain"
+    author_or_editor: "John McDermott"
+    year: 1980
+    url: "https://cdn.aaai.org/AAAI/1980/AAAI80-076.pdf"
+    type: "conference-paper"
+    authority: "primary"
+    accessed: "2026-06-19"
+    claim_usage:
+      - "R1/XCON as a rule-based expert system for computer-system configuration."
+      - "Narrow-domain commercial expert-system example."
+    caution: "Use later R1/XCON retrospectives for production statistics and maintenance experience."
+
+  - id: "src-r1-revisited-1984"
+    title: "R1 Revisited: Four Years in the Trenches"
+    author_or_editor: "Judith Bachant and John McDermott"
+    year: 1984
+    url: "https://ojs.aaai.org/aimagazine/index.php/aimagazine/article/view/445"
+    type: "case-study"
+    authority: "primary-retrospective"
+    accessed: "2026-06-19"
+    claim_usage:
+      - "Production experience with R1/XCON."
+      - "Maintenance, deployment, and engineering lessons around expert systems."
+    caution: "Verify exact savings, rule-count, and order-volume figures before final article prose."
+
+  - id: "src-haigh-no-first-winter"
+    title: "There Was No 'First AI Winter'"
+    author_or_editor: "Thomas Haigh"
+    year: 2023
+    url: "https://cacm.acm.org/opinion/there-was-no-first-ai-winter/"
+    type: "historiographic-commentary"
+    authority: "secondary"
+    accessed: "2026-06-19"
+    claim_usage:
+      - "Caution against repeating a simplified first-AI-winter narrative."
+      - "Support for saying research activity continued even amid criticism."
+    caution: "Use as attributed historiographic interpretation."
+
+  - id: "src-haigh-ai-boom-bust"
+    title: "How the AI Boom Went Bust"
+    author_or_editor: "Thomas Haigh"
+    year: 2024
+    url: "https://cacm.acm.org/opinion/how-the-ai-boom-went-bust/"
+    type: "historiographic-commentary"
+    authority: "secondary"
+    accessed: "2026-06-19"
+    claim_usage:
+      - "1980s expert-system boom and bust framing."
+      - "Historical comparison for hype-cycle claims."
+    caution: "Attribute claims and avoid using the source as sole evidence for exact commercial figures."
+
+  - id: "src-nist-ai-rmf"
+    title: "Artificial Intelligence Risk Management Framework (AI RMF 1.0)"
+    author_or_editor: "National Institute of Standards and Technology"
+    year: 2023
+    url: "https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf"
+    type: "standards-framework"
+    authority: "primary-modern-framework"
+    accessed: "2026-06-19"
+    claim_usage:
+      - "Modern comparison point for test, evaluation, verification, and validation across an AI lifecycle."
+      - "Grounds the article's modern lesson without making capability claims."
+    caution: "Use for evaluation/governance continuity, not for AI winter prediction."
+
+  - id: "src-hai-ai-index"
+    title: "The 2026 AI Index Report"
+    author_or_editor: "Stanford Institute for Human-Centered Artificial Intelligence"
+    year: 2026
+    url: "https://hai.stanford.edu/ai-index/2026-ai-index-report"
+    type: "data-reference"
+    authority: "modern-data-reference"
+    accessed: "2026-06-19"
+    claim_usage:
+      - "Modern benchmark, investment, and deployment context."
+      - "Caution that modern AI progress should be evaluated with current data."
+    caution: "Use only for modern context; do not project future boom or winter outcomes."
+
+claims:
+  - id: "claim-aiw-001"
+    claim: "Public evaluation reports mattered because they tested AI-adjacent promises against measurable usefulness."
+    claim_type: "interpretation"
+    confidence: "medium-high"
+    uncertainty: "settled-for-work-package"
+    sources:
+      - "src-alpac-1966"
+      - "src-lighthill-1973"
+      - "src-agar-lighthill-2020"
+    review_flags:
+      - "Do not imply ALPAC and Lighthill had identical scope or institutional effect."
+
+  - id: "claim-aiw-002"
+    claim: "AI winter should be treated as a contested historical label for reduced confidence, funding, and commercial enthusiasm, not as proof that AI research stopped."
+    claim_type: "historiographic-interpretation"
+    confidence: "medium"
+    uncertainty: "debated"
+    sources:
+      - "src-haigh-no-first-winter"
+      - "src-haigh-ai-boom-bust"
+      - "src-nrc-ai-1999"
+    review_flags:
+      - "Attribute periodization to sources."
+      - "Avoid unqualified first-AI-winter phrasing."
+
+  - id: "claim-aiw-003"
+    claim: "Expert systems produced useful results in narrow domains where domain knowledge could be encoded and maintained."
+    claim_type: "fact-interpretation"
+    confidence: "high"
+    uncertainty: "settled-for-work-package"
+    sources:
+      - "src-feigenbaum-1977"
+      - "src-mycin-1984"
+      - "src-r1-1980"
+      - "src-r1-revisited-1984"
+    review_flags:
+      - "Include success cases as well as limits."
+
+  - id: "claim-aiw-004"
+    claim: "Expert-system limits included knowledge acquisition, updating, evaluation, user trust, and workflow integration, not only inference algorithms."
+    claim_type: "synthesis"
+    confidence: "medium-high"
+    uncertainty: "settled-for-work-package"
+    sources:
+      - "src-mycin-1984"
+      - "src-r1-revisited-1984"
+      - "src-nrc-ai-1999"
+    review_flags:
+      - "Tie maintenance-cost examples to direct source text before final prose."
+
+  - id: "claim-aiw-005"
+    claim: "The modern lesson is that intelligence claims need grounded tests, maintenance plans, and deployment criteria."
+    claim_type: "analogy-and-modern-context"
+    confidence: "medium"
+    uncertainty: "analogy-only"
+    sources:
+      - "src-nist-ai-rmf"
+      - "src-hai-ai-index"
+      - "src-mycin-1984"
+    review_flags:
+      - "Do not claim current AI is repeating the 1980s expert-system cycle."
+
+privacy:
+  public_sources_only: true
+  private_identifiers_present: false
+  screenshots_present: false
+  abstraction_example:
+    original: "A private concern that AI history should avoid hype and weak claims."
+    abstracted: "A public article work package about historical overpromising, evaluation limits, and expert-system lessons."
