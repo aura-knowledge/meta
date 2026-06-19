@@ -1,7 +1,7 @@
 schemaVersion: 1
 package: "long-human-road-to-ai/articles/human-systems"
 title: "The Human Road Through AI: Labor, Institutions, Governance, and Meaning"
-status: "seed-work-package"
+status: canon-normalized
 accessed: "2026-06-19"
 source_registry_status: "package-local"
 canonicalization:
@@ -34,7 +34,7 @@ source_map_schema:
     - "technical_companion_notes"
 
 sources:
-  - id: "src-ilo-jobs"
+  - id: "src-ilo-genai-jobs"
     title: "Generative AI and Jobs: A Refined Global Index of Occupational Exposure"
     url: "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure"
     type: "working-paper"
@@ -80,7 +80,7 @@ sources:
     registry_status: "package-local"
     notes: "Use for dated EU legal framing. Avoid giving legal advice."
 
-  - id: "src-oecd-principles"
+  - id: "src-oecd-ai-principles"
     title: "OECD AI Principles"
     url: "https://oecd.ai/en/ai-principles"
     type: "intergovernmental-principles"
@@ -92,7 +92,7 @@ sources:
     registry_status: "package-local"
     notes: "Use for trustworthy AI values, accountability, transparency, and human-centred framing."
 
-  - id: "src-unesco-edu"
+  - id: "src-unesco-genai-edu"
     title: "Guidance for Generative AI in Education and Research"
     url: "https://unesdoc.unesco.org/ark:/48223/pf0000386693"
     type: "official-guidance"
@@ -103,7 +103,7 @@ sources:
     registry_status: "package-local"
     notes: "Use for education and human-centred capacity guidance."
 
-  - id: "src-oecd-science"
+  - id: "src-oecd-ai-science"
     title: "Artificial Intelligence in Science"
     url: "https://doi.org/10.1787/a8d820bd-en"
     type: "research-synthesis"
@@ -125,7 +125,7 @@ sources:
     registry_status: "package-local"
     notes: "Use for U.S. copyright and authorship framing. Avoid globalizing U.S.-specific law."
 
-  - id: "src-itu-access"
+  - id: "src-itu-facts-2025"
     title: "Measuring Digital Development: Facts and Figures 2025"
     url: "https://www.itu.int/hub/publication/d-ind-ict_mdd-2025-3/"
     type: "official-statistics"
@@ -136,7 +136,7 @@ sources:
     registry_status: "package-local"
     notes: "Use for connectivity, digital divide, affordability, quality, gender, and urban-rural access context."
 
-  - id: "src-worldbank-digital"
+  - id: "src-worldbank-digital-2023"
     title: "Digital Progress and Trends Report 2023"
     url: "https://doi.org/10.1596/978-1-4648-2049-6"
     type: "institutional-report"
@@ -147,7 +147,7 @@ sources:
     registry_status: "package-local"
     notes: "Use for digital-development and low/middle income country context."
 
-  - id: "src-iea-energy"
+  - id: "src-iea-energy-ai"
     title: "Key Questions on Energy and AI"
     url: "https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary"
     type: "energy-analysis"
@@ -158,7 +158,7 @@ sources:
     registry_status: "package-local"
     notes: "Use for data-centre electricity demand and projection ranges. Keep local grid context explicit."
 
-  - id: "src-stanford-index"
+  - id: "src-hai-ai-index"
     title: "The 2026 AI Index Report"
     url: "https://hai.stanford.edu/ai-index/2026-ai-index-report"
     type: "annual-report"
@@ -169,7 +169,7 @@ sources:
     registry_status: "package-local"
     notes: "Use for adoption, investment, benchmark, and governance-gap context. Date all fast-moving claims."
 
-  - id: "src-pew-trust"
+  - id: "src-pew-ai-topic"
     title: "Artificial Intelligence"
     url: "https://www.pewresearch.org/topic/internet-technology/emerging-technology/artificial-intelligence/"
     type: "survey-topic"
@@ -203,8 +203,8 @@ claims:
     confidence: "medium"
     source_status: "sourced"
     source_ids:
-      - "src-ilo-jobs"
-      - "src-stanford-index"
+      - "src-ilo-genai-jobs"
+      - "src-hai-ai-index"
     social_boundary: "Discuss augmentation, automation, and transition costs without deterministic labor predictions."
     analogy_candidate: "Spreadsheets changed accounting work without making all accounting disappear."
     analogy_limits: "Generative AI applies across language, images, code, and decisions, so its reach differs from spreadsheets."
@@ -221,7 +221,7 @@ claims:
     source_ids:
       - "src-nist-ai-rmf"
       - "src-eu-ai-act"
-      - "src-oecd-principles"
+      - "src-oecd-ai-principles"
     social_boundary: "Use official sources and dates; do not provide legal advice."
     analogy_candidate: "Like bridges, medicines, and public records, AI needs standards and contestability when it affects people."
     analogy_limits: "AI systems can be adaptive, privately operated, and embedded across domains, so one-time approval is not enough."
@@ -236,8 +236,8 @@ claims:
     confidence: "medium"
     source_status: "sourced"
     source_ids:
-      - "src-unesco-edu"
-      - "src-oecd-science"
+      - "src-unesco-genai-edu"
+      - "src-oecd-ai-science"
       - "src-usco-ai"
     social_boundary: "Avoid reducing the topic to cheating or productivity; focus on institutional rules and judgment."
     analogy_candidate: "Calculators changed math education but did not remove the need for number sense or proof."
@@ -253,9 +253,9 @@ claims:
     confidence: "medium"
     source_status: "sourced"
     source_ids:
-      - "src-itu-access"
-      - "src-worldbank-digital"
-      - "src-iea-energy"
+      - "src-itu-facts-2025"
+      - "src-worldbank-digital-2023"
+      - "src-iea-energy-ai"
     social_boundary: "Avoid universal access claims; distinguish connectivity, affordability, quality, language, and energy constraints."
     analogy_candidate: "Printing expanded access only where paper, presses, literacy, distribution, and institutions could support it."
     analogy_limits: "AI infrastructure is networked, compute-heavy, and globally concentrated in different ways than print."
@@ -270,9 +270,9 @@ claims:
     confidence: "medium"
     source_status: "sourced"
     source_ids:
-      - "src-pew-trust"
+      - "src-pew-ai-topic"
       - "src-nist-ai-rmf"
-      - "src-oecd-principles"
+      - "src-oecd-ai-principles"
     social_boundary: "Use survey findings as context, not universal sentiment. Avoid global claims from U.S. survey data."
     analogy_candidate: "Courts and public health systems rely on procedures, not only expertise."
     analogy_limits: "AI accountability often runs through private platforms and opaque supply chains."
