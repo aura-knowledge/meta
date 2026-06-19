@@ -1,0 +1,410 @@
+schemaVersion: 1
+series: long-human-road-to-ai
+season: 1
+status: synthesis-draft
+updated: '2026-06-19'
+source_policy:
+  public_only: true
+  source_authority: proposals/long-human-road-to-ai/research/source-canon.yaml
+  article_source_maps: proposals/long-human-road-to-ai/articles/*/source-map.yaml
+  rule: Use canonical source IDs and keep analogy limits visible.
+reading_path:
+- order: 1
+  slug: before-machines
+  title: 'Before Machines: Calculation, Automata, and the Dream of Mechanical Reason'
+  package_path: proposals/long-human-road-to-ai/articles/before-machines
+  issue: 6
+  role: Establish computation as human labor, external state, artifacts, mechanisms,
+    and organized procedure.
+  reader_question: How did people extend calculation and memory before electronic
+    computers?
+  bridge_from_previous: null
+  bridge_to_next: Formal logic asks what happens when procedure and symbol manipulation
+    become precise enough to reason about.
+  key_claim_ids:
+  - claim-human-computation-labor
+  - claim-external-state
+  - claim-decompose-work
+  - claim-babbage-threshold
+  - claim-reasoning-as-calculation
+  recurring_patterns:
+  - external_memory
+  - mechanized_calculation
+  - hidden_labor
+  - procedure
+  visual_priority:
+  - artifact-to-abstraction ladder
+  - human labor and tool stack
+- order: 2
+  slug: formal-logic-to-computation
+  title: 'From Formal Logic to Computation: The Mathematical Road to AI'
+  package_path: proposals/long-human-road-to-ai/articles/formal-logic-to-computation
+  issue: 7
+  role: Show how symbols, effective procedure, computability, circuits, information,
+    and feedback made machine computation legible.
+  reader_question: How can reasoning or procedure become something a machine can represent?
+  bridge_from_previous: Mechanical aids and tables become more powerful when their
+    procedures are explicit and inspectable.
+  bridge_to_next: Early AI tries to make reasoning executable by encoding problems,
+    search, and inference in programs.
+  key_claim_ids:
+  - claim-001
+  - claim-005
+  - claim-007
+  - claim-008
+  - claim-009
+  - claim-011
+  recurring_patterns:
+  - formal_symbols
+  - effective_methods
+  - digital_logic
+  - feedback
+  visual_priority:
+  - symbols to circuits bridge
+  - analogy boundary boxes
+- order: 3
+  slug: birth-of-ai
+  title: 'The Birth of AI: Dartmouth, Symbolic Systems, and Early Optimism'
+  package_path: proposals/long-human-road-to-ai/articles/birth-of-ai
+  issue: 8
+  role: Explain field formation, symbolic AI, early demonstrations, and optimism without
+    collapsing all origins into one event.
+  reader_question: Why did people believe machines might do intelligent work?
+  bridge_from_previous: Computability and digital computers made formal reasoning
+    executable enough to become a research program.
+  bridge_to_next: Optimistic demonstrations met evaluation, funding, domain, and maintenance
+    limits.
+  key_claim_ids:
+  - CLAIM-BAI-001
+  - CLAIM-BAI-002
+  - CLAIM-BAI-003
+  - CLAIM-BAI-004
+  - CLAIM-BAI-005
+  recurring_patterns:
+  - field_formation
+  - symbolic_reasoning
+  - search
+  - institutional_optimism
+  visual_priority:
+  - Dartmouth as meeting point, not origin point
+  - symbolic AI pipeline
+- order: 4
+  slug: ai-winters-expert-systems
+  title: Winters, Expert Systems, and the Cost of Overpromising Intelligence
+  package_path: proposals/long-human-road-to-ai/articles/ai-winters-expert-systems
+  issue: 9
+  role: Turn AI winter into a story about evaluation, expectations, narrow-domain
+    usefulness, maintenance, and institutional confidence.
+  reader_question: What happens when a field's promises are tested against real costs
+    and use cases?
+  bridge_from_previous: Early ambition made evaluation and institutional trust unavoidable.
+  bridge_to_next: When hand-coded expertise proved costly to maintain, learning from
+    examples became more attractive.
+  key_claim_ids:
+  - claim-aiw-001
+  - claim-aiw-002
+  - claim-aiw-003
+  - claim-aiw-004
+  - claim-aiw-005
+  recurring_patterns:
+  - evaluation
+  - maintenance
+  - domain_limits
+  - institutional_confidence
+  visual_priority:
+  - expectation versus evidence loop
+  - then and now evaluation table
+- order: 5
+  slug: learning-machines
+  title: 'Learning Machines: Statistics, Neural Networks, and the Data Turn'
+  package_path: proposals/long-human-road-to-ai/articles/learning-machines
+  issue: 10
+  role: Explain statistical learning, neural networks, backpropagation, benchmarks,
+    data, GPUs, and generalization.
+  reader_question: What changes when machines improve behavior from examples instead
+    of only following hand-written rules?
+  bridge_from_previous: Expert systems exposed the cost of encoding knowledge by hand;
+    learning systems shift effort toward data, training, and evaluation.
+  bridge_to_next: Once data, compute, and model scale become central, general-purpose
+    models become plausible.
+  key_claim_ids:
+  - claim-lm-001
+  - claim-lm-002
+  - claim-lm-003
+  - claim-lm-007
+  - claim-lm-008
+  - claim-lm-010
+  recurring_patterns:
+  - learning_from_examples
+  - generalization
+  - benchmarks
+  - compute_scaling
+  visual_priority:
+  - rules to learning contrast
+  - data, model, benchmark loop
+- order: 6
+  slug: foundation-models
+  title: Foundation Models and the Return of General-Purpose AI Systems
+  package_path: proposals/long-human-road-to-ai/articles/foundation-models
+  issue: 11
+  role: Explain transformers, scaling, foundation models, retrieval, tools, post-training,
+    multimodality, and governance boundaries.
+  reader_question: Why do recent AI systems feel more general than earlier specialized
+    systems?
+  bridge_from_previous: Learning systems improved with data, compute, and benchmarks;
+    foundation models generalize that scaling logic across tasks and media.
+  bridge_to_next: General-purpose capability shifts the central question from what
+    the model can do to where and how society should rely on it.
+  key_claim_ids:
+  - claim-fm-def
+  - claim-gp-return
+  - claim-transformer
+  - claim-pretrain
+  - claim-scale
+  - claim-tools
+  - claim-eval-risk
+  recurring_patterns:
+  - scaling
+  - general_purpose_models
+  - tool_use
+  - governance
+  visual_priority:
+  - model lifecycle stack
+  - capability, risk, and governance matrix
+- order: 7
+  slug: human-systems
+  title: 'The Human Road Through AI: Labor, Institutions, Governance, and Meaning'
+  package_path: proposals/long-human-road-to-ai/articles/human-systems
+  issue: 12
+  role: Close the season by showing that AI outcomes depend on labor, institutions,
+    education, access, infrastructure, governance, and trust.
+  reader_question: What human systems decide whether AI becomes useful, harmful, fair,
+    trusted, or wasteful?
+  bridge_from_previous: Foundation models create broader deployment surfaces, so institutions
+    and public trust become part of the technology.
+  bridge_to_next: null
+  key_claim_ids:
+  - claim-human-001
+  - claim-human-002
+  - claim-human-003
+  - claim-human-004
+  - claim-human-005
+  - claim-human-006
+  recurring_patterns:
+  - labor
+  - institutions
+  - governance
+  - access
+  - trust
+  visual_priority:
+  - hidden labor and infrastructure stack
+  - trust triangle
+cross_links:
+- from: before-machines
+  to: formal-logic-to-computation
+  link_type: reader-handoff
+  relation: procedure-to-formalization
+  support:
+    claim_ids:
+      before-machines:
+      - claim-decompose-work
+      - claim-reasoning-as-calculation
+      formal-logic-to-computation:
+      - claim-001
+      - claim-011
+    bridge_source_ids:
+    - src-sep-leibniz-logic
+    endpoint_source_ids:
+      before-machines:
+      - src-smithsonian-napier-rods
+      - src-sep-leibniz-logic
+      formal-logic-to-computation:
+      - src-sep-computing
+    all_source_ids:
+    - src-sep-leibniz-logic
+    - src-sep-computing
+- from: formal-logic-to-computation
+  to: birth-of-ai
+  link_type: chronology
+  relation: formalization-to-executable-intelligence
+  support:
+    claim_ids:
+      formal-logic-to-computation:
+      - claim-005
+      - claim-007
+      birth-of-ai:
+      - CLAIM-BAI-002
+      - CLAIM-BAI-003
+    bridge_source_ids:
+    - src-turing-1936
+    - src-shannon-switching
+    endpoint_source_ids:
+      formal-logic-to-computation:
+      - src-turing-1936
+      - src-shannon-switching
+      birth-of-ai:
+      - src-logic-theory-machine
+      - src-mccarthy-common-sense
+    all_source_ids:
+    - src-turing-1936
+    - src-shannon-switching
+    - src-logic-theory-machine
+- from: birth-of-ai
+  to: ai-winters-expert-systems
+  link_type: contrast
+  relation: optimism-to-evaluation
+  support:
+    claim_ids:
+      birth-of-ai:
+      - CLAIM-BAI-004
+      ai-winters-expert-systems:
+      - claim-aiw-001
+      - claim-aiw-002
+    bridge_source_ids:
+    - src-alpac-1966
+    - src-lighthill-1973
+    endpoint_source_ids:
+      birth-of-ai:
+      - src-dartmouth-1955
+      ai-winters-expert-systems:
+      - src-alpac-1966
+      - src-lighthill-1973
+      - src-haigh-no-first-winter
+    all_source_ids:
+    - src-dartmouth-1955
+    - src-alpac-1966
+    - src-lighthill-1973
+- from: ai-winters-expert-systems
+  to: learning-machines
+  link_type: reader-handoff
+  relation: hand-coded-knowledge-to-learning
+  support:
+    claim_ids:
+      ai-winters-expert-systems:
+      - claim-aiw-003
+      - claim-aiw-004
+      learning-machines:
+      - claim-lm-002
+      - claim-lm-009
+    bridge_source_ids:
+    - src-mycin-1984
+    - src-r1-revisited-1984
+    endpoint_source_ids:
+      ai-winters-expert-systems:
+      - src-mycin-1984
+      - src-r1-revisited-1984
+      learning-machines:
+      - src-samuel-1959
+      - src-elements-stat-learning
+    all_source_ids:
+    - src-mycin-1984
+    - src-r1-revisited-1984
+    - src-samuel-1959
+    - src-elements-stat-learning
+- from: learning-machines
+  to: foundation-models
+  link_type: chronology
+  relation: specialized-learning-to-general-purpose-scale
+  support:
+    claim_ids:
+      learning-machines:
+      - claim-lm-007
+      - claim-lm-008
+      - claim-lm-010
+      foundation-models:
+      - claim-fm-def
+      - claim-scale
+      - claim-gp-return
+    bridge_source_ids:
+    - src-sutton-bitter
+    - src-scaling-laws-2020
+    endpoint_source_ids:
+      learning-machines:
+      - src-imagenet-2015
+      - src-alexnet-2012
+      - src-sutton-bitter
+      foundation-models:
+      - src-foundation-models-2021
+      - src-scaling-laws-2020
+    all_source_ids:
+    - src-imagenet-2015
+    - src-alexnet-2012
+    - src-sutton-bitter
+    - src-foundation-models-2021
+    - src-scaling-laws-2020
+- from: foundation-models
+  to: human-systems
+  link_type: context
+  relation: capability-to-social-institutional-deployment
+  support:
+    claim_ids:
+      foundation-models:
+      - claim-eval-risk
+      - claim-nist-risk
+      - claim-eu-gpai
+      human-systems:
+      - claim-human-001
+      - claim-human-003
+      - claim-human-006
+    bridge_source_ids:
+    - src-nist-ai-rmf
+    - src-eu-ai-act
+    endpoint_source_ids:
+      foundation-models:
+      - src-helm-2022
+      - src-nist-ai-rmf
+      - src-eu-ai-act
+      human-systems:
+      - src-pai-data-labor
+      - src-oecd-ai-principles
+      - src-nist-ai-rmf
+    all_source_ids:
+    - src-helm-2022
+    - src-nist-ai-rmf
+    - src-eu-ai-act
+    - src-pai-data-labor
+    - src-oecd-ai-principles
+season_threads:
+  human_need:
+    description: Memory, calculation, communication, prediction, coordination, and
+      delegation recur throughout the season.
+    appears_in:
+    - before-machines
+    - formal-logic-to-computation
+    - human-systems
+  explicit_rules:
+    description: Rules move from human procedure to formal logic, programs, expert
+      systems, and governance frameworks.
+    appears_in:
+    - before-machines
+    - formal-logic-to-computation
+    - birth-of-ai
+    - ai-winters-expert-systems
+    - human-systems
+  learning_and_scale:
+    description: The season shifts from hand-written rules to learning from examples,
+      then to scaled general-purpose models.
+    appears_in:
+    - learning-machines
+    - foundation-models
+  evaluation_and_trust:
+    description: Claims about intelligence become meaningful only when tested against
+      tasks, institutions, maintenance, and public trust.
+    appears_in:
+    - birth-of-ai
+    - ai-winters-expert-systems
+    - learning-machines
+    - foundation-models
+    - human-systems
+publication_backlog:
+- Clean stale package README/agent-brief wording that still describes source IDs as
+  provisional.
+- Decide whether the public site presents Season 1 as a guided series, one long essay
+  with chapters, or both.
+- Produce original diagrams before publication; avoid reusing museum or archive images
+  unless rights are explicit.
+- Create a shared glossary from the technical companion before final prose drafting.
+privacy:
+  public_only: true
+  notes: This synthesis is derived from public repository artifacts and public source
+    maps only.
