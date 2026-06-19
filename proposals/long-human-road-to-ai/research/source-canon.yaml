@@ -374,7 +374,7 @@ sources:
     accessed: "2026-06-19"
     status: "active"
     public_access: "open-web"
-    access_notes: "Public transcription of Menabrea's 1842 paper with Ada Lovelace's notes; verify quotations and scholarly interpretation against stronger editions when central."
+    access_notes: "Public transcription of Menabrea's 1842 paper with Ada Lovelace's notes; fourmilab.ch is outside the default allow-list and is justified as a public transcription source, but verify quotations and scholarly interpretation against stronger editions when central."
     best_for:
       - "Analytical Engine primary wording"
       - "Lovelace notes"
@@ -524,3 +524,49 @@ sources:
       notes: "Process document only."
     added_for: "Shared submission rules for this proposal."
     notes: "Keeps proposal shell aligned with router expectations."
+
+  - id: "src-lhra-method"
+    title: "The Long Human Road to AI Research Method"
+    url: "https://github.com/aura-knowledge/meta/blob/main/proposals/long-human-road-to-ai/research/README.md"
+    source_type: "project-document"
+    authority: "primary"
+    publisher: "Aura Knowledge"
+    accessed: "2026-06-19"
+    status: "active"
+    public_access: "public-repo"
+    access_notes: "Public repository document; github.com is on the default allow-list."
+    best_for:
+      - "LHRA method rules"
+      - "research-card workflow"
+      - "series-specific analogy discipline"
+    limitations:
+      - "Use only for Aura Knowledge process and series-method claims."
+      - "Do not use as evidence for external historical claims."
+    visual_use:
+      reuse: "prohibited"
+      notes: "Process document only."
+    added_for: "Canon source for artifact claims about the series research method."
+    notes: "This source becomes available after the source-canon PR lands on main."
+
+  - id: "src-lhra-review"
+    title: "The Long Human Road to AI Review Checklist"
+    url: "https://github.com/aura-knowledge/meta/blob/main/proposals/long-human-road-to-ai/research/review-checklist.md"
+    source_type: "project-document"
+    authority: "primary"
+    publisher: "Aura Knowledge"
+    accessed: "2026-06-19"
+    status: "active"
+    public_access: "public-repo"
+    access_notes: "Public repository document; github.com is on the default allow-list."
+    best_for:
+      - "review gates"
+      - "source discipline checks"
+      - "analogy and visual review rules"
+    limitations:
+      - "Use only for Aura Knowledge review-process claims."
+      - "Do not use as evidence for external historical claims."
+    visual_use:
+      reuse: "prohibited"
+      notes: "Process document only."
+    added_for: "Canon source for artifact claims about the series review checklist."
+    notes: "This source becomes available after the source-canon PR lands on main."

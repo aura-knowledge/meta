@@ -17,6 +17,10 @@ except Exception:  # pragma: no cover
 
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 WORK_PACKAGE_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
+OUTSIDE_ALLOWLIST_MARKERS = (
+    "outside the default allow-list",
+    "outside the default source allow-list",
+)
 
 
 def load_yaml(path: Path, errors: list[str]) -> object:
@@ -41,6 +45,17 @@ def valid_url(value: object) -> bool:
     return parsed.scheme in {"http", "https"} and bool(parsed.netloc)
 
 
+def source_allow_list(canon: dict) -> set[str]:
+    snapshot = canon.get("default_allow_list_reference", {}).get("snapshot", [])
+    if not isinstance(snapshot, list):
+        return set()
+    return {str(item).lower().lstrip("www.") for item in snapshot if item}
+
+
+def domain_allowed(domain: str, allow_list: set[str]) -> bool:
+    return any(domain == allowed or domain.endswith(f".{allowed}") for allowed in allow_list)
+
+
 def validate_source_canon(research_dir: Path, errors: list[str]) -> tuple[dict, set[str]]:
     canon = load_yaml(research_dir / "source-canon.yaml", errors)
     if not isinstance(canon, dict):
@@ -63,6 +78,7 @@ def validate_source_canon(research_dir: Path, errors: list[str]) -> tuple[dict, 
     source_type_values = set(canon.get("source_type_values", []))
     public_access_values = set(canon.get("public_access_values", []))
     visual_reuse_values = set(canon.get("visual_reuse_values", []))
+    allow_list = source_allow_list(canon)
 
     sources = canon.get("sources", [])
     if not isinstance(sources, list) or not sources:
@@ -94,8 +110,19 @@ def validate_source_canon(research_dir: Path, errors: list[str]) -> tuple[dict, 
             errors.append(f"{loc}.source_type has unknown value: {source.get('source_type')}")
         if source.get("public_access") and public_access_values and source.get("public_access") not in public_access_values:
             errors.append(f"{loc}.public_access has unknown value: {source.get('public_access')}")
-        if source.get("url") and not valid_url(source.get("url")):
+        source_url = source.get("url")
+        if source_url and not valid_url(source_url):
             errors.append(f"{loc}.url must be an http or https URL")
+        elif source_url and allow_list:
+            domain = urlparse(str(source_url)).netloc.lower().lstrip("www.")
+            access_notes = str(source.get("access_notes", ""))
+            if domain and not domain_allowed(domain, allow_list) and not any(
+                marker in access_notes for marker in OUTSIDE_ALLOWLIST_MARKERS
+            ):
+                errors.append(
+                    f"{loc} domain '{domain}' is outside the default allow-list; "
+                    "access_notes must justify public citability"
+                )
         if source.get("accessed") and not DATE_RE.fullmatch(str(source.get("accessed"))):
             errors.append(f"{loc}.accessed must be YYYY-MM-DD")
         if source.get("status") not in {"active", "deprecated"}:
@@ -152,6 +179,13 @@ def validate_card_schema(research_dir: Path, errors: list[str]) -> dict:
     return schema
 
 
+def card_id_validator(schema: dict) -> tuple[re.Pattern[str], int]:
+    id_policy = schema.get("id_policy", {})
+    pattern = str(id_policy.get("card_id_pattern", r"^$"))
+    max_length = int(id_policy.get("max_id_length", 999))
+    return re.compile(pattern), max_length
+
+
 def card_files(cards_dir: Path) -> list[Path]:
     if not cards_dir.exists():
         return []
@@ -190,9 +224,25 @@ def validate_card(
 
     validate_card_path(cards_dir, path, card, errors)
 
+    card_id_re, max_card_id_length = card_id_validator(schema)
+    card_id = card.get("id")
+    if not isinstance(card_id, str) or not card_id_re.fullmatch(card_id):
+        errors.append(f"{path}: card id fails pattern: {card_id}")
+    elif len(card_id) > max_card_id_length:
+        errors.append(f"{path}: card id exceeds max length: {card_id}")
+
+    optional_empty_fields = {
+        "analogy_candidate",
+        "analogy_limits",
+        "visual_candidates",
+        "visual_license_notes",
+        "review_flags",
+    }
     for field in schema.get("required_fields", []):
         if field not in card:
             errors.append(f"{path}: missing required field: {field}")
+        elif field not in optional_empty_fields and missing(card.get(field)):
+            errors.append(f"{path}: required field {field} must be non-empty")
 
     enums = schema.get("enums", {})
     enum_fields = (

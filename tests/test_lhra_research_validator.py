@@ -104,6 +104,46 @@ def test_unknown_card_source(tmp_path: Path) -> None:
     assert "unknown source id: src-not-in-canon" in result.stderr
 
 
+def test_invalid_card_id_fails(tmp_path: Path) -> None:
+    proposal = copy_proposal(tmp_path)
+    card = valid_card()
+    card["id"] = "BAD"
+    write_card(proposal, card)
+
+    result = run_validator(tmp_path)
+
+    assert result.returncode == 1
+    assert "card id fails pattern: BAD" in result.stderr
+
+
+def test_empty_required_card_fields_fail(tmp_path: Path) -> None:
+    proposal = copy_proposal(tmp_path)
+    card = valid_card()
+    card["title"] = ""
+    card["event_or_claim"] = ""
+    write_card(proposal, card)
+
+    result = run_validator(tmp_path)
+
+    assert result.returncode == 1
+    assert "required field title must be non-empty" in result.stderr
+    assert "required field event_or_claim must be non-empty" in result.stderr
+
+
+def test_outside_allow_list_source_requires_specific_publicness_note(tmp_path: Path) -> None:
+    proposal = copy_proposal(tmp_path)
+    canon_path = proposal / "research" / "source-canon.yaml"
+    canon = yaml.safe_load(canon_path.read_text(encoding="utf-8"))
+    canon["sources"][0]["url"] = "https://example.com/source"
+    canon["sources"][0]["access_notes"] = "Public page."
+    canon_path.write_text(yaml.safe_dump(canon, sort_keys=False), encoding="utf-8")
+
+    result = run_validator(tmp_path)
+
+    assert result.returncode == 1
+    assert "domain 'example.com' is outside the default allow-list" in result.stderr
+
+
 def test_analogy_limits_required(tmp_path: Path) -> None:
     proposal = copy_proposal(tmp_path)
     card = valid_card()
