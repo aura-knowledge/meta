@@ -1,0 +1,526 @@
+schema_version: 1
+series: "long-human-road-to-ai"
+title: "Source Canon for The Long Human Road to AI"
+updated: "2026-06-19"
+
+id_policy:
+  pattern: "^src-[a-z0-9]+(-[a-z0-9]+){0,3}$"
+  max_length: 31
+  stability: "Source IDs are append-only. Deprecate instead of renaming."
+
+authority_classes:
+  primary:
+    description: "Original paper, patent, artifact record, archival record, official standard, official release, or project document."
+    use_for:
+      - "original wording"
+      - "technical claims"
+      - "publication dates"
+      - "official governance or process claims"
+    limits: "Primary sources still need interpretation; do not infer broad historical meaning from one document alone."
+  secondary:
+    description: "Historian work, scholarly synthesis, peer-reviewed interpretation, or deeply cited technical history."
+    use_for:
+      - "context"
+      - "causal interpretation"
+      - "historiographic disagreement"
+      - "connections across fields"
+    limits: "Check central interpretations against at least one other source when possible."
+  tertiary:
+    description: "Museum summary, public timeline, encyclopedia overview, or teaching reference."
+    use_for:
+      - "orientation"
+      - "simple chronology"
+      - "source discovery"
+      - "reader-facing definitions"
+    limits: "Do not use as the only support for disputed causality, priority, or technical interpretation."
+  modern-commentary:
+    description: "Current data project, public commentary, benchmark summary, policy context, or living report."
+    use_for:
+      - "current AI context"
+      - "public framing"
+      - "deployment and adoption trends"
+      - "recent governance context"
+    limits: "Do not establish historical fact by itself; verify rapidly changing claims with current public sources."
+
+claim_types:
+  fact:
+    minimum_sources: 1
+    rule: "One source may support a simple event, artifact, date, or technical statement. Tertiary-only support is limited to basic chronology."
+  interpretation:
+    minimum_sources: 2
+    rule: "Use at least two sources, preferably including a secondary source. If only one source is available, add a review flag."
+  analogy:
+    minimum_sources: 1
+    rule: "Cite the underlying facts, include analogy_limits, and never treat the analogy as evidence."
+  speculation:
+    minimum_sources: 1
+    rule: "Cite any background fact, mark the speculative step, and do not use speculation to support historical claims."
+
+confidence_states:
+  high: "The cited sources directly support the claim, and no known conflict is present."
+  medium: "The claim is source-backed but depends on synthesis, source translation, or incomplete coverage."
+  low: "The claim is plausible but under-sourced, disputed, or awaiting a stronger source."
+
+uncertainty_states:
+  settled: "The available public record is stable for this article's level of detail."
+  debated: "Sources disagree or the interpretation is contested."
+  speculative: "The card includes future-looking, counterfactual, or weakly evidenced inference."
+  analogy-only: "The card is useful as a teaching comparison but not as historical evidence."
+
+source_type_values:
+  - archival-record
+  - data-reference
+  - data-report
+  - encyclopedia-entry
+  - museum-collection
+  - museum-timeline
+  - official-guidance
+  - original-paper
+  - primary-text
+  - primary-text-transcription
+  - project-document
+  - scholarly-history
+
+public_access_values:
+  - open-web
+  - public-pdf
+  - public-repo
+  - public-institutional-page
+  - public-doi
+  - paywalled-public-citation
+
+visual_reuse_values:
+  - metadata-only
+  - original-diagram
+  - public-domain
+  - permissive-license
+  - rights-review-needed
+  - prohibited
+
+default_allow_list_reference:
+  config_path: "capabilities/aura-export/config.yaml"
+  snapshot:
+    - "github.com"
+    - "arxiv.org"
+    - "doi.org"
+    - "en.wikipedia.org"
+    - "docs.python.org"
+    - "developer.mozilla.org"
+    - "www.w3.org"
+    - "semver.org"
+    - "python.org"
+    - "pkg.go.dev"
+    - "docs.rs"
+
+source_entry_contract:
+  required_fields:
+    - id
+    - title
+    - url
+    - source_type
+    - authority
+    - publisher
+    - accessed
+    - status
+    - public_access
+    - access_notes
+    - best_for
+    - limitations
+    - visual_use
+    - added_for
+    - notes
+  optional_fields:
+    - archive_url
+    - replacement_ids
+    - deprecation_notes
+  field_rules:
+    id: "Short stable ID matching id_policy.pattern; never rename or recycle."
+    title: "Public title of the source."
+    url: "Public URL only."
+    source_type: "One value from source_type_values."
+    authority: "One of primary, secondary, tertiary, modern-commentary."
+    publisher: "Public institution, journal, archive, repository, or project name."
+    accessed: "Date checked by the worker, YYYY-MM-DD."
+    status: "active or deprecated."
+    public_access: "One value from public_access_values."
+    access_notes: "Explain publicness and note if the domain falls outside the default source allow-list recorded in default_allow_list_reference."
+    best_for: "Short list of claim types this source can support."
+    limitations: "Short list of claims this source should not support alone."
+    visual_use: "Object whose reuse field uses one value from visual_reuse_values."
+    added_for: "Why this source entered the canon."
+    notes: "Reviewer-facing caution or usage guidance."
+
+canon_lifecycle:
+  - "Add new sources before cards cite them."
+  - "Do not rename source IDs; downstream cards treat them as stable interfaces."
+  - "If replacing a source, keep the original entry, set status to deprecated, and add replacement_ids."
+  - "Do not add private, client, personal, or internal sources."
+  - "For domains outside the default source allow-list recorded in default_allow_list_reference, public_access and access_notes must justify public citability."
+  - "Source additions should be reviewed for publicness, authority class, and fit before article drafting."
+
+minimum_citation_rules:
+  - "A fact card needs at least one source; tertiary-only support is acceptable only for simple chronology or orientation."
+  - "A causal, technical, or debated historical claim needs a primary or secondary source, or a review flag naming the missing class."
+  - "An interpretation card needs at least two sources unless the review flag explains why a single source is temporarily accepted."
+  - "An analogy card must cite the underlying facts and include analogy_limits."
+  - "A speculation card must not support historical claims."
+  - "Modern AI claims require an accessed date and should prefer current public institutional, scholarly, or data sources."
+
+visual_provenance_rules:
+  - "Every reused image needs a source URL, creator or institution if known, license or rights statement, and accessed date."
+  - "Museum pages may be cited for artifact context, but image reuse depends on the linked rights statement."
+  - "Generated or original diagrams must list source_ids that support their factual structure."
+  - "Timelines and causal graphs must not imply direct causality unless the cited sources support that relationship."
+  - "If visual rights are unclear, use the source only for research and create an original diagram instead."
+
+analogy_boundary_rules:
+  - "State what the analogy clarifies."
+  - "State where the analogy breaks."
+  - "Do not use an analogy to claim direct descent, inevitability, or equivalence."
+  - "Flag analogies that may erase labor, institutions, geography, or social context."
+
+sources:
+  - id: "src-chm-timeline"
+    title: "Timeline of Computer History"
+    url: "https://www.computerhistory.org/timeline/"
+    source_type: "museum-timeline"
+    authority: "tertiary"
+    publisher: "Computer History Museum"
+    accessed: "2026-06-19"
+    status: "active"
+    public_access: "open-web"
+    access_notes: "Public museum timeline; computerhistory.org is outside the default allow-list and is justified as a public museum source."
+    best_for:
+      - "orientation"
+      - "basic computing chronology"
+      - "source discovery"
+    limitations:
+      - "Do not use alone for causal claims."
+      - "Verify disputed priority or technical interpretation elsewhere."
+    visual_use:
+      reuse: "rights-review-needed"
+      notes: "Images and artifact photos require separate rights review before reuse."
+    added_for: "Baseline computing chronology for the proposal and future research cards."
+    notes: "Good starting map for computing milestones, not an exhaustive historiography."
+
+  - id: "src-sep-computing"
+    title: "The Modern History of Computing"
+    url: "https://plato.stanford.edu/entries/computing-history/"
+    source_type: "encyclopedia-entry"
+    authority: "tertiary"
+    publisher: "Stanford Encyclopedia of Philosophy"
+    accessed: "2026-06-19"
+    status: "active"
+    public_access: "open-web"
+    access_notes: "Public scholarly encyclopedia entry; plato.stanford.edu is outside the default allow-list and is justified as a public academic reference."
+    best_for:
+      - "early computing orientation"
+      - "human-computer terminology"
+      - "bibliography discovery"
+    limitations:
+      - "Use primary or secondary sources for contested interpretation."
+      - "Check article revision date when relying on modern framing."
+    visual_use:
+      reuse: "metadata-only"
+      notes: "Use for text citation and bibliography discovery, not visual reuse."
+    added_for: "Shared reference for early computing and human computers."
+    notes: "Useful for Babbage, analog computing, Turing, and early electronic machines."
+
+  - id: "src-sep-turing"
+    title: "Alan Turing"
+    url: "https://plato.stanford.edu/entries/turing/"
+    source_type: "encyclopedia-entry"
+    authority: "tertiary"
+    publisher: "Stanford Encyclopedia of Philosophy"
+    accessed: "2026-06-19"
+    status: "active"
+    public_access: "open-web"
+    access_notes: "Public scholarly encyclopedia entry; plato.stanford.edu is outside the default allow-list and is justified as a public academic reference."
+    best_for:
+      - "Turing orientation"
+      - "philosophical context"
+      - "bibliography discovery"
+    limitations:
+      - "Do not use alone for sensitive biographical framing."
+      - "Use primary texts for Turing's own arguments."
+    visual_use:
+      reuse: "metadata-only"
+      notes: "Use for text citation and bibliography discovery, not visual reuse."
+    added_for: "Shared reference for Turing-related cards."
+    notes: "Pair with primary Turing papers when discussing his arguments."
+
+  - id: "src-turing-1936"
+    title: "On Computable Numbers, with an Application to the Entscheidungsproblem"
+    url: "https://turingarchive.kings.cam.ac.uk/computable-numbers-0"
+    source_type: "archival-record"
+    authority: "primary"
+    publisher: "The Turing Digital Archive"
+    accessed: "2026-06-19"
+    status: "active"
+    public_access: "public-institutional-page"
+    access_notes: "Public archive record from King's College Cambridge; turingarchive.kings.cam.ac.uk is outside the default allow-list and is justified as a public institutional archive."
+    best_for:
+      - "computability history"
+      - "primary-source anchor"
+      - "formal computation cards"
+    limitations:
+      - "Use secondary explanation for general-reader interpretation."
+      - "Archive images are copyrighted and require rights review."
+    visual_use:
+      reuse: "metadata-only"
+      notes: "Use as an archive record; check terms before viewing or reusing images."
+    added_for: "Primary-source anchor for computability and Turing-machine discussions."
+    notes: "Pair with src-sep-computing or another secondary explanation for accessible prose."
+
+  - id: "src-turing-1950"
+    title: "Computing Machinery and Intelligence"
+    url: "https://academic.oup.com/mind/article/LIX/236/433/986238"
+    source_type: "original-paper"
+    authority: "primary"
+    publisher: "Mind"
+    accessed: "2026-06-19"
+    status: "active"
+    public_access: "open-web"
+    access_notes: "Public Oxford Academic page marked free; academic.oup.com is outside the default allow-list and is justified as the journal page for the article."
+    best_for:
+      - "imitation game framing"
+      - "machine intelligence debate"
+      - "primary-source wording"
+    limitations:
+      - "Do not use alone for broad claims that Turing settled the nature of intelligence."
+      - "Use secondary sources for later reception and interpretation."
+    visual_use:
+      reuse: "rights-review-needed"
+      notes: "Use short quotations sparingly; check publisher terms before figure or page-image reuse."
+    added_for: "Primary-source anchor for machine-intelligence framing."
+    notes: "Prefer paraphrase except for short, necessary excerpts."
+
+  - id: "src-dartmouth-1955"
+    title: "A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence"
+    url: "https://www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.html"
+    source_type: "primary-text"
+    authority: "primary"
+    publisher: "John McCarthy archive at Stanford"
+    accessed: "2026-06-19"
+    status: "active"
+    public_access: "open-web"
+    access_notes: "Public copy of the 1955 proposal hosted with John McCarthy's Stanford materials; www-formal.stanford.edu is outside the default allow-list and is justified as a public academic archive."
+    best_for:
+      - "AI naming history"
+      - "Dartmouth proposal wording"
+      - "early AI research agenda"
+    limitations:
+      - "Use secondary histories for the workshop's later significance."
+      - "Do not treat the proposal as evidence that the field developed as planned."
+    visual_use:
+      reuse: "metadata-only"
+      notes: "Use for text citation, not visual reuse."
+    added_for: "Primary-source anchor for the formal naming and early agenda of AI."
+    notes: "Good source for what the proposers claimed; pair with histories for aftermath."
+
+  - id: "src-smg-babbage"
+    title: "Babbage's Difference Engine No 2, 2002"
+    url: "https://collection.sciencemuseumgroup.org.uk/objects/co62748"
+    source_type: "museum-collection"
+    authority: "tertiary"
+    publisher: "Science Museum Group"
+    accessed: "2026-06-19"
+    status: "active"
+    public_access: "open-web"
+    access_notes: "Public Science Museum Group collection record; collection.sciencemuseumgroup.org.uk is outside the default allow-list and is justified as a public museum source."
+    best_for:
+      - "Babbage artifact context"
+      - "Difference Engine chronology"
+      - "mechanical calculation orientation"
+      - "visual source discovery"
+    limitations:
+      - "Use archival, essay, or scholarly sources for detailed technical claims."
+      - "Check image rights separately before reuse."
+    visual_use:
+      reuse: "rights-review-needed"
+      notes: "The record includes museum images; follow linked rights statements before reuse."
+    added_for: "Durable public museum source for Babbage and early mechanical computation."
+    notes: "Useful bridge from mathematical tables and human calculation to mechanized calculation."
+
+  - id: "src-swade-de2"
+    title: "The Construction of Charles Babbage's Difference Engine No. 2"
+    url: "https://www.computer.org/csdl/magazine/an/2005/03/man2005030070/13rRUILLkxm"
+    source_type: "scholarly-history"
+    authority: "secondary"
+    publisher: "IEEE Annals of the History of Computing"
+    accessed: "2026-06-19"
+    status: "active"
+    public_access: "paywalled-public-citation"
+    access_notes: "Public IEEE Computer Society metadata page; computer.org is outside the default allow-list and is justified as a public scholarly citation, though full text access may vary."
+    best_for:
+      - "Babbage construction context"
+      - "secondary technical history"
+      - "interpretation of Difference Engine No. 2 reconstruction"
+    limitations:
+      - "Do not use alone for all Babbage or Lovelace interpretation."
+      - "Check access terms before quoting or reusing figures."
+    visual_use:
+      reuse: "metadata-only"
+      notes: "Use for citation and interpretation; do not reuse article figures without rights review."
+    added_for: "Secondary-source exemplar for Babbage and mechanical computation interpretation."
+    notes: "Pair with museum records or primary Babbage/Lovelace material when building high-confidence cards."
+
+  - id: "src-lovelace-notes"
+    title: "Sketch of the Analytical Engine Invented by Charles Babbage"
+    url: "https://www.fourmilab.ch/babbage/sketch.html"
+    source_type: "primary-text-transcription"
+    authority: "primary"
+    publisher: "Fourmilab"
+    accessed: "2026-06-19"
+    status: "active"
+    public_access: "open-web"
+    access_notes: "Public transcription of Menabrea's 1842 paper with Ada Lovelace's notes; verify quotations and scholarly interpretation against stronger editions when central."
+    best_for:
+      - "Analytical Engine primary wording"
+      - "Lovelace notes"
+      - "non-numeric computation discussion"
+    limitations:
+      - "The hosting page is not itself a scholarly edition."
+      - "Use secondary scholarship for interpretation of Lovelace's role."
+    visual_use:
+      reuse: "metadata-only"
+      notes: "Use as a text source; do not reuse page graphics without separate rights review."
+    added_for: "Primary-source anchor for Lovelace and Analytical Engine cards."
+    notes: "Quote sparingly and keep interpretation distinct from primary text."
+
+  - id: "src-transformer-2017"
+    title: "Attention Is All You Need"
+    url: "https://arxiv.org/abs/1706.03762"
+    source_type: "original-paper"
+    authority: "primary"
+    publisher: "arXiv"
+    accessed: "2026-06-19"
+    status: "active"
+    public_access: "open-web"
+    access_notes: "Public arXiv abstract and paper; arxiv.org is on the default allow-list."
+    best_for:
+      - "transformer architecture"
+      - "modern AI technical milestone"
+      - "primary technical wording"
+    limitations:
+      - "Do not use alone for social impact or adoption claims."
+      - "Pair with secondary sources for historical interpretation."
+    visual_use:
+      reuse: "rights-review-needed"
+      notes: "Check arXiv and paper license before reusing figures; original diagrams are safer."
+    added_for: "Primary-source anchor for transformer-based modern AI cards."
+    notes: "Use for technical claims, not for broad claims about generative AI adoption."
+
+  - id: "src-owid-ai"
+    title: "Artificial Intelligence"
+    url: "https://ourworldindata.org/artificial-intelligence"
+    source_type: "data-reference"
+    authority: "modern-commentary"
+    publisher: "Our World in Data"
+    accessed: "2026-06-19"
+    status: "active"
+    public_access: "open-web"
+    access_notes: "Public data and explainer page; ourworldindata.org is outside the default allow-list and is justified as a public data source."
+    best_for:
+      - "modern AI trend orientation"
+      - "public data visualization discovery"
+      - "reader-facing context"
+    limitations:
+      - "Check current date and underlying datasets."
+      - "Do not use alone for historical causality."
+    visual_use:
+      reuse: "rights-review-needed"
+      notes: "Each visual still needs license and attribution review."
+    added_for: "Current public context source for AI trend cards."
+    notes: "Use accessed dates because the page can change."
+
+  - id: "src-hai-ai-index"
+    title: "The 2026 AI Index Report"
+    url: "https://hai.stanford.edu/ai-index/2026-ai-index-report"
+    source_type: "data-report"
+    authority: "modern-commentary"
+    publisher: "Stanford HAI"
+    accessed: "2026-06-19"
+    status: "active"
+    public_access: "open-web"
+    access_notes: "Public Stanford HAI report page; hai.stanford.edu is outside the default allow-list and is justified as a public academic institute report."
+    best_for:
+      - "recent AI capability context"
+      - "adoption and investment trends"
+      - "measurement caveats"
+      - "source discovery"
+    limitations:
+      - "Do not use alone for deep historical claims."
+      - "Prefer the latest report for current statistics."
+    visual_use:
+      reuse: "rights-review-needed"
+      notes: "Check report licensing before reusing charts; cite chart source and accessed date."
+    added_for: "Recent public AI trend source for modern chapters."
+    notes: "Because this is a living annual series, cards should name the report year."
+
+  - id: "src-nist-ai-rmf"
+    title: "Artificial Intelligence Risk Management Framework"
+    url: "https://doi.org/10.6028/NIST.AI.100-1"
+    source_type: "official-guidance"
+    authority: "primary"
+    publisher: "National Institute of Standards and Technology"
+    accessed: "2026-06-19"
+    status: "active"
+    public_access: "public-doi"
+    access_notes: "Public U.S. government publication DOI; nist.gov is outside the default allow-list and is justified as a public government source."
+    best_for:
+      - "AI governance framing"
+      - "risk management terminology"
+      - "official release dates"
+    limitations:
+      - "Do not use alone for claims about actual adoption or effectiveness."
+      - "Check whether revisions affect the cited claim."
+    visual_use:
+      reuse: "rights-review-needed"
+      notes: "Government pages may include third-party material; verify before visual reuse."
+    added_for: "Public governance source for human-consequences and safety context."
+    notes: "Voluntary AI RMF 1.0 guidance published in 2023. Re-check NIST before publication because the framework is intended to evolve."
+
+  - id: "src-privacy"
+    title: "Aura Knowledge Meta Privacy Contract"
+    url: "https://github.com/aura-knowledge/meta/blob/main/docs/privacy-contract.md"
+    source_type: "project-document"
+    authority: "primary"
+    publisher: "Aura Knowledge"
+    accessed: "2026-06-19"
+    status: "active"
+    public_access: "public-repo"
+    access_notes: "Public repository document; github.com is on the default allow-list."
+    best_for:
+      - "privacy rules"
+      - "public-source constraints"
+      - "submission safety"
+    limitations:
+      - "Use only for Aura Knowledge process claims."
+    visual_use:
+      reuse: "prohibited"
+      notes: "Process document only."
+    added_for: "Shared privacy contract for all research-card work."
+    notes: "Future cards must remain compatible with this contract."
+
+  - id: "src-submit-guide"
+    title: "Aura Knowledge Meta Submission Guide"
+    url: "https://github.com/aura-knowledge/meta/blob/main/docs/submission-guide.md"
+    source_type: "project-document"
+    authority: "primary"
+    publisher: "Aura Knowledge"
+    accessed: "2026-06-19"
+    status: "active"
+    public_access: "public-repo"
+    access_notes: "Public repository document; github.com is on the default allow-list."
+    best_for:
+      - "article-proposal process"
+      - "submission requirements"
+      - "agent-routing expectations"
+    limitations:
+      - "Use only for Aura Knowledge process claims."
+    visual_use:
+      reuse: "prohibited"
+      notes: "Process document only."
+    added_for: "Shared submission rules for this proposal."
+    notes: "Keeps proposal shell aligned with router expectations."

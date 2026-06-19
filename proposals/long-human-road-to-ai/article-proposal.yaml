@@ -1,0 +1,47 @@
+schemaVersion: 1
+title: "The Long Human Road to AI"
+slug: "long-human-road-to-ai"
+thesis: "Artificial intelligence is easier to understand when it is presented as the latest chapter in a much older human story: our repeated effort to extend memory, calculation, communication, measurement, coordination, prediction, and delegation beyond the limits of one person."
+audience:
+  - general
+  - students
+  - builders
+  - agents
+tags:
+  - ai-history
+  - computing-history
+  - human-progress
+  - education
+  - analogies
+maturity: seed
+claims:
+  - "The series should explain computers and AI through recurring human capabilities rather than through hardware and software categories alone."
+  - "A technical companion should preserve chronology, source detail, and agent-readable milestone structure without forcing the human-facing series to become academic."
+  - "Analogies should be used as teaching devices with explicit limits, not as evidence for historical claims."
+sources:
+  - title: "Timeline of Computer History"
+    url: "https://www.computerhistory.org/timeline/"
+    type: "museum-timeline"
+    accessed: "2026-06-19"
+  - title: "The Modern History of Computing"
+    url: "https://plato.stanford.edu/entries/computing-history/"
+    type: "encyclopedia"
+    accessed: "2026-06-19"
+  - title: "Alan Turing"
+    url: "https://plato.stanford.edu/entries/turing/"
+    type: "encyclopedia"
+    accessed: "2026-06-19"
+  - title: "Artificial Intelligence"
+    url: "https://ourworldindata.org/artificial-intelligence"
+    type: "data-reference"
+    accessed: "2026-06-19"
+sanitized_summary: |
+  This proposal defines a public article series that explains computers and AI as part of a broader story of human tools and knowledge systems. It emphasizes memory, calculation, communication, measurement, coordination, prediction, and delegation as recurring human needs that shaped computing and AI.
+abstraction_examples:
+  - original: "A private planning discussion about coordinating future AI history research work."
+    abstracted: "A public series charter that defines audience, research lanes, source rules, and review criteria without including private workspace details."
+  - original: "A personal reflection about making AI easier to explain to non-specialists."
+    abstracted: "A public teaching premise about explaining AI through older human practices such as counting, recording, measuring, and delegating."
+privacy_acknowledgment: true
+agent_involvement: "Drafted with AI agent assistance from a human-provided concept; human editors retain final judgment."
+draft_available: true
