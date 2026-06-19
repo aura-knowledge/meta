@@ -1,0 +1,250 @@
+schema_version: 1
+record_type: "lhra-research-card"
+title: "Research Card Schema for The Long Human Road to AI"
+updated: "2026-06-19"
+
+id_policy:
+  card_id_pattern: "^card-[a-z0-9]+(-[a-z0-9]+){1,5}$"
+  source_id_pattern: "^src-[a-z0-9]+(-[a-z0-9]+){0,3}$"
+  max_id_length: 31
+  stability: "IDs are stable references. Deprecate records instead of renaming them."
+
+required_fields:
+  - id
+  - title
+  - date_or_period
+  - geography_or_tradition
+  - human_capability
+  - lane
+  - event_or_claim
+  - why_it_matters
+  - enabled
+  - story_role
+  - source_ids
+  - claim_type
+  - confidence
+  - uncertainty
+  - analogy_candidate
+  - analogy_limits
+  - visual_candidates
+  - visual_license_notes
+  - technical_companion_notes
+  - review_flags
+
+optional_fields:
+  - related_card_ids
+  - article_candidate
+  - glossary_terms
+  - open_questions
+  - notes
+
+enums:
+  human_capability:
+    - counting
+    - remembering
+    - instructing
+    - measuring
+    - mechanizing
+    - communicating
+    - organizing
+    - searching
+    - predicting
+    - learning
+    - delegating
+  lane:
+    - pre-machine-coordination
+    - tools-that-extend-thought
+    - measurement-prediction-control
+    - formal-symbol-systems
+    - industrial-automation
+    - programmable-machines
+    - information-cybernetics
+    - early-ai
+    - learning-machines
+    - data-infrastructure
+    - generative-ai
+    - human-consequences
+  geography_or_tradition:
+    - global
+    - africa
+    - americas
+    - china
+    - europe
+    - india
+    - islamic-world
+    - japan
+    - mediterranean
+    - middle-east
+    - specific-place
+    - unclear
+  story_role:
+    - origin
+    - bridge
+    - contrast
+    - turning-point
+    - caution
+    - analogy
+    - context
+    - technical-foundation
+    - social-context
+  claim_type:
+    - fact
+    - interpretation
+    - analogy
+    - speculation
+  confidence:
+    - high
+    - medium
+    - low
+  uncertainty:
+    - settled
+    - debated
+    - speculative
+    - analogy-only
+  source_authority:
+    - primary
+    - secondary
+    - tertiary
+    - modern-commentary
+  visual_type:
+    - timeline
+    - causal-graph
+    - then-now-table
+    - boundary-box
+    - map
+    - artifact-photo
+    - source-facsimile
+    - original-diagram
+    - sketch
+    - no-visual
+  visual_provenance:
+    - original-diagram
+    - public-domain
+    - permissive-license
+    - metadata-only
+    - rights-review-needed
+    - prohibited
+  review_flag:
+    - needs-primary-source
+    - needs-secondary-source
+    - needs-source-cross-check
+    - source-missing
+    - source-deprecated
+    - chronology-uncertain
+    - disputed-claim
+    - weak-causality
+    - analogy-limit-missing
+    - visual-rights-needed
+    - geography-too-broad
+    - social-context-missing
+    - presentism-risk
+    - great-person-risk
+    - privacy-review-needed
+    - modern-source-stale
+    - ready-for-draft
+
+field_definitions:
+  id: "Stable card ID that matches id_policy.card_id_pattern."
+  title: "Human-readable card title."
+  date_or_period: "Specific date, year, century, or broad period, with uncertainty stated in notes when needed."
+  geography_or_tradition: "One enum value. Use specific-place when the card names a city, institution, region, or tradition in notes."
+  human_capability: "Primary capability lane from the enum."
+  lane: "Historical or technical lane from the enum."
+  event_or_claim: "The concrete event, practice, tool, or claim being recorded. Keep one claim per card."
+  why_it_matters: "Why this changed what people could do, know, coordinate, automate, or delegate."
+  enabled: "Later developments this helped make possible. Avoid direct causality unless sourced."
+  story_role: "How this card might function in article prose."
+  source_ids: "List of IDs from source-canon.yaml."
+  claim_type: "Fact, interpretation, analogy, or speculation."
+  confidence: "Worker confidence that the cited sources support the card."
+  uncertainty: "State of the record: settled, debated, speculative, or analogy-only."
+  analogy_candidate: "Reader-friendly comparison, or empty string when not used."
+  analogy_limits: "Where the comparison fails, or why no analogy is used. Required for claim_type analogy, story_role analogy, or non-empty analogy_candidate."
+  visual_candidates: "List of visual ideas with type, provenance, rights_basis, source_ids, and notes."
+  visual_license_notes: "Required when visual_candidates is not empty. Include public-domain, permissive license, original diagram, metadata-only, or rights-review-needed status."
+  technical_companion_notes: "Definitions, chronology, caveats, or extra detail for the companion."
+  review_flags: "List of enum values. Use ready-for-draft only after unresolved flags are cleared."
+  notes: "Optional public notes for unresolved questions."
+
+minimum_citation_rules:
+  fact:
+    min_sources: 1
+    rule: "Use at least one public source. Tertiary-only support is acceptable only for simple chronology or orientation."
+  interpretation:
+    min_sources: 1
+    preferred_sources: 2
+    rule: "Use two sources before drafting. One source is allowed only while review_flags includes needs-source-cross-check, needs-primary-source, or needs-secondary-source."
+  analogy:
+    min_sources: 1
+    rule: "The surrounding facts need sources. The analogy also needs explicit limits."
+  speculation:
+    min_sources: 1
+    rule: "Use uncertainty: speculative and explain why the idea belongs. Do not use speculation to support historical claims."
+
+cross_file_validation:
+  - "Every source_ids value must match sources[].id in source-canon.yaml."
+  - "Every source entry must contain each source_entry_contract.required_fields value from source-canon.yaml."
+  - "Enum fields must use enums values exactly."
+  - "claim_type: analogy requires non-empty analogy_candidate and analogy_limits."
+  - "story_role: analogy or non-empty analogy_candidate requires non-empty analogy_limits."
+  - "claim_type: interpretation requires two source_ids before drafting; one source is accepted only with needs-source-cross-check, needs-primary-source, or needs-secondary-source."
+  - "visual_candidates entries require type, provenance, and rights_basis."
+  - "public-domain and permissive-license visual candidates require license_url and attribution."
+  - "visual_candidates entries require non-empty visual_license_notes."
+  - "Cards must not cite source-canon entries with status: deprecated unless review_flags includes source-deprecated or needs-source-cross-check."
+  - "Modern AI cards should include modern-source-stale unless their sources were accessed in the current research cycle."
+  - "Any card touching living people, recent organizations, or governance claims needs privacy and publicness review."
+
+conditional_field_rules:
+  - "For non-analogy cards, analogy_candidate and analogy_limits may be empty strings."
+  - "For cards without visual plans, visual_candidates may be an empty list and visual_license_notes may be an empty string."
+  - "For public-domain and permissive-license visual candidates, license_url and attribution are required."
+  - "For rights-review-needed visual candidates, add visual-rights-needed to review_flags."
+  - "For metadata-only visual candidates, do not reuse the source image; create an original diagram or use the source only for description."
+
+visual_candidate_shape:
+  required_fields:
+    - type
+    - provenance
+    - rights_basis
+  optional_fields:
+    - source_ids
+    - license_url
+    - attribution
+    - notes
+
+confidence_vs_uncertainty:
+  confidence: "How well the worker believes the cited sources support the card."
+  uncertainty: "Whether the historical or technical record itself is settled, debated, speculative, or only useful as an analogy."
+  example: "A card may have high confidence and debated uncertainty when sources clearly show a real scholarly disagreement."
+
+example_card:
+  id: "card-human-computers"
+  title: "Human Computers as Organized Calculation"
+  date_or_period: "Before electronic computers; exact scope varies by institution"
+  geography_or_tradition: "europe"
+  human_capability: "counting"
+  lane: "programmable-machines"
+  event_or_claim: "The word computer referred to people who performed calculations before it referred mainly to machines."
+  why_it_matters: "It shows that computation was first a human and institutional practice, not only a machine category."
+  enabled: "This framing helps readers understand later calculating machines as attempts to mechanize organized procedures."
+  story_role: "origin"
+  source_ids:
+    - "src-sep-computing"
+  claim_type: "fact"
+  confidence: "medium"
+  uncertainty: "settled"
+  analogy_candidate: "A computing center before electronics can be introduced as a room-sized workflow of trained people."
+  analogy_limits: "People interpret, repair, and negotiate work in ways that machines do not; do not imply human computers were software."
+  visual_candidates:
+    - type: "then-now-table"
+      provenance: "original-diagram"
+      rights_basis: "Original table created for the article series from cited sources."
+      source_ids:
+        - "src-sep-computing"
+      notes: "Compare human procedure, calculating aid, stored program, and AI tool."
+  visual_license_notes: "Use an original table; cite src-sep-computing for the factual structure."
+  technical_companion_notes: "Define effective method and distinguish occupation, machine, and theory."
+  review_flags:
+    - "needs-source-cross-check"
+  notes: "Add institution-specific examples in later cards."

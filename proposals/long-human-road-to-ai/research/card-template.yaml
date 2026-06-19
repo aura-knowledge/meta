@@ -1,0 +1,25 @@
+# Copy this file to research/cards/<work-package>/<card-id>.yaml and replace the
+# values with one reviewed research card.
+id: "card-human-computers"
+title: "Human Computers as Organized Calculation"
+date_or_period: "Before electronic computers; exact scope varies by institution"
+geography_or_tradition: "europe"
+human_capability: "counting"
+lane: "programmable-machines"
+event_or_claim: "The word computer referred to people who performed calculations before it referred mainly to machines."
+why_it_matters: "It shows that computation was first a human and institutional practice, not only a machine category."
+enabled: "This framing helps readers understand later calculating machines as attempts to mechanize organized procedures."
+story_role: "origin"
+source_ids:
+  - "src-sep-computing"
+claim_type: "fact"
+confidence: "medium"
+uncertainty: "settled"
+analogy_candidate: ""
+analogy_limits: ""
+visual_candidates: []
+visual_license_notes: ""
+technical_companion_notes: "Define effective method and distinguish occupation, machine, and theory."
+review_flags:
+  - "needs-source-cross-check"
+notes: "Add institution-specific examples in later cards."

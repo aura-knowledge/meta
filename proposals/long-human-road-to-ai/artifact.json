@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "article:long-human-road-to-ai",
+  "slug": "long-human-road-to-ai",
+  "title": "The Long Human Road to AI",
+  "canonicalPath": "/articles/long-human-road-to-ai/",
+  "sourcePath": "proposals/long-human-road-to-ai/README.md",
+  "methodPath": "proposals/long-human-road-to-ai/research/README.md",
+  "status": "draft",
+  "maturity": "seed",
+  "proposedAt": "2026-06-19",
+  "publishedAt": null,
+  "updatedAt": "2026-06-19",
+  "audiences": ["general", "students", "builders", "agents"],
+  "topics": ["ai-history", "computing-history", "human-progress", "education", "analogies"],
+  "claims": [
+    {
+      "id": "claim-001",
+      "claim": "A human-facing AI history series should start from recurring human capabilities rather than from hardware and software categories alone.",
+      "confidence": "medium",
+      "status": "proposal",
+      "evidence": ["src-chm-timeline", "src-sep-computing"]
+    },
+    {
+      "id": "claim-002",
+      "claim": "For this series, analogies are internal teaching devices and must state their limits before they appear in article prose.",
+      "confidence": "medium",
+      "status": "method-rule",
+      "evidence": ["src-lhra-method", "src-lhra-review"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-chm-timeline",
+      "title": "Timeline of Computer History",
+      "url": "https://www.computerhistory.org/timeline/",
+      "type": "museum-timeline",
+      "accessed": "2026-06-19"
+    },
+    {
+      "id": "src-sep-computing",
+      "title": "The Modern History of Computing",
+      "url": "https://plato.stanford.edu/entries/computing-history/",
+      "type": "encyclopedia",
+      "accessed": "2026-06-19"
+    },
+    {
+      "id": "src-submit-guide",
+      "title": "Aura Knowledge Meta Submission Guide",
+      "url": "https://github.com/aura-knowledge/meta/blob/main/docs/submission-guide.md",
+      "type": "project-document",
+      "accessed": "2026-06-19"
+    },
+    {
+      "id": "src-privacy",
+      "title": "Aura Knowledge Meta Privacy Contract",
+      "url": "https://github.com/aura-knowledge/meta/blob/main/docs/privacy-contract.md",
+      "type": "project-document",
+      "accessed": "2026-06-19"
+    },
+    {
+      "id": "src-lhra-method",
+      "title": "The Long Human Road to AI Research Method",
+      "url": "https://github.com/aura-knowledge/meta/blob/main/proposals/long-human-road-to-ai/research/README.md",
+      "type": "project-document",
+      "accessed": "2026-06-19"
+    },
+    {
+      "id": "src-lhra-review",
+      "title": "The Long Human Road to AI Review Checklist",
+      "url": "https://github.com/aura-knowledge/meta/blob/main/proposals/long-human-road-to-ai/research/review-checklist.md",
+      "type": "project-document",
+      "accessed": "2026-06-19"
+    }
+  ],
+  "agentInstructions": [
+    "Treat this proposal as a series charter, not a finished article.",
+    "Research human-capability lanes before drafting prose.",
+    "Store findings as research cards with source IDs and analogy limits.",
+    "Do not present analogies as evidence.",
+    "Move dense chronology into the technical companion."
+  ],
+  "humanReview": {
+    "status": "needs-human-review",
+    "reviewedAt": null,
+    "reviewers": [],
+    "notes": "Initial charter requires human editorial review before article drafting."
+  }
+}
