@@ -2,7 +2,7 @@ schemaVersion: 1
 package: "ai-winters-expert-systems"
 series: "long-human-road-to-ai"
 generated: "2026-06-19"
-status: "provisional-source-map"
+status: canon-normalized
 
 upstream_dependencies:
   - issue: 4
@@ -20,7 +20,7 @@ source_reconciliation:
   risky_claim_rule: "Funding contraction, AI-winter periodization, brittleness, and maintenance-cost claims require direct evidence or attributed historiographic phrasing."
 
 sources:
-  - id: "aiw-src-alpac-1966"
+  - id: "src-alpac-1966"
     title: "Language and Machines: Computers in Translation and Linguistics"
     author_or_editor: "National Research Council, Automatic Language Processing Advisory Committee"
     year: 1966
@@ -34,7 +34,7 @@ sources:
     caution: "Do not treat ALPAC as a complete verdict on all AI research."
     future_canon_mapping: "canon-alpac-1966"
 
-  - id: "aiw-src-lighthill-1973"
+  - id: "src-lighthill-1973"
     title: "Artificial Intelligence: A General Survey"
     author_or_editor: "Sir James Lighthill"
     year: 1973
@@ -48,7 +48,7 @@ sources:
     caution: "Treat as Lighthill's review for the UK Science Research Council, not a universal explanation of global AI history."
     future_canon_mapping: "canon-lighthill-1973"
 
-  - id: "aiw-src-agar-2020"
+  - id: "src-agar-lighthill-2020"
     title: "What is science for? The Lighthill report on artificial intelligence reinterpreted"
     author_or_editor: "Jon Agar"
     year: 2020
@@ -62,7 +62,7 @@ sources:
     caution: "Use as interpretation, not as primary evidence for funding decisions."
     future_canon_mapping: "canon-agar-2020"
 
-  - id: "aiw-src-nrc-1999"
+  - id: "src-nrc-ai-1999"
     title: "Funding a Revolution: Government Support for Computing Research, Chapter 9: Development in Artificial Intelligence"
     author_or_editor: "National Research Council"
     year: 1999
@@ -76,7 +76,7 @@ sources:
     caution: "Use exact funding figures only when quoting or paraphrasing the source closely."
     future_canon_mapping: "canon-nrc-ai-1999"
 
-  - id: "aiw-src-feig-1977"
+  - id: "src-feigenbaum-1977"
     title: "The Art of Artificial Intelligence: I. Themes and Case Studies of Knowledge Engineering"
     author_or_editor: "Edward A. Feigenbaum"
     year: 1977
@@ -90,7 +90,7 @@ sources:
     caution: "Use for expert-system optimism and method, not for later bust claims."
     future_canon_mapping: "canon-feig-1977"
 
-  - id: "aiw-src-feig-acm"
+  - id: "src-feigenbaum-acm"
     title: "Edward A. Feigenbaum: A.M. Turing Award Laureate profile"
     author_or_editor: "Association for Computing Machinery"
     year: 1994
@@ -104,7 +104,7 @@ sources:
     caution: "Use for orientation; prefer primary program papers for detailed claims."
     future_canon_mapping: "canon-feig-acm"
 
-  - id: "aiw-src-mycin-1984"
+  - id: "src-mycin-1984"
     title: "Rule-Based Expert Systems: The MYCIN Experiments of the Stanford Heuristic Programming Project"
     author_or_editor: "Bruce G. Buchanan and Edward H. Shortliffe, editors"
     year: 1984
@@ -118,7 +118,7 @@ sources:
     caution: "Medical performance claims require the evaluation chapters or related clinical papers, not summary memory."
     future_canon_mapping: "canon-mycin-1984"
 
-  - id: "aiw-src-r1-1980"
+  - id: "src-r1-1980"
     title: "R1: An Expert in the Computer Systems Domain"
     author_or_editor: "John McDermott"
     year: 1980
@@ -132,7 +132,7 @@ sources:
     caution: "Use later R1/XCON retrospectives for production statistics and maintenance experience."
     future_canon_mapping: "canon-r1-1980"
 
-  - id: "aiw-src-r1rev-1984"
+  - id: "src-r1-revisited-1984"
     title: "R1 Revisited: Four Years in the Trenches"
     author_or_editor: "Judith Bachant and John McDermott"
     year: 1984
@@ -146,7 +146,7 @@ sources:
     caution: "Verify exact savings, rule-count, and order-volume figures before final article prose."
     future_canon_mapping: "canon-r1rev-1984"
 
-  - id: "aiw-src-haigh-2023"
+  - id: "src-haigh-no-first-winter"
     title: "There Was No 'First AI Winter'"
     author_or_editor: "Thomas Haigh"
     year: 2023
@@ -160,7 +160,7 @@ sources:
     caution: "Use as attributed historiographic interpretation."
     future_canon_mapping: "canon-haigh-2023"
 
-  - id: "aiw-src-haigh-2024"
+  - id: "src-haigh-ai-boom-bust"
     title: "How the AI Boom Went Bust"
     author_or_editor: "Thomas Haigh"
     year: 2024
@@ -174,7 +174,7 @@ sources:
     caution: "Attribute claims and avoid using the source as sole evidence for exact commercial figures."
     future_canon_mapping: "canon-haigh-2024"
 
-  - id: "aiw-src-nist-rmf-2023"
+  - id: "src-nist-ai-rmf"
     title: "Artificial Intelligence Risk Management Framework (AI RMF 1.0)"
     author_or_editor: "National Institute of Standards and Technology"
     year: 2023
@@ -188,7 +188,7 @@ sources:
     caution: "Use for evaluation/governance continuity, not for AI winter prediction."
     future_canon_mapping: "canon-nist-rmf-2023"
 
-  - id: "aiw-src-aiindex-2026"
+  - id: "src-hai-ai-index"
     title: "The 2026 AI Index Report"
     author_or_editor: "Stanford Institute for Human-Centered Artificial Intelligence"
     year: 2026
@@ -209,9 +209,9 @@ claims:
     confidence: "medium-high"
     uncertainty: "settled-for-work-package"
     sources:
-      - "aiw-src-alpac-1966"
-      - "aiw-src-lighthill-1973"
-      - "aiw-src-agar-2020"
+      - "src-alpac-1966"
+      - "src-lighthill-1973"
+      - "src-agar-lighthill-2020"
     review_flags:
       - "Do not imply ALPAC and Lighthill had identical scope or institutional effect."
 
@@ -221,9 +221,9 @@ claims:
     confidence: "medium"
     uncertainty: "debated"
     sources:
-      - "aiw-src-haigh-2023"
-      - "aiw-src-haigh-2024"
-      - "aiw-src-nrc-1999"
+      - "src-haigh-no-first-winter"
+      - "src-haigh-ai-boom-bust"
+      - "src-nrc-ai-1999"
     review_flags:
       - "Attribute periodization to sources."
       - "Avoid unqualified first-AI-winter phrasing."
@@ -234,10 +234,10 @@ claims:
     confidence: "high"
     uncertainty: "settled-for-work-package"
     sources:
-      - "aiw-src-feig-1977"
-      - "aiw-src-mycin-1984"
-      - "aiw-src-r1-1980"
-      - "aiw-src-r1rev-1984"
+      - "src-feigenbaum-1977"
+      - "src-mycin-1984"
+      - "src-r1-1980"
+      - "src-r1-revisited-1984"
     review_flags:
       - "Include success cases as well as limits."
 
@@ -247,9 +247,9 @@ claims:
     confidence: "medium-high"
     uncertainty: "settled-for-work-package"
     sources:
-      - "aiw-src-mycin-1984"
-      - "aiw-src-r1rev-1984"
-      - "aiw-src-nrc-1999"
+      - "src-mycin-1984"
+      - "src-r1-revisited-1984"
+      - "src-nrc-ai-1999"
     review_flags:
       - "Tie maintenance-cost examples to direct source text before final prose."
 
@@ -259,9 +259,9 @@ claims:
     confidence: "medium"
     uncertainty: "analogy-only"
     sources:
-      - "aiw-src-nist-rmf-2023"
-      - "aiw-src-aiindex-2026"
-      - "aiw-src-mycin-1984"
+      - "src-nist-ai-rmf"
+      - "src-hai-ai-index"
+      - "src-mycin-1984"
     review_flags:
       - "Do not claim current AI is repeating the 1980s expert-system cycle."
 
