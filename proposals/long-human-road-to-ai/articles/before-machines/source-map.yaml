@@ -1,0 +1,471 @@
+schema_version: 1
+package_id: before-machines
+issue: "aura-knowledge/meta#6"
+status: canon-normalized
+provisional: false
+sync_required_with: null
+accessed: "2026-06-19"
+
+source_policy:
+  public_sources_only: true
+  no_private_sources: true
+  visual_provenance_required: true
+  note: "IDs are normalized against the shared source canon."
+
+sources:
+  - id: src-chm-human-computers
+    title: "Human Computers"
+    url: "https://www.computerhistory.org/revolution/calculators/1/65"
+    type: museum-exhibit
+    authority: tertiary
+    accessed: "2026-06-19"
+    use_for:
+      - "The term computer referred to people doing calculations before electronic machines."
+      - "Human calculation work supported science, industry, national defense, and later computing machines."
+    cautions:
+      - "Use as accessible museum framing; corroborate detailed labor history with additional sources."
+
+  - id: src-smith-human-computers
+    title: "Human Computer Project"
+    url: "https://womenshistory.si.edu/human-computer-project"
+    type: museum-research-project
+    authority: tertiary
+    accessed: "2026-06-19"
+    use_for:
+      - "Human computing work included trained mathematicians and workers with basic skills."
+      - "By the late nineteenth century, much human computing labor increasingly fell to women."
+    cautions:
+      - "Use for social-history framing; avoid reducing all human computers to one institution or era."
+
+  - id: src-nist-math-tables
+    title: "Prehistory: The Math Tables Project"
+    url: "https://www.nist.gov/mathematics-statistics/prehistory-math-tables-project"
+    type: government-history
+    authority: tertiary
+    accessed: "2026-06-19"
+    use_for:
+      - "The WPA Mathematical Tables Project employed human computers to produce tables of mathematical functions."
+      - "Mathematical tables supported hand computation before electronic computers."
+    cautions:
+      - "This is a twentieth-century example; use as a clear late instance, not the whole history."
+
+  - id: src-chm-abacus
+    title: "The Versatile, Venerable Abacus"
+    url: "https://www.computerhistory.org/revolution/calculators/1/1"
+    type: museum-exhibit
+    authority: tertiary
+    accessed: "2026-06-19"
+    use_for:
+      - "Counting boards and abaci are durable examples of physical aids for arithmetic."
+      - "The Salamis tablet is presented as an old surviving calculating device."
+    cautions:
+      - "Do not use to claim one linear origin of computing."
+
+  - id: src-smithsonian-abacus
+    title: "The Abacus, the Numeral Frame, and Counters"
+    url: "https://www.si.edu/spotlight/the-abacus-the-numeral-frame-and-counters"
+    type: museum-exhibit
+    authority: tertiary
+    accessed: "2026-06-19"
+    use_for:
+      - "An abacus supports arithmetic by moving counters along rods, wires, or lines."
+      - "Small stones or counters made calculation physical and inspectable."
+    cautions:
+      - "Avoid treating abacus use as a single tradition; forms varied by place and time."
+
+  - id: src-whipple-napier
+    title: "John Napier's Calculating Tools"
+    url: "https://www.whipplemuseum.cam.ac.uk/explore-whipple-collections/calculating-devices/john-napiers-calculating-tools"
+    type: museum-exhibit
+    authority: tertiary
+    accessed: "2026-06-19"
+    use_for:
+      - "Napier's bones helped users break larger calculations into smaller parts."
+      - "The rods are useful as an example of procedural decomposition and teaching."
+    cautions:
+      - "Keep rods distinct from logarithms and from automatic calculation."
+
+  - id: src-smithsonian-napier-rods
+    title: "Napier's Rods"
+    url: "https://americanhistory.si.edu/collections/nmah_690812"
+    type: museum-object
+    authority: tertiary
+    accessed: "2026-06-19"
+    use_for:
+      - "Napier also discovered logarithms, later embodied in the slide rule."
+      - "Object-level example of calculation aids."
+    cautions:
+      - "The page is object-focused; use it to support artifact description, not broad causal claims."
+
+  - id: src-smg-pascal-calculator
+    title: "Replica of Pascal's Calculator"
+    url: "https://collection.sciencemuseumgroup.org.uk/objects/co60769/replica-of-pascals-calculator"
+    type: museum-object
+    authority: tertiary
+    accessed: "2026-06-19"
+    use_for:
+      - "Pascal's 1642 calculating machine was designed for addition and subtraction."
+      - "The machine helped explain the shift from hand-aided calculation to mechanical operation."
+    cautions:
+      - "Do not overstate practical adoption or general-purpose capability."
+
+  - id: src-chm-leibniz
+    title: "The Leibniz Step Reckoner and Curta Calculators"
+    url: "https://www.computerhistory.org/revolution/calculators/1/49"
+    type: museum-exhibit
+    authority: tertiary
+    accessed: "2026-06-19"
+    use_for:
+      - "Leibniz's stepped-drum mechanism influenced later calculator designs."
+      - "The Step Reckoner is useful for explaining four-function mechanical calculation."
+    cautions:
+      - "Keep mechanical calculator claims separate from Leibniz's philosophical logic program."
+
+  - id: src-sep-leibniz-logic
+    title: "Leibniz's Influence on 19th Century Logic"
+    url: "https://plato.stanford.edu/entries/leibniz-logic-influence/"
+    type: encyclopedia
+    authority: secondary
+    accessed: "2026-06-19"
+    use_for:
+      - "Leibniz imagined a symbolic method in which reasoning errors could be exposed through calculation-like manipulation."
+      - "Bridge from mechanical calculation to later formal logic."
+    cautions:
+      - "Use as foreshadowing only; detailed logic history belongs in the next article."
+
+  - id: src-mactutor-alkhwarizmi
+    title: "Al-Khwarizmi"
+    url: "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Khwarizmi/"
+    type: mathematics-history
+    authority: secondary
+    accessed: "2026-06-19"
+    use_for:
+      - "Al-Khwarizmi is relevant to algorithmic procedure and algebraic method."
+      - "Use as a non-European procedural bridge if final article length permits."
+    cautions:
+      - "Do not frame all algorithms as beginning with one person."
+
+  - id: src-nature-antikythera-2006
+    title: "Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism"
+    url: "https://www.nature.com/articles/nature05357"
+    type: research-article
+    authority: primary-research
+    accessed: "2026-06-19"
+    use_for:
+      - "The Antikythera mechanism calculated and displayed celestial information such as lunar phases and calendar cycles."
+      - "Useful for precise wording around astronomical calculation."
+    cautions:
+      - "Avoid using popular shorthand like 'first computer' without qualification."
+
+  - id: src-isaw-antikythera
+    title: "The Antikythera Mechanism"
+    url: "https://isaw.nyu.edu/research/antikythera-mechanism"
+    type: university-research-summary
+    authority: secondary
+    accessed: "2026-06-19"
+    use_for:
+      - "The mechanism displayed chronological cycles and heavenly motions or phenomena."
+      - "Useful accessible support for describing the device as an astronomical mechanism."
+    cautions:
+      - "Use with Nature source for technical claims."
+
+  - id: src-mpiwg-antikythera
+    title: "The Inscriptions of the Antikythera Mechanism"
+    url: "https://www.mpiwg-berlin.mpg.de/research/projects/inscriptions-antikythera-mechanism"
+    type: research-project
+    authority: secondary
+    accessed: "2026-06-19"
+    use_for:
+      - "Modern imaging revealed inscriptions on the fragments."
+      - "Useful for explaining uncertainty and reconstruction limits."
+    cautions:
+      - "Do not present reconstruction as complete certainty."
+
+  - id: src-science-museum-automata
+    title: "Marvellous Machines: Early Robots"
+    url: "https://www.sciencemuseum.org.uk/objects-and-stories/marvellous-machines-early-robots"
+    type: museum-story
+    authority: tertiary
+    accessed: "2026-06-19"
+    use_for:
+      - "Automata and early robot-like machines provide cultural context for mechanical imitation."
+      - "Useful for reader-friendly examples of self-moving devices."
+    cautions:
+      - "The word robot is modern; avoid projecting modern AI assumptions backward."
+
+  - id: src-britannica-automaton
+    title: "Automaton"
+    url: "https://www.britannica.com/technology/automaton"
+    type: encyclopedia
+    authority: tertiary
+    accessed: "2026-06-19"
+    use_for:
+      - "General definition: a mechanical object that is relatively self-operating after being set in motion."
+      - "Boundary language for automata as self-operating mechanisms."
+    cautions:
+      - "Use only for general definition, not deep historiography."
+
+  - id: src-chm-mech-turk
+    title: "Chatbots Decoded: Exploring AI"
+    url: "https://computerhistory.org/stories/chatbots-decoded/"
+    type: museum-story
+    authority: tertiary
+    accessed: "2026-06-19"
+    use_for:
+      - "The Mechanical Turk appeared to play chess but concealed a skilled human player."
+      - "Useful as a cautionary example about hidden human labor behind apparent machine intelligence."
+    cautions:
+      - "Use only as a cautionary contrast; it was a deception, not an autonomous thinking machine."
+
+  - id: src-smithsonian-punch-cards
+    title: "Punch Cards"
+    url: "https://www.si.edu/spotlight/punch-cards"
+    type: museum-exhibit
+    authority: tertiary
+    accessed: "2026-06-19"
+    use_for:
+      - "Babbage admired Jacquard's invention and suggested punch cards for computing devices."
+      - "Punched-card control is useful as a bridge from textile mechanism to computing input/control."
+    cautions:
+      - "Do not call Jacquard cards full modern software without boundary language."
+
+  - id: src-smg-jacquard
+    title: "Programming Patterns: The Story of the Jacquard Loom"
+    url: "https://www.scienceandindustrymuseum.org.uk/objects-and-stories/jacquard-loom"
+    type: museum-story
+    authority: tertiary
+    accessed: "2026-06-19"
+    use_for:
+      - "Jacquard cards stored weaving patterns and influenced Babbage's thinking."
+      - "Useful for explaining controlled patterns to general readers."
+    cautions:
+      - "The loom reproduced patterns; it did not reason."
+
+  - id: src-smg-babbage
+    title: "Charles Babbage's Difference Engines and the Science Museum"
+    url: "https://www.sciencemuseum.org.uk/objects-and-stories/charles-babbages-difference-engines-and-science-museum"
+    type: museum-story
+    authority: tertiary
+    accessed: "2026-06-19"
+    use_for:
+      - "Babbage's Difference Engine and Analytical Engine provide the article's threshold to automatic calculation."
+      - "The Analytical Engine was designed to perform calculations set before it."
+    cautions:
+      - "Babbage's most ambitious engines were not completed by him; keep built versus designed distinction clear."
+
+  - id: src-smg-babbage
+    title: "The Babbage Engine"
+    url: "https://www.computerhistory.org/babbage/"
+    type: museum-exhibit
+    authority: tertiary
+    accessed: "2026-06-19"
+    use_for:
+      - "Babbage designed automatic computing engines and failed to build complete versions in his lifetime."
+      - "Difference Engine No. 2 was later built from original drawings."
+    cautions:
+      - "Museum phrasing may call Babbage a computer pioneer; avoid turning that into a direct AI-origin claim."
+
+  - id: src-sep-computing
+    title: "The Modern History of Computing"
+    url: "https://plato.stanford.edu/entries/computing-history/"
+    type: encyclopedia
+    authority: secondary
+    accessed: "2026-06-19"
+    use_for:
+      - "General chronology and careful framing of Babbage, computation, and computing machines."
+      - "Useful for source-checking technical terminology."
+    cautions:
+      - "This source covers broader computing history; use only the parts relevant to this package."
+
+claims:
+  - id: claim-human-computation-labor
+    claim: "Computation was performed by people before it became associated with electronic machines."
+    claim_type: historical-fact
+    confidence: high
+    source_ids:
+      - src-chm-human-computers
+      - src-smith-human-computers
+      - src-nist-math-tables
+    article_use: "Opening frame: computing begins as human work."
+    boundary: "Do not treat human workers as interchangeable machine parts; include labor and institutional context."
+
+  - id: claim-external-state
+    claim: "Counting boards and abaci moved arithmetic into visible physical state that could be manipulated and checked."
+    claim_type: interpretation
+    confidence: medium-high
+    source_ids:
+      - src-chm-abacus
+      - src-smithsonian-abacus
+    article_use: "Explain why externalized calculation mattered."
+    boundary: "The tool does not supply purpose, control flow, or judgment."
+
+  - id: claim-decompose-work
+    claim: "Rods, tables, and logarithmic methods reduced complex calculations by decomposing or reusing prior work."
+    claim_type: interpretation
+    confidence: medium
+    source_ids:
+      - src-whipple-napier
+      - src-smithsonian-napier-rods
+      - src-nist-math-tables
+    article_use: "Introduce lookup, reuse, and decomposition in plain language."
+    boundary: "Use modern terms like cache or lookup only as analogies with limits."
+
+  - id: claim-mech-calc
+    claim: "Seventeenth-century mechanical calculators embodied arithmetic operations in physical mechanisms."
+    claim_type: historical-fact
+    confidence: high
+    source_ids:
+      - src-smg-pascal-calculator
+      - src-chm-leibniz
+    article_use: "Show the shift from hand-aided calculation to automatic arithmetic."
+    boundary: "Do not imply general programmability or intelligence."
+
+  - id: claim-antikythera
+    claim: "The Antikythera mechanism was a sophisticated geared astronomical calculator or display mechanism."
+    claim_type: historical-fact
+    confidence: high
+    source_ids:
+      - src-nature-antikythera-2006
+      - src-isaw-antikythera
+      - src-mpiwg-antikythera
+    article_use: "Use as an example of calculating and displaying astronomical cycles."
+    boundary: "Do not call it AI; qualify any use of 'computer' as analog or historical terminology."
+
+  - id: claim-automata-projected-agency
+    claim: "Automata made mechanism appear self-directed, inviting audiences to project life or agency onto fixed motion."
+    claim_type: interpretation
+    confidence: medium
+    source_ids:
+      - src-science-museum-automata
+      - src-britannica-automaton
+    article_use: "Explain the cultural dream of mechanical action."
+    boundary: "Apparent agency is not perception, learning, or understanding."
+
+  - id: claim-mech-turk
+    claim: "The Mechanical Turk is a cautionary example of apparent machine intelligence hiding human labor."
+    claim_type: historical-fact
+    confidence: high
+    source_ids:
+      - src-chm-mech-turk
+    article_use: "Use only if the article discusses hidden human labor behind apparent autonomous action."
+    boundary: "Do not treat the Mechanical Turk as an automaton that genuinely played chess or reasoned."
+
+  - id: claim-jacquard
+    claim: "Jacquard punched cards controlled textile patterns and influenced later ideas about machine input and control."
+    claim_type: historical-fact
+    confidence: medium-high
+    source_ids:
+      - src-smithsonian-punch-cards
+      - src-smg-jacquard
+    article_use: "Bridge physical instructions to later programmable machines."
+    boundary: "The loom controlled weaving patterns; it did not perform general-purpose computation."
+
+  - id: claim-babbage-threshold
+    claim: "Babbage's engines mark a threshold between mechanical arithmetic and designs for automatic computing machinery."
+    claim_type: interpretation
+    confidence: medium-high
+    source_ids:
+      - src-smg-babbage
+      - src-sep-computing
+    article_use: "Close the article by pointing to formal computation."
+    boundary: "Keep designed, built, and later reconstructed machines distinct."
+
+  - id: claim-reasoning-as-calculation
+    claim: "Leibniz's logical ambitions show an early dream that reasoning might be represented and checked through calculation-like symbol manipulation."
+    claim_type: interpretation
+    confidence: medium
+    source_ids:
+      - src-sep-leibniz-logic
+      - src-chm-leibniz
+    article_use: "Foreshadow the next article on formal logic and computation."
+    boundary: "Do not make this a direct causal origin story for modern AI."
+
+  - id: claim-procedure-bg
+    claim: "Al-Khwarizmi is useful background for stepwise mathematical procedures and the later word algorithm."
+    claim_type: historical-context
+    confidence: medium
+    source_ids:
+      - src-mactutor-alkhwarizmi
+    article_use: "Optional short bridge if the article needs a non-European procedural example."
+    boundary: "Avoid single-founder mythology and keep the full algorithm history for later articles."
+
+analogies:
+  - id: analogy-abacus-working-memory
+    comparison: "abacus as visible working memory"
+    helps: "Shows how a calculation can have an external state."
+    limit: "The human operator supplies the rules and knows what the beads mean."
+    related_claims:
+      - claim-external-state
+
+  - id: analogy-table-cache
+    comparison: "mathematical table as cached work"
+    helps: "Shows why precomputed results can save repeated labor."
+    limit: "A table is static, narrow, and does not retrieve or reason by itself."
+    related_claims:
+      - claim-decompose-work
+
+  - id: analogy-napier-lookup-transform
+    comparison: "Napier's rods as lookup plus transformation"
+    helps: "Shows how a hard operation can be decomposed into easier visible steps."
+    limit: "The rods do not choose the method or verify the goal."
+    related_claims:
+      - claim-decompose-work
+
+  - id: analogy-jacquard
+    comparison: "Jacquard cards as stored pattern instructions"
+    helps: "Shows how a machine can be controlled by an external encoded sequence."
+    limit: "The sequence controls weaving, not general symbolic computation."
+    related_claims:
+      - claim-jacquard
+
+  - id: analogy-automata-theater
+    comparison: "automata as theater of mechanism"
+    helps: "Shows why mechanical motion could make agency feel plausible."
+    limit: "Fixed motion is not sensing, learning, intention, or understanding."
+    related_claims:
+      - claim-automata-projected-agency
+
+  - id: analogy-human-work
+    comparison: "human computer office as coordinated calculation work"
+    helps: "Shows how large calculations could be organized and checked across people."
+    limit: "People are workers in social institutions, not neutral processors."
+    related_claims:
+      - claim-human-computation-labor
+
+visual_candidates:
+  included_assets: []
+  provenance_rule: "No image, diagram, or screenshot may be added without public source, license status, and attribution notes."
+  candidates:
+    - id: visual-need-tool-system
+      format: diagram
+      purpose: "Show calculation need moving from memory to marks to tools to mechanisms."
+      provenance: original-diagram-required
+    - id: visual-threshold-timeline
+      format: timeline
+      purpose: "Show selected milestones only; avoid complete chronology."
+      provenance: original-diagram-required
+    - id: visual-symbol-rule-mechanism
+      format: layer-diagram
+      purpose: "Separate symbol, rule, operator, and mechanism."
+      provenance: original-diagram-required
+    - id: visual-analogy-boundaries
+      format: table
+      purpose: "Keep analogies and limits visible to readers."
+      provenance: original-table-required
+
+review_flags:
+  - "Source IDs are normalized against issue #5; keep any later additions aligned with the shared source canon."
+  - "Avoid 'first computer' claims unless the sentence defines the sense of computer."
+  - "Keep Antikythera, automata, and Jacquard examples contextual rather than deterministic."
+  - "Add non-Western procedural history only where source-backed and relevant to the narrow article."
+  - "Include labor and institution context so the article is not only an artifact timeline."
+
+privacy_check:
+  no_client_names: true
+  no_project_codenames: true
+  no_proprietary_code: true
+  no_internal_urls: true
+  no_personal_information: true
+  public_sources_only: true
+  screenshots_included: false
+  notes: "All examples are public historical references or abstract teaching analogies."
