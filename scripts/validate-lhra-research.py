@@ -179,6 +179,34 @@ def validate_card_schema(research_dir: Path, errors: list[str]) -> dict:
     return schema
 
 
+def validate_source_id_map(research_dir: Path, source_ids: set[str], errors: list[str]) -> None:
+    path = research_dir / "source-id-map.yaml"
+    if not path.exists():
+        return
+
+    source_map = load_yaml(path, errors)
+    if not isinstance(source_map, dict):
+        errors.append("source-id-map.yaml must parse to a mapping")
+        return
+    packages = source_map.get("packages")
+    if not isinstance(packages, dict) or not packages:
+        errors.append("source-id-map.yaml must define packages")
+        return
+    for package, mappings in packages.items():
+        if not isinstance(mappings, dict) or not mappings:
+            errors.append(f"source-id-map.yaml packages.{package} must be a non-empty mapping")
+            continue
+        for local_id, canon_id in mappings.items():
+            if not isinstance(local_id, str) or missing(local_id):
+                errors.append(f"source-id-map.yaml packages.{package} has an invalid local source id")
+            if not isinstance(canon_id, str) or missing(canon_id):
+                errors.append(f"source-id-map.yaml packages.{package}.{local_id} must map to a canon source id")
+            elif canon_id not in source_ids:
+                errors.append(
+                    f"source-id-map.yaml packages.{package}.{local_id} unknown canon id: {canon_id}"
+                )
+
+
 def card_id_validator(schema: dict) -> tuple[re.Pattern[str], int]:
     id_policy = schema.get("id_policy", {})
     pattern = str(id_policy.get("card_id_pattern", r"^$"))
@@ -390,6 +418,7 @@ def main() -> int:
     else:
         canon, source_ids = validate_source_canon(research_dir, errors)
         schema = validate_card_schema(research_dir, errors)
+        validate_source_id_map(research_dir, source_ids, errors)
         card_count = validate_cards(research_dir, schema, canon, source_ids, errors)
 
     if errors:

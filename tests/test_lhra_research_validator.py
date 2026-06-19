@@ -144,6 +144,19 @@ def test_outside_allow_list_source_requires_specific_publicness_note(tmp_path: P
     assert "domain 'example.com' is outside the default allow-list" in result.stderr
 
 
+def test_source_id_map_unknown_target_fails(tmp_path: Path) -> None:
+    proposal = copy_proposal(tmp_path)
+    map_path = proposal / "research" / "source-id-map.yaml"
+    source_map = yaml.safe_load(map_path.read_text(encoding="utf-8"))
+    source_map["packages"]["learning-machines"]["source-rosenblatt-1958"] = "src-not-in-canon"
+    map_path.write_text(yaml.safe_dump(source_map, sort_keys=False), encoding="utf-8")
+
+    result = run_validator(tmp_path)
+
+    assert result.returncode == 1
+    assert "source-id-map.yaml packages.learning-machines.source-rosenblatt-1958 unknown canon id: src-not-in-canon" in result.stderr
+
+
 def test_analogy_limits_required(tmp_path: Path) -> None:
     proposal = copy_proposal(tmp_path)
     card = valid_card()

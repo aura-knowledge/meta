@@ -54,13 +54,13 @@ packages:
     prov-britannica-cybernetics: src-britannica-cybernetics
     prov-church-turing-sep: src-sep-church-turing
     prov-godel-sep: src-sep-godel
-    prov-leibniz-sep: src-sep-leibniz-logic-2
+    prov-leibniz-sep: src-sep-leibniz-logic
     prov-post-processes: src-post-1936
     prov-principia-archive: src-principia-archive
     prov-shannon-info: src-shannon-info-1948
     prov-shannon-info-pdf: src-shannon-info-pdf
     prov-shannon-switching: src-shannon-switching
-    prov-turing-computable: src-turing-computable-doi
+    prov-turing-computable: src-turing-1936
     provisional-boole-laws-thought: src-boole-laws-thought
     provisional-chm-digital-logic: src-chm-digital-logic
     provisional-church-sep: src-sep-church
@@ -90,7 +90,7 @@ packages:
     source-toolformer: src-toolformer-2023
     source-transformer: src-transformer-2017
   human-systems:
-    src-eu-ai-act: src-eu-ai-act-2
+    src-eu-ai-act: src-eu-ai-act
     src-iea-energy: src-iea-energy-ai
     src-ilo-jobs: src-ilo-genai-jobs
     src-itu-access: src-itu-facts-2025
@@ -113,9 +113,9 @@ packages:
     source-imagenet-site: src-imagenet-site
     source-lecun-docrec-1998: src-lecun-docrec-1998
     source-minsky-papert-1969: src-minsky-papert-1969
-    source-rosenblatt-1958: src-rosenblatt-1958-2
+    source-rosenblatt-1958: src-rosenblatt-1958
     source-rumelhart-backprop-1986: src-backprop-1986
     source-samuel-1959: src-samuel-1959
-    source-sutton-bitter-2019: src-sutton-bitter-2
+    source-sutton-bitter-2019: src-sutton-bitter
 schema_version: 1
 updated: '2026-06-19'

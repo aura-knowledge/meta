@@ -835,11 +835,11 @@ sources:
     url: https://womenshistory.si.edu/human-computer-project
     source_type: original-paper
     authority: tertiary
-    publisher: omenshistory.si.edu
+    publisher: "Smithsonian American Women's History Museum"
     accessed: '2026-06-19'
     status: active
     public_access: open-web
-    access_notes: Public source; omenshistory.si.edu is outside the default allow-list and is justified as a public source for
+    access_notes: Public source; womenshistory.si.edu is outside the default allow-list and is justified as a public source for
       the before-machines work package.
     best_for:
     - Human computing work included trained mathematicians and workers with basic skills.
@@ -919,11 +919,11 @@ sources:
     url: https://www.whipplemuseum.cam.ac.uk/explore-whipple-collections/calculating-devices/john-napiers-calculating-tools
     source_type: museum-collection
     authority: tertiary
-    publisher: hipplemuseum.cam.ac.uk
+    publisher: "Whipple Museum of the History of Science"
     accessed: '2026-06-19'
     status: active
     public_access: open-web
-    access_notes: Public source; hipplemuseum.cam.ac.uk is outside the default allow-list and is justified as a public source
+    access_notes: Public source; whipplemuseum.cam.ac.uk is outside the default allow-list and is justified as a public source
       for the before-machines work package.
     best_for:
     - Napier's bones helped users break larger calculations into smaller parts.
@@ -1554,26 +1554,6 @@ sources:
       notes: Use for source citation and factual structure, not visual reuse by default.
     added_for: Canon expansion for learning-machines article work package.
     notes: Use as an early machine-learning example built around checkers and evaluated improvement.
-  - id: src-rosenblatt-1958-2
-    title: 'The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain'
-    url: https://homepages.math.uic.edu/~lreyzin/papers/rosenblatt58.pdf
-    source_type: original-paper
-    authority: primary
-    publisher: homepages.math.uic.edu
-    accessed: '2026-06-19'
-    status: active
-    public_access: open-web
-    access_notes: Public source; homepages.math.uic.edu is outside the default allow-list and is justified as a public source
-      for the learning-machines work package.
-    best_for:
-    - claim-lm-003
-    limitations:
-    - Keep biological analogy bounded; this is not a claim that perceptrons explain the brain.
-    visual_use:
-      reuse: metadata-only
-      notes: Use for source citation and factual structure, not visual reuse by default.
-    added_for: Canon expansion for learning-machines article work package.
-    notes: Use for connectionist framing, adaptive connections, pattern recognition, and probabilistic analysis.
   - id: src-minsky-papert-1969
     title: 'Perceptrons: An Introduction to Computational Geometry'
     url: https://mitpress.mit.edu/9780262630221/perceptrons/
@@ -1733,26 +1713,6 @@ sources:
       notes: Use for source citation and factual structure, not visual reuse by default.
     added_for: Canon expansion for learning-machines article work package.
     notes: Use for modern deep-learning concepts, training, optimization, representation learning, and caveats.
-  - id: src-sutton-bitter-2
-    title: The Bitter Lesson
-    url: https://www.incompleteideas.net/IncIdeas/BitterLesson.html
-    source_type: encyclopedia-entry
-    authority: modern-commentary
-    publisher: incompleteideas.net
-    accessed: '2026-06-19'
-    status: active
-    public_access: open-web
-    access_notes: Public source; incompleteideas.net is outside the default allow-list and is justified as a public source for
-      the learning-machines work package.
-    best_for:
-    - claim-lm-010
-    limitations:
-    - Do not let this lens flatten the roles of data, labor, institutions, or domain knowledge.
-    visual_use:
-      reuse: metadata-only
-      notes: Use for source citation and factual structure, not visual reuse by default.
-    added_for: Canon expansion for learning-machines article work package.
-    notes: Use only as a marked interpretive lens about general methods and compute scaling.
   - id: src-ilo-genai-jobs
     title: 'Generative AI and Jobs: A Refined Global Index of Occupational Exposure'
     url: https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure
@@ -1793,26 +1753,6 @@ sources:
       notes: Use for source citation and factual structure, not visual reuse by default.
     added_for: Canon expansion for human-systems article work package.
     notes: Use for data enrichment workers and the hidden human judgment behind AI systems.
-  - id: src-eu-ai-act-2
-    title: Regulation (EU) 2024/1689, Artificial Intelligence Act
-    url: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng
-    source_type: official-guidance
-    authority: primary
-    publisher: European Union
-    accessed: '2026-06-19'
-    status: active
-    public_access: open-web
-    access_notes: Public source; eur-lex.europa.eu is outside the default allow-list and is justified as a public source for
-      the human-systems work package.
-    best_for:
-    - claim-human-003
-    limitations:
-    - Use for dated EU legal framing. Avoid giving legal advice.
-    visual_use:
-      reuse: metadata-only
-      notes: Use for source citation and factual structure, not visual reuse by default.
-    added_for: Canon expansion for human-systems article work package.
-    notes: Use for dated EU legal framing. Avoid giving legal advice.
   - id: src-oecd-ai-principles
     title: OECD AI Principles
     url: https://oecd.ai/en/ai-principles
@@ -2202,26 +2142,6 @@ sources:
       notes: Use for source citation and factual structure, not visual reuse by default.
     added_for: Canon expansion for ai-winters article work package.
     notes: Attribute claims and avoid using the source as sole evidence for exact commercial figures.
-  - id: src-sep-leibniz-logic-2
-    title: Leibniz's Influence on 19th Century Logic
-    url: https://plato.stanford.edu/entries/leibniz-logic-influence/
-    source_type: encyclopedia-entry
-    authority: tertiary
-    publisher: Stanford Encyclopedia of Philosophy
-    accessed: '2026-06-19'
-    status: active
-    public_access: open-web
-    access_notes: Public source; plato.stanford.edu is outside the default allow-list and is justified as a public source for
-      the formal-logic work package.
-    best_for:
-    - Background only for earlier dreams of symbolic reasoning and universal characteristic.
-    limitations:
-    - Do not overstate Leibniz as a direct origin of modern computation; use as a prehistory note only.
-    visual_use:
-      reuse: metadata-only
-      notes: Use for source citation and factual structure, not visual reuse by default.
-    added_for: Canon expansion for formal-logic article work package.
-    notes: Imported from package-local source map; review before article publication.
   - id: src-boole-laws-thought
     title: An Investigation of the Laws of Thought
     url: https://archive.org/details/investigationofl01bool
@@ -2358,25 +2278,6 @@ sources:
     - Main context source for effective methods, Turing/Church equivalence, and common misunderstandings.
     limitations:
     - Keep the thesis about effective methods; do not turn it into a claim about all physical machines or minds.
-    visual_use:
-      reuse: metadata-only
-      notes: Use for source citation and factual structure, not visual reuse by default.
-    added_for: Canon expansion for formal-logic article work package.
-    notes: Imported from package-local source map; review before article publication.
-  - id: src-turing-computable-doi
-    title: On Computable Numbers, with an Application to the Entscheidungsproblem
-    url: https://doi.org/10.1112/plms/s2-42.1.230
-    source_type: original-paper
-    authority: primary
-    publisher: DOI
-    accessed: '2026-06-19'
-    status: active
-    public_access: public-doi
-    access_notes: Public source.
-    best_for:
-    - Primary anchor for Turing machines and the decision-problem result.
-    limitations:
-    - Use DOI metadata plus public secondary context; avoid quoting inaccessible text from paywalled copy.
     visual_use:
       reuse: metadata-only
       notes: Use for source citation and factual structure, not visual reuse by default.
@@ -2523,11 +2424,11 @@ sources:
     url: https://web.mit.edu/STS.035/www/PDFs/edvac.pdf
     source_type: original-paper
     authority: primary
-    publisher: eb.mit.edu
+    publisher: "MIT Press"
     accessed: '2026-06-19'
     status: active
     public_access: open-web
-    access_notes: Public source; eb.mit.edu is outside the default allow-list and is justified as a public source for the formal-logic
+    access_notes: Public source; direct.mit.edu is outside the default allow-list and is justified as a public source for the formal-logic
       work package.
     best_for:
     - Optional note on stored-program architecture and the machine execution of instructions.
