@@ -58,7 +58,7 @@ sources:
     type: "research-paper"
     authority: "primary-publication"
     claim_types: ["fact", "technical-example"]
-    supports: ["claim-lm-003"]
+    supports: ["claim-lm-003", "claim-lm-004"]
     notes: "Use for connectionist framing, adaptive connections, pattern recognition, and probabilistic analysis."
     cautions: "Keep biological analogy bounded; this is not a claim that perceptrons explain the brain."
 
@@ -154,7 +154,7 @@ sources:
     type: "textbook"
     authority: "textbook"
     claim_types: ["concept", "technical-background"]
-    supports: ["claim-lm-009"]
+    supports: ["claim-lm-005", "claim-lm-009", "claim-lm-010"]
     notes: "Use for supervised learning, inference, prediction, and generalization framing."
     cautions: "Use for conceptual grounding, not as a historical primary source."
 
@@ -209,14 +209,14 @@ claims:
     type: "interpretation"
     confidence: "medium-high"
     uncertainty: "debated"
-    source_ids: ["src-minsky-papert-1969"]
+    source_ids: ["src-minsky-papert-1969", "src-rosenblatt-1958"]
 
   - id: "claim-lm-005"
     claim: "The 1986 Nature paper helped make backpropagation for multilayer networks practically legible to a broad research audience."
     type: "interpretation"
     confidence: "high"
     uncertainty: "settled"
-    source_ids: ["src-backprop-1986"]
+    source_ids: ["src-backprop-1986", "src-deep-learning-book"]
 
   - id: "claim-lm-006"
     claim: "Gradient-trained convolutional networks were demonstrated in practical document-recognition systems before ImageNet."
@@ -251,7 +251,7 @@ claims:
     type: "interpretation"
     confidence: "medium"
     uncertainty: "debated"
-    source_ids: ["src-sutton-bitter"]
+    source_ids: ["src-sutton-bitter", "src-deep-learning-book"]
 
 analogy_boundaries:
   - concept: "loss"

@@ -70,16 +70,16 @@ Use source IDs from `source-map.yaml` instead of inventing inline source names.
 
 Minimum source expectations:
 
-- Dartmouth framing: `source-dartmouth-1955`
-- early learning example: `source-samuel-1959`
-- perceptron: `source-rosenblatt-1958`
-- perceptron limits: `source-minsky-papert-1969`
-- backpropagation: `source-rumelhart-backprop-1986`
-- document recognition continuity: `source-lecun-docrec-1998`
-- data and benchmarks: `source-imagenet-site`, `source-imagenet-2015`
-- 2012 hinge: `source-alexnet-2012`
-- generalization and modern technical context: `source-esl-2009`, `source-deep-learning-2016`
-- compute-scaling commentary: `source-sutton-bitter-2019`
+- Dartmouth framing: `src-dartmouth-1955`
+- early learning example: `src-samuel-1959`
+- perceptron: `src-rosenblatt-1958`
+- perceptron limits: `src-minsky-papert-1969`
+- backpropagation: `src-backprop-1986`
+- document recognition continuity: `src-lecun-docrec-1998`
+- data and benchmarks: `src-imagenet-site`, `src-imagenet-2015`
+- 2012 hinge: `src-alexnet-2012`
+- generalization and modern technical context: `src-elements-stat-learning`, `src-deep-learning-book`
+- compute-scaling commentary: `src-sutton-bitter`
 
 Mark commentary as commentary. Do not use a modern essay as the only support for a factual historical claim.
 

@@ -75,16 +75,16 @@ End the article by preparing the reader for foundation models: once learning sys
 
 | Claim ID | Claim | Source IDs | Confidence | Caveat |
 |---|---|---|---|---|
-| `claim-lm-001` | The field's early public framing already included learning as a central feature of intelligence. | `source-dartmouth-1955` | high | Dartmouth is field-framing context, not evidence that early systems achieved the goal. |
-| `claim-lm-002` | Samuel's checkers work is an early example of a program improving through machine-learning procedures. | `source-samuel-1959` | high | Avoid repeating the common "without being explicitly programmed" definition unless separately sourced. |
-| `claim-lm-003` | Rosenblatt's perceptron framed pattern recognition through adaptive connections and probabilistic analysis. | `source-rosenblatt-1958` | high | Do not treat the perceptron as equivalent to modern deep learning. |
-| `claim-lm-004` | Minsky and Papert analyzed limitations of perceptron models, helping define why simple architectures were insufficient. | `source-minsky-papert-1969` | medium-high | Avoid the simplistic "book killed the field" claim. |
-| `claim-lm-005` | The 1986 backpropagation paper helped make multilayer neural-network training practically legible to a broad research audience. | `source-rumelhart-backprop-1986` | high | Phrase as influential demonstration/popularization, not sole invention. |
-| `claim-lm-006` | Gradient-trained convolutional networks were demonstrated in practical document-recognition systems before the ImageNet era. | `source-lecun-docrec-1998` | high | Keep this as historical continuity, not a claim that the modern wave was inevitable. |
-| `claim-lm-007` | ImageNet and ILSVRC helped turn large-scale labeled data and shared benchmarks into infrastructure for computer-vision progress. | `source-imagenet-2015`, `source-imagenet-site` | high | Benchmarks measure defined tasks, not all visual understanding. |
-| `claim-lm-008` | AlexNet made the combination of deep networks, ImageNet-scale data, and GPU implementation newly persuasive in 2012. | `source-alexnet-2012`, `source-imagenet-2015` | high | Do not erase parallel deep-learning work outside ImageNet. |
-| `claim-lm-009` | Statistical learning should be explained through generalization to new cases, not memorization of training examples. | `source-esl-2009`, `source-deep-learning-2016` | high | Generalization depends on the relationship between training, test, and deployment distributions. |
-| `claim-lm-010` | The compute-scaling interpretation is useful but interpretive; it should be marked as modern commentary. | `source-sutton-bitter-2019` | medium | Sutton's essay is a lens, not the whole history. |
+| `claim-lm-001` | The field's early public framing already included learning as a central feature of intelligence. | `src-dartmouth-1955` | high | Dartmouth is field-framing context, not evidence that early systems achieved the goal. |
+| `claim-lm-002` | Samuel's checkers work is an early example of a program improving through machine-learning procedures. | `src-samuel-1959` | high | Avoid repeating the common "without being explicitly programmed" definition unless separately sourced. |
+| `claim-lm-003` | Rosenblatt's perceptron framed pattern recognition through adaptive connections and probabilistic analysis. | `src-rosenblatt-1958` | high | Do not treat the perceptron as equivalent to modern deep learning. |
+| `claim-lm-004` | Minsky and Papert analyzed limitations of perceptron models, helping define why simple architectures were insufficient. | `src-minsky-papert-1969`, `src-rosenblatt-1958` | medium-high | Avoid the simplistic "book killed the field" claim. |
+| `claim-lm-005` | The 1986 backpropagation paper helped make multilayer neural-network training practically legible to a broad research audience. | `src-backprop-1986`, `src-deep-learning-book` | high | Phrase as influential demonstration/popularization, not sole invention. |
+| `claim-lm-006` | Gradient-trained convolutional networks were demonstrated in practical document-recognition systems before the ImageNet era. | `src-lecun-docrec-1998` | high | Keep this as historical continuity, not a claim that the modern wave was inevitable. |
+| `claim-lm-007` | ImageNet and ILSVRC helped turn large-scale labeled data and shared benchmarks into infrastructure for computer-vision progress. | `src-imagenet-2015`, `src-imagenet-site` | high | Benchmarks measure defined tasks, not all visual understanding. |
+| `claim-lm-008` | AlexNet made the combination of deep networks, ImageNet-scale data, and GPU implementation newly persuasive in 2012. | `src-alexnet-2012`, `src-imagenet-2015` | high | Do not erase parallel deep-learning work outside ImageNet. |
+| `claim-lm-009` | Statistical learning should be explained through generalization to new cases, not memorization of training examples. | `src-elements-stat-learning`, `src-deep-learning-book` | high | Generalization depends on the relationship between training, test, and deployment distributions. |
+| `claim-lm-010` | The compute-scaling interpretation is useful but interpretive; it should be marked as modern commentary. | `src-sutton-bitter`, `src-deep-learning-book` | medium | Sutton's essay is a lens, not the whole history. |
 
 ## Analogy Map
 
