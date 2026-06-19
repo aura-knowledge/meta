@@ -23,6 +23,35 @@ def load_schema(name: str) -> dict[str, Any]:
     return load_json(schema_path(name))
 
 
+def _local_schema_store() -> dict[str, dict[str, Any]]:
+    """Map public schema IDs to their local schema documents."""
+    store: dict[str, dict[str, Any]] = {}
+    for path in (PACKAGED_SCHEMA_DIR, REPO_SCHEMA_DIR):
+        if not path.exists():
+            continue
+        for schema_file in path.glob("*.schema.json"):
+            schema = load_json(schema_file)
+            schema_id = schema.get("$id")
+            if isinstance(schema_id, str):
+                store[schema_id] = schema
+    return store
+
+
+def _jsonschema_validator(jsonschema: Any, validator_cls: Any, schema: dict[str, Any]) -> Any:
+    store = _local_schema_store()
+    try:
+        from referencing import Registry, Resource
+
+        resources = [
+            (schema_id, Resource.from_contents(local_schema))
+            for schema_id, local_schema in store.items()
+        ]
+        return validator_cls(schema, registry=Registry().with_resources(resources))
+    except (ImportError, TypeError):
+        resolver = jsonschema.RefResolver.from_schema(schema, store=store)
+        return validator_cls(schema, resolver=resolver)
+
+
 def _check_required(payload: Any, schema: dict[str, Any], path: str = "$") -> list[str]:
     """Basic required-field validator."""
     errors: list[str] = []
@@ -118,7 +147,7 @@ def validate(payload: dict[str, Any], schema_name: str) -> list[str]:
             if "2020-12" in schema.get("$schema", "")
             else jsonschema.Draft7Validator
         )
-        validator = validator_cls(schema)
+        validator = _jsonschema_validator(jsonschema, validator_cls, schema)
         return [str(e.message) for e in validator.iter_errors(payload)]
     except ImportError:
         pass

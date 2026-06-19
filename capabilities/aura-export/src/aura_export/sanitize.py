@@ -48,13 +48,12 @@ def check_sources(payload: dict[str, Any], cfg: dict[str, Any] | None = None) ->
     if cfg is None:
         cfg = config.load_config()
 
-    allow_list = config.source_allow_list(cfg)
+    allow_list = [_normalize_domain(domain) for domain in config.source_allow_list(cfg)]
     warnings: list[str] = []
     sources = payload.get("sources", [])
     for i, source in enumerate(sources):
         url = source.get("url", "")
-        parsed = urlparse(url)
-        domain = parsed.netloc.lower().lstrip("www.")
+        domain = _normalize_domain(urlparse(url).hostname or "")
         if domain and not any(domain == allowed or domain.endswith(f".{allowed}") for allowed in allow_list):
             warnings.append(
                 f"sources[{i}] domain '{domain}' is not in the allow-list; "
@@ -78,6 +77,13 @@ def check_abstraction_examples(payload: dict[str, Any]) -> list[str]:
         elif original.lower() == abstracted.lower():
             errors.append(f"abstraction_examples[{i}] original and abstracted values are identical.")
     return errors
+
+
+def _normalize_domain(domain: str) -> str:
+    normalized = domain.lower()
+    if normalized.startswith("www."):
+        return normalized[4:]
+    return normalized
 
 
 def apply_abstraction_hints(text: str, cfg: dict[str, Any] | None = None) -> tuple[str, list[dict[str, str]]]:

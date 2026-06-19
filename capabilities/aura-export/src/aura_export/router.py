@@ -82,7 +82,7 @@ def build_article_proposal_payload(draft: dict[str, Any]) -> dict[str, Any]:
         payload["other_stem_proposed"] = draft["other_stem_proposed"]
     if draft.get("related_articles"):
         payload["related_articles"] = draft["related_articles"]
-    if draft.get("provenance_bundle") and not schemas.validate_provenance_bundle(draft["provenance_bundle"]):
+    if _valid_provenance_bundle(draft):
         payload["provenance_bundle"] = draft["provenance_bundle"]
 
     return payload
@@ -108,6 +108,8 @@ def build_org_feedback_payload(draft: dict[str, Any]) -> dict[str, Any]:
         payload["agent_involvement"] = draft["agent_involvement"]
     if draft.get("proposed_topic_stem"):
         payload["proposed_topic_stem"] = draft["proposed_topic_stem"]
+    if _valid_provenance_bundle(draft):
+        payload["provenance_bundle"] = draft["provenance_bundle"]
 
     return payload
 
@@ -151,3 +153,9 @@ def _normalize_abstraction_examples(examples: list[dict[str, Any]]) -> list[dict
         abstracted = example.get("abstracted", example.get("abstract", ""))
         normalized.append({"original": original, "abstracted": abstracted})
     return normalized
+
+
+def _valid_provenance_bundle(draft: dict[str, Any]) -> bool:
+    return bool(draft.get("provenance_bundle")) and not schemas.validate_provenance_bundle(
+        draft["provenance_bundle"]
+    )

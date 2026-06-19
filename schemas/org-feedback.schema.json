@@ -25,6 +25,7 @@
     "impact": { "type": "string", "minLength": 40 },
     "proposed_topic_stem": { "type": "string", "pattern": "^[a-z0-9-/]+$" },
     "privacy_acknowledgment": { "type": "boolean", "enum": [true] },
-    "agent_involvement": { "type": "string", "maxLength": 400 }
+    "agent_involvement": { "type": "string", "maxLength": 400 },
+    "provenance_bundle": { "$ref": "./provenance-bundle.schema.json" }
   }
 }
