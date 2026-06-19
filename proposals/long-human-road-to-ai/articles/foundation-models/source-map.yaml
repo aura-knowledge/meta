@@ -1,0 +1,359 @@
+schemaVersion: 1
+article: "article:foundation-models-return"
+status: canon-normalized
+accessed: "2026-06-19"
+source_id_note: "Source IDs are normalized against the shared source canon from issue #5."
+
+sources:
+  - id: src-dartmouth-1955
+    title: "A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence"
+    url: "https://jmc.stanford.edu/articles/dartmouth/dartmouth.pdf"
+    source_type: "primary-source"
+    authority: "primary"
+    publication_date: "1955-08-31"
+    accessed: "2026-06-19"
+    durability: "durable"
+    volatility: "low"
+    recheck_after: null
+    notes: "Use only for the original breadth of AI ambition, not for modern capability claims."
+
+  - id: src-sutton-bitter
+    title: "The Bitter Lesson"
+    url: "https://www.incompleteideas.net/IncIdeas/BitterLesson.html"
+    source_type: "research-essay"
+    authority: "expert-commentary"
+    publication_date: "2019-03-13"
+    accessed: "2026-06-19"
+    durability: "durable"
+    volatility: "medium"
+    recheck_after: null
+    notes: "Useful as a framing source for general methods and computation; present as a viewpoint, not settled law."
+
+  - id: src-transformer-2017
+    title: "Attention Is All You Need"
+    url: "https://arxiv.org/abs/1706.03762"
+    source_type: "research-paper"
+    authority: "primary"
+    publication_date: "2017-06-12"
+    accessed: "2026-06-19"
+    durability: "durable"
+    volatility: "low"
+    recheck_after: null
+    notes: "Primary source for Transformer architecture and parallelizable attention framing."
+
+  - id: src-bert-2018
+    title: "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"
+    url: "https://arxiv.org/abs/1810.04805"
+    source_type: "research-paper"
+    authority: "primary"
+    publication_date: "2018-10-11"
+    accessed: "2026-06-19"
+    durability: "durable"
+    volatility: "low"
+    recheck_after: null
+    notes: "Use for bidirectional pretraining and downstream adaptation through fine-tuning."
+
+  - id: src-scaling-laws-2020
+    title: "Scaling Laws for Neural Language Models"
+    url: "https://arxiv.org/abs/2001.08361"
+    source_type: "research-paper"
+    authority: "primary"
+    publication_date: "2020-01-23"
+    accessed: "2026-06-19"
+    durability: "durable"
+    volatility: "medium"
+    recheck_after: null
+    notes: "Use for empirical scaling-law framing; balance with later data-scaling caveats."
+
+  - id: src-rag-2020
+    title: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
+    url: "https://arxiv.org/abs/2005.11401"
+    source_type: "research-paper"
+    authority: "primary"
+    publication_date: "2020-05-22"
+    accessed: "2026-06-19"
+    durability: "durable"
+    volatility: "low"
+    recheck_after: null
+    notes: "Use for parametric plus non-parametric memory and provenance/update limits."
+
+  - id: src-gpt3-2020
+    title: "Language Models are Few-Shot Learners"
+    url: "https://arxiv.org/abs/2005.14165"
+    source_type: "research-paper"
+    authority: "primary"
+    publication_date: "2020-05-28"
+    accessed: "2026-06-19"
+    durability: "durable"
+    volatility: "medium"
+    recheck_after: null
+    notes: "Use for GPT-3, few-shot prompting, and observed failures. Avoid extrapolating to all later systems."
+
+  - id: src-clip-2021
+    title: "Learning Transferable Visual Models From Natural Language Supervision"
+    url: "https://arxiv.org/abs/2103.00020"
+    source_type: "research-paper"
+    authority: "primary"
+    publication_date: "2021-02-26"
+    accessed: "2026-06-19"
+    durability: "durable"
+    volatility: "low"
+    recheck_after: null
+    notes: "Use for multimodal transfer through image-text supervision."
+
+  - id: src-foundation-models-2021
+    title: "On the Opportunities and Risks of Foundation Models"
+    url: "https://arxiv.org/abs/2108.07258"
+    source_type: "research-report"
+    authority: "secondary-synthesis"
+    publication_date: "2021-08-16"
+    accessed: "2026-06-19"
+    durability: "durable"
+    volatility: "medium"
+    recheck_after: null
+    notes: "Use for the foundation-model definition, homogenization risk, and sociotechnical framing."
+
+  - id: src-rlhf-2022
+    title: "Training language models to follow instructions with human feedback"
+    url: "https://arxiv.org/abs/2203.02155"
+    source_type: "research-paper"
+    authority: "primary"
+    publication_date: "2022-03-04"
+    accessed: "2026-06-19"
+    durability: "durable"
+    volatility: "medium"
+    recheck_after: null
+    notes: "Use for instruction following and RLHF; state that the paper still reports mistakes and incomplete alignment."
+
+  - id: src-chinchilla-2022
+    title: "Training Compute-Optimal Large Language Models"
+    url: "https://arxiv.org/abs/2203.15556"
+    source_type: "research-paper"
+    authority: "primary"
+    publication_date: "2022-03-29"
+    accessed: "2026-06-19"
+    durability: "durable"
+    volatility: "medium"
+    recheck_after: null
+    notes: "Use to qualify simple model-size scaling with data and compute allocation."
+
+  - id: src-react-2022
+    title: "ReAct: Synergizing Reasoning and Acting in Language Models"
+    url: "https://arxiv.org/abs/2210.03629"
+    source_type: "research-paper"
+    authority: "primary"
+    publication_date: "2022-10-06"
+    accessed: "2026-06-19"
+    durability: "durable"
+    volatility: "medium"
+    recheck_after: null
+    notes: "Use for interleaving model reasoning traces and actions. Do not imply reliable autonomy."
+
+  - id: src-helm-2022
+    title: "Holistic Evaluation of Language Models"
+    url: "https://arxiv.org/abs/2211.09110"
+    source_type: "research-paper"
+    authority: "primary"
+    publication_date: "2022-11-16"
+    accessed: "2026-06-19"
+    durability: "durable"
+    volatility: "medium"
+    recheck_after: null
+    notes: "Use for multi-metric evaluation and transparency gaps."
+
+  - id: src-toolformer-2023
+    title: "Toolformer: Language Models Can Teach Themselves to Use Tools"
+    url: "https://arxiv.org/abs/2302.04761"
+    source_type: "research-paper"
+    authority: "primary"
+    publication_date: "2023-02-09"
+    accessed: "2026-06-19"
+    durability: "durable"
+    volatility: "medium"
+    recheck_after: null
+    notes: "Use for learned API/tool-call behavior; treat as research, not evidence of dependable agents."
+
+  - id: src-gpt4-2023
+    title: "GPT-4 Technical Report"
+    url: "https://arxiv.org/abs/2303.08774"
+    source_type: "technical-report"
+    authority: "primary-limited-disclosure"
+    publication_date: "2023-03-15"
+    accessed: "2026-06-19"
+    durability: "durable"
+    volatility: "medium"
+    recheck_after: null
+    notes: "Use cautiously for multimodal and post-training claims; note limited disclosure."
+
+  - id: src-nist-ai-rmf
+    title: "Artificial Intelligence Risk Management Framework 1.0"
+    url: "https://doi.org/10.6028/NIST.AI.100-1"
+    source_type: "public-guidance"
+    authority: "official"
+    publication_date: "2023-01-26"
+    accessed: "2026-06-19"
+    durability: "durable"
+    volatility: "medium"
+    recheck_after: "2026-12-31"
+    notes: "Use for general lifecycle risk-management framing."
+
+  - id: src-nist-gai-profile
+    title: "NIST AI RMF Generative AI Profile"
+    url: "https://doi.org/10.6028/NIST.AI.600-1"
+    source_type: "public-guidance"
+    authority: "official"
+    publication_date: "2024-07-26"
+    accessed: "2026-06-19"
+    durability: "durable"
+    volatility: "medium"
+    recheck_after: "2026-12-31"
+    notes: "Use for generative AI risk categories and lifecycle risk framing. Official page was updated in 2026."
+
+  - id: src-hai-ai-index
+    title: "The 2026 AI Index Report"
+    url: "https://hai.stanford.edu/ai-index/2026-ai-index-report"
+    source_type: "public-report"
+    authority: "secondary-current-state"
+    publication_date: "2026-04"
+    accessed: "2026-06-19"
+    durability: "current-snapshot"
+    volatility: "high"
+    recheck_after: "2026-12-31"
+    notes: "Use only with as-of dating for capability, adoption, benchmark, incident, infrastructure, and governance trend claims."
+
+  - id: src-eu-ai-act
+    title: "AI Act"
+    url: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+    source_type: "official-policy-page"
+    authority: "official"
+    publication_date: "not-listed"
+    date_note: "Official page did not list a publication date; use accessed date for current-state claims."
+    accessed: "2026-06-19"
+    durability: "current-snapshot"
+    volatility: "high"
+    recheck_after: "2026-12-31"
+    notes: "Use only with as-of dating for EU general-purpose AI model rules and timeline."
+
+  - id: src-eu-ai-code
+    title: "Drawing-up a General-Purpose AI Code of Practice"
+    url: "https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice"
+    source_type: "official-policy-page"
+    authority: "official"
+    publication_date: "2025-08-01"
+    accessed: "2026-06-19"
+    durability: "current-snapshot"
+    volatility: "high"
+    recheck_after: "2026-12-31"
+    notes: "Use for the Code of Practice and August 2025 GPAI timing."
+
+claim_map:
+  - claim_id: claim-old-ambition
+    claim: "The 1955 Dartmouth proposal framed AI as a broad program involving language, abstraction, problem solving, and self-improvement."
+    claim_type: "historical-fact"
+    sources: ["src-dartmouth-1955"]
+    source_posture: "primary-durable"
+    volatility: "low"
+    recheck_after: null
+
+  - claim_id: claim-fm-def
+    claim: "A foundation model is a broadly trained model, generally trained with self-supervision at scale, that can be adapted to many downstream tasks."
+    claim_type: "definition"
+    sources: ["src-foundation-models-2021"]
+    source_posture: "secondary-durable"
+    volatility: "medium"
+    recheck_after: null
+
+  - claim_id: claim-gp-return
+    claim: "Foundation models revive general-purpose AI ambition by supporting many tasks from a shared base, but this should not be equated with humanlike understanding."
+    claim_type: "interpretation"
+    sources: ["src-foundation-models-2021", "src-gpt3-2020", "src-helm-2022"]
+    source_posture: "synthesis"
+    volatility: "medium"
+    recheck_after: null
+
+  - claim_id: claim-transformer
+    claim: "The Transformer replaced recurrence and convolution with attention for sequence transduction and made training more parallelizable."
+    claim_type: "technical-fact"
+    sources: ["src-transformer-2017"]
+    source_posture: "primary-durable"
+    volatility: "low"
+    recheck_after: null
+
+  - claim_id: claim-pretrain
+    claim: "Broad pretraining enabled models such as BERT and GPT-3 to be adapted or prompted across many tasks."
+    claim_type: "technical-synthesis"
+    sources: ["src-bert-2018", "src-gpt3-2020", "src-foundation-models-2021"]
+    source_posture: "primary-plus-synthesis"
+    volatility: "medium"
+    recheck_after: null
+
+  - claim_id: claim-scale
+    claim: "Scaling research made model size, data, and compute explicit variables, while later work emphasized compute-optimal allocation rather than model size alone."
+    claim_type: "technical-synthesis"
+    sources: ["src-scaling-laws-2020", "src-chinchilla-2022"]
+    source_posture: "primary-durable"
+    volatility: "medium"
+    recheck_after: null
+
+  - claim_id: claim-posttrain
+    claim: "Instruction tuning and RLHF can improve usefulness and intent-following, but do not eliminate mistakes or alignment limits."
+    claim_type: "technical-caveat"
+    sources: ["src-rlhf-2022"]
+    source_posture: "primary-durable"
+    volatility: "medium"
+    recheck_after: null
+
+  - claim_id: claim-multimodal
+    claim: "Natural-language supervision and multimodal training widened foundation-model behavior beyond text-only tasks."
+    claim_type: "technical-synthesis"
+    sources: ["src-clip-2021", "src-gpt4-2023", "src-foundation-models-2021"]
+    source_posture: "primary-plus-synthesis"
+    volatility: "medium"
+    recheck_after: null
+
+  - claim_id: claim-tools
+    claim: "Retrieval, tool use, and reasoning/action loops can extend model behavior by connecting models to external sources, APIs, and environments."
+    claim_type: "technical-synthesis"
+    sources: ["src-rag-2020", "src-react-2022", "src-toolformer-2023"]
+    source_posture: "primary-durable"
+    volatility: "medium"
+    recheck_after: null
+
+  - claim_id: claim-eval-risk
+    claim: "Language-model evaluation needs multi-metric transparency because accuracy alone hides tradeoffs in calibration, robustness, fairness, bias, toxicity, and efficiency."
+    claim_type: "evaluation-caveat"
+    sources: ["src-helm-2022"]
+    source_posture: "primary-durable"
+    volatility: "medium"
+    recheck_after: null
+
+  - claim_id: claim-aiindex-now
+    claim: "As of 2026-06-19, the 2026 AI Index reports rapid changes in AI capabilities, adoption, incidents, and responsible-AI measurement gaps."
+    claim_type: "current-state"
+    sources: ["src-hai-ai-index"]
+    source_posture: "secondary-current-state"
+    volatility: "high"
+    recheck_after: "2026-12-31"
+
+  - claim_id: claim-nist-risk
+    claim: "As of 2026-06-19, NIST AI 600-1 is the generative AI profile used here for lifecycle risk-management framing."
+    claim_type: "current-policy"
+    sources: ["src-nist-gai-profile", "src-nist-ai-rmf"]
+    source_posture: "official-current-state"
+    volatility: "medium"
+    recheck_after: "2026-12-31"
+
+  - claim_id: claim-eu-gpai
+    claim: "As of 2026-06-19, European Commission pages state that EU general-purpose AI model rules became effective in August 2025 and that the Code of Practice supports compliance."
+    claim_type: "current-policy"
+    sources: ["src-eu-ai-act", "src-eu-ai-code"]
+    source_posture: "official-current-state"
+    volatility: "high"
+    recheck_after: "2026-12-31"
+
+stale_claim_rules:
+  - "Do not use 'latest', 'current', 'frontier', 'state of the art', or 'today' without an as-of date."
+  - "Recheck all high-volatility claims before publication after 2026-12-31."
+  - "Benchmark claims must name the benchmark and source; do not generalize them to intelligence."
+  - "Regulatory claims must cite official sources or be removed."
+  - "Product-release claims are out of scope unless needed as dated examples."
