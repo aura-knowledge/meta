@@ -2,7 +2,7 @@ schemaVersion: 1
 article: "article:foundation-models-return"
 status: canon-normalized
 accessed: "2026-06-19"
-source_id_note: "Provisional until issue #5 publishes the shared source canon."
+source_id_note: "Source IDs are normalized against the shared source canon from issue #5."
 
 sources:
   - id: src-dartmouth-1955
