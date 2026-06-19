@@ -1,7 +1,7 @@
 schema_version: 1
 package_id: before-machines
 issue: "aura-knowledge/meta#6"
-status: draft-work-package
+status: canon-normalized
 provisional: true
 sync_required_with: "aura-knowledge/meta#5"
 accessed: "2026-06-19"
@@ -37,7 +37,7 @@ sources:
     cautions:
       - "Use for social-history framing; avoid reducing all human computers to one institution or era."
 
-  - id: src-nist-math-tables-project
+  - id: src-nist-math-tables
     title: "Prehistory: The Math Tables Project"
     url: "https://www.nist.gov/mathematics-statistics/prehistory-math-tables-project"
     type: government-history
@@ -97,7 +97,7 @@ sources:
     cautions:
       - "The page is object-focused; use it to support artifact description, not broad causal claims."
 
-  - id: src-science-museum-pascal
+  - id: src-smg-pascal-calculator
     title: "Replica of Pascal's Calculator"
     url: "https://collection.sciencemuseumgroup.org.uk/objects/co60769/replica-of-pascals-calculator"
     type: museum-object
@@ -229,7 +229,7 @@ sources:
     cautions:
       - "Do not call Jacquard cards full modern software without boundary language."
 
-  - id: src-science-industry-jacquard
+  - id: src-smg-jacquard
     title: "Programming Patterns: The Story of the Jacquard Loom"
     url: "https://www.scienceandindustrymuseum.org.uk/objects-and-stories/jacquard-loom"
     type: museum-story
@@ -241,7 +241,7 @@ sources:
     cautions:
       - "The loom reproduced patterns; it did not reason."
 
-  - id: src-science-museum-babbage
+  - id: src-smg-babbage
     title: "Charles Babbage's Difference Engines and the Science Museum"
     url: "https://www.sciencemuseum.org.uk/objects-and-stories/charles-babbages-difference-engines-and-science-museum"
     type: museum-story
@@ -253,7 +253,7 @@ sources:
     cautions:
       - "Babbage's most ambitious engines were not completed by him; keep built versus designed distinction clear."
 
-  - id: src-chm-babbage-engine
+  - id: src-smg-babbage
     title: "The Babbage Engine"
     url: "https://www.computerhistory.org/babbage/"
     type: museum-exhibit
@@ -265,7 +265,7 @@ sources:
     cautions:
       - "Museum phrasing may call Babbage a computer pioneer; avoid turning that into a direct AI-origin claim."
 
-  - id: src-sep-computing-history
+  - id: src-sep-computing
     title: "The Modern History of Computing"
     url: "https://plato.stanford.edu/entries/computing-history/"
     type: encyclopedia
@@ -285,7 +285,7 @@ claims:
     source_ids:
       - src-chm-human-computers
       - src-smith-human-computers
-      - src-nist-math-tables-project
+      - src-nist-math-tables
     article_use: "Opening frame: computing begins as human work."
     boundary: "Do not treat human workers as interchangeable machine parts; include labor and institutional context."
 
@@ -306,7 +306,7 @@ claims:
     source_ids:
       - src-whipple-napier
       - src-smithsonian-napier-rods
-      - src-nist-math-tables-project
+      - src-nist-math-tables
     article_use: "Introduce lookup, reuse, and decomposition in plain language."
     boundary: "Use modern terms like cache or lookup only as analogies with limits."
 
@@ -315,7 +315,7 @@ claims:
     claim_type: historical-fact
     confidence: high
     source_ids:
-      - src-science-museum-pascal
+      - src-smg-pascal-calculator
       - src-chm-leibniz
     article_use: "Show the shift from hand-aided calculation to automatic arithmetic."
     boundary: "Do not imply general programmability or intelligence."
@@ -356,7 +356,7 @@ claims:
     confidence: medium-high
     source_ids:
       - src-smithsonian-punch-cards
-      - src-science-industry-jacquard
+      - src-smg-jacquard
     article_use: "Bridge physical instructions to later programmable machines."
     boundary: "The loom controlled weaving patterns; it did not perform general-purpose computation."
 
@@ -365,9 +365,9 @@ claims:
     claim_type: interpretation
     confidence: medium-high
     source_ids:
-      - src-science-museum-babbage
-      - src-chm-babbage-engine
-      - src-sep-computing-history
+      - src-smg-babbage
+      - src-smg-babbage
+      - src-sep-computing
     article_use: "Close the article by pointing to formal computation."
     boundary: "Keep designed, built, and later reconstructed machines distinct."
 
