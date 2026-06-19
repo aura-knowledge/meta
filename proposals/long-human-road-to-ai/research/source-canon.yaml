@@ -570,3 +570,1872 @@ sources:
       notes: "Process document only."
     added_for: "Canon source for artifact claims about the series review checklist."
     notes: "This source becomes available after the source-canon PR lands on main."
+
+  - id: src-dartmouth-ai-coined
+    title: Artificial Intelligence (AI) Coined at Dartmouth
+    url: https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth
+    source_type: archival-record
+    authority: tertiary
+    publisher: home.dartmouth.edu
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; home.dartmouth.edu is outside the default allow-list and is justified as a public source for
+      the birth-of-ai work package.
+    best_for:
+    - Dartmouth institutional framing
+    - public summary of the 1956 project
+    limitations:
+    - Institutional source; pair with primary proposal and critical secondary history.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for birth-of-ai article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-dick-ai-history
+    title: Artificial Intelligence
+    url: https://hdsr.mitpress.mit.edu/pub/0aytgrau/release/3
+    source_type: scholarly-history
+    authority: secondary
+    publisher: hdsr.mitpress.mit.edu
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; hdsr.mitpress.mit.edu is outside the default allow-list and is justified as a public source
+      for the birth-of-ai work package.
+    best_for:
+    - critique of over-simple Dartmouth origin narratives
+    - changing definitions of intelligence
+    - symbolic AI context
+    limitations:
+    - Use as interpretive secondary history, not as primary evidence for workshop details.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for birth-of-ai article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-sep-ai
+    title: Artificial Intelligence
+    url: https://plato.stanford.edu/entries/artificial-intelligence/
+    source_type: encyclopedia-entry
+    authority: tertiary
+    publisher: Stanford Encyclopedia of Philosophy
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; plato.stanford.edu is outside the default allow-list and is justified as a public source for
+      the birth-of-ai work package.
+    best_for:
+    - high-level AI history
+    - Dartmouth as official start with precursors
+    - definition range
+    limitations:
+    - Good orientation source; verify specific claims with primary or specialist sources.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for birth-of-ai article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-sep-logic-ai
+    title: Logic and Artificial Intelligence
+    url: https://plato.stanford.edu/entries/logic-ai/
+    source_type: encyclopedia-entry
+    authority: tertiary
+    publisher: Stanford Encyclopedia of Philosophy
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; plato.stanford.edu is outside the default allow-list and is justified as a public source for
+      the birth-of-ai work package.
+    best_for:
+    - role of logic in AI
+    - symbolic reasoning background
+    limitations:
+    - Use for conceptual framing, not as sole evidence for a historical event.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for birth-of-ai article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-logic-theory-machine
+    title: 'The Logic Theory Machine: A Complex Information Processing System'
+    url: https://www.rand.org/pubs/papers/P868.html
+    source_type: original-paper
+    authority: primary
+    publisher: rand.org
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; rand.org is outside the default allow-list and is justified as a public source for the birth-of-ai
+      work package.
+    best_for:
+    - Logic Theorist
+    - heuristic search
+    - symbolic proof discovery
+    limitations:
+    - RAND notes that the paper series was less formal than reports and not peer reviewed.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for birth-of-ai article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-gps-stanford
+    title: A Guide to the General Problem-Solver Program GPS-2-2
+    url: https://stacks.stanford.edu/file/druid:zk239tp3547/zk239tp3547.pdf
+    source_type: original-paper
+    authority: primary
+    publisher: stacks.stanford.edu
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; stacks.stanford.edu is outside the default allow-list and is justified as a public source for
+      the birth-of-ai work package.
+    best_for:
+    - General Problem Solver
+    - means-ends analysis
+    - planning and problem-solving ambitions
+    limitations:
+    - Use for GPS program details; use secondary history for broader impact.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for birth-of-ai article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-mccarthy-common-sense
+    title: Programs with Common Sense
+    url: https://jmc.stanford.edu/articles/mcc59/mcc59.pdf
+    source_type: original-paper
+    authority: primary
+    publisher: jmc.stanford.edu
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; jmc.stanford.edu is outside the default allow-list and is justified as a public source for
+      the birth-of-ai work package.
+    best_for:
+    - Advice Taker
+    - formal language and common-sense reasoning
+    - symbolic AI ambitions
+    limitations:
+    - Treat as proposal and research agenda, not as a completed system.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for birth-of-ai article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-chm-ai-robotics
+    title: 'AI and Robotics: Timeline of Computer History'
+    url: https://www.computerhistory.org/timeline/ai-robotics/
+    source_type: museum-collection
+    authority: tertiary
+    publisher: Computer History Museum
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; computerhistory.org is outside the default allow-list and is justified as a public source for
+      the birth-of-ai work package.
+    best_for:
+    - Logic Theorist timeline
+    - Lisp timeline
+    - early AI and robotics chronology
+    limitations:
+    - Use for orientation and dates; pair causal claims with primary or secondary sources.
+    visual_use:
+      reuse: rights-review-needed
+      notes: Check source-specific rights before visual reuse.
+    added_for: Canon expansion for birth-of-ai article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-rosenblatt-1958
+    title: 'The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain'
+    url: https://homepages.math.uic.edu/~lreyzin/papers/rosenblatt58.pdf
+    source_type: original-paper
+    authority: primary
+    publisher: homepages.math.uic.edu
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; homepages.math.uic.edu is outside the default allow-list and is justified as a public source
+      for the birth-of-ai work package.
+    best_for:
+    - neural and pattern-recognition thread
+    - early optimism outside symbolic AI
+    limitations:
+    - Use as one lineage, not as proof that modern deep learning was inevitable.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for birth-of-ai article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-cornell-perceptron
+    title: Professor's perceptron paved the way for AI - 60 years too soon
+    url: https://news.cornell.edu/stories/2019/09/professors-perceptron-paved-way-ai-60-years-too-soon
+    source_type: archival-record
+    authority: secondary
+    publisher: news.cornell.edu
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; news.cornell.edu is outside the default allow-list and is justified as a public source for
+      the birth-of-ai work package.
+    best_for:
+    - press and public narrative around perceptron claims
+    - optimism beyond the symbolic AI lineage
+    limitations:
+    - Use for public narrative context; use Rosenblatt's paper for technical perceptron claims.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for birth-of-ai article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-nilsson-quest-ai
+    title: 'The Quest for Artificial Intelligence: A History of Ideas and Achievements'
+    url: https://ai.stanford.edu/~nilsson/QAI/qai.pdf
+    source_type: scholarly-history
+    authority: secondary
+    publisher: ai.stanford.edu
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; ai.stanford.edu is outside the default allow-list and is justified as a public source for the
+      birth-of-ai work package.
+    best_for:
+    - balanced historical synthesis
+    - early AI programs and institutional context
+    - source-canon alignment
+    limitations:
+    - Use as secondary synthesis; verify quoted details against primary sources.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for birth-of-ai article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-chm-human-computers
+    title: Human Computers
+    url: https://www.computerhistory.org/revolution/calculators/1/65
+    source_type: museum-collection
+    authority: tertiary
+    publisher: Computer History Museum
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; computerhistory.org is outside the default allow-list and is justified as a public source for
+      the before-machines work package.
+    best_for:
+    - The term computer referred to people doing calculations before electronic machines.
+    - Human calculation work supported science, industry, national defense, and later computing machines.
+    limitations:
+    - Use as accessible museum framing; corroborate detailed labor history with additional sources.
+    visual_use:
+      reuse: rights-review-needed
+      notes: Check source-specific rights before visual reuse.
+    added_for: Canon expansion for before-machines article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-smith-human-computers
+    title: Human Computer Project
+    url: https://womenshistory.si.edu/human-computer-project
+    source_type: original-paper
+    authority: tertiary
+    publisher: "Smithsonian American Women's History Museum"
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; womenshistory.si.edu is outside the default allow-list and is justified as a public source for
+      the before-machines work package.
+    best_for:
+    - Human computing work included trained mathematicians and workers with basic skills.
+    - By the late nineteenth century, much human computing labor increasingly fell to women.
+    limitations:
+    - Use for social-history framing; avoid reducing all human computers to one institution or era.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for before-machines article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-nist-math-tables
+    title: 'Prehistory: The Math Tables Project'
+    url: https://www.nist.gov/mathematics-statistics/prehistory-math-tables-project
+    source_type: encyclopedia-entry
+    authority: tertiary
+    publisher: National Institute of Standards and Technology
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; nist.gov is outside the default allow-list and is justified as a public source for the before-machines
+      work package.
+    best_for:
+    - The WPA Mathematical Tables Project employed human computers to produce tables of mathematical functions.
+    - Mathematical tables supported hand computation before electronic computers.
+    limitations:
+    - This is a twentieth-century example; use as a clear late instance, not the whole history.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for before-machines article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-chm-abacus
+    title: The Versatile, Venerable Abacus
+    url: https://www.computerhistory.org/revolution/calculators/1/1
+    source_type: museum-collection
+    authority: tertiary
+    publisher: Computer History Museum
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; computerhistory.org is outside the default allow-list and is justified as a public source for
+      the before-machines work package.
+    best_for:
+    - Counting boards and abaci are durable examples of physical aids for arithmetic.
+    - The Salamis tablet is presented as an old surviving calculating device.
+    limitations:
+    - Do not use to claim one linear origin of computing.
+    visual_use:
+      reuse: rights-review-needed
+      notes: Check source-specific rights before visual reuse.
+    added_for: Canon expansion for before-machines article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-smithsonian-abacus
+    title: The Abacus, the Numeral Frame, and Counters
+    url: https://www.si.edu/spotlight/the-abacus-the-numeral-frame-and-counters
+    source_type: museum-collection
+    authority: tertiary
+    publisher: si.edu
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; si.edu is outside the default allow-list and is justified as a public source for the before-machines
+      work package.
+    best_for:
+    - An abacus supports arithmetic by moving counters along rods, wires, or lines.
+    - Small stones or counters made calculation physical and inspectable.
+    limitations:
+    - Avoid treating abacus use as a single tradition; forms varied by place and time.
+    visual_use:
+      reuse: rights-review-needed
+      notes: Check source-specific rights before visual reuse.
+    added_for: Canon expansion for before-machines article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-whipple-napier
+    title: John Napier's Calculating Tools
+    url: https://www.whipplemuseum.cam.ac.uk/explore-whipple-collections/calculating-devices/john-napiers-calculating-tools
+    source_type: museum-collection
+    authority: tertiary
+    publisher: "Whipple Museum of the History of Science"
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; whipplemuseum.cam.ac.uk is outside the default allow-list and is justified as a public source
+      for the before-machines work package.
+    best_for:
+    - Napier's bones helped users break larger calculations into smaller parts.
+    - The rods are useful as an example of procedural decomposition and teaching.
+    limitations:
+    - Keep rods distinct from logarithms and from automatic calculation.
+    visual_use:
+      reuse: rights-review-needed
+      notes: Check source-specific rights before visual reuse.
+    added_for: Canon expansion for before-machines article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-smithsonian-napier-rods
+    title: Napier's Rods
+    url: https://americanhistory.si.edu/collections/nmah_690812
+    source_type: museum-collection
+    authority: tertiary
+    publisher: americanhistory.si.edu
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; americanhistory.si.edu is outside the default allow-list and is justified as a public source
+      for the before-machines work package.
+    best_for:
+    - Napier also discovered logarithms, later embodied in the slide rule.
+    - Object-level example of calculation aids.
+    limitations:
+    - The page is object-focused; use it to support artifact description, not broad causal claims.
+    visual_use:
+      reuse: rights-review-needed
+      notes: Check source-specific rights before visual reuse.
+    added_for: Canon expansion for before-machines article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-smg-pascal-calculator
+    title: Replica of Pascal's Calculator
+    url: https://collection.sciencemuseumgroup.org.uk/objects/co60769/replica-of-pascals-calculator
+    source_type: museum-collection
+    authority: tertiary
+    publisher: collection.sciencemuseumgroup.org.uk
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; collection.sciencemuseumgroup.org.uk is outside the default allow-list and is justified as
+      a public source for the before-machines work package.
+    best_for:
+    - Pascal's 1642 calculating machine was designed for addition and subtraction.
+    - The machine helped explain the shift from hand-aided calculation to mechanical operation.
+    limitations:
+    - Do not overstate practical adoption or general-purpose capability.
+    visual_use:
+      reuse: rights-review-needed
+      notes: Check source-specific rights before visual reuse.
+    added_for: Canon expansion for before-machines article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-chm-leibniz
+    title: The Leibniz Step Reckoner and Curta Calculators
+    url: https://www.computerhistory.org/revolution/calculators/1/49
+    source_type: museum-collection
+    authority: tertiary
+    publisher: Computer History Museum
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; computerhistory.org is outside the default allow-list and is justified as a public source for
+      the before-machines work package.
+    best_for:
+    - Leibniz's stepped-drum mechanism influenced later calculator designs.
+    - The Step Reckoner is useful for explaining four-function mechanical calculation.
+    limitations:
+    - Keep mechanical calculator claims separate from Leibniz's philosophical logic program.
+    visual_use:
+      reuse: rights-review-needed
+      notes: Check source-specific rights before visual reuse.
+    added_for: Canon expansion for before-machines article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-sep-leibniz-logic
+    title: Leibniz's Influence on 19th Century Logic
+    url: https://plato.stanford.edu/entries/leibniz-logic-influence/
+    source_type: encyclopedia-entry
+    authority: secondary
+    publisher: Stanford Encyclopedia of Philosophy
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; plato.stanford.edu is outside the default allow-list and is justified as a public source for
+      the before-machines work package.
+    best_for:
+    - Leibniz imagined a symbolic method in which reasoning errors could be exposed through calculation-like manipulation.
+    - Bridge from mechanical calculation to later formal logic.
+    limitations:
+    - Use as foreshadowing only; detailed logic history belongs in the next article.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for before-machines article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-mactutor-alkhwarizmi
+    title: Al-Khwarizmi
+    url: https://mathshistory.st-andrews.ac.uk/Biographies/Al-Khwarizmi/
+    source_type: scholarly-history
+    authority: secondary
+    publisher: mathshistory.st-andrews.ac.uk
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; mathshistory.st-andrews.ac.uk is outside the default allow-list and is justified as a public
+      source for the before-machines work package.
+    best_for:
+    - Al-Khwarizmi is relevant to algorithmic procedure and algebraic method.
+    - Use as a non-European procedural bridge if final article length permits.
+    limitations:
+    - Do not frame all algorithms as beginning with one person.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for before-machines article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-nature-antikythera-2006
+    title: Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism
+    url: https://www.nature.com/articles/nature05357
+    source_type: original-paper
+    authority: primary
+    publisher: nature.com
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; nature.com is outside the default allow-list and is justified as a public source for the before-machines
+      work package.
+    best_for:
+    - The Antikythera mechanism calculated and displayed celestial information such as lunar phases and calendar cycles.
+    - Useful for precise wording around astronomical calculation.
+    limitations:
+    - Avoid using popular shorthand like 'first computer' without qualification.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for before-machines article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-isaw-antikythera
+    title: The Antikythera Mechanism
+    url: https://isaw.nyu.edu/research/antikythera-mechanism
+    source_type: original-paper
+    authority: secondary
+    publisher: isaw.nyu.edu
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; isaw.nyu.edu is outside the default allow-list and is justified as a public source for the
+      before-machines work package.
+    best_for:
+    - The mechanism displayed chronological cycles and heavenly motions or phenomena.
+    - Useful accessible support for describing the device as an astronomical mechanism.
+    limitations:
+    - Use with Nature source for technical claims.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for before-machines article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-mpiwg-antikythera
+    title: The Inscriptions of the Antikythera Mechanism
+    url: https://www.mpiwg-berlin.mpg.de/research/projects/inscriptions-antikythera-mechanism
+    source_type: original-paper
+    authority: secondary
+    publisher: mpiwg-berlin.mpg.de
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; mpiwg-berlin.mpg.de is outside the default allow-list and is justified as a public source for
+      the before-machines work package.
+    best_for:
+    - Modern imaging revealed inscriptions on the fragments.
+    - Useful for explaining uncertainty and reconstruction limits.
+    limitations:
+    - Do not present reconstruction as complete certainty.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for before-machines article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-science-museum-automata
+    title: 'Marvellous Machines: Early Robots'
+    url: https://www.sciencemuseum.org.uk/objects-and-stories/marvellous-machines-early-robots
+    source_type: museum-collection
+    authority: tertiary
+    publisher: sciencemuseum.org.uk
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; sciencemuseum.org.uk is outside the default allow-list and is justified as a public source
+      for the before-machines work package.
+    best_for:
+    - Automata and early robot-like machines provide cultural context for mechanical imitation.
+    - Useful for reader-friendly examples of self-moving devices.
+    limitations:
+    - The word robot is modern; avoid projecting modern AI assumptions backward.
+    visual_use:
+      reuse: rights-review-needed
+      notes: Check source-specific rights before visual reuse.
+    added_for: Canon expansion for before-machines article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-britannica-automaton
+    title: Automaton
+    url: https://www.britannica.com/technology/automaton
+    source_type: encyclopedia-entry
+    authority: tertiary
+    publisher: britannica.com
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; britannica.com is outside the default allow-list and is justified as a public source for the
+      before-machines work package.
+    best_for:
+    - 'General definition: a mechanical object that is relatively self-operating after being set in motion.'
+    - Boundary language for automata as self-operating mechanisms.
+    limitations:
+    - Use only for general definition, not deep historiography.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for before-machines article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-chm-mech-turk
+    title: 'Chatbots Decoded: Exploring AI'
+    url: https://computerhistory.org/stories/chatbots-decoded/
+    source_type: museum-collection
+    authority: tertiary
+    publisher: Computer History Museum
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; computerhistory.org is outside the default allow-list and is justified as a public source for
+      the before-machines work package.
+    best_for:
+    - The Mechanical Turk appeared to play chess but concealed a skilled human player.
+    - Useful as a cautionary example about hidden human labor behind apparent machine intelligence.
+    limitations:
+    - Use only as a cautionary contrast; it was a deception, not an autonomous thinking machine.
+    visual_use:
+      reuse: rights-review-needed
+      notes: Check source-specific rights before visual reuse.
+    added_for: Canon expansion for before-machines article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-smithsonian-punch-cards
+    title: Punch Cards
+    url: https://www.si.edu/spotlight/punch-cards
+    source_type: museum-collection
+    authority: tertiary
+    publisher: si.edu
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; si.edu is outside the default allow-list and is justified as a public source for the before-machines
+      work package.
+    best_for:
+    - Babbage admired Jacquard's invention and suggested punch cards for computing devices.
+    - Punched-card control is useful as a bridge from textile mechanism to computing input/control.
+    limitations:
+    - Do not call Jacquard cards full modern software without boundary language.
+    visual_use:
+      reuse: rights-review-needed
+      notes: Check source-specific rights before visual reuse.
+    added_for: Canon expansion for before-machines article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-smg-jacquard
+    title: 'Programming Patterns: The Story of the Jacquard Loom'
+    url: https://www.scienceandindustrymuseum.org.uk/objects-and-stories/jacquard-loom
+    source_type: museum-collection
+    authority: tertiary
+    publisher: scienceandindustrymuseum.org.uk
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; scienceandindustrymuseum.org.uk is outside the default allow-list and is justified as a public
+      source for the before-machines work package.
+    best_for:
+    - Jacquard cards stored weaving patterns and influenced Babbage's thinking.
+    - Useful for explaining controlled patterns to general readers.
+    limitations:
+    - The loom reproduced patterns; it did not reason.
+    visual_use:
+      reuse: rights-review-needed
+      notes: Check source-specific rights before visual reuse.
+    added_for: Canon expansion for before-machines article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-sutton-bitter
+    title: The Bitter Lesson
+    url: https://www.incompleteideas.net/IncIdeas/BitterLesson.html
+    source_type: original-paper
+    authority: modern-commentary
+    publisher: incompleteideas.net
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; incompleteideas.net is outside the default allow-list and is justified as a public source for
+      the foundation-models work package.
+    best_for:
+    - foundation-models source-map support
+    limitations:
+    - Useful as a framing source for general methods and computation; present as a viewpoint, not settled law.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for foundation-models article work package.
+    notes: Useful as a framing source for general methods and computation; present as a viewpoint, not settled law.
+  - id: src-bert-2018
+    title: 'BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding'
+    url: https://arxiv.org/abs/1810.04805
+    source_type: original-paper
+    authority: primary
+    publisher: arXiv
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source.
+    best_for:
+    - foundation-models source-map support
+    limitations:
+    - Use for bidirectional pretraining and downstream adaptation through fine-tuning.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for foundation-models article work package.
+    notes: Use for bidirectional pretraining and downstream adaptation through fine-tuning.
+  - id: src-scaling-laws-2020
+    title: Scaling Laws for Neural Language Models
+    url: https://arxiv.org/abs/2001.08361
+    source_type: original-paper
+    authority: primary
+    publisher: arXiv
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source.
+    best_for:
+    - foundation-models source-map support
+    limitations:
+    - Use for empirical scaling-law framing; balance with later data-scaling caveats.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for foundation-models article work package.
+    notes: Use for empirical scaling-law framing; balance with later data-scaling caveats.
+  - id: src-rag-2020
+    title: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
+    url: https://arxiv.org/abs/2005.11401
+    source_type: original-paper
+    authority: primary
+    publisher: arXiv
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source.
+    best_for:
+    - foundation-models source-map support
+    limitations:
+    - Use for parametric plus non-parametric memory and provenance/update limits.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for foundation-models article work package.
+    notes: Use for parametric plus non-parametric memory and provenance/update limits.
+  - id: src-gpt3-2020
+    title: Language Models are Few-Shot Learners
+    url: https://arxiv.org/abs/2005.14165
+    source_type: original-paper
+    authority: primary
+    publisher: arXiv
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source.
+    best_for:
+    - foundation-models source-map support
+    limitations:
+    - Use for GPT-3, few-shot prompting, and observed failures. Avoid extrapolating to all later systems.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for foundation-models article work package.
+    notes: Use for GPT-3, few-shot prompting, and observed failures. Avoid extrapolating to all later systems.
+  - id: src-clip-2021
+    title: Learning Transferable Visual Models From Natural Language Supervision
+    url: https://arxiv.org/abs/2103.00020
+    source_type: original-paper
+    authority: primary
+    publisher: arXiv
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source.
+    best_for:
+    - foundation-models source-map support
+    limitations:
+    - Use for multimodal transfer through image-text supervision.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for foundation-models article work package.
+    notes: Use for multimodal transfer through image-text supervision.
+  - id: src-foundation-models-2021
+    title: On the Opportunities and Risks of Foundation Models
+    url: https://arxiv.org/abs/2108.07258
+    source_type: original-paper
+    authority: secondary
+    publisher: arXiv
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source.
+    best_for:
+    - foundation-models source-map support
+    limitations:
+    - Use for the foundation-model definition, homogenization risk, and sociotechnical framing.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for foundation-models article work package.
+    notes: Use for the foundation-model definition, homogenization risk, and sociotechnical framing.
+  - id: src-rlhf-2022
+    title: Training language models to follow instructions with human feedback
+    url: https://arxiv.org/abs/2203.02155
+    source_type: original-paper
+    authority: primary
+    publisher: arXiv
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source.
+    best_for:
+    - foundation-models source-map support
+    limitations:
+    - Use for instruction following and RLHF; state that the paper still reports mistakes and incomplete alignment.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for foundation-models article work package.
+    notes: Use for instruction following and RLHF; state that the paper still reports mistakes and incomplete alignment.
+  - id: src-chinchilla-2022
+    title: Training Compute-Optimal Large Language Models
+    url: https://arxiv.org/abs/2203.15556
+    source_type: original-paper
+    authority: primary
+    publisher: arXiv
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source.
+    best_for:
+    - foundation-models source-map support
+    limitations:
+    - Use to qualify simple model-size scaling with data and compute allocation.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for foundation-models article work package.
+    notes: Use to qualify simple model-size scaling with data and compute allocation.
+  - id: src-react-2022
+    title: 'ReAct: Synergizing Reasoning and Acting in Language Models'
+    url: https://arxiv.org/abs/2210.03629
+    source_type: original-paper
+    authority: primary
+    publisher: arXiv
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source.
+    best_for:
+    - foundation-models source-map support
+    limitations:
+    - Use for interleaving model reasoning traces and actions. Do not imply reliable autonomy.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for foundation-models article work package.
+    notes: Use for interleaving model reasoning traces and actions. Do not imply reliable autonomy.
+  - id: src-helm-2022
+    title: Holistic Evaluation of Language Models
+    url: https://arxiv.org/abs/2211.09110
+    source_type: original-paper
+    authority: primary
+    publisher: arXiv
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source.
+    best_for:
+    - foundation-models source-map support
+    limitations:
+    - Use for multi-metric evaluation and transparency gaps.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for foundation-models article work package.
+    notes: Use for multi-metric evaluation and transparency gaps.
+  - id: src-toolformer-2023
+    title: 'Toolformer: Language Models Can Teach Themselves to Use Tools'
+    url: https://arxiv.org/abs/2302.04761
+    source_type: original-paper
+    authority: primary
+    publisher: arXiv
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source.
+    best_for:
+    - foundation-models source-map support
+    limitations:
+    - Use for learned API/tool-call behavior; treat as research, not evidence of dependable agents.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for foundation-models article work package.
+    notes: Use for learned API/tool-call behavior; treat as research, not evidence of dependable agents.
+  - id: src-gpt4-2023
+    title: GPT-4 Technical Report
+    url: https://arxiv.org/abs/2303.08774
+    source_type: original-paper
+    authority: primary
+    publisher: arXiv
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source.
+    best_for:
+    - foundation-models source-map support
+    limitations:
+    - Use cautiously for multimodal and post-training claims; note limited disclosure.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for foundation-models article work package.
+    notes: Use cautiously for multimodal and post-training claims; note limited disclosure.
+  - id: src-nist-gai-profile
+    title: NIST AI RMF Generative AI Profile
+    url: https://doi.org/10.6028/NIST.AI.600-1
+    source_type: official-guidance
+    authority: primary
+    publisher: DOI
+    accessed: '2026-06-19'
+    status: active
+    public_access: public-doi
+    access_notes: Public source.
+    best_for:
+    - foundation-models source-map support
+    limitations:
+    - Use for generative AI risk categories and lifecycle risk framing. Official page was updated in 2026.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for foundation-models article work package.
+    notes: Use for generative AI risk categories and lifecycle risk framing. Official page was updated in 2026.
+  - id: src-eu-ai-act
+    title: AI Act
+    url: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
+    source_type: primary-text
+    authority: primary
+    publisher: digital-strategy.ec.europa.eu
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; digital-strategy.ec.europa.eu is outside the default allow-list and is justified as a public
+      source for the foundation-models work package.
+    best_for:
+    - foundation-models source-map support
+    limitations:
+    - Use only with as-of dating for EU general-purpose AI model rules and timeline.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for foundation-models article work package.
+    notes: Use only with as-of dating for EU general-purpose AI model rules and timeline.
+  - id: src-eu-ai-code
+    title: Drawing-up a General-Purpose AI Code of Practice
+    url: https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice
+    source_type: primary-text
+    authority: primary
+    publisher: digital-strategy.ec.europa.eu
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; digital-strategy.ec.europa.eu is outside the default allow-list and is justified as a public
+      source for the foundation-models work package.
+    best_for:
+    - foundation-models source-map support
+    limitations:
+    - Use for the Code of Practice and August 2025 GPAI timing.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for foundation-models article work package.
+    notes: Use for the Code of Practice and August 2025 GPAI timing.
+  - id: src-dartmouth-story
+    title: 'AI at Dartmouth: Our Story'
+    url: https://ai.dartmouth.edu/our-story
+    source_type: archival-record
+    authority: secondary
+    publisher: ai.dartmouth.edu
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; ai.dartmouth.edu is outside the default allow-list and is justified as a public source for
+      the learning-machines work package.
+    best_for:
+    - claim-lm-001
+    limitations:
+    - Use as context, not as the sole source for detailed historical interpretation.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for learning-machines article work package.
+    notes: Useful secondary institutional context for the Dartmouth meeting and field naming.
+  - id: src-samuel-1959
+    title: Some Studies in Machine Learning Using the Game of Checkers
+    url: https://doi.org/10.1147/rd.33.0210
+    source_type: original-paper
+    authority: primary
+    publisher: DOI
+    accessed: '2026-06-19'
+    status: active
+    public_access: public-doi
+    access_notes: Public source.
+    best_for:
+    - claim-lm-002
+    limitations:
+    - Do not attach the popular short definition of machine learning unless independently sourced.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for learning-machines article work package.
+    notes: Use as an early machine-learning example built around checkers and evaluated improvement.
+  - id: src-minsky-papert-1969
+    title: 'Perceptrons: An Introduction to Computational Geometry'
+    url: https://mitpress.mit.edu/9780262630221/perceptrons/
+    source_type: primary-text
+    authority: primary
+    publisher: mitpress.mit.edu
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; mitpress.mit.edu is outside the default allow-list and is justified as a public source for
+      the learning-machines work package.
+    best_for:
+    - claim-lm-004
+    limitations:
+    - Avoid the folk claim that the book alone ended neural-network research.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for learning-machines article work package.
+    notes: Use for limits of perceptron models and historical caveats about simple architectures.
+  - id: src-backprop-1986
+    title: Learning Representations by Back-Propagating Errors
+    url: https://doi.org/10.1038/323533a0
+    source_type: original-paper
+    authority: primary
+    publisher: DOI
+    accessed: '2026-06-19'
+    status: active
+    public_access: public-doi
+    access_notes: Public source.
+    best_for:
+    - claim-lm-005
+    limitations:
+    - Say demonstration or popularization; do not imply sole invention of backpropagation.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for learning-machines article work package.
+    notes: Use for a widely influential account of backpropagation in multilayer networks.
+  - id: src-lecun-docrec-1998
+    title: Gradient-Based Learning Applied to Document Recognition
+    url: https://doi.org/10.1109/5.726791
+    source_type: original-paper
+    authority: primary
+    publisher: DOI
+    accessed: '2026-06-19'
+    status: active
+    public_access: public-doi
+    access_notes: Public source.
+    best_for:
+    - claim-lm-006
+    limitations:
+    - Do not imply this alone caused the ImageNet-era shift.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for learning-machines article work package.
+    notes: Use for continuity between earlier neural-network applications and the later deep-learning wave.
+  - id: src-imagenet-site
+    title: ImageNet Large Scale Visual Recognition Challenge
+    url: https://www.image-net.org/challenges/LSVRC/
+    source_type: primary-text
+    authority: primary
+    publisher: image-net.org
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; image-net.org is outside the default allow-list and is justified as a public source for the
+      learning-machines work package.
+    best_for:
+    - claim-lm-007
+    limitations:
+    - Avoid using benchmark scope as a proxy for all visual intelligence.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for learning-machines article work package.
+    notes: Use for the challenge's public description, evaluation role, and citation guidance.
+  - id: src-imagenet-2015
+    title: ImageNet Large Scale Visual Recognition Challenge
+    url: https://arxiv.org/abs/1409.0575
+    source_type: original-paper
+    authority: primary
+    publisher: arXiv
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source.
+    best_for:
+    - claim-lm-007
+    - claim-lm-008
+    limitations:
+    - The paper is about object category classification and detection, not all AI progress.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for learning-machines article work package.
+    notes: Use for benchmark creation, data scale, annotation challenges, and progress framing.
+  - id: src-alexnet-2012
+    title: ImageNet Classification with Deep Convolutional Neural Networks
+    url: https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks
+    source_type: original-paper
+    authority: primary
+    publisher: papers.nips.cc
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; papers.nips.cc is outside the default allow-list and is justified as a public source for the
+      learning-machines work package.
+    best_for:
+    - claim-lm-008
+    limitations:
+    - Do not claim AlexNet was the only deep-learning breakthrough or the first neural network.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for learning-machines article work package.
+    notes: Use for the 2012 NeurIPS paper and the combination of deep convolutional networks, ImageNet-scale training, and GPU
+      implementation. The ACM DOI 10.1145/3065386 is a later record for the same title.
+  - id: src-elements-stat-learning
+    title: The Elements of Statistical Learning
+    url: https://hastie.su.domains/ElemStatLearn/
+    source_type: scholarly-history
+    authority: secondary
+    publisher: hastie.su.domains
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; hastie.su.domains is outside the default allow-list and is justified as a public source for
+      the learning-machines work package.
+    best_for:
+    - claim-lm-009
+    limitations:
+    - Use for conceptual grounding, not as a historical primary source.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for learning-machines article work package.
+    notes: Use for supervised learning, inference, prediction, and generalization framing.
+  - id: src-deep-learning-book
+    title: Deep Learning
+    url: https://www.deeplearningbook.org/
+    source_type: scholarly-history
+    authority: secondary
+    publisher: deeplearningbook.org
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; deeplearningbook.org is outside the default allow-list and is justified as a public source
+      for the learning-machines work package.
+    best_for:
+    - claim-lm-009
+    limitations:
+    - Use as modern technical context, not a primary source for earlier history.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for learning-machines article work package.
+    notes: Use for modern deep-learning concepts, training, optimization, representation learning, and caveats.
+  - id: src-ilo-genai-jobs
+    title: 'Generative AI and Jobs: A Refined Global Index of Occupational Exposure'
+    url: https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure
+    source_type: original-paper
+    authority: secondary
+    publisher: ilo.org
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; ilo.org is outside the default allow-list and is justified as a public source for the human-systems
+      work package.
+    best_for:
+    - claim-human-002
+    limitations:
+    - Use for task exposure and labor-impact uncertainty. Do not convert exposure into deterministic job-loss claims.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for human-systems article work package.
+    notes: Use for task exposure and labor-impact uncertainty. Do not convert exposure into deterministic job-loss claims.
+  - id: src-pai-data-labor
+    title: Responsible Sourcing Across the Data Supply Line
+    url: https://partnershiponai.org/workstream/responsible-sourcing/
+    source_type: official-guidance
+    authority: modern-commentary
+    publisher: partnershiponai.org
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; partnershiponai.org is outside the default allow-list and is justified as a public source for
+      the human-systems work package.
+    best_for:
+    - claim-human-001
+    limitations:
+    - Use for data enrichment workers and the hidden human judgment behind AI systems.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for human-systems article work package.
+    notes: Use for data enrichment workers and the hidden human judgment behind AI systems.
+  - id: src-oecd-ai-principles
+    title: OECD AI Principles
+    url: https://oecd.ai/en/ai-principles
+    source_type: official-guidance
+    authority: primary
+    publisher: oecd.ai
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; oecd.ai is outside the default allow-list and is justified as a public source for the human-systems
+      work package.
+    best_for:
+    - claim-human-003
+    - claim-human-006
+    limitations:
+    - Use for trustworthy AI values, accountability, transparency, and human-centred framing.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for human-systems article work package.
+    notes: Use for trustworthy AI values, accountability, transparency, and human-centred framing.
+  - id: src-unesco-genai-edu
+    title: Guidance for Generative AI in Education and Research
+    url: https://unesdoc.unesco.org/ark:/48223/pf0000386693
+    source_type: official-guidance
+    authority: primary
+    publisher: unesdoc.unesco.org
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; unesdoc.unesco.org is outside the default allow-list and is justified as a public source for
+      the human-systems work package.
+    best_for:
+    - claim-human-004
+    limitations:
+    - Use for education and human-centred capacity guidance.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for human-systems article work package.
+    notes: Use for education and human-centred capacity guidance.
+  - id: src-oecd-ai-science
+    title: Artificial Intelligence in Science
+    url: https://doi.org/10.1787/a8d820bd-en
+    source_type: original-paper
+    authority: secondary
+    publisher: DOI
+    accessed: '2026-06-19'
+    status: active
+    public_access: public-doi
+    access_notes: Public source.
+    best_for:
+    - claim-human-004
+    limitations:
+    - Use for AI in science, research governance, validation, and institutional capacity.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for human-systems article work package.
+    notes: Use for AI in science, research governance, validation, and institutional capacity.
+  - id: src-usco-ai
+    title: Copyright and Artificial Intelligence
+    url: https://www.copyright.gov/ai/
+    source_type: data-report
+    authority: primary
+    publisher: copyright.gov
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; copyright.gov is outside the default allow-list and is justified as a public source for the
+      human-systems work package.
+    best_for:
+    - claim-human-004
+    limitations:
+    - Use for U.S. copyright and authorship framing. Avoid globalizing U.S.-specific law.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for human-systems article work package.
+    notes: Use for U.S. copyright and authorship framing. Avoid globalizing U.S.-specific law.
+  - id: src-itu-facts-2025
+    title: 'Measuring Digital Development: Facts and Figures 2025'
+    url: https://www.itu.int/hub/publication/d-ind-ict_mdd-2025-3/
+    source_type: data-report
+    authority: primary
+    publisher: itu.int
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; itu.int is outside the default allow-list and is justified as a public source for the human-systems
+      work package.
+    best_for:
+    - claim-human-005
+    limitations:
+    - Use for connectivity, digital divide, affordability, quality, gender, and urban-rural access context.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for human-systems article work package.
+    notes: Use for connectivity, digital divide, affordability, quality, gender, and urban-rural access context.
+  - id: src-worldbank-digital-2023
+    title: Digital Progress and Trends Report 2023
+    url: https://doi.org/10.1596/978-1-4648-2049-6
+    source_type: data-report
+    authority: secondary
+    publisher: DOI
+    accessed: '2026-06-19'
+    status: active
+    public_access: public-doi
+    access_notes: Public source.
+    best_for:
+    - claim-human-005
+    limitations:
+    - Use for digital-development and low/middle income country context.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for human-systems article work package.
+    notes: Use for digital-development and low/middle income country context.
+  - id: src-iea-energy-ai
+    title: Key Questions on Energy and AI
+    url: https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary
+    source_type: scholarly-history
+    authority: secondary
+    publisher: iea.org
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; iea.org is outside the default allow-list and is justified as a public source for the human-systems
+      work package.
+    best_for:
+    - claim-human-005
+    limitations:
+    - Use for data-centre electricity demand and projection ranges. Keep local grid context explicit.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for human-systems article work package.
+    notes: Use for data-centre electricity demand and projection ranges. Keep local grid context explicit.
+  - id: src-pew-ai-topic
+    title: Artificial Intelligence
+    url: https://www.pewresearch.org/topic/internet-technology/emerging-technology/artificial-intelligence/
+    source_type: scholarly-history
+    authority: secondary
+    publisher: pewresearch.org
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; pewresearch.org is outside the default allow-list and is justified as a public source for the
+      human-systems work package.
+    best_for:
+    - claim-human-006
+    limitations:
+    - Use for U.S. public-attitude context. Do not treat U.S. surveys as global public opinion.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for human-systems article work package.
+    notes: Use for U.S. public-attitude context. Do not treat U.S. surveys as global public opinion.
+  - id: src-alpac-1966
+    title: 'Language and Machines: Computers in Translation and Linguistics'
+    url: https://www.nationalacademies.org/read/9547
+    source_type: data-report
+    authority: primary
+    publisher: nationalacademies.org
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; nationalacademies.org is outside the default allow-list and is justified as a public source
+      for the ai-winters work package.
+    best_for:
+    - Early machine translation evaluation and public usefulness standards.
+    - AI-adjacent warning about cost, quality, and near-term deployment claims.
+    limitations:
+    - Use only for the claims named in the article source map until reviewed.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for ai-winters article work package.
+    notes: Do not treat ALPAC as a complete verdict on all AI research.
+  - id: src-lighthill-1973
+    title: 'Artificial Intelligence: A General Survey'
+    url: https://www.chilton-computing.org.uk/inf/literature/reports/lighthill_report/p001.htm
+    source_type: data-report
+    authority: primary
+    publisher: chilton-computing.org.uk
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; chilton-computing.org.uk is outside the default allow-list and is justified as a public source
+      for the ai-winters work package.
+    best_for:
+    - UK policy-review moment.
+    - Disappointed expectations, combinatorial explosion, and limited-domain criticism.
+    limitations:
+    - Use only for the claims named in the article source map until reviewed.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for ai-winters article work package.
+    notes: Treat as Lighthill's review for the UK Science Research Council, not a universal explanation of global AI history.
+  - id: src-agar-lighthill-2020
+    title: What is science for? The Lighthill report on artificial intelligence reinterpreted
+    url: https://doi.org/10.1017/S0007087420000230
+    source_type: scholarly-history
+    authority: secondary
+    publisher: DOI
+    accessed: '2026-06-19'
+    status: active
+    public_access: public-doi
+    access_notes: Public source.
+    best_for:
+    - Historiographic context for why the Lighthill report mattered.
+    - Fairness guardrail against one-cause winter narratives.
+    limitations:
+    - Use only for the claims named in the article source map until reviewed.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for ai-winters article work package.
+    notes: Use as interpretation, not as primary evidence for funding decisions.
+  - id: src-nrc-ai-1999
+    title: 'Funding a Revolution: Government Support for Computing Research, Chapter 9: Development in Artificial Intelligence'
+    url: https://www.nationalacademies.org/read/6323/chapter/11
+    source_type: archival-record
+    authority: secondary
+    publisher: nationalacademies.org
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; nationalacademies.org is outside the default allow-list and is justified as a public source
+      for the ai-winters work package.
+    best_for:
+    - U.S. government research funding context.
+    - DARPA, Strategic Computing, and changing funding styles.
+    limitations:
+    - Use only for the claims named in the article source map until reviewed.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for ai-winters article work package.
+    notes: Use exact funding figures only when quoting or paraphrasing the source closely.
+  - id: src-feigenbaum-1977
+    title: 'The Art of Artificial Intelligence: I. Themes and Case Studies of Knowledge Engineering'
+    url: https://stacks.stanford.edu/file/druid%3Abg342cm2034/bg342cm2034.pdf
+    source_type: original-paper
+    authority: primary
+    publisher: stacks.stanford.edu
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; stacks.stanford.edu is outside the default allow-list and is justified as a public source for
+      the ai-winters work package.
+    best_for:
+    - Knowledge engineering as a central expert-system idea.
+    - Shift from abstract reasoning alone toward domain knowledge.
+    limitations:
+    - Use only for the claims named in the article source map until reviewed.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for ai-winters article work package.
+    notes: Use for expert-system optimism and method, not for later bust claims.
+  - id: src-feigenbaum-acm
+    title: 'Edward A. Feigenbaum: A.M. Turing Award Laureate profile'
+    url: https://amturing.acm.org/award_winners/feigenbaum_4167235.cfm
+    source_type: encyclopedia-entry
+    authority: tertiary
+    publisher: amturing.acm.org
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; amturing.acm.org is outside the default allow-list and is justified as a public source for
+      the ai-winters work package.
+    best_for:
+    - DENDRAL, MYCIN, PUFF, ONCOCIN, MOLGEN, CHRYSALIS, and EMYCIN context.
+    - Concise source for Feigenbaum's knowledge-centered contribution.
+    limitations:
+    - Use only for the claims named in the article source map until reviewed.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for ai-winters article work package.
+    notes: Use for orientation; prefer primary program papers for detailed claims.
+  - id: src-mycin-1984
+    title: 'Rule-Based Expert Systems: The MYCIN Experiments of the Stanford Heuristic Programming Project'
+    url: https://www.shortliffe.net/Buchanan-Shortliffe-1984/MYCIN%20Book.htm
+    source_type: primary-text
+    authority: primary
+    publisher: shortliffe.net
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; shortliffe.net is outside the default allow-list and is justified as a public source for the
+      ai-winters work package.
+    best_for:
+    - MYCIN architecture, rule-base construction, uncertainty, explanation, evaluation, and human-use lessons.
+    - Evidence that expert systems required evaluation and user-centered design.
+    limitations:
+    - Use only for the claims named in the article source map until reviewed.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for ai-winters article work package.
+    notes: Medical performance claims require the evaluation chapters or related clinical papers, not summary memory.
+  - id: src-r1-1980
+    title: 'R1: An Expert in the Computer Systems Domain'
+    url: https://cdn.aaai.org/AAAI/1980/AAAI80-076.pdf
+    source_type: original-paper
+    authority: primary
+    publisher: cdn.aaai.org
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; cdn.aaai.org is outside the default allow-list and is justified as a public source for the
+      ai-winters work package.
+    best_for:
+    - R1/XCON as a rule-based expert system for computer-system configuration.
+    - Narrow-domain commercial expert-system example.
+    limitations:
+    - Use only for the claims named in the article source map until reviewed.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for ai-winters article work package.
+    notes: Use later R1/XCON retrospectives for production statistics and maintenance experience.
+  - id: src-r1-revisited-1984
+    title: 'R1 Revisited: Four Years in the Trenches'
+    url: https://ojs.aaai.org/aimagazine/index.php/aimagazine/article/view/445
+    source_type: primary-text
+    authority: primary
+    publisher: ojs.aaai.org
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; ojs.aaai.org is outside the default allow-list and is justified as a public source for the
+      ai-winters work package.
+    best_for:
+    - Production experience with R1/XCON.
+    - Maintenance, deployment, and engineering lessons around expert systems.
+    limitations:
+    - Use only for the claims named in the article source map until reviewed.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for ai-winters article work package.
+    notes: Verify exact savings, rule-count, and order-volume figures before final article prose.
+  - id: src-haigh-no-first-winter
+    title: There Was No 'First AI Winter'
+    url: https://cacm.acm.org/opinion/there-was-no-first-ai-winter/
+    source_type: scholarly-history
+    authority: secondary
+    publisher: cacm.acm.org
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; cacm.acm.org is outside the default allow-list and is justified as a public source for the
+      ai-winters work package.
+    best_for:
+    - Caution against repeating a simplified first-AI-winter narrative.
+    - Support for saying research activity continued even amid criticism.
+    limitations:
+    - Use only for the claims named in the article source map until reviewed.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for ai-winters article work package.
+    notes: Use as attributed historiographic interpretation.
+  - id: src-haigh-ai-boom-bust
+    title: How the AI Boom Went Bust
+    url: https://cacm.acm.org/opinion/how-the-ai-boom-went-bust/
+    source_type: scholarly-history
+    authority: secondary
+    publisher: cacm.acm.org
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; cacm.acm.org is outside the default allow-list and is justified as a public source for the
+      ai-winters work package.
+    best_for:
+    - 1980s expert-system boom and bust framing.
+    - Historical comparison for hype-cycle claims.
+    limitations:
+    - Use only for the claims named in the article source map until reviewed.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for ai-winters article work package.
+    notes: Attribute claims and avoid using the source as sole evidence for exact commercial figures.
+  - id: src-boole-laws-thought
+    title: An Investigation of the Laws of Thought
+    url: https://archive.org/details/investigationofl01bool
+    source_type: primary-text
+    authority: primary
+    publisher: archive.org
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; archive.org is outside the default allow-list and is justified as a public source for the formal-logic
+      work package.
+    best_for:
+    - Primary anchor for algebraic treatment of logic.
+    limitations:
+    - Boole did not invent digital computers or AI; use for formalization of logical operations.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for formal-logic article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-sep-frege-logic
+    title: Frege's Logic
+    url: https://plato.stanford.edu/entries/frege-logic/
+    source_type: encyclopedia-entry
+    authority: tertiary
+    publisher: Stanford Encyclopedia of Philosophy
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; plato.stanford.edu is outside the default allow-list and is justified as a public source for
+      the formal-logic work package.
+    best_for:
+    - Context for Frege's role in modern quantificational logic and attribution cautions.
+    limitations:
+    - Use SEP's caution that novelty and attribution are contested; avoid all-credit-to-Frege framing.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for formal-logic article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-principia-archive
+    title: Principia Mathematica
+    url: https://archive.org/details/cu31924001575244
+    source_type: primary-text
+    authority: primary
+    publisher: archive.org
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; archive.org is outside the default allow-list and is justified as a public source for the formal-logic
+      work package.
+    best_for:
+    - Historical context for logicism and formal mathematical systems.
+    limitations:
+    - Do not make readers learn Principia notation; use only as context for formal-system ambition.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for formal-logic article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-hilbert-problems
+    title: Mathematical Problems
+    url: https://aleph0.clarku.edu/~djoyce/hilbert/problems.html
+    source_type: primary-text
+    authority: primary
+    publisher: aleph0.clarku.edu
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; aleph0.clarku.edu is outside the default allow-list and is justified as a public source for
+      the formal-logic work package.
+    best_for:
+    - Context for Hilbert's formalist ambitions and decision-problem background.
+    limitations:
+    - The Entscheidungsproblem is later and more specific than the 1900 problem list; avoid collapsing all Hilbert program details
+      into this source.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for formal-logic article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-sep-godel
+    title: Godel's Incompleteness Theorems
+    url: https://plato.stanford.edu/entries/goedel-incompleteness/
+    source_type: encyclopedia-entry
+    authority: tertiary
+    publisher: Stanford Encyclopedia of Philosophy
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; plato.stanford.edu is outside the default allow-list and is justified as a public source for
+      the formal-logic work package.
+    best_for:
+    - Context for the limits of formal systems containing arithmetic.
+    limitations:
+    - Do not use incompleteness as a vague metaphor for consciousness or AI limits.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for formal-logic article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-sep-church
+    title: Alonzo Church
+    url: https://plato.stanford.edu/entries/church/
+    source_type: encyclopedia-entry
+    authority: tertiary
+    publisher: Stanford Encyclopedia of Philosophy
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; plato.stanford.edu is outside the default allow-list and is justified as a public source for
+      the formal-logic work package.
+    best_for:
+    - Context for lambda calculus, Church's thesis, and the negative result for the Entscheidungsproblem.
+    limitations:
+    - Do not make Church a footnote to Turing; present independent route and later equivalence carefully.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for formal-logic article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-sep-church-turing
+    title: The Church-Turing Thesis
+    url: https://plato.stanford.edu/archives/fall2020/entries/church-turing/
+    source_type: encyclopedia-entry
+    authority: tertiary
+    publisher: Stanford Encyclopedia of Philosophy
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; plato.stanford.edu is outside the default allow-list and is justified as a public source for
+      the formal-logic work package.
+    best_for:
+    - Main context source for effective methods, Turing/Church equivalence, and common misunderstandings.
+    limitations:
+    - Keep the thesis about effective methods; do not turn it into a claim about all physical machines or minds.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for formal-logic article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-post-1936
+    title: Finite Combinatory Processes - Formulation 1
+    url: https://doi.org/10.2307/2269031
+    source_type: original-paper
+    authority: primary
+    publisher: DOI
+    accessed: '2026-06-19'
+    status: active
+    public_access: public-doi
+    access_notes: Public source.
+    best_for:
+    - Independent computability context and convergence on formal symbol processes.
+    limitations:
+    - 'Keep short in the main article unless issue #5 expands the computability source canon.'
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for formal-logic article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-shannon-switching
+    title: A Symbolic Analysis of Relay and Switching Circuits
+    url: https://doi.org/10.1109/T-AIEE.1938.5057767
+    source_type: original-paper
+    authority: primary
+    publisher: DOI
+    accessed: '2026-06-19'
+    status: active
+    public_access: public-doi
+    access_notes: Public source.
+    best_for:
+    - Primary metadata anchor for the 1938 published article on relay/switching circuit design.
+    limitations:
+    - This is an engineering bridge, not a theory of thought.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for formal-logic article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-chm-digital-logic
+    title: How Do Digital Computers Think?
+    url: https://www.computerhistory.org/revolution/digital-logic/12/269
+    source_type: museum-collection
+    authority: tertiary
+    publisher: Computer History Museum
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; computerhistory.org is outside the default allow-list and is justified as a public source for
+      the formal-logic work package.
+    best_for:
+    - Reader-facing context for Shannon, Boolean logic, digital circuits, and the 1937 thesis / 1938 publication distinction.
+    limitations:
+    - Use as explanation support; avoid implying Shannon was the only relevant switching-logic figure.
+    visual_use:
+      reuse: rights-review-needed
+      notes: Check source-specific rights before visual reuse.
+    added_for: Canon expansion for formal-logic article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-shannon-info-1948
+    title: A Mathematical Theory of Communication
+    url: https://doi.org/10.1002/j.1538-7305.1948.tb01338.x
+    source_type: original-paper
+    authority: primary
+    publisher: DOI
+    accessed: '2026-06-19'
+    status: active
+    public_access: public-doi
+    access_notes: Public source.
+    best_for:
+    - Primary anchor for information theory, channels, noise, and message transmission.
+    limitations:
+    - Shannon information is not semantic meaning or human understanding.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for formal-logic article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-shannon-info-pdf
+    title: A Mathematical Theory of Communication
+    url: https://ia803209.us.archive.org/27/items/bstj27-3-379/bstj27-3-379_text.pdf
+    source_type: original-paper
+    authority: primary
+    publisher: ia803209.us.archive.org
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; ia803209.us.archive.org is outside the default allow-list and is justified as a public source
+      for the formal-logic work package.
+    best_for:
+    - Public full-text support for entropy, information, channels, and noise claims.
+    limitations:
+    - Use for technical support; keep semantic-meaning caveat visible.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for formal-logic article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-wiener-cybernetics
+    title: 'Cybernetics: Or Control and Communication in the Animal and the Machine'
+    url: https://doi.org/10.7551/mitpress/11810.001.0001
+    source_type: primary-text
+    authority: primary
+    publisher: DOI
+    accessed: '2026-06-19'
+    status: active
+    public_access: public-doi
+    access_notes: Public source.
+    best_for:
+    - Bounded context for feedback, control, and communication in machines and organisms.
+    limitations:
+    - Do not expand into a full cybernetics survey; feedback is not intelligence by itself.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for formal-logic article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-britannica-cybernetics
+    title: Cybernetics
+    url: https://www.britannica.com/science/cybernetics
+    source_type: encyclopedia-entry
+    authority: tertiary
+    publisher: britannica.com
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; britannica.com is outside the default allow-list and is justified as a public source for the
+      formal-logic work package.
+    best_for:
+    - Public secondary support for cybernetics as control theory applied to complex systems.
+    limitations:
+    - Use to define feedback/control scope, not to claim cybernetics directly caused AI.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for formal-logic article work package.
+    notes: Imported from package-local source map; review before article publication.
+  - id: src-edvac-first-draft
+    title: First Draft of a Report on the EDVAC
+    url: https://web.mit.edu/STS.035/www/PDFs/edvac.pdf
+    source_type: original-paper
+    authority: primary
+    publisher: "MIT Press"
+    accessed: '2026-06-19'
+    status: active
+    public_access: open-web
+    access_notes: Public source; direct.mit.edu is outside the default allow-list and is justified as a public source for the formal-logic
+      work package.
+    best_for:
+    - Optional note on stored-program architecture and the machine execution of instructions.
+    limitations:
+    - Attribution is contested; do not credit the stored-program concept to von Neumann alone.
+    visual_use:
+      reuse: metadata-only
+      notes: Use for source citation and factual structure, not visual reuse by default.
+    added_for: Canon expansion for formal-logic article work package.
+    notes: Imported from package-local source map; review before article publication.
