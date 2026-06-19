@@ -27,7 +27,7 @@ Cross-agent plan review approved the plan with required changes:
 
 - Record missing series artifacts and source canon as upstream dependencies.
 - Add fallback validation when issue-level validation targets are absent.
-- Namespace local source IDs and include future canon mapping notes.
+- Use canonical source IDs and keep any new source additions aligned with the shared source canon.
 - Require direct evidence or attributed phrasing for funding contraction, AI-winter periodization, brittleness, and maintenance-cost claims.
 - Include fairness guardrails for useful expert-system outcomes and continued research during downturns.
 

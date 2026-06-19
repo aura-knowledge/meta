@@ -11,12 +11,12 @@ upstream_dependencies:
     handling: "No branch-local series artifact was available; this package records the dependency for later reconciliation."
   - issue: 5
     name: "Source canon and historiography"
-    status: "no source-canon output available on this branch"
-    handling: "Local source IDs are namespaced with aiw-src-* and include future canon mapping notes."
+    status: "merged"
+    handling: "Source IDs are normalized against the shared source canon."
 
 source_reconciliation:
-  local_namespace: "aiw-src-*"
-  future_rule: "When issue #5 source-canon.yaml exists, map these local IDs to canon IDs without changing claim meanings. Preserve accessed dates and authority notes."
+  local_namespace: null
+  future_rule: "Keep any later source additions aligned with the shared source canon without changing claim meanings. Preserve accessed dates and authority notes."
   risky_claim_rule: "Funding contraction, AI-winter periodization, brittleness, and maintenance-cost claims require direct evidence or attributed historiographic phrasing."
 
 sources:
@@ -32,7 +32,6 @@ sources:
       - "Early machine translation evaluation and public usefulness standards."
       - "AI-adjacent warning about cost, quality, and near-term deployment claims."
     caution: "Do not treat ALPAC as a complete verdict on all AI research."
-    future_canon_mapping: "canon-alpac-1966"
 
   - id: "src-lighthill-1973"
     title: "Artificial Intelligence: A General Survey"
@@ -46,7 +45,6 @@ sources:
       - "UK policy-review moment."
       - "Disappointed expectations, combinatorial explosion, and limited-domain criticism."
     caution: "Treat as Lighthill's review for the UK Science Research Council, not a universal explanation of global AI history."
-    future_canon_mapping: "canon-lighthill-1973"
 
   - id: "src-agar-lighthill-2020"
     title: "What is science for? The Lighthill report on artificial intelligence reinterpreted"
@@ -60,7 +58,6 @@ sources:
       - "Historiographic context for why the Lighthill report mattered."
       - "Fairness guardrail against one-cause winter narratives."
     caution: "Use as interpretation, not as primary evidence for funding decisions."
-    future_canon_mapping: "canon-agar-2020"
 
   - id: "src-nrc-ai-1999"
     title: "Funding a Revolution: Government Support for Computing Research, Chapter 9: Development in Artificial Intelligence"
@@ -74,7 +71,6 @@ sources:
       - "U.S. government research funding context."
       - "DARPA, Strategic Computing, and changing funding styles."
     caution: "Use exact funding figures only when quoting or paraphrasing the source closely."
-    future_canon_mapping: "canon-nrc-ai-1999"
 
   - id: "src-feigenbaum-1977"
     title: "The Art of Artificial Intelligence: I. Themes and Case Studies of Knowledge Engineering"
@@ -88,7 +84,6 @@ sources:
       - "Knowledge engineering as a central expert-system idea."
       - "Shift from abstract reasoning alone toward domain knowledge."
     caution: "Use for expert-system optimism and method, not for later bust claims."
-    future_canon_mapping: "canon-feig-1977"
 
   - id: "src-feigenbaum-acm"
     title: "Edward A. Feigenbaum: A.M. Turing Award Laureate profile"
@@ -102,7 +97,6 @@ sources:
       - "DENDRAL, MYCIN, PUFF, ONCOCIN, MOLGEN, CHRYSALIS, and EMYCIN context."
       - "Concise source for Feigenbaum's knowledge-centered contribution."
     caution: "Use for orientation; prefer primary program papers for detailed claims."
-    future_canon_mapping: "canon-feig-acm"
 
   - id: "src-mycin-1984"
     title: "Rule-Based Expert Systems: The MYCIN Experiments of the Stanford Heuristic Programming Project"
@@ -116,7 +110,6 @@ sources:
       - "MYCIN architecture, rule-base construction, uncertainty, explanation, evaluation, and human-use lessons."
       - "Evidence that expert systems required evaluation and user-centered design."
     caution: "Medical performance claims require the evaluation chapters or related clinical papers, not summary memory."
-    future_canon_mapping: "canon-mycin-1984"
 
   - id: "src-r1-1980"
     title: "R1: An Expert in the Computer Systems Domain"
@@ -130,7 +123,6 @@ sources:
       - "R1/XCON as a rule-based expert system for computer-system configuration."
       - "Narrow-domain commercial expert-system example."
     caution: "Use later R1/XCON retrospectives for production statistics and maintenance experience."
-    future_canon_mapping: "canon-r1-1980"
 
   - id: "src-r1-revisited-1984"
     title: "R1 Revisited: Four Years in the Trenches"
@@ -144,7 +136,6 @@ sources:
       - "Production experience with R1/XCON."
       - "Maintenance, deployment, and engineering lessons around expert systems."
     caution: "Verify exact savings, rule-count, and order-volume figures before final article prose."
-    future_canon_mapping: "canon-r1rev-1984"
 
   - id: "src-haigh-no-first-winter"
     title: "There Was No 'First AI Winter'"
@@ -158,7 +149,6 @@ sources:
       - "Caution against repeating a simplified first-AI-winter narrative."
       - "Support for saying research activity continued even amid criticism."
     caution: "Use as attributed historiographic interpretation."
-    future_canon_mapping: "canon-haigh-2023"
 
   - id: "src-haigh-ai-boom-bust"
     title: "How the AI Boom Went Bust"
@@ -172,7 +162,6 @@ sources:
       - "1980s expert-system boom and bust framing."
       - "Historical comparison for hype-cycle claims."
     caution: "Attribute claims and avoid using the source as sole evidence for exact commercial figures."
-    future_canon_mapping: "canon-haigh-2024"
 
   - id: "src-nist-ai-rmf"
     title: "Artificial Intelligence Risk Management Framework (AI RMF 1.0)"
@@ -186,7 +175,6 @@ sources:
       - "Modern comparison point for test, evaluation, verification, and validation across an AI lifecycle."
       - "Grounds the article's modern lesson without making capability claims."
     caution: "Use for evaluation/governance continuity, not for AI winter prediction."
-    future_canon_mapping: "canon-nist-rmf-2023"
 
   - id: "src-hai-ai-index"
     title: "The 2026 AI Index Report"
@@ -200,7 +188,6 @@ sources:
       - "Modern benchmark, investment, and deployment context."
       - "Caution that modern AI progress should be evaluated with current data."
     caution: "Use only for modern context; do not project future boom or winter outcomes."
-    future_canon_mapping: "canon-aiindex-2026"
 
 claims:
   - id: "claim-aiw-001"

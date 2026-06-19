@@ -81,13 +81,13 @@ Connect cautiously to modern AI. The analogy is not "LLMs are expert systems." T
 
 | Period | Milestone | Story role | Source IDs |
 |---|---|---|---|
-| 1966 | ALPAC report on machine translation | early evaluation warning | `aiw-src-alpac-1966` |
-| 1972-1973 | Lighthill's AI survey for the UK Science Research Council | public review and criticism | `aiw-src-lighthill-1973`, `aiw-src-agar-2020` |
-| 1977 | Feigenbaum frames knowledge engineering as a central AI practice | expert-system pivot | `aiw-src-feig-1977`, `aiw-src-feig-acm` |
-| 1980 | R1/XCON presented as an expert system for computer configuration | narrow-domain commercial value | `aiw-src-r1-1980`, `aiw-src-r1rev-1984` |
-| 1984 | MYCIN retrospective published | evaluation and human-use lessons | `aiw-src-mycin-1984` |
-| 1980s | Strategic Computing and changing AI funding styles | institutional expectation and funding context | `aiw-src-nrc-1999` |
-| 2023-2026 | AI risk and benchmark evaluation practices | modern comparison point | `aiw-src-nist-rmf-2023`, `aiw-src-aiindex-2026` |
+| 1966 | ALPAC report on machine translation | early evaluation warning | `src-alpac-1966` |
+| 1972-1973 | Lighthill's AI survey for the UK Science Research Council | public review and criticism | `src-lighthill-1973`, `src-agar-lighthill-2020` |
+| 1977 | Feigenbaum frames knowledge engineering as a central AI practice | expert-system pivot | `src-feigenbaum-1977`, `src-feigenbaum-acm` |
+| 1980 | R1/XCON presented as an expert system for computer configuration | narrow-domain commercial value | `src-r1-1980`, `src-r1-revisited-1984` |
+| 1984 | MYCIN retrospective published | evaluation and human-use lessons | `src-mycin-1984` |
+| 1980s | Strategic Computing and changing AI funding styles | institutional expectation and funding context | `src-nrc-ai-1999` |
+| 2023-2026 | AI risk and benchmark evaluation practices | modern comparison point | `src-nist-ai-rmf`, `src-hai-ai-index` |
 
 ## Analogy Candidates and Limits
 
@@ -121,7 +121,7 @@ Connect cautiously to modern AI. The analogy is not "LLMs are expert systems." T
 
 ## Open Review Flags
 
-- Reconcile local source IDs with the future source canon from issue #5 before publication.
+- Keep source IDs aligned with the shared source canon before publication.
 - Decide whether the article should use the phrase "first AI winter" or avoid it in favor of "early AI disappointment cycles"; the historiography is contested.
 - Verify all exact XCON/R1 commercial figures against primary or near-primary sources before drafting final prose.
 - If the main series charter from issue #4 lands in the branch, align section naming and topic stems with that artifact before PR.
