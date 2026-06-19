@@ -1,0 +1,269 @@
+schemaVersion: 1
+article: "learning-machines"
+title: "Learning Machines: Statistics, Neural Networks, and the Data Turn"
+status: "provisional-until-source-canon"
+accessed: "2026-06-19"
+dependency_notes:
+  - "Issue #5 source canon was still unavailable during this session; source IDs and authority classes are provisional."
+  - "Before publication, sync IDs and authority labels with the shared source canon."
+
+authority_classes:
+  primary-publication: "Original or near-original public source used for source-backed technical or historical claims."
+  benchmark-site: "Public benchmark or dataset infrastructure page used for scope and evaluation claims."
+  textbook: "Durable educational source used for conceptual framing."
+  institutional-history: "Public institutional history used for field-framing context."
+  commentary: "Modern interpretive source; use only as an explicitly marked lens."
+
+sources:
+  - id: "source-dartmouth-1955"
+    title: "A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence"
+    authors: ["John McCarthy", "Marvin L. Minsky", "Nathaniel Rochester", "Claude E. Shannon"]
+    year: 1955
+    url: "https://jmc.stanford.edu/articles/dartmouth/dartmouth.pdf"
+    type: "proposal"
+    authority: "primary-publication"
+    claim_types: ["fact", "field-framing"]
+    supports: ["claim-lm-001"]
+    notes: "Use to show that learning was part of the early AI field framing."
+    cautions: "Do not treat the proposal as evidence that the field had already solved learning."
+
+  - id: "source-dartmouth-story"
+    title: "AI at Dartmouth: Our Story"
+    authors: ["Dartmouth"]
+    year: 2026
+    url: "https://ai.dartmouth.edu/our-story"
+    type: "institutional-history"
+    authority: "institutional-history"
+    claim_types: ["context"]
+    supports: ["claim-lm-001"]
+    notes: "Useful secondary institutional context for the Dartmouth meeting and field naming."
+    cautions: "Use as context, not as the sole source for detailed historical interpretation."
+
+  - id: "source-samuel-1959"
+    title: "Some Studies in Machine Learning Using the Game of Checkers"
+    authors: ["Arthur L. Samuel"]
+    year: 1959
+    url: "https://doi.org/10.1147/rd.33.0210"
+    type: "research-paper"
+    authority: "primary-publication"
+    claim_types: ["fact", "technical-example"]
+    supports: ["claim-lm-002"]
+    notes: "Use as an early machine-learning example built around checkers and evaluated improvement."
+    cautions: "Do not attach the popular short definition of machine learning unless independently sourced."
+
+  - id: "source-rosenblatt-1958"
+    title: "The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain"
+    authors: ["Frank Rosenblatt"]
+    year: 1958
+    url: "https://homepages.math.uic.edu/~lreyzin/papers/rosenblatt58.pdf"
+    type: "research-paper"
+    authority: "primary-publication"
+    claim_types: ["fact", "technical-example"]
+    supports: ["claim-lm-003"]
+    notes: "Use for connectionist framing, adaptive connections, pattern recognition, and probabilistic analysis."
+    cautions: "Keep biological analogy bounded; this is not a claim that perceptrons explain the brain."
+
+  - id: "source-minsky-papert-1969"
+    title: "Perceptrons: An Introduction to Computational Geometry"
+    authors: ["Marvin Minsky", "Seymour A. Papert"]
+    year: 1969
+    url: "https://mitpress.mit.edu/9780262630221/perceptrons/"
+    type: "book"
+    authority: "primary-publication"
+    claim_types: ["fact", "technical-limit"]
+    supports: ["claim-lm-004"]
+    notes: "Use for limits of perceptron models and historical caveats about simple architectures."
+    cautions: "Avoid the folk claim that the book alone ended neural-network research."
+
+  - id: "source-rumelhart-backprop-1986"
+    title: "Learning Representations by Back-Propagating Errors"
+    authors: ["David E. Rumelhart", "Geoffrey E. Hinton", "Ronald J. Williams"]
+    year: 1986
+    url: "https://doi.org/10.1038/323533a0"
+    type: "research-paper"
+    authority: "primary-publication"
+    claim_types: ["fact", "technical-method"]
+    supports: ["claim-lm-005"]
+    notes: "Use for a widely influential account of backpropagation in multilayer networks."
+    cautions: "Say demonstration or popularization; do not imply sole invention of backpropagation."
+
+  - id: "source-lecun-docrec-1998"
+    title: "Gradient-Based Learning Applied to Document Recognition"
+    authors: ["Yann LeCun", "Leon Bottou", "Yoshua Bengio", "Patrick Haffner"]
+    year: 1998
+    url: "https://doi.org/10.1109/5.726791"
+    type: "research-paper"
+    authority: "primary-publication"
+    claim_types: ["fact", "technical-method", "deployment-context"]
+    supports: ["claim-lm-006"]
+    notes: "Use for continuity between earlier neural-network applications and the later deep-learning wave."
+    cautions: "Do not imply this alone caused the ImageNet-era shift."
+
+  - id: "source-imagenet-site"
+    title: "ImageNet Large Scale Visual Recognition Challenge"
+    authors: ["ImageNet"]
+    year: 2020
+    url: "https://www.image-net.org/challenges/LSVRC/"
+    type: "benchmark-site"
+    authority: "benchmark-site"
+    claim_types: ["fact", "infrastructure"]
+    supports: ["claim-lm-007"]
+    notes: "Use for the challenge's public description, evaluation role, and citation guidance."
+    cautions: "Avoid using benchmark scope as a proxy for all visual intelligence."
+
+  - id: "source-imagenet-2015"
+    title: "ImageNet Large Scale Visual Recognition Challenge"
+    authors:
+      - "Olga Russakovsky"
+      - "Jia Deng"
+      - "Hao Su"
+      - "Jonathan Krause"
+      - "Sanjeev Satheesh"
+      - "Sean Ma"
+      - "Zhiheng Huang"
+      - "Andrej Karpathy"
+      - "Aditya Khosla"
+      - "Michael Bernstein"
+      - "Alexander C. Berg"
+      - "Li Fei-Fei"
+    year: 2015
+    url: "https://arxiv.org/abs/1409.0575"
+    type: "research-paper"
+    authority: "primary-publication"
+    claim_types: ["fact", "infrastructure", "interpretation"]
+    supports: ["claim-lm-007", "claim-lm-008"]
+    notes: "Use for benchmark creation, data scale, annotation challenges, and progress framing."
+    cautions: "The paper is about object category classification and detection, not all AI progress."
+
+  - id: "source-alexnet-2012"
+    title: "ImageNet Classification with Deep Convolutional Neural Networks"
+    authors: ["Alex Krizhevsky", "Ilya Sutskever", "Geoffrey E. Hinton"]
+    year: 2012
+    url: "https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks"
+    type: "research-paper"
+    authority: "primary-publication"
+    claim_types: ["fact", "technical-method", "infrastructure"]
+    supports: ["claim-lm-008"]
+    notes: "Use for the 2012 NeurIPS paper and the combination of deep convolutional networks, ImageNet-scale training, and GPU implementation. The ACM DOI 10.1145/3065386 is a later record for the same title."
+    cautions: "Do not claim AlexNet was the only deep-learning breakthrough or the first neural network."
+
+  - id: "source-esl-2009"
+    title: "The Elements of Statistical Learning"
+    authors: ["Trevor Hastie", "Robert Tibshirani", "Jerome Friedman"]
+    year: 2009
+    url: "https://hastie.su.domains/ElemStatLearn/"
+    type: "textbook"
+    authority: "textbook"
+    claim_types: ["concept", "technical-background"]
+    supports: ["claim-lm-009"]
+    notes: "Use for supervised learning, inference, prediction, and generalization framing."
+    cautions: "Use for conceptual grounding, not as a historical primary source."
+
+  - id: "source-deep-learning-2016"
+    title: "Deep Learning"
+    authors: ["Ian Goodfellow", "Yoshua Bengio", "Aaron Courville"]
+    year: 2016
+    url: "https://www.deeplearningbook.org/"
+    type: "textbook"
+    authority: "textbook"
+    claim_types: ["concept", "technical-background"]
+    supports: ["claim-lm-009"]
+    notes: "Use for modern deep-learning concepts, training, optimization, representation learning, and caveats."
+    cautions: "Use as modern technical context, not a primary source for earlier history."
+
+  - id: "source-sutton-bitter-2019"
+    title: "The Bitter Lesson"
+    authors: ["Richard S. Sutton"]
+    year: 2019
+    url: "https://www.incompleteideas.net/IncIdeas/BitterLesson.html"
+    type: "essay"
+    authority: "commentary"
+    claim_types: ["interpretation"]
+    supports: ["claim-lm-010"]
+    notes: "Use only as a marked interpretive lens about general methods and compute scaling."
+    cautions: "Do not let this lens flatten the roles of data, labor, institutions, or domain knowledge."
+
+claims:
+  - id: "claim-lm-001"
+    claim: "The early AI field framing included learning as a central feature of intelligence."
+    type: "fact"
+    confidence: "high"
+    uncertainty: "settled"
+    source_ids: ["source-dartmouth-1955", "source-dartmouth-story"]
+
+  - id: "claim-lm-002"
+    claim: "Samuel's checkers work is an early public example of machine-learning procedures."
+    type: "fact"
+    confidence: "high"
+    uncertainty: "settled"
+    source_ids: ["source-samuel-1959"]
+
+  - id: "claim-lm-003"
+    claim: "Rosenblatt's perceptron framed pattern recognition through adaptive connections and probabilistic analysis."
+    type: "fact"
+    confidence: "high"
+    uncertainty: "settled"
+    source_ids: ["source-rosenblatt-1958"]
+
+  - id: "claim-lm-004"
+    claim: "Minsky and Papert analyzed limits of perceptron models and helped clarify why simple architectures were insufficient."
+    type: "interpretation"
+    confidence: "medium-high"
+    uncertainty: "debated"
+    source_ids: ["source-minsky-papert-1969"]
+
+  - id: "claim-lm-005"
+    claim: "The 1986 Nature paper helped make backpropagation for multilayer networks practically legible to a broad research audience."
+    type: "interpretation"
+    confidence: "high"
+    uncertainty: "settled"
+    source_ids: ["source-rumelhart-backprop-1986"]
+
+  - id: "claim-lm-006"
+    claim: "Gradient-trained convolutional networks were demonstrated in practical document-recognition systems before ImageNet."
+    type: "fact"
+    confidence: "high"
+    uncertainty: "settled"
+    source_ids: ["source-lecun-docrec-1998"]
+
+  - id: "claim-lm-007"
+    claim: "ImageNet and ILSVRC helped make large labeled datasets and shared benchmarks central infrastructure for computer vision."
+    type: "interpretation"
+    confidence: "high"
+    uncertainty: "settled"
+    source_ids: ["source-imagenet-site", "source-imagenet-2015"]
+
+  - id: "claim-lm-008"
+    claim: "AlexNet made deep networks, ImageNet-scale data, and GPU implementation newly persuasive in 2012."
+    type: "interpretation"
+    confidence: "high"
+    uncertainty: "settled"
+    source_ids: ["source-alexnet-2012", "source-imagenet-2015"]
+
+  - id: "claim-lm-009"
+    claim: "Generalization to new cases is the central reader-facing distinction between learning and memorization."
+    type: "concept"
+    confidence: "high"
+    uncertainty: "settled"
+    source_ids: ["source-esl-2009", "source-deep-learning-2016"]
+
+  - id: "claim-lm-010"
+    claim: "The compute-scaling frame is useful as commentary but should not be treated as a complete causal account."
+    type: "interpretation"
+    confidence: "medium"
+    uncertainty: "debated"
+    source_ids: ["source-sutton-bitter-2019"]
+
+analogy_boundaries:
+  - concept: "loss"
+    analogy: "scoreboard"
+    limit: "A loss score is an optimization signal, not truth or meaning."
+  - concept: "backpropagation"
+    analogy: "assigning error back through a layered workshop"
+    limit: "Gradient assignment is not moral blame or complete causal explanation."
+  - concept: "generalization"
+    analogy: "doing well on a new exam after practice"
+    limit: "The exam must resemble the intended use; distribution shifts can break performance."
+  - concept: "benchmark"
+    analogy: "public exam"
+    limit: "Benchmarks enable comparison but narrow attention to what is measured."
