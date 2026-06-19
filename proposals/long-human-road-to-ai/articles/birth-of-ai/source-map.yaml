@@ -3,9 +3,8 @@ article_slug: "birth-of-ai"
 status: canon-normalized
 accessed: "2026-06-19"
 provenance_note: >
-  This source map is provisional and source-canon-compatible. It supports issue
-  #8 only until issue #5 creates the shared source canon for The Long Human
-  Road to AI.
+  This source map is normalized against the shared source canon for The Long
+  Human Road to AI and supports issue #8.
 
 claims:
   - id: "CLAIM-BAI-001"

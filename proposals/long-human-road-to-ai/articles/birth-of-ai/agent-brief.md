@@ -25,13 +25,13 @@ into symbols, rules, search, and programs.
 ## Required Source Practice
 
 - Map every major factual or interpretive claim to `source-map.yaml`.
-- Use `source-dartmouth-proposal` for the proposal's ambitions and funding
+- Use `src-dartmouth-1955` for the proposal's ambitions and funding
   frame.
-- Use `source-rand-logic-theory-machine`, `source-gps-stanford`, and
-  `source-mccarthy-common-sense` for early symbolic systems.
-- Use `source-hdsr-dick-ai-history` and `source-nilsson-quest-ai` for balanced
+- Use `src-logic-theory-machine`, `src-gps-stanford`, and
+  `src-mccarthy-common-sense` for early symbolic systems.
+- Use `src-dick-ai-history` and `src-nilsson-quest-ai` for balanced
   historical interpretation.
-- Use `source-cornell-rosenblatt` to keep non-symbolic early work visible.
+- Use `src-rosenblatt-1958` to keep non-symbolic early work visible.
 
 ## Claims to Make Carefully
 

@@ -40,8 +40,8 @@ The Dartmouth proposal and 1956 summer project gave "artificial intelligence" a
 field label and a research agenda, but the article must not imply that all
 machine-intelligence work began there.
 
-- Source IDs: `source-dartmouth-proposal`, `source-dartmouth-institutional`,
-  `source-sep-ai`, `source-hdsr-dick-ai-history`
+- Source IDs: `src-dartmouth-1955`, `src-dartmouth-ai-coined`,
+  `src-sep-ai`, `src-dick-ai-history`
 - Claim type: historical fact with interpretive boundary
 - Confidence: high
 - Boundary: Use "birth" as title language with caveats. Prefer "naming,"
@@ -53,8 +53,8 @@ Early symbolic programs made intelligence operational by representing problems
 as formal structures and using heuristics to search through possible moves,
 proofs, or actions.
 
-- Source IDs: `source-rand-logic-theory-machine`, `source-chm-ai-robotics`,
-  `source-mccarthy-common-sense`, `source-sep-logic-ai`
+- Source IDs: `src-logic-theory-machine`, `src-chm-ai-robotics`,
+  `src-mccarthy-common-sense`, `src-sep-logic-ai`
 - Claim type: technical explanation
 - Confidence: high
 - Boundary: Do not collapse all early AI into logic alone; search, language,
@@ -68,8 +68,8 @@ proposals helped define the programming and representation tools around that
 ambition. The systems and proposals remained bounded; they did not solve
 open-ended human intelligence.
 
-- Source IDs: `source-rand-logic-theory-machine`, `source-gps-stanford`,
-  `source-chm-ai-robotics`, `source-mccarthy-common-sense`
+- Source IDs: `src-logic-theory-machine`, `src-gps-stanford`,
+  `src-chm-ai-robotics`, `src-mccarthy-common-sense`
 - Claim type: historical fact plus interpretation
 - Confidence: medium-high
 - Boundary: Avoid saying they "understood" mathematics, language, or the world
@@ -81,8 +81,8 @@ The field's optimism came from real progress in digital computers and formal
 systems, but it was amplified by funding proposals, public demonstrations,
 press accounts, and broad claims about simulating intelligence.
 
-- Source IDs: `source-dartmouth-proposal`, `source-hdsr-dick-ai-history`,
-  `source-cornell-perceptron-history`, `source-nilsson-quest-ai`
+- Source IDs: `src-dartmouth-1955`, `src-dick-ai-history`,
+  `src-cornell-perceptron`, `src-nilsson-quest-ai`
 - Claim type: interpretation
 - Confidence: medium
 - Boundary: Do not mock early optimism. Explain what looked plausible from the
@@ -94,9 +94,9 @@ The Dartmouth-centered story should sit beside other threads: Turing's machine
 intelligence question, cybernetics, neural-network and pattern-recognition work,
 game-playing, information theory, and postwar institutions.
 
-- Source IDs: `source-turing-archive`, `source-sep-ai`,
-  `source-hdsr-dick-ai-history`, `source-cornell-rosenblatt`,
-  `source-chm-ai-robotics`
+- Source IDs: `src-turing-1950`, `src-sep-ai`,
+  `src-dick-ai-history`, `src-rosenblatt-1958`,
+  `src-chm-ai-robotics`
 - Claim type: historical interpretation
 - Confidence: medium-high
 - Boundary: The article can foreground symbolic AI while still making clear
