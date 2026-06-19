@@ -72,7 +72,7 @@ Claim type: `interpretation`
 
 Public labor research distinguishes task exposure from job loss. Generative AI can augment, automate, or reshape work depending on task mix, occupation, income context, gendered labor patterns, management choices, and institutions.
 
-Use sources: `src-ilo-jobs`, `src-stanford-index`
+Use sources: `src-ilo-genai-jobs`, `src-hai-ai-index`
 
 Why it matters: The article should avoid one-line predictions that AI will "replace jobs" or "create jobs." It should ask what work changes, who controls the change, who receives productivity gains, and who bears transition costs.
 
@@ -91,7 +91,7 @@ Claim type: `interpretation`
 
 AI governance is not external decoration. Official frameworks and laws define responsibilities for risk management, transparency, accountability, human oversight, safety, and rights in high-impact settings.
 
-Use sources: `src-nist-ai-rmf`, `src-eu-ai-act`, `src-oecd-principles`
+Use sources: `src-nist-ai-rmf`, `src-eu-ai-act`, `src-oecd-ai-principles`
 
 Why it matters: The article can frame governance as a continuation of older institution-building: weights and measures, professional standards, audit trails, public records, product safety, and due process.
 
@@ -110,7 +110,7 @@ Claim type: `interpretation`
 
 In education, science, and creative work, AI raises questions about what humans should learn, what counts as evidence, what counts as authorship, and when assistance becomes substitution.
 
-Use sources: `src-unesco-edu`, `src-oecd-science`, `src-usco-ai`
+Use sources: `src-unesco-genai-edu`, `src-oecd-ai-science`, `src-usco-ai`
 
 Why it matters: This lets the article avoid a narrow "cheating tool" or "productivity tool" frame. The durable question is how institutions preserve human judgment while using AI to expand inquiry and expression.
 
@@ -129,7 +129,7 @@ Claim type: `interpretation`
 
 AI benefits depend on connectivity, language, compute, affordability, skills, energy systems, and local institutions. Public connectivity and energy sources show that digital access remains unequal and that data-center growth has real electricity and grid implications.
 
-Use sources: `src-itu-access`, `src-worldbank-digital`, `src-iea-energy`
+Use sources: `src-itu-facts-2025`, `src-worldbank-digital-2023`, `src-iea-energy-ai`
 
 Why it matters: The article should keep "AI for everyone" claims tied to material conditions. If people lack affordable connectivity, local-language tools, institutional capacity, or reliable energy, the benefits will not distribute evenly.
 
@@ -148,7 +148,7 @@ Claim type: `interpretation`
 
 Survey and governance sources show that public attitudes toward AI include both openness and caution. Trust depends on where AI is used, whether people can understand or challenge decisions, and whether institutions are credible.
 
-Use sources: `src-pew-trust`, `src-nist-ai-rmf`, `src-oecd-principles`
+Use sources: `src-pew-ai-topic`, `src-nist-ai-rmf`, `src-oecd-ai-principles`
 
 Why it matters: The article should treat trust as earned infrastructure, not a public-relations problem. If people cannot inspect, appeal, or understand AI-mediated decisions, adoption can produce resistance even where tools are capable.
 
