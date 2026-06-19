@@ -15,7 +15,7 @@ article:
     - "computability"
     - "information-theory"
     - "cybernetics"
-  source_canon_status: "provisional-ids-pending-5"
+  source_canon_status: "canon-normalized"
   sanitized_summary: "This article package explains how formal reasoning, symbolic notation, Boolean algebra, computability, information theory, and feedback/control concepts made later computing and AI ideas possible and legible. It uses public historical and technical sources only, avoids private anecdotes, and treats analogies as teaching devices rather than evidence of inevitability."
 
 privacy:
@@ -28,7 +28,7 @@ privacy:
     - "All URLs point to public source pages, public metadata, or public scans."
 
 sources:
-  - id: "prov-leibniz-sep"
+  - id: "src-sep-leibniz-logic"
     title: "Leibniz's Influence on 19th Century Logic"
     author_or_editor: "Stanford Encyclopedia of Philosophy"
     year: 2009
@@ -40,7 +40,7 @@ sources:
     use: "Background only for earlier dreams of symbolic reasoning and universal characteristic."
     limits_or_counterclaim: "Do not overstate Leibniz as a direct origin of modern computation; use as a prehistory note only."
 
-  - id: "provisional-boole-laws-thought"
+  - id: "src-boole-laws-thought"
     title: "An Investigation of the Laws of Thought"
     author_or_editor: "George Boole"
     year: 1854
@@ -52,7 +52,7 @@ sources:
     use: "Primary anchor for algebraic treatment of logic."
     limits_or_counterclaim: "Boole did not invent digital computers or AI; use for formalization of logical operations."
 
-  - id: "provisional-frege-logic-sep"
+  - id: "src-sep-frege-logic"
     title: "Frege's Logic"
     author_or_editor: "Stanford Encyclopedia of Philosophy"
     year: 2023
@@ -64,7 +64,7 @@ sources:
     use: "Context for Frege's role in modern quantificational logic and attribution cautions."
     limits_or_counterclaim: "Use SEP's caution that novelty and attribution are contested; avoid all-credit-to-Frege framing."
 
-  - id: "prov-principia-archive"
+  - id: "src-principia-archive"
     title: "Principia Mathematica"
     author_or_editor: "Alfred North Whitehead and Bertrand Russell"
     year: 1910
@@ -76,7 +76,7 @@ sources:
     use: "Historical context for logicism and formal mathematical systems."
     limits_or_counterclaim: "Do not make readers learn Principia notation; use only as context for formal-system ambition."
 
-  - id: "provisional-hilbert-problems"
+  - id: "src-hilbert-problems"
     title: "Mathematical Problems"
     author_or_editor: "David Hilbert"
     year: 1900
@@ -88,7 +88,7 @@ sources:
     use: "Context for Hilbert's formalist ambitions and decision-problem background."
     limits_or_counterclaim: "The Entscheidungsproblem is later and more specific than the 1900 problem list; avoid collapsing all Hilbert program details into this source."
 
-  - id: "prov-godel-sep"
+  - id: "src-sep-godel"
     title: "Godel's Incompleteness Theorems"
     author_or_editor: "Stanford Encyclopedia of Philosophy"
     year: 2013
@@ -101,7 +101,7 @@ sources:
     use: "Context for the limits of formal systems containing arithmetic."
     limits_or_counterclaim: "Do not use incompleteness as a vague metaphor for consciousness or AI limits."
 
-  - id: "provisional-church-sep"
+  - id: "src-sep-church"
     title: "Alonzo Church"
     author_or_editor: "Stanford Encyclopedia of Philosophy"
     year: 2021
@@ -113,7 +113,7 @@ sources:
     use: "Context for lambda calculus, Church's thesis, and the negative result for the Entscheidungsproblem."
     limits_or_counterclaim: "Do not make Church a footnote to Turing; present independent route and later equivalence carefully."
 
-  - id: "prov-church-turing-sep"
+  - id: "src-sep-church-turing"
     title: "The Church-Turing Thesis"
     author_or_editor: "Stanford Encyclopedia of Philosophy"
     year: 2017
@@ -125,7 +125,7 @@ sources:
     use: "Main context source for effective methods, Turing/Church equivalence, and common misunderstandings."
     limits_or_counterclaim: "Keep the thesis about effective methods; do not turn it into a claim about all physical machines or minds."
 
-  - id: "prov-turing-computable"
+  - id: "src-turing-1936"
     title: "On Computable Numbers, with an Application to the Entscheidungsproblem"
     author_or_editor: "Alan M. Turing"
     year: 1937
@@ -137,7 +137,7 @@ sources:
     use: "Primary anchor for Turing machines and the decision-problem result."
     limits_or_counterclaim: "Use DOI metadata plus public secondary context; avoid quoting inaccessible text from paywalled copy."
 
-  - id: "prov-post-processes"
+  - id: "src-post-1936"
     title: "Finite Combinatory Processes - Formulation 1"
     author_or_editor: "Emil L. Post"
     year: 1936
@@ -149,7 +149,7 @@ sources:
     use: "Independent computability context and convergence on formal symbol processes."
     limits_or_counterclaim: "Keep short in the main article unless issue #5 expands the computability source canon."
 
-  - id: "prov-shannon-switching"
+  - id: "src-shannon-switching"
     title: "A Symbolic Analysis of Relay and Switching Circuits"
     author_or_editor: "Claude E. Shannon"
     year: 1938
@@ -161,7 +161,7 @@ sources:
     use: "Primary metadata anchor for the 1938 published article on relay/switching circuit design."
     limits_or_counterclaim: "This is an engineering bridge, not a theory of thought."
 
-  - id: "provisional-chm-digital-logic"
+  - id: "src-chm-digital-logic"
     title: "How Do Digital Computers Think?"
     author_or_editor: "Computer History Museum"
     year: "n.d."
@@ -173,7 +173,7 @@ sources:
     use: "Reader-facing context for Shannon, Boolean logic, digital circuits, and the 1937 thesis / 1938 publication distinction."
     limits_or_counterclaim: "Use as explanation support; avoid implying Shannon was the only relevant switching-logic figure."
 
-  - id: "prov-shannon-info"
+  - id: "src-shannon-info-1948"
     title: "A Mathematical Theory of Communication"
     author_or_editor: "Claude E. Shannon"
     year: 1948
@@ -185,7 +185,7 @@ sources:
     use: "Primary anchor for information theory, channels, noise, and message transmission."
     limits_or_counterclaim: "Shannon information is not semantic meaning or human understanding."
 
-  - id: "prov-shannon-info-pdf"
+  - id: "src-shannon-info-pdf"
     title: "A Mathematical Theory of Communication"
     author_or_editor: "Claude E. Shannon"
     year: 1948
@@ -197,7 +197,7 @@ sources:
     use: "Public full-text support for entropy, information, channels, and noise claims."
     limits_or_counterclaim: "Use for technical support; keep semantic-meaning caveat visible."
 
-  - id: "provisional-wiener-cybernetics"
+  - id: "src-wiener-cybernetics"
     title: "Cybernetics: Or Control and Communication in the Animal and the Machine"
     author_or_editor: "Norbert Wiener"
     year: 1948
@@ -209,7 +209,7 @@ sources:
     use: "Bounded context for feedback, control, and communication in machines and organisms."
     limits_or_counterclaim: "Do not expand into a full cybernetics survey; feedback is not intelligence by itself."
 
-  - id: "prov-britannica-cybernetics"
+  - id: "src-britannica-cybernetics"
     title: "Cybernetics"
     author_or_editor: "Encyclopaedia Britannica"
     year: "n.d."
@@ -221,7 +221,7 @@ sources:
     use: "Public secondary support for cybernetics as control theory applied to complex systems."
     limits_or_counterclaim: "Use to define feedback/control scope, not to claim cybernetics directly caused AI."
 
-  - id: "provisional-edvac-first-draft"
+  - id: "src-edvac-first-draft"
     title: "First Draft of a Report on the EDVAC"
     author_or_editor: "John von Neumann"
     year: 1945
@@ -239,8 +239,8 @@ claims:
     claim_type: "interpretive-bridge"
     confidence: "high"
     source_ids:
-      - "provisional-boole-laws-thought"
-      - "provisional-frege-logic-sep"
+      - "src-boole-laws-thought"
+      - "src-sep-frege-logic"
     limits_or_counterclaim: "This does not mean logic alone created computation or AI."
     article_use: "Opening section on symbols and rules."
     review_flags:
@@ -251,7 +251,7 @@ claims:
     claim_type: "historical-fact"
     confidence: "high"
     source_ids:
-      - "provisional-frege-logic-sep"
+      - "src-sep-frege-logic"
     limits_or_counterclaim: "Use this as an attribution caution, not as a detour into every contributor."
     article_use: "Caveat box on great-man history."
     review_flags:
@@ -262,9 +262,9 @@ claims:
     claim_type: "interpretive-bridge"
     confidence: "medium-high"
     source_ids:
-      - "provisional-hilbert-problems"
-      - "prov-church-turing-sep"
-      - "provisional-church-sep"
+      - "src-hilbert-problems"
+      - "src-sep-church-turing"
+      - "src-sep-church"
     limits_or_counterclaim: "Hilbert's 1900 problems are not identical to the later Entscheidungsproblem; explain this carefully."
     article_use: "Bridge from formal logic to computability."
     review_flags:
@@ -275,7 +275,7 @@ claims:
     claim_type: "historical-fact"
     confidence: "high"
     source_ids:
-      - "prov-godel-sep"
+      - "src-sep-godel"
     limits_or_counterclaim: "Do not generalize into vague claims that machines, minds, or AI are impossible."
     article_use: "Boundary marker before computability."
     review_flags:
@@ -286,10 +286,10 @@ claims:
     claim_type: "historical-fact"
     confidence: "high"
     source_ids:
-      - "provisional-church-sep"
-      - "prov-church-turing-sep"
-      - "prov-turing-computable"
-      - "prov-post-processes"
+      - "src-sep-church"
+      - "src-sep-church-turing"
+      - "src-turing-1936"
+      - "src-post-1936"
     limits_or_counterclaim: "Do not present Turing as the only route to computability."
     article_use: "Core computability section."
     review_flags:
@@ -300,7 +300,7 @@ claims:
     claim_type: "technical-explanation"
     confidence: "high"
     source_ids:
-      - "prov-church-turing-sep"
+      - "src-sep-church-turing"
     limits_or_counterclaim: "Avoid physical or psychological versions unless explicitly marked as outside this article."
     article_use: "Technical companion caveat."
     review_flags:
@@ -311,8 +311,8 @@ claims:
     claim_type: "historical-fact"
     confidence: "high"
     source_ids:
-      - "prov-shannon-switching"
-      - "provisional-chm-digital-logic"
+      - "src-shannon-switching"
+      - "src-chm-digital-logic"
     limits_or_counterclaim: "Logic gates implement operations; they do not understand propositions."
     article_use: "Bridge from formal symbols to physical circuits."
     review_flags:
@@ -323,8 +323,8 @@ claims:
     claim_type: "technical-explanation"
     confidence: "high"
     source_ids:
-      - "prov-shannon-info"
-      - "prov-shannon-info-pdf"
+      - "src-shannon-info-1948"
+      - "src-shannon-info-pdf"
     limits_or_counterclaim: "Information in this sense is not wisdom, truth, or understanding."
     article_use: "Information section and analogy boundary box."
     review_flags:
@@ -335,8 +335,8 @@ claims:
     claim_type: "interpretive-bridge"
     confidence: "medium-high"
     source_ids:
-      - "provisional-wiener-cybernetics"
-      - "prov-britannica-cybernetics"
+      - "src-wiener-cybernetics"
+      - "src-britannica-cybernetics"
     limits_or_counterclaim: "Do not let cybernetics become a broad systems-theory article."
     article_use: "Bounded feedback/control/communication section."
     review_flags:
@@ -347,7 +347,7 @@ claims:
     claim_type: "caveat"
     confidence: "medium"
     source_ids:
-      - "provisional-edvac-first-draft"
+      - "src-edvac-first-draft"
     limits_or_counterclaim: "Use only as a short optional note; this article is not a hardware architecture history."
     article_use: "Optional technical companion sidebar."
     review_flags:
@@ -358,7 +358,7 @@ claims:
     claim_type: "technical-explanation"
     confidence: "high"
     source_ids:
-      - "prov-church-turing-sep"
+      - "src-sep-church-turing"
     limits_or_counterclaim: "Do not imply all human thought is rote symbol manipulation."
     article_use: "Computability section and technical companion note."
     review_flags:
@@ -368,46 +368,46 @@ timeline:
   - period: "1854"
     event: "Boole publishes an algebraic treatment of logic."
     source_ids:
-      - "provisional-boole-laws-thought"
+      - "src-boole-laws-thought"
     article_role: "symbolic-logic-foundation"
   - period: "1879"
     event: "Frege publishes Begriffsschrift."
     source_ids:
-      - "provisional-frege-logic-sep"
+      - "src-sep-frege-logic"
     article_role: "quantificational-logic-context"
   - period: "1900-1920s"
     event: "Formal foundations and decision-procedure ambitions shape mathematical logic."
     source_ids:
-      - "provisional-hilbert-problems"
-      - "prov-principia-archive"
+      - "src-hilbert-problems"
+      - "src-principia-archive"
     article_role: "formal-system-ambition"
   - period: "1931"
     event: "Godel publishes incompleteness results."
     source_ids:
-      - "prov-godel-sep"
+      - "src-sep-godel"
     article_role: "limits-of-formal-systems"
   - period: "1936-1937"
     event: "Church, Turing, and Post clarify effective procedure and computability."
     source_ids:
-      - "provisional-church-sep"
-      - "prov-turing-computable"
-      - "prov-post-processes"
+      - "src-sep-church"
+      - "src-turing-1936"
+      - "src-post-1936"
     article_role: "computability-boundary"
   - period: "1938"
     event: "Shannon applies Boolean algebra to relay and switching circuits."
     source_ids:
-      - "prov-shannon-switching"
+      - "src-shannon-switching"
     article_role: "logic-to-circuit-bridge"
   - period: "1945"
     event: "The EDVAC report describes a stored-program design."
     source_ids:
-      - "provisional-edvac-first-draft"
+      - "src-edvac-first-draft"
     article_role: "optional-execution-context"
   - period: "1948"
     event: "Shannon publishes communication theory; Wiener publishes Cybernetics."
     source_ids:
-      - "prov-shannon-info"
-      - "provisional-wiener-cybernetics"
+      - "src-shannon-info-1948"
+      - "src-wiener-cybernetics"
     article_role: "information-feedback-context"
 
 analogies:
