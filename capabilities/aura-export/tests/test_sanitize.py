@@ -48,3 +48,26 @@ def test_source_allow_list_requires_exact_or_subdomain_match():
     payload = {"sources": [{"url": "https://docs.github.com/post"}]}
     warnings = sanitize.check_sources(payload, cfg={"source_allow_list": ["github.com"]})
     assert not warnings
+
+
+def test_source_allow_list_strips_only_www_prefix():
+    payload = {"sources": [
+        {"url": "https://www.w3.org/TR/WCAG22/"},
+        {"url": "https://www.google.com/search?q=knowledge+garden"},
+        {"url": "https://docs.github.com/post"},
+    ]}
+
+    warnings = sanitize.check_sources(
+        payload,
+        cfg={"source_allow_list": ["w3.org", "google.com", "github.com"]},
+    )
+
+    assert not warnings
+
+
+def test_source_allow_list_normalizes_allowed_www_domains():
+    payload = {"sources": [{"url": "https://www.w3.org/TR/WCAG22/"}]}
+
+    warnings = sanitize.check_sources(payload, cfg={"source_allow_list": ["www.w3.org"]})
+
+    assert not warnings

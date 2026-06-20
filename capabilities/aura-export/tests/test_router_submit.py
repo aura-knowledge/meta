@@ -31,6 +31,33 @@ def valid_article_draft():
     }
 
 
+def valid_provenance_bundle():
+    return {
+        "schemaVersion": 1,
+        "origin_workspace_type": "personal",
+        "sanitization_steps": [
+            "Replaced project-specific names with generic workflow descriptions."
+        ],
+        "reviewer_agents": ["privacy-and-structure"],
+        "confidence_at_origin": "high",
+        "export_decision_rationale": (
+            "The exported finding is general tooling feedback and does not depend on private context."
+        ),
+    }
+
+
+def valid_org_feedback_draft():
+    return {
+        "title": "Improve submission routing",
+        "feedback_type": "workflow",
+        "summary": "Improve the fallback triage workflow",
+        "current_state": "Submissions that do not match a lane need an explicit fallback path for maintainers.",
+        "proposed_change": "Apply a human-triage label and comment with privacy-safe next steps.",
+        "impact": "This keeps public submissions safer and gives maintainers a predictable routing path.",
+        "privacy_acknowledgment": True,
+    }
+
+
 def test_route_builds_payload_for_top_level_article_schema():
     lane, payload, errors = router.route_draft(valid_article_draft(), lane="article-proposal")
 
@@ -56,6 +83,25 @@ def test_article_issue_body_matches_workflow_markers():
     assert "### Privacy acknowledgment" in body
     assert "Original:" in body
     assert "Abstracted:" in body
+
+
+def test_article_route_and_submit_accept_provenance_bundle_with_jsonschema():
+    draft = valid_article_draft()
+    draft["provenance_bundle"] = valid_provenance_bundle()
+
+    lane, payload, errors = router.route_draft(draft, lane="article-proposal")
+
+    assert lane == "article-proposal"
+    assert errors == []
+    assert payload["provenance_bundle"] == valid_provenance_bundle()
+
+    result = submit.submit_payload(
+        lane,
+        payload,
+        dry_run=True,
+        cfg={"source_allow_list": ["github.com"], "sensitive_patterns": []},
+    )
+    assert result["status"] == "dry-run"
 
 
 def test_submit_dry_run_fails_closed_on_privacy_findings():
@@ -96,15 +142,7 @@ def test_cli_submit_returns_nonzero_on_privacy_failure(tmp_path):
 
 
 def test_org_feedback_payload_and_body_match_workflow_markers():
-    draft = {
-        "title": "Improve submission routing",
-        "feedback_type": "workflow",
-        "summary": "Improve the fallback triage workflow",
-        "current_state": "Submissions that do not match a lane need an explicit fallback path for maintainers.",
-        "proposed_change": "Apply a human-triage label and comment with privacy-safe next steps.",
-        "impact": "This keeps public submissions safer and gives maintainers a predictable routing path.",
-        "privacy_acknowledgment": True,
-    }
+    draft = valid_org_feedback_draft()
 
     lane, payload, errors = router.route_draft(draft, lane="org-feedback")
     assert lane == "org-feedback"
@@ -115,3 +153,22 @@ def test_org_feedback_payload_and_body_match_workflow_markers():
     assert "### Feedback type" in body
     assert "### One-sentence summary" in body
     assert "### Privacy acknowledgment" in body
+
+
+def test_org_feedback_route_and_submit_accept_provenance_bundle_with_jsonschema():
+    draft = valid_org_feedback_draft()
+    draft["provenance_bundle"] = valid_provenance_bundle()
+
+    lane, payload, errors = router.route_draft(draft, lane="org-feedback")
+
+    assert lane == "org-feedback"
+    assert errors == []
+    assert payload["provenance_bundle"] == valid_provenance_bundle()
+
+    result = submit.submit_payload(
+        lane,
+        payload,
+        dry_run=True,
+        cfg={"source_allow_list": ["github.com"], "sensitive_patterns": []},
+    )
+    assert result["status"] == "dry-run"
