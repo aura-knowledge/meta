@@ -1,51 +1,38 @@
 # Aura Knowledge Meta
 
-Central routing, feedback, and submission hub for the [Aura Knowledge](https://github.com/aura-knowledge) organization.
+This is the public inbox for the [Aura Knowledge](https://github.com/aura-knowledge) organization. It collects article proposals and organization feedback, validates them, and routes accepted work to the published garden at [aura-knowledge.github.io](https://aura-knowledge.github.io/).
 
-- **Humans:** file feedback or propose articles using GitHub issue forms — no write access to the garden repo required.
-- **Agents:** discover findings in private workspaces, sanitize them, and route submissions here through machine-readable schemas.
-- **Maintainers:** triage submissions and move accepted article proposals to [aura-knowledge.github.io](https://github.com/aura-knowledge/aura-knowledge.github.io).
+## Quick start
 
-## Quick links
+The smoothest way to contribute is to open this repository in an agent session and talk through your idea. Aura Knowledge is **agent-agnostic** — you can use Claude, ChatGPT, Kimi, Gemini, Copilot, a local model, or any other assistant. The instructions are embedded in the repo, so the agent can read them directly.
 
-- [Submit an article proposal](https://github.com/aura-knowledge/meta/issues/new?template=article-proposal.yml)
-- [Submit organization feedback](https://github.com/aura-knowledge/meta/issues/new?template=org-feedback.yml)
-- [Privacy contract](./docs/privacy-contract.md)
+Example starts:
+- "I want to propose a knowledge-garden article about…"
+- "I noticed the topic ontology is confusing. Can we suggest a change?"
+- "Explain how articles get published here."
+
+You can also fill the issue forms directly:
+
+- [Propose a new article](https://github.com/aura-knowledge/meta/issues/new?template=article-proposal.yml)
+- [Give organization feedback](https://github.com/aura-knowledge/meta/issues/new?template=org-feedback.yml)
+
+Not sure where to start? Read the [organization README](https://github.com/aura-knowledge/.github/blob/main/profile/README.md), the [contributing guide](https://github.com/aura-knowledge/.github/blob/main/CONTRIBUTING.md), and the [submission guide](./docs/submission-guide.md).
+
+## What happens after you submit
+
+1. Automated checks validate the issue shape and run a lightweight privacy scan.
+2. A maintainer or sibling agent reviews it.
+3. Accepted article proposals move to [aura-knowledge.github.io](https://github.com/aura-knowledge/aura-knowledge.github.io) as pull requests.
+4. Org feedback is triaged and either implemented or discussed.
+
+## Privacy
+
+Everything in this repository is public. Do not include client names, project codenames, proprietary code, internal URLs, or personal information. Read the [privacy contract](./docs/privacy-contract.md) and [submission guide](./docs/submission-guide.md) before submitting.
+
+## For agents and maintainers
+
 - [Agent routing guide](./docs/agent-routing.md)
-- [Relationship to the garden repo](./docs/garden-relationship.md)
-- [Routing skill for client-project agents](./skills/knowledge-garden-routing.md)
-- [Installable aura-export capability](./capabilities/aura-export/)
+- [Garden relationship](./docs/garden-relationship.md)
+- [Routing skill](./skills/knowledge-garden-routing.md)
 - [Route-submission helper script](./scripts/route-submission.py)
 - [Design document](./DESIGN.md)
-
-## Quick start for agents
-
-Install the skill in your agent workspace, then run the script from any client project:
-
-```bash
-python3 /path/to/aura-knowledge/meta/scripts/route-submission.py \
-  --type article-proposal \
-  --submission path/to/submission.yaml \
-  --dry-run
-```
-
-See `examples/article-proposal-example.yaml` and `examples/org-feedback-example.yaml` for submission formats.
-
-## Principles
-
-1. **Agent-first, human-readable as a side effect.** Issue forms and schemas are parseable by both humans and agents.
-2. **Public by default, sanitized by contract.** Anything filed here is public. See the [privacy contract](./docs/privacy-contract.md) before submitting.
-3. **Folksonomy-first, curated-second.** Tags start free-form; controlled topic stems are promoted from real usage.
-4. **Branches and worktrees.** All work happens on feature branches; `main` is protected.
-
-## Repository layout
-
-```text
-.github/ISSUE_TEMPLATE/    # issue forms for humans
-.github/workflows/         # triage and validation automation
-schemas/                   # JSON schemas for machine parsing
-routing/                   # executable router (Phase 2a)
-capabilities/aura-export/  # installable agent skill and CLI for sanitized exports
-docs/                      # human and agent guides
-proposals/                 # accepted article proposal drafts
-```
