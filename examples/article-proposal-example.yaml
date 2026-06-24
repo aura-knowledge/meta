@@ -6,6 +6,12 @@ audience:
   - builders
   - agents
   - researchers
+primary_reader: "Builders designing agent memory for client-facing projects"
+intended_outcome: "Readers should be able to evaluate whether a project-scoped memory layer is appropriate and identify the privacy controls it needs."
+artifact_fit: "An article fits because the reusable value is a design pattern and decision frame, not a ready-made implementation."
+smallest_viable_version: "A short pattern article covering scope boundaries, routing behavior, and privacy checks."
+scope_risks: "The proposal should avoid becoming a full product comparison or client memory architecture spec."
+alternatives_considered: "A checklist or template may follow later, but the first artifact should establish the pattern and vocabulary."
 tags:
   - ai-agents
   - memory

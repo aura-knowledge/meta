@@ -23,10 +23,14 @@ jobs:
           script: |
             const body = context.payload.issue.body || '';
             // Lightweight checks: required markers, email pattern, internal URL patterns, UUIDs, and high-entropy tokens.
+            const hasHeading = (label) => {
+              const escaped = label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+              return new RegExp(`^#{2,3}\\s+${escaped}\\s*$`, 'im').test(body);
+            };
             const findings = [];
-            if (!body.includes('### Article title')) findings.push('Missing article title section');
-            if (!body.includes('### Thesis')) findings.push('Missing thesis section');
-            if (!body.includes('### Privacy acknowledgment')) findings.push('Missing privacy acknowledgment');
+            if (!hasHeading('Article title')) findings.push('Missing article title section');
+            if (!hasHeading('Thesis')) findings.push('Missing thesis section');
+            if (!hasHeading('Privacy acknowledgment')) findings.push('Missing privacy acknowledgment');
             if (/\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/.test(body)) findings.push('Possible email address detected');
             if (/https?:\/\/[^\s]+\.(internal|corp|local|lan|vpn)(?:\/|:|$)/i.test(body)) findings.push('Possible internal URL detected');
             if (/\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\b/i.test(body)) findings.push('Possible UUID detected');

@@ -16,6 +16,7 @@ Required fields:
 Optional fields:
 - **Slug** — auto-suggested if empty
 - **Related articles** — existing Aura Knowledge article IDs
+- **Primary reader**, **intended outcome**, **why an article**, **smallest viable version**, **scope risks**, and **alternatives considered** — use these when an idea needed clarification before submission
 - **Agent involvement** — disclosure of AI assistance
 
 ## Organization feedback
@@ -38,6 +39,7 @@ Required fields:
 ## Tips
 
 - Keep the thesis under one paragraph.
+- Clarify half-formed ideas privately before filing a public issue.
 - Use the abstraction-examples field actively; do not just check the privacy box.
 - Cite public sources only.
 - If you are unsure whether something is safe to share, do not file it publicly. Sanitize it in a private workspace first, or ask a maintainer out of band.

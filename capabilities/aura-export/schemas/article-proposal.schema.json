@@ -30,6 +30,12 @@
         "enum": ["researchers", "students", "agents", "builders", "policy", "general"]
       }
     },
+    "primary_reader": { "type": "string", "minLength": 4, "maxLength": 200 },
+    "intended_outcome": { "type": "string", "minLength": 8, "maxLength": 500 },
+    "artifact_fit": { "type": "string", "minLength": 8, "maxLength": 500 },
+    "smallest_viable_version": { "type": "string", "minLength": 8, "maxLength": 500 },
+    "scope_risks": { "type": "string", "maxLength": 800 },
+    "alternatives_considered": { "type": "string", "maxLength": 800 },
     "tags": {
       "type": "array",
       "minItems": 1,

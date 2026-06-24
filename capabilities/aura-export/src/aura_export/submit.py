@@ -75,6 +75,24 @@ def _article_proposal_body(payload: dict[str, Any]) -> list[str]:
         lines.append(f"- {claim}")
     lines.append("")
 
+    purpose_fields = [
+        ("Primary reader", "primary_reader"),
+        ("Intended outcome", "intended_outcome"),
+        ("Why an article?", "artifact_fit"),
+        ("Smallest viable version", "smallest_viable_version"),
+        ("Scope risks", "scope_risks"),
+        ("Alternatives considered", "alternatives_considered"),
+    ]
+    purpose_lines = [
+        f"**{label}:** {payload[key]}"
+        for label, key in purpose_fields
+        if payload.get(key)
+    ]
+    if purpose_lines:
+        lines.extend(["", "### Clarified purpose", ""])
+        lines.extend(purpose_lines)
+        lines.append("")
+
     if payload.get("proposed_topic_stem"):
         lines.extend(["", "### Proposed topic stem", "", payload["proposed_topic_stem"]])
     if payload.get("other_stem_proposed"):
