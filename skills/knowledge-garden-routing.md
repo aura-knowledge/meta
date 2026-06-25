@@ -40,12 +40,13 @@ Do **not** use this skill for findings that are proprietary, client-specific, or
    - A **concern about a cited source** → source challenge.
    - **Unclear** → org feedback asking for triage help.
 5. **Cross-agent review.** Ask a sibling agent to check for leaks, structural fit, and whether the purpose is clear enough to route.
-6. **Prepare submission.** Use the issue form in `aura-knowledge/meta` or run `scripts/route-submission.py` from that repo.
+6. **Prepare submission.** Use the issue form in `aura-knowledge/meta`. For `article-proposal` and `org-feedback` only, you may run `scripts/route-submission.py` from that repo.
 7. **Submit.** Open an issue in `aura-knowledge/meta`. Do not paste raw client content.
 
 ## Default constraints
 
 - `dry-run=true` by default. Show the rendered issue body and stop unless explicitly authorized to create it.
+- Programmatic submission is available only for `article-proposal` and `org-feedback`; use the dedicated issue forms for `article-erratum` and `source-challenge`.
 - `sanitized=true` required. No issue may be created without abstraction examples.
 - `public-sources-only` required. Non-public sources must be removed.
 - `client-anonymized` required. Client names and project codenames must be abstracted.

@@ -61,7 +61,9 @@ Use this decision tree:
 
 ## Issue body
 
-Use the relevant issue form. If invoking programmatically, the issue body must validate against the JSON schema in `schemas/`.
+Use the relevant issue form. If invoking programmatically, `scripts/route-submission.py` currently supports only `article-proposal` and `org-feedback` payloads that validate against the JSON schemas in `schemas/`.
+
+For `article-erratum` and `source-challenge`, use the dedicated public issue forms. Until those lanes have dedicated schemas and helper support, do not call `route-submission.py` with those types.
 
 ## Provenance (optional, Phase 2a)
 
