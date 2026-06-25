@@ -1,0 +1,90 @@
+name: Article erratum
+description: Report a correction, outdated claim, or clarity issue in an existing article
+title: "[erratum] "
+labels: ["org-feedback", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for corrections to published Aura Knowledge articles. Everything filed here is public; do not include private or identifying context.
+  - type: dropdown
+    id: feedback_type
+    attributes:
+      label: Feedback type
+      description: Errata are routed through the organization-feedback lane until the correction workflow has dedicated labels.
+      options:
+        - workflow
+    validations:
+      required: true
+  - type: input
+    id: summary
+    attributes:
+      label: One-sentence summary
+      description: Summarize the correction in one sentence.
+    validations:
+      required: true
+  - type: input
+    id: article_id
+    attributes:
+      label: Article URL or ID
+      description: Link to the article or provide article:slug.
+    validations:
+      required: true
+  - type: dropdown
+    id: erratum_type
+    attributes:
+      label: Erratum type
+      options:
+        - factual-error
+        - outdated-claim
+        - source-issue
+        - clarity
+        - accessibility
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: current_state
+    attributes:
+      label: Current state
+      description: What does the article currently say, and why is it wrong, outdated, or unclear?
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_change
+    attributes:
+      label: Proposed change
+      description: What should be corrected, removed, clarified, or re-sourced?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Public evidence
+      description: Public sources or reasoning that support the correction.
+    validations:
+      required: true
+  - type: textarea
+    id: affected_claims
+    attributes:
+      label: Affected claims (optional)
+      description: Claim IDs, headings, or excerpts that need review.
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Who benefits from fixing this, and what risk remains if it is not fixed?
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy_acknowledgment
+    attributes:
+      label: Privacy acknowledgment
+      options:
+        - label: I confirm this submission contains no client, project, proprietary, or personal information.
+          required: true
+  - type: textarea
+    id: agent_involvement
+    attributes:
+      label: Agent involvement (optional)
+      description: Disclose any AI agent assistance in drafting this erratum.

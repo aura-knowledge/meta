@@ -1,0 +1,70 @@
+schemaVersion: 1
+name: article-proposal-ideation
+purpose: Shape rough article ideas into safe, focused Aura Knowledge submissions.
+phases:
+  - id: intake
+    goal: Capture the raw idea privately.
+    inputs:
+      - rough_idea
+      - origin_context
+    outputs:
+      - private_notes
+      - initial_privacy_risks
+  - id: clarify
+    goal: Resolve missing reader, outcome, scope, and artifact-fit details.
+    outputs:
+      - primary_reader
+      - intended_outcome
+      - reader_problem
+      - smallest_viable_version
+      - artifact_fit
+  - id: challenge
+    goal: Test weak assumptions and reduce scope.
+    checks:
+      - audience_is_specific
+      - outcome_is_observable
+      - article_is_right_artifact
+      - scope_has_clear_boundary
+  - id: source-map
+    goal: Identify public sources and evidence gaps.
+    outputs:
+      - source_candidates
+      - source_gaps
+      - claim_confidence
+  - id: visualize
+    goal: Decide whether visuals or examples improve understanding.
+    outputs:
+      - example_plan
+      - visual_plan
+      - no_visual_reason
+  - id: sanitize
+    goal: Convert private context into public-safe abstraction.
+    outputs:
+      - sanitized_summary
+      - abstraction_examples
+      - privacy_check_result
+  - id: cross-agent-review
+    goal: Ask a sibling agent to review scope, route, privacy, and evidence.
+    outputs:
+      - review_findings
+      - required_changes
+  - id: fuse
+    goal: Produce the final submission-ready proposal material.
+    outputs:
+      - purpose_statement
+      - claims
+      - sources
+      - route_recommendation
+  - id: evaluate
+    goal: Score readiness with eval-card.yaml.
+    outputs:
+      - eval_score
+      - blocking_gaps
+  - id: route
+    goal: Select the public lane or keep the idea private.
+    routes:
+      article-proposal: New publishable article.
+      org-feedback: Garden workflow, schema, ontology, or governance improvement.
+      article-erratum: Correction to an existing article.
+      source-challenge: Challenge to a cited source or reference.
+      no-public-submission: Unsafe, private, or not useful enough yet.
