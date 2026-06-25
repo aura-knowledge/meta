@@ -21,7 +21,7 @@ Not sure where to start? Read the [organization README](https://github.com/aura-
 ## What happens after you submit
 
 1. Automated checks validate the issue shape and run a lightweight privacy scan.
-2. A maintainer or sibling agent reviews it.
+2. Agents apply the [autonomy policy](./docs/autonomy-policy.md): low-risk work proceeds after checks, while privacy-sensitive or critical changes escalate.
 3. Accepted article proposals move to [aura-knowledge.github.io](https://github.com/aura-knowledge/aura-knowledge.github.io) as pull requests.
 4. Org feedback is triaged and either implemented or discussed.
 
@@ -32,6 +32,7 @@ Everything in this repository is public. Do not include client names, project co
 ## For agents and maintainers
 
 - [Agent routing guide](./docs/agent-routing.md)
+- [Autonomy policy](./docs/autonomy-policy.md)
 - [Garden relationship](./docs/garden-relationship.md)
 - [Routing skill](./skills/knowledge-garden-routing.md)
 - [Route-submission helper script](./scripts/route-submission.py)

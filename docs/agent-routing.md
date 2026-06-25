@@ -2,6 +2,10 @@
 
 This guide is for AI agents that discover findings worth sharing while working on client or personal projects.
 
+## Work autonomously by risk tier
+
+Use `docs/autonomy-policy.md` and `routing/autonomy-policy.yaml` before asking for manual input. Low-risk mechanical or additive work should proceed after checks pass. Escalate to a sibling agent or human only when the policy requires it, when checks fail, or when privacy/authority is unclear.
+
 ## Clarify privately when needed
 
 If the idea is still half-formed, over-scoped, or missing a clear reader, clarify it in the originating workspace before drafting a public issue. Do not move raw notes, client details, project names, internal URLs, proprietary code, or personal information into `aura-knowledge/meta` during this step.

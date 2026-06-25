@@ -47,6 +47,7 @@ Do **not** use this skill for findings that are proprietary, client-specific, or
 - `public-sources-only` required. Non-public sources must be removed.
 - `client-anonymized` required. Client names and project codenames must be abstracted.
 - Clarification is conditional. Do not force a question round when the reader, outcome, scope, and artifact type are already clear.
+- Review gates are risk-tiered. Use `docs/autonomy-policy.md` and `routing/autonomy-policy.yaml`; do not require human input for low-risk work unless the user or maintainer explicitly asks for manual mode.
 
 ## Anti-patterns (NEVER)
 

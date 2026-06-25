@@ -22,7 +22,7 @@ We need a **meta repository** that:
 1. **Agent-first, human-readable as a side effect.** Every issue template, schema, and workflow must be parseable by an agent; the human form is generated from the same schema.
 2. **Public by default, sanitized by contract.** Anything entering the meta repo is public. Submitters must strip project identifiers, client names, proprietary code, internal URLs, and PII.
 3. **One lane at a time.** The first phase focuses on article proposals because they are the highest-value flow. Org-feedback and correction workflows follow once the core lane works.
-4. **Cross-agent review.** Non-trivial proposals require a second agent lens (privacy, taste, source-critic) before acceptance.
+4. **Risk-tiered autonomy.** Low-risk work proceeds after checks; sibling-agent and human review are escalation gates, not default ceremony.
 5. **Folksonomy-first, curated-second.** Free-form tags are allowed initially; controlled topic stems are promoted from real usage, not imposed before traffic exists.
 6. **Worktrees and branches.** Like the garden repo, all work happens on feature branches; `main` is protected.
 
@@ -79,12 +79,13 @@ Goal: one working lane (article proposals) with strong privacy guardrails.
   4. Flag for human review if any source is outside the documented allow-list.
 - **Stretch goal:** if feasible, add a lightweight source-domain allow-list and a provenance transform log to Phase 1 before moving to Phase 1.5.
 
-### Phase 1 cross-agent review trigger
+### Phase 1 review trigger
 
 After the automated scan passes, the triage workflow posts a comment that:
-- requests a sibling-agent review,
+- applies the autonomy tier from `docs/autonomy-policy.md`,
+- requests sibling-agent review only when the tier requires it,
 - provides a privacy-checklist prompt,
-- removes the `needs-review` label only when a sibling agent (or a maintainer acting on its findings) replies with `privacy-review-passed` and optionally `taste-review-passed`.
+- removes the `needs-review` label when the required tier gates pass.
 
 ### Phase 1 fallback / human-triage
 
@@ -181,9 +182,12 @@ When an agent working on a client/personal project discovers a finding worth sha
 
 ## Governance
 
-- `main` is protected; changes require PR + one approval.
+- `main` is protected; changes use PRs and the minimum approval gate defined by the autonomy policy.
 - Agents follow the lifecycle and branch workflow defined in `AGENTS.md`.
-- Schema and privacy-contract changes require cross-agent review.
+- Agents use `docs/autonomy-policy.md` and `routing/autonomy-policy.yaml` to choose the minimum useful review gate.
+- Low-risk mechanical and additive changes may proceed autonomously after checks pass.
+- Contract-changing work requires sibling-agent review unless a maintainer explicitly overrides it.
+- Critical privacy, security, destructive, or governance-authority changes require human approval.
 - Issue templates are versioned; breaking schema changes bump `schemaVersion`.
 
 ## Deep-research article proposal
