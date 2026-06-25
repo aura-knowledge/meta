@@ -85,6 +85,27 @@ def test_article_issue_body_matches_workflow_markers():
     assert "Abstracted:" in body
 
 
+def test_article_route_and_body_preserve_clarified_purpose():
+    draft = valid_article_draft()
+    draft.update({
+        "primary_reader": "Agents preparing public knowledge submissions",
+        "intended_outcome": "Readers should know when to ask clarifying questions before drafting.",
+        "artifact_fit": "An article fits because the value is a reusable workflow judgment.",
+        "smallest_viable_version": "A short article that defines the clarification gate and review criteria.",
+        "scope_risks": "The article should not become a complete authoring methodology.",
+        "alternatives_considered": "A checklist could follow after the article establishes the framing.",
+    })
+
+    _, payload, errors = router.route_draft(draft, lane="article-proposal")
+    assert errors == []
+    assert payload["primary_reader"] == "Agents preparing public knowledge submissions"
+
+    body = submit.build_issue_body("article-proposal", payload)
+    assert "### Clarified purpose" in body
+    assert "**Primary reader:** Agents preparing public knowledge submissions" in body
+    assert "**Smallest viable version:** A short article" in body
+
+
 def test_article_route_and_submit_accept_provenance_bundle_with_jsonschema():
     draft = valid_article_draft()
     draft["provenance_bundle"] = valid_provenance_bundle()

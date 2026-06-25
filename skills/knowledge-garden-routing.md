@@ -19,19 +19,26 @@ Do **not** use this skill for findings that are proprietary, client-specific, or
 
 ## Process
 
-1. **Capture privately.** Draft the finding in the originating workspace. Mark it `aura-export-candidate`.
-2. **Sanitize.** Run the privacy contract checklist from `aura-knowledge/meta/docs/privacy-contract.md`.
+1. **Clarify privately when needed.** If the idea is half-formed, over-scoped, or lacks a clear reader, clarify it in the originating workspace before drafting a public submission. Ask only the questions needed to resolve the gap, usually no more than 3-5:
+   - Who is the primary reader?
+   - What should the reader understand, feel, or do afterward?
+   - What problem does this solve for the reader?
+   - What is the smallest version that still works?
+   - Why is an article, rather than a tool, template, note, or discussion, the right artifact?
+   Challenge weak assumptions, suggest smaller alternatives, and redirect the idea if another artifact type fits better. Do not paste unsanitized client, project, proprietary, or personal details into `aura-knowledge/meta` while clarifying.
+2. **Capture privately.** Draft the finding in the originating workspace. Mark it `aura-export-candidate`.
+3. **Sanitize.** Run the privacy contract checklist from `aura-knowledge/meta/docs/privacy-contract.md`.
    - Replace client names with abstractions.
    - Remove proprietary identifiers, internal URLs, and code snippets.
    - Replace non-public sources with public ones or remove them.
    - Produce at least one `abstraction_example`.
-3. **Classify.** Decide whether the finding is:
+4. **Classify.** Decide whether the finding is:
    - A **publishable article** → article proposal.
    - An **improvement to the garden** → org feedback.
    - **Unclear** → org feedback asking for triage help.
-4. **Cross-agent review.** Ask a sibling agent to check for leaks and structural fit.
-5. **Prepare submission.** Use the issue form in `aura-knowledge/meta` or run `scripts/route-submission.py` from that repo.
-6. **Submit.** Open an issue in `aura-knowledge/meta`. Do not paste raw client content.
+5. **Cross-agent review.** Ask a sibling agent to check for leaks, structural fit, and whether the purpose is clear enough to route.
+6. **Prepare submission.** Use the issue form in `aura-knowledge/meta` or run `scripts/route-submission.py` from that repo.
+7. **Submit.** Open an issue in `aura-knowledge/meta`. Do not paste raw client content.
 
 ## Default constraints
 
@@ -39,10 +46,14 @@ Do **not** use this skill for findings that are proprietary, client-specific, or
 - `sanitized=true` required. No issue may be created without abstraction examples.
 - `public-sources-only` required. Non-public sources must be removed.
 - `client-anonymized` required. Client names and project codenames must be abstracted.
+- Clarification is conditional. Do not force a question round when the reader, outcome, scope, and artifact type are already clear.
+- Review gates are risk-tiered. Use `docs/autonomy-policy.md` and `routing/autonomy-policy.yaml`; do not require human input for low-risk work unless the user or maintainer explicitly asks for manual mode.
 
 ## Anti-patterns (NEVER)
 
 - Paste raw client notes, code, or internal URLs into `aura-knowledge/meta`.
+- Clarify half-formed, unsanitized ideas in a public issue.
+- Treat the author's first phrasing as fixed when the scope, audience, or artifact type is unclear.
 - Create an issue before running the privacy contract checklist.
 - Treat a finding as publishable without a sibling-agent review.
 - Use the garden repo (`aura-knowledge.github.io`) for submissions; use the meta repo instead.

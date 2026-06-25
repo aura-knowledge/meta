@@ -1,0 +1,70 @@
+schemaVersion: 1
+default_mode: autonomous
+uncertain_tier: escalate_one_level
+overrides:
+  manual: "Require human approval even when the tier would normally proceed autonomously."
+  autonomous: "Allow Tier 0 and Tier 1 work to proceed after checks pass."
+  escalate: "Stop and ask for human direction when authority, privacy, or checks are unclear."
+tiers:
+  - id: 0
+    name: mechanical
+    examples:
+      - typo fixes
+      - formatting fixes
+      - link repairs
+      - heading-marker parser fixes
+      - test-only updates without behavior changes
+    required_gates:
+      - relevant_checks_pass
+    human_required: false
+    sibling_agent_required: false
+    default_action: proceed_after_checks
+  - id: 1
+    name: low-risk-additive
+    examples:
+      - optional schema fields
+      - additive documentation
+      - additive issue-form fields
+      - non-breaking routing improvements
+      - schema-valid examples
+    required_gates:
+      - relevant_checks_pass
+      - agent_self_review
+    human_required: false
+    sibling_agent_required: false
+    default_action: proceed_after_checks
+  - id: 2
+    name: contract-changing
+    examples:
+      - required schema fields
+      - schemaVersion changes
+      - label semantic changes
+      - acceptance criteria changes
+      - privacy scan behavior changes
+      - publication routing changes
+    required_gates:
+      - relevant_checks_pass
+      - sibling_agent_review
+    human_required: false
+    sibling_agent_required: true
+    default_action: proceed_after_sibling_review
+    escalate_to_human_when:
+      - ambiguity_identified
+      - policy_tradeoff_identified
+      - privacy_risk_identified
+      - checks_fail
+  - id: 3
+    name: critical
+    examples:
+      - privacy contract weakening
+      - public article publication
+      - destructive repository action
+      - credential or permission change
+      - governance authority change
+    required_gates:
+      - relevant_checks_pass
+      - sibling_agent_review
+      - human_approval
+    human_required: true
+    sibling_agent_required: true
+    default_action: require_human_approval

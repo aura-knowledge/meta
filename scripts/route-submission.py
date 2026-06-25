@@ -79,6 +79,15 @@ def validate_article_proposal(data: dict) -> list:
         invalid = sorted(set(data["audience"]) - ARTICLE_AUDIENCES)
         if invalid:
             errors.append(f"audience contains invalid value(s): {', '.join(invalid)}")
+    for field, minimum, maximum in [
+        ("primary_reader", 4, 200),
+        ("intended_outcome", 8, 500),
+        ("artifact_fit", 8, 500),
+        ("smallest_viable_version", 8, 500),
+        ("scope_risks", 0, 800),
+        ("alternatives_considered", 0, 800),
+    ]:
+        _validate_optional_string(data, field, minimum, maximum, errors)
     if not _list_of_strings(data.get("tags")):
         errors.append("tags must be a non-empty list of strings")
     else:
@@ -158,6 +167,18 @@ def _list_of_strings(value) -> bool:
     return isinstance(value, list) and bool(value) and all(isinstance(item, str) and item for item in value)
 
 
+def _validate_optional_string(data: dict, field: str, minimum: int, maximum: int, errors: list) -> None:
+    if field not in data or data[field] is None:
+        return
+    if not isinstance(data[field], str):
+        errors.append(f"{field} must be a string")
+        return
+    if len(data[field]) < minimum:
+        errors.append(f"{field} must be at least {minimum} characters")
+    if len(data[field]) > maximum:
+        errors.append(f"{field} must be at most {maximum} characters")
+
+
 def privacy_scan(text: str, kind: str) -> list:
     findings = []
     for name, pattern in PRIVACY_PATTERNS:
@@ -177,6 +198,21 @@ def render_article_body(data: dict) -> str:
         f"## Audience\n\n" + ", ".join(data["audience"]),
         f"## Tags\n\n" + ", ".join(data["tags"]),
     ]
+    purpose_fields = [
+        ("Primary reader", "primary_reader"),
+        ("Intended outcome", "intended_outcome"),
+        ("Why an article?", "artifact_fit"),
+        ("Smallest viable version", "smallest_viable_version"),
+        ("Scope risks", "scope_risks"),
+        ("Alternatives considered", "alternatives_considered"),
+    ]
+    purpose_lines = [
+        f"**{label}:** {data[key]}"
+        for label, key in purpose_fields
+        if data.get(key)
+    ]
+    if purpose_lines:
+        lines.append("## Clarified purpose\n\n" + "\n\n".join(purpose_lines))
     if data.get("proposed_topic_stem"):
         lines.append(f"## Proposed topic stem\n\n{data['proposed_topic_stem']}")
     if data.get("other_stem_proposed"):

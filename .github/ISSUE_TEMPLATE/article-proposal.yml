@@ -53,6 +53,36 @@ body:
         - general
     validations:
       required: true
+  - type: input
+    id: primary_reader
+    attributes:
+      label: Primary reader (optional)
+      description: The most specific reader this article should serve.
+  - type: textarea
+    id: intended_outcome
+    attributes:
+      label: Intended outcome (optional)
+      description: What should the reader understand, feel, or do after reading?
+  - type: textarea
+    id: artifact_fit
+    attributes:
+      label: Why an article? (optional)
+      description: Why is this better as an article than a tool, template, note, or discussion?
+  - type: textarea
+    id: smallest_viable_version
+    attributes:
+      label: Smallest viable version (optional)
+      description: What is the smallest useful version of this article?
+  - type: textarea
+    id: scope_risks
+    attributes:
+      label: Scope risks (optional)
+      description: What would make this proposal too broad, fuzzy, or hard to review?
+  - type: textarea
+    id: alternatives_considered
+    attributes:
+      label: Alternatives considered (optional)
+      description: Other artifact types or smaller routes considered before proposing an article.
   - type: textarea
     id: tags
     attributes:

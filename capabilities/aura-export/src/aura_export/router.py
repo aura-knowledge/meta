@@ -82,6 +82,16 @@ def build_article_proposal_payload(draft: dict[str, Any]) -> dict[str, Any]:
         payload["other_stem_proposed"] = draft["other_stem_proposed"]
     if draft.get("related_articles"):
         payload["related_articles"] = draft["related_articles"]
+    for field in [
+        "primary_reader",
+        "intended_outcome",
+        "artifact_fit",
+        "smallest_viable_version",
+        "scope_risks",
+        "alternatives_considered",
+    ]:
+        if draft.get(field):
+            payload[field] = draft[field]
     if _valid_provenance_bundle(draft):
         payload["provenance_bundle"] = draft["provenance_bundle"]
 

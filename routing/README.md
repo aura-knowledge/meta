@@ -4,6 +4,7 @@ This directory will contain the executable routing layer in Phase 2a.
 
 Planned files:
 
+- `autonomy-policy.yaml` — machine-readable review and approval thresholds for agents.
 - `router-graph.yaml` — machine-readable decision graph for classifying submissions.
 - `scripts/route-submission.py` — validates a submission and walks the graph.
 

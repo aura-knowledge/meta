@@ -2,6 +2,24 @@
 
 This guide is for AI agents that discover findings worth sharing while working on client or personal projects.
 
+## Work autonomously by risk tier
+
+Use `docs/autonomy-policy.md` and `routing/autonomy-policy.yaml` before asking for manual input. Low-risk mechanical or additive work should proceed after checks pass. Escalate to a sibling agent or human only when the policy requires it, when checks fail, or when privacy/authority is unclear.
+
+## Clarify privately when needed
+
+If the idea is still half-formed, over-scoped, or missing a clear reader, clarify it in the originating workspace before drafting a public issue. Do not move raw notes, client details, project names, internal URLs, proprietary code, or personal information into `aura-knowledge/meta` during this step.
+
+Ask only the questions needed to resolve the gap, usually no more than 3-5:
+
+- Who is the primary reader?
+- What should the reader understand, feel, or do afterward?
+- What problem does this solve for the reader?
+- What is the smallest version that still works?
+- Why is an article, rather than a tool, template, note, or discussion, the right artifact?
+
+Challenge weak assumptions, suggest smaller versions, and redirect the idea if another artifact type fits better. Skip this step when the reader, outcome, scope, and artifact type are already clear.
+
 ## Capture in the private workspace first
 
 Do not paste raw client findings into `aura-knowledge/meta`. Instead:
@@ -26,6 +44,7 @@ Ask a sibling agent to review the draft for:
 - Remaining privacy leaks.
 - Structural fit for the knowledge garden.
 - Whether the finding is better as an article proposal or org feedback.
+- Whether the reader, outcome, scope, and artifact type are clear enough to route.
 
 ## Route
 
