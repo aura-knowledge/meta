@@ -10,6 +10,8 @@ Use `docs/autonomy-policy.md` and `routing/autonomy-policy.yaml` before asking f
 
 If the idea is still half-formed, over-scoped, or missing a clear reader, clarify it in the originating workspace before drafting a public issue. Do not move raw notes, client details, project names, internal URLs, proprietary code, or personal information into `aura-knowledge/meta` during this step.
 
+For any Aura Knowledge article lifecycle request, start with `capabilities/article-lifecycle-router/SKILL.md`. It routes natural-language requests to the right stage without loading every stage workflow.
+
 For rough article ideas, use `capabilities/article-proposal-ideation/` as the structured clarification process. It can route the result to an article proposal, org feedback, article erratum, source challenge, or no public submission.
 
 Ask only the questions needed to resolve the gap, usually no more than 3-5:
@@ -53,6 +55,7 @@ Ask a sibling agent to review the draft for:
 
 Use this decision tree:
 
+- **Unclear article lifecycle request** → load `capabilities/article-lifecycle-router/SKILL.md`.
 - **Publishable finding** → open an **article-proposal** issue in `aura-knowledge/meta`.
 - **Improvement to garden structure/schemas/workflows** → open an **org-feedback** issue in `aura-knowledge/meta`.
 - **Correction to a published article** → open an **article-erratum** issue in `aura-knowledge/meta`.
