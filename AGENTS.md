@@ -24,6 +24,14 @@ This is the canonical repo-local router skill. It selects the lifecycle stage be
 
 Claude users may also invoke `/aura-article`; this repository ships `.claude/commands/aura-article.md` for that environment. Kimi Code coverage is through this `AGENTS.md` file.
 
+## Session start nudge
+
+On the first assistant response in this repository, if the user has not given a concrete task, show exactly one short line:
+
+`Aura Knowledge ready. Common starts: propose or shape an article, export a private finding safely, improve organization workflow, review or prepare publication, or correct/challenge sources.`
+
+If the user has given a concrete task, skip this nudge and route directly. Do not load `capabilities/article-lifecycle-router/SKILL.md` only to produce the nudge; load it only after the user chooses article lifecycle work or asks for matching work in natural language.
+
 ## Workflow
 
 1. **Capture in the private workspace first.** When you discover a finding in a client or personal project, draft it in that workspace and mark it `aura-export-candidate`. Load the `knowledge-garden-routing` skill for the full checklist.
