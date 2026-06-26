@@ -7,6 +7,7 @@ on:
       - 'submissions/**'
       - 'examples/**'
       - 'schemas/**'
+      - 'capabilities/article-proposal-ideation/**'
       - '.github/ISSUE_TEMPLATE/**'
 
 permissions:
@@ -46,9 +47,13 @@ jobs:
             ajv validate --spec=draft2020 --strict=false -s schemas/org-feedback.schema.json -r schemas/provenance-bundle.schema.json -d "${org_files[@]}"
           fi
 
-      - name: Check issue templates are valid YAML
+      - name: Check YAML files are valid
         run: |
           for f in .github/ISSUE_TEMPLATE/*.yml; do
+            [ -f "$f" ] || continue
+            ruby -ryaml -e "YAML.load_file('$f')"
+          done
+          for f in capabilities/article-proposal-ideation/*.yaml; do
             [ -f "$f" ] || continue
             ruby -ryaml -e "YAML.load_file('$f')"
           done

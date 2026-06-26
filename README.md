@@ -9,12 +9,15 @@ The smoothest way to contribute is to open this repository in an agent session a
 Example starts:
 - "I want to propose a knowledge-garden article about…"
 - "I noticed the topic ontology is confusing. Can we suggest a change?"
+- "I found a source or article correction we should review."
 - "Explain how articles get published here."
 
 You can also fill the issue forms directly:
 
 - [Propose a new article](https://github.com/aura-knowledge/meta/issues/new?template=article-proposal.yml)
 - [Give organization feedback](https://github.com/aura-knowledge/meta/issues/new?template=org-feedback.yml)
+- [Report an article erratum](https://github.com/aura-knowledge/meta/issues/new?template=article-erratum.yml)
+- [Challenge a source](https://github.com/aura-knowledge/meta/issues/new?template=source-challenge.yml)
 
 Not sure where to start? Read the [organization README](https://github.com/aura-knowledge/.github/blob/main/profile/README.md), the [contributing guide](https://github.com/aura-knowledge/.github/blob/main/CONTRIBUTING.md), and the [submission guide](./docs/submission-guide.md).
 
@@ -35,5 +38,6 @@ Everything in this repository is public. Do not include client names, project co
 - [Autonomy policy](./docs/autonomy-policy.md)
 - [Garden relationship](./docs/garden-relationship.md)
 - [Routing skill](./skills/knowledge-garden-routing.md)
+- [Article proposal ideation capability](./capabilities/article-proposal-ideation/README.md)
 - [Route-submission helper script](./scripts/route-submission.py)
 - [Design document](./DESIGN.md)

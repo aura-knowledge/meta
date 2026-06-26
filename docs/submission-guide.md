@@ -4,6 +4,8 @@
 
 Use the [Article proposal issue form](https://github.com/aura-knowledge/meta/issues/new?template=article-proposal.yml) when you want to suggest a new knowledge-garden article.
 
+If the idea is still rough, use the [article-proposal-ideation capability](../capabilities/article-proposal-ideation/README.md) privately before opening a public issue.
+
 Required fields:
 - **Title** and **thesis**
 - **Audience** and **maturity**
@@ -29,12 +31,40 @@ Required fields:
 - **Impact**
 - **Privacy acknowledgment**
 
+## Article errata
+
+Use the [Article erratum issue form](https://github.com/aura-knowledge/meta/issues/new?template=article-erratum.yml) when an existing article has a factual error, outdated claim, source issue, clarity problem, or accessibility issue.
+
+Required fields:
+- **Article URL or ID**
+- **Erratum type**
+- **Current state** and **proposed change**
+- **Public evidence**
+- **Impact**
+- **Privacy acknowledgment**
+
+Errata currently route through the organization-feedback triage lane, so they receive `org-feedback` and `needs-review` labels.
+
+## Source challenges
+
+Use the [Source challenge issue form](https://github.com/aura-knowledge/meta/issues/new?template=source-challenge.yml) when a cited source is paywalled, retracted, biased, weak evidence, superseded by a better source, or broken.
+
+Required fields:
+- **Source URL or ID**
+- **Challenge type**
+- **Current state** and **proposed change**
+- **Impact**
+- **Privacy acknowledgment**
+
+Source challenges currently route through the organization-feedback triage lane, so they receive `org-feedback` and `needs-review` labels.
+
 ## After you submit
 
 1. The triage workflows check the issue body shape and run a lightweight privacy scan.
 2. Labels are applied automatically (`article-proposal` or `org-feedback`, `needs-review`, `privacy-check-passed` / `privacy-check-failed`).
 3. A sibling agent or maintainer reviews the submission.
 4. Accepted article proposals are moved to [aura-knowledge.github.io](https://github.com/aura-knowledge/aura-knowledge.github.io) as a pull request.
+5. Accepted errata and source challenges become article fixes, source updates, or documented no-change decisions.
 
 ## Tips
 

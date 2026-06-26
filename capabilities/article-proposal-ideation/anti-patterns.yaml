@@ -1,0 +1,24 @@
+schemaVersion: 1
+anti_patterns:
+  - id: agreeable-execution
+    rule: Do not accept the first idea as final when reader, outcome, or scope is unclear.
+  - id: audience-soup
+    rule: Do not target everyone; identify the primary reader.
+  - id: feature-list-introduction
+    rule: Do not turn articles into lists of product features without a thesis.
+  - id: over-scoped-seed
+    rule: Do not route a broad series when one bounded article would work.
+  - id: decoration-over-communication
+    rule: Do not add visuals unless they explain structure, sequence, contrast, or evidence.
+  - id: orphaned-prompt-template
+    rule: Do not publish prompts without context, examples, limits, and safety notes.
+  - id: abstract-safety-lecture
+    rule: Do not replace concrete privacy guidance with generic warnings.
+  - id: late-review
+    rule: Do not wait until public submission to discover basic scope or privacy problems.
+  - id: vendor-lock-in
+    rule: Do not make provider-specific advice unless the article is explicitly provider-specific.
+  - id: missing-provenance
+    rule: Do not omit agent involvement or sanitization context for agent-assisted proposals.
+  - id: wrong-lane
+    rule: Do not file a new article when the work is really an erratum, source challenge, or org-feedback item.

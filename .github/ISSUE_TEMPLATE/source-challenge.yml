@@ -1,0 +1,94 @@
+name: Source challenge
+description: Challenge or improve a cited source or reference
+title: "[source-challenge] "
+labels: ["org-feedback", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this to flag weak, inaccessible, retracted, biased, or superseded sources. Everything filed here is public; do not include private source material.
+  - type: dropdown
+    id: feedback_type
+    attributes:
+      label: Feedback type
+      description: Source challenges are routed through the organization-feedback lane until the correction workflow has dedicated labels.
+      options:
+        - workflow
+    validations:
+      required: true
+  - type: input
+    id: summary
+    attributes:
+      label: One-sentence summary
+      description: Summarize the source concern in one sentence.
+    validations:
+      required: true
+  - type: input
+    id: source_url
+    attributes:
+      label: Source URL or ID
+      description: Link to the source or provide its source ID.
+    validations:
+      required: true
+  - type: input
+    id: article_id
+    attributes:
+      label: Related article URL or ID (optional)
+      description: Link to the affected article or provide article:slug.
+  - type: dropdown
+    id: challenge_type
+    attributes:
+      label: Challenge type
+      options:
+        - paywalled
+        - retracted
+        - biased
+        - insufficient-evidence
+        - better-source-available
+        - broken-link
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: current_state
+    attributes:
+      label: Current state
+      description: How is the source currently used, cited, or described?
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_change
+    attributes:
+      label: Proposed change
+      description: What should change about this source, citation, or supporting claim?
+    validations:
+      required: true
+  - type: textarea
+    id: replacement_source
+    attributes:
+      label: Replacement source (optional)
+      description: Public replacement source, if available.
+  - type: textarea
+    id: affected_claims
+    attributes:
+      label: Affected claims (optional)
+      description: Claim IDs, headings, or excerpts that depend on this source.
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Who benefits from resolving this, and what risk remains if it is not resolved?
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy_acknowledgment
+    attributes:
+      label: Privacy acknowledgment
+      options:
+        - label: I confirm this submission contains no client, project, proprietary, or personal information.
+          required: true
+  - type: textarea
+    id: agent_involvement
+    attributes:
+      label: Agent involvement (optional)
+      description: Disclose any AI agent assistance in drafting this source challenge.
