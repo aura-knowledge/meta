@@ -14,6 +14,16 @@ This repository handles two public inputs for the Aura Knowledge organization:
 
 Everything here is public. Do not paste client names, project codenames, proprietary code, internal URLs, or personal information.
 
+## Article lifecycle command
+
+When the user invokes `$aura-article`, `use aura-article`, `use Aura article flow`, or asks in natural language to propose, ideate, research, scope, structure, draft, review, finalize, publish, correct, audit, or challenge sources for an Aura Knowledge article, load and follow:
+
+- `capabilities/article-lifecycle-router/SKILL.md`
+
+This is the canonical repo-local router skill. It selects the lifecycle stage before loading stage-specific guidance.
+
+Claude users may also invoke `/aura-article`; this repository ships `.claude/commands/aura-article.md` for that environment. Kimi Code coverage is through this `AGENTS.md` file.
+
 ## Workflow
 
 1. **Capture in the private workspace first.** When you discover a finding in a client or personal project, draft it in that workspace and mark it `aura-export-candidate`. Load the `knowledge-garden-routing` skill for the full checklist.
