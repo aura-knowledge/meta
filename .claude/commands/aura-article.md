@@ -1,6 +1,8 @@
 # Aura Article
 
-Load and follow `capabilities/article-lifecycle-router/SKILL.md`.
+If invoked without a concrete Aura Knowledge article lifecycle task, ask which lifecycle stage to use and do not load the router yet.
+
+For a concrete lifecycle task, load and follow `capabilities/article-lifecycle-router/SKILL.md`.
 
 Use this command for Aura Knowledge article lifecycle work: proposal intake, ideation, research, scoping, structure, drafting, review, finalization, publication preparation, article errata, and source challenges.
 
