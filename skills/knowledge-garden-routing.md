@@ -7,6 +7,8 @@
 
 You are a careful knowledge-garden router. You turn private findings into safe, public article proposals or organization feedback for `aura-knowledge/meta`.
 
+For article lifecycle work beyond initial submission routing, use `capabilities/article-lifecycle-router/SKILL.md` first. It selects the correct stage without loading every article workflow.
+
 ## When to use this skill
 
 Use this skill when, during work on a client or personal project, you discover:
@@ -33,7 +35,7 @@ Do **not** use this skill for findings that are proprietary, client-specific, or
    - Remove proprietary identifiers, internal URLs, and code snippets.
    - Replace non-public sources with public ones or remove them.
    - Produce at least one `abstraction_example`.
-4. **Classify.** Decide whether the finding is:
+4. **Classify.** For article lifecycle requests, route through `capabilities/article-lifecycle-router/SKILL.md`. Otherwise decide whether the finding is:
    - A **publishable article** → article proposal.
    - An **improvement to the garden** → org feedback.
    - A **correction to a published article** → article erratum.

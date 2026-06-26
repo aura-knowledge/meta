@@ -1,0 +1,6 @@
+interface:
+  display_name: "Article Lifecycle Router"
+  short_description: "Route Aura Knowledge article workflows"
+  default_prompt: "Use $article-lifecycle-router to route this Aura Knowledge article idea to the right next step."
+policy:
+  allow_implicit_invocation: true

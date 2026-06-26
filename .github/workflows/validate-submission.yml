@@ -7,7 +7,7 @@ on:
       - 'submissions/**'
       - 'examples/**'
       - 'schemas/**'
-      - 'capabilities/article-proposal-ideation/**'
+      - 'capabilities/**'
       - '.github/ISSUE_TEMPLATE/**'
 
 permissions:
