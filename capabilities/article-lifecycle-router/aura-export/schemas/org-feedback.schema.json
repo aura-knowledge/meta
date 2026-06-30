@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aura-knowledge.github.io/meta/schemas/org-feedback.schema.json",
+  "title": "Aura Knowledge Organization Feedback",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "feedback_type",
+    "summary",
+    "current_state",
+    "proposed_change",
+    "impact",
+    "privacy_acknowledgment"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "feedback_type": {
+      "type": "string",
+      "enum": ["structure", "schema", "workflow", "topic-ontology", "privacy", "governance", "other"]
+    },
+    "summary": { "type": "string", "minLength": 16, "maxLength": 220 },
+    "current_state": { "type": "string", "minLength": 40 },
+    "proposed_change": { "type": "string", "minLength": 40 },
+    "impact": { "type": "string", "minLength": 40 },
+    "proposed_topic_stem": { "type": "string", "pattern": "^[a-z0-9-/]+$" },
+    "privacy_acknowledgment": { "type": "boolean", "enum": [true] },
+    "agent_involvement": { "type": "string", "maxLength": 400 },
+    "provenance_bundle": { "$ref": "./provenance-bundle.schema.json" }
+  }
+}

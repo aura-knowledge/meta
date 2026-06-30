@@ -1,0 +1,42 @@
+schemaVersion: 1
+name: article-proposal-ideation-eval
+minimum_passing_score: 16
+maximum_score: 24
+criteria:
+  - id: reader_clarity
+    points: 0-3
+    pass_threshold: 2
+    question: Is there a specific primary reader?
+  - id: outcome_clarity
+    points: 0-3
+    pass_threshold: 2
+    question: Is the intended reader outcome concrete?
+  - id: format_fit
+    points: 0-3
+    pass_threshold: 2
+    question: Is an article better than a tool, template, note, erratum, or source challenge?
+  - id: scope_discipline
+    points: 0-3
+    pass_threshold: 2
+    question: Is the smallest viable version clear and bounded?
+  - id: claim_quality
+    points: 0-3
+    pass_threshold: 2
+    question: Are claims defensible and not just topic labels?
+  - id: source_readiness
+    points: 0-3
+    pass_threshold: 2
+    question: Are public sources identified or source gaps named?
+  - id: privacy_hygiene
+    points: 0-3
+    pass_threshold: 3
+    question: Are private details removed and abstraction examples present?
+  - id: route_fit
+    points: 0-3
+    pass_threshold: 2
+    question: Does the selected submission lane match the work?
+blocking_failures:
+  - privacy_hygiene_below_3
+  - no_primary_reader
+  - no_public_source_path
+  - route_should_be_erratum_or_source_challenge

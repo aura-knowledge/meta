@@ -6,7 +6,7 @@ Use this checklist before any card set becomes article prose.
 
 - [ ] No client names, project codenames, proprietary code, internal URLs, private chat excerpts, or personal information of non-public people appear in the work.
 - [ ] Every source is public or explicitly safe for public citation.
-- [ ] Sources outside the default allow-list in `capabilities/aura-export/config.yaml` have `public_access` and `access_notes`.
+- [ ] Sources outside the default allow-list in `capabilities/article-lifecycle-router/aura-export/config.yaml` have `public_access` and `access_notes`.
 - [ ] No screenshots are included unless explicitly whitelisted.
 - [ ] Private notes, if any, were used only to locate public sources and are not mentioned.
 
@@ -77,7 +77,7 @@ Summary:
 - Restricted tertiary sources to simple chronology unless stronger sources or review flags are present.
 - Added documented cross-file validation checks for source IDs, enum values, analogy limits, visual provenance, deprecated sources, and required source fields.
 - Added source-canon lifecycle rules for immutable IDs, deprecation, replacement notes, and source-addition rationale.
-- Added public-access and access-notes requirements for public sources outside the default allow-list in `capabilities/aura-export/config.yaml`.
+- Added public-access and access-notes requirements for public sources outside the default allow-list in `capabilities/article-lifecycle-router/aura-export/config.yaml`.
 - Clarified the difference between `confidence` and `uncertainty`.
 
 Result: plan accepted with changes incorporated before implementation.

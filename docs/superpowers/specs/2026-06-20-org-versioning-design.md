@@ -2,7 +2,7 @@
 
 ## Context
 
-Aura repositories need an auditable release trail. The `meta` repository currently has component-level versioning for `capabilities/aura-export` and a versioned privacy contract, but it does not have repository-level release tags, a repository changelog, or an organization rule that tells agents and maintainers when to bump versions.
+Aura repositories need an auditable release trail. The `meta` repository currently has component-level versioning for `capabilities/article-lifecycle-router/aura-export` and a versioned privacy contract, but it does not have repository-level release tags, a repository changelog, or an organization rule that tells agents and maintainers when to bump versions.
 
 This design makes versioning an Aura organization rule while keeping implementation small and deterministic. Each repository owns an explicit `VERSION` file and `CHANGELOG.md`. A post-main-merge GitHub Actions workflow creates an annotated `vX.Y.Z` tag when the merged repository version does not already have one.
 
@@ -19,7 +19,7 @@ This design makes versioning an Aura organization rule while keeping implementat
 - Automatically calculate semantic versions from conventional commits.
 - Publish packages, GitHub Releases, or site deployments as part of the first versioning pass.
 - Force every repository to share the same version number.
-- Replace component-specific versions such as `capabilities/aura-export` `0.1.0` or `privacy-contract.md` `1.0.0`.
+- Replace component-specific versions such as `capabilities/article-lifecycle-router/aura-export` `0.1.0` or `privacy-contract.md` `1.0.0`.
 
 ## Organization Policy
 
@@ -51,7 +51,7 @@ The first changelog entry should summarize the existing baseline rather than eve
 - public article proposal and org feedback schemas
 - privacy contract and submission guide
 - agent routing workflow
-- `aura-export` capability baseline
+- `aura-export` sub-capability baseline (under `article-lifecycle-router`)
 - triage and validation workflows
 
 ## Automation

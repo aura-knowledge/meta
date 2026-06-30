@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "title": "AI Delegation Orchestration: From Conversation to Durable Agent Work",
+  "slug": "ai-delegation-orchestration",
+  "thesis": "AI interfaces can stay conversational, but consequential AI work should be governed through bounded delegations, durable delegation records, operator control surfaces, and domain-specific review boundaries instead of relying on chat transcripts as the system of record.",
+  "audience": [
+    "builders",
+    "researchers",
+    "students",
+    "agents"
+  ],
+  "primary_reader": "Builders, researchers, advanced AI users, and operators of multi-agent or long-running AI workflows who are starting to feel the limits of chat-session-based work.",
+  "intended_outcome": "Readers should understand the distinction between conversational input and delegated work, then move through a practical series covering delegation records, operator cockpits, control loci, long-running delegations, capability contracts, and commitment boundaries in high-stakes domains.",
+  "artifact_fit": "The topic is a cross-disciplinary design argument that connects HCI, coordination theory, agent tooling, governance, and domain practice. It is better suited to a series than one article because each layer needs examples, diagrams, and cautions.",
+  "smallest_viable_version": "A seven-part draft series with a source-controlled visual plan: conversation-to-delegation, delegation record schema, operator cockpit, control loci, long-running delegations, capability contracts, and commitment boundaries in high-stakes domains.",
+  "scope_risks": "The main risk is redundancy across articles. The series handles this by assigning each article one reader question and using bridges rather than repeating the full framework every time.",
+  "alternatives_considered": "A single comprehensive essay was rejected because it would bury the core idea under too many adjacent topics. A pure tooling survey was rejected because the durable contribution is a design primitive, not a product roundup.",
+  "tags": [
+    "ai-agents",
+    "agent-orchestration",
+    "delegation",
+    "human-ai-interaction",
+    "workflow",
+    "governance",
+    "multi-agent-systems"
+  ],
+  "maturity": "sprout",
+  "claims": [
+    "Natural language can remain the main interaction modality for AI while durable work state lives outside the chat transcript.",
+    "A chat transcript is a weak system of record for consequential AI work because it does not reliably preserve scope, constraints, state, evidence, review, or stop conditions.",
+    "Consequential multi-step AI work should be represented as bounded delegations with explicit objectives, non-goals, control boundaries, evidence, risks, and exit criteria.",
+    "Not every AI interaction should become a delegation; quick explanations, brainstorming, and disposable drafts can remain lightweight conversations.",
+    "The series should support both conceptual and technical readers by pairing technical terms with analogies, diagrams, and concrete scenarios.",
+    "Operator-level orchestration should route decisions to executor agents, verifier agents, arbiter agents, policy rules, context-refresh capabilities, or humans depending on the decision, rather than defaulting every uncertainty to the human.",
+    "The broader article series should treat operator cockpits, control loci, long-running delegations, capability contracts, and commitment boundaries in high-stakes domains as separate follow-up topics."
+  ],
+  "sources": [
+    {
+      "title": "Malone and Crowston, The Interdisciplinary Study of Coordination",
+      "url": "https://crowston.syr.edu/sites/default/files/acmcs94.pdf",
+      "type": "paper",
+      "accessed": "2026-06-28"
+    },
+    {
+      "title": "Endsley, Toward a Theory of Situation Awareness in Dynamic Systems",
+      "url": "https://journals.sagepub.com/doi/10.1518/001872095779049543",
+      "type": "journal-article",
+      "accessed": "2026-06-28"
+    },
+    {
+      "title": "Gutwin and Greenberg, A Descriptive Framework of Workspace Awareness for Real-Time Groupware",
+      "url": "https://link.springer.com/article/10.1023/A%3A1021271517844",
+      "type": "paper",
+      "accessed": "2026-06-28"
+    },
+    {
+      "title": "Mark, Gudith, and Klocke, The Cost of Interrupted Work",
+      "url": "https://www.ics.uci.edu/~gmark/chi08-mark.pdf",
+      "type": "conference-paper",
+      "accessed": "2026-06-28"
+    },
+    {
+      "title": "OpenAI Agents SDK documentation",
+      "url": "https://developers.openai.com/api/docs/guides/agents",
+      "type": "documentation",
+      "accessed": "2026-06-28"
+    },
+    {
+      "title": "OpenAI Agents SDK human-in-the-loop documentation",
+      "url": "https://openai.github.io/openai-agents-python/human_in_the_loop/",
+      "type": "documentation",
+      "accessed": "2026-06-28"
+    },
+    {
+      "title": "LangGraph documentation",
+      "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+      "type": "documentation",
+      "accessed": "2026-06-28"
+    },
+    {
+      "title": "NIST AI Risk Management Framework",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "type": "framework",
+      "accessed": "2026-06-28"
+    },
+    {
+      "title": "ABA Formal Opinion 512, Generative Artificial Intelligence Tools",
+      "url": "https://www.americanbar.org/content/dam/aba/administrative/professional_responsibility/ethics-opinions/aba-formal-opinion-512.pdf",
+      "type": "professional-guidance",
+      "accessed": "2026-06-28"
+    },
+    {
+      "title": "Anthropic, Building effective agents",
+      "url": "https://www.anthropic.com/research/building-effective-agents",
+      "type": "technical-guide",
+      "accessed": "2026-06-28"
+    },
+    {
+      "title": "Model Context Protocol introduction",
+      "url": "https://modelcontextprotocol.io/docs/getting-started/intro",
+      "type": "documentation",
+      "accessed": "2026-06-28"
+    }
+  ],
+  "related_articles": [
+    "article:agent-control-planes",
+    "article:ai-agent-advanced-questions"
+  ],
+  "sanitized_summary": "This proposal is now a seven-part series arguing that AI work should be split into conversational interaction and durable delegated state. It introduces delegation records, operator cockpits, control loci, long-running delegation loops, capability contracts, and commitment boundaries in high-stakes domains using generic examples only.",
+  "abstraction_examples": [
+    {
+      "original": "An operator runs several AI work sessions and later struggles to recover what each session did and what instruction should come next.",
+      "abstracted": "An operator supervises several active AI delegations and needs a durable state record to resume, compare, and route next actions."
+    },
+    {
+      "original": "An orchestration system uses domain-specific capabilities and review policies to decide when agents should continue without human input.",
+      "abstracted": "A capability network routes work among executor, verifier, arbiter, policy, and human review surfaces according to a delegation record."
+    },
+    {
+      "original": "A specific project's coding agent is told not to touch billing, authentication, or schema files while fixing a checkout issue.",
+      "abstracted": "A coding delegation includes explicit non-goals and forbidden action boundaries while allowing reversible branch-local edits."
+    }
+  ],
+  "privacy_acknowledgment": true,
+  "agent_involvement": "The proposal was created by an AI agent from a sanitized research discussion and public sources; human review is required before public publication.",
+  "draft_available": true
+}

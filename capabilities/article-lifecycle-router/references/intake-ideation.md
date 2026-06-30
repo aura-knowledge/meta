@@ -12,7 +12,7 @@ Use for rough Aura Knowledge article ideas, reusable findings, topic exploration
    - smallest useful version
    - why this should be an article
 3. Challenge weak assumptions, broad audiences, and oversized scope.
-4. Use `../../article-proposal-ideation/SKILL.md` for the detailed ideation checklist when the idea is still fuzzy.
+4. Use `../article-proposal-ideation/SKILL.md` for the detailed ideation checklist when the idea is still fuzzy.
 5. Produce a route recommendation.
 
 ## Route Decision

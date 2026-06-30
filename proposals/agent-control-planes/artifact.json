@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "title": "From Agent Swarms to Agent Control Planes",
+  "slug": "agent-control-planes",
+  "thesis": "Agent orchestration is shifting from hand-written workflows toward governed control planes that route across models, tools, memory, evaluators, policies, and execution environments, making routing, observability, and policy enforcement infrastructure concerns rather than per-agent code.",
+  "audience": [
+    "builders",
+    "researchers"
+  ],
+  "primary_reader": "Engineering teams designing or scaling agent systems who need a skeptical, capability-based framing of control-plane architecture.",
+  "intended_outcome": "Readers should be able to define what a control plane does, map vendor and research claims to concrete capabilities, and use the builder checklist to audit their own systems.",
+  "artifact_fit": "The topic is complex, contested, and cross-disciplinary; a long-form article can connect the research lineage, current tooling, and practical questions in one durable reference.",
+  "smallest_viable_version": "A 1,200-word version covering the definition, the three control-plane patterns, the Fugu/Trinity/Conductor signals, and the builder checklist.",
+  "scope_risks": "Vendor feature churn may outdate product references; very recent preprints may be revised or retracted; benchmark claims require careful framing.",
+  "alternatives_considered": "A narrower how-to on LiteLLM routing, or a pure research survey; both were rejected in favor of an integrative argument with practical takeaways.",
+  "tags": [
+    "ai-agents",
+    "agent-orchestration",
+    "llm-routing",
+    "multi-agent-systems",
+    "governance",
+    "evals",
+    "observability"
+  ],
+  "maturity": "contested",
+  "claims": [
+    "Agent orchestration is shifting from hand-written workflows toward governed control planes that route across models, tools, memory, evaluators, policies, and execution environments.",
+    "Mixture-of-Experts and conditional computation predate LLMs and provide the earliest architectural precedent for learned routing.",
+    "Learned routers such as FrugalGPT and RouteLLM can match or exceed single-model accuracy at a fraction of the cost, though benchmark caveats apply.",
+    "Test-time search strategies\u2014self-consistency, Tree of Thoughts, Reflexion, and multi-agent debate\u2014expand what a control plane can spend compute on at runtime.",
+    "Recent learned orchestrators such as Sakana Fugu, Trinity, and Conductor are signals of automated scaffold generation, not settled production recipes.",
+    "Production control planes combine routing, fallback, policy, memory, evaluation, observability, and lifecycle governance, but no single vendor owns all of them.",
+    "The term 'control plane' is contested across vendors; teams should judge products by concrete capabilities rather than marketing labels.",
+    "Teams should treat model selection, fallback, observability, and policy enforcement as infrastructure concerns rather than per-agent code."
+  ],
+  "sources": [
+    {
+      "title": "Shazeer et al., Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer",
+      "url": "https://arxiv.org/abs/1701.06538",
+      "type": "paper",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Fedus et al., Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity",
+      "url": "https://arxiv.org/abs/2101.03961",
+      "type": "paper",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Dohan et al., Language Model Cascades",
+      "url": "https://arxiv.org/abs/2207.10342",
+      "type": "paper",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Chen et al., FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance",
+      "url": "https://arxiv.org/abs/2305.05176",
+      "type": "paper",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Ong et al., RouteLLM: Learning to Route LLMs with Preference Data",
+      "url": "https://arxiv.org/abs/2406.18665",
+      "type": "paper",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Yao et al., Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
+      "url": "https://arxiv.org/abs/2305.10601",
+      "type": "paper",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Yao et al., ReAct: Synergizing Reasoning and Acting in Language Models",
+      "url": "https://arxiv.org/abs/2210.03629",
+      "type": "paper",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Wang et al., Mixture-of-Agents Enhances Large Language Model Capabilities",
+      "url": "https://arxiv.org/abs/2406.04692",
+      "type": "paper",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Tang et al., Sakana Fugu: Orchestrator Models for Adaptive Agentic Scaffolds",
+      "url": "https://arxiv.org/abs/2606.21228",
+      "type": "paper",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Zhang et al., AFlow: Automating Agentic Workflow Generation",
+      "url": "https://arxiv.org/abs/2410.10762",
+      "type": "paper",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "LiteLLM documentation",
+      "url": "https://docs.litellm.ai/",
+      "type": "documentation",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "LangGraph documentation (LangChain)",
+      "url": "https://www.langchain.com/langgraph",
+      "type": "documentation",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Wang et al., Self-Consistency Improves Chain of Thought Reasoning in Language Models",
+      "url": "https://arxiv.org/abs/2203.11171",
+      "type": "paper",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Shinn et al., Reflexion: Self-Reflective Agents with Dynamic Memory",
+      "url": "https://arxiv.org/abs/2303.11366",
+      "type": "paper",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Du et al., Improving Factuality and Reasoning in Language Models through Multiagent Debate",
+      "url": "https://arxiv.org/abs/2305.14325",
+      "type": "paper",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Jiang et al., LLM-Blender: Ensembling Large Language Models with Pairwise Ranking and Generative Fusion",
+      "url": "https://arxiv.org/abs/2306.02561",
+      "type": "paper",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Xu et al., Trinity: Harmonizing Multiple Large Language Models as a Single Mind",
+      "url": "https://arxiv.org/abs/2512.04695",
+      "type": "paper",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Nielsen et al., Conductor: Learning to Orchestrate LLM Agents via Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2512.04388",
+      "type": "paper",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Hu et al., RouterBench: A Benchmark for Multi-LLM Routing",
+      "url": "https://arxiv.org/abs/2403.12031",
+      "type": "paper",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Hu et al., Automated Design of Agentic Systems",
+      "url": "https://arxiv.org/abs/2408.08435",
+      "type": "paper",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Yue et al., MASRouter: A Multiplexing LLM Agent Router",
+      "url": "https://arxiv.org/abs/2502.11133",
+      "type": "paper",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Li et al., AgentPrune: Reducing Communication Redundancy in Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2410.02506",
+      "type": "paper",
+      "accessed": "2026-06-26"
+    }
+  ],
+  "related_articles": [],
+  "sanitized_summary": "This article argues that agent orchestration is evolving from hand-written workflows into a governed control-plane layer that routes across models, tools, memory, evaluators, policies, and execution environments. It traces the research lineage from Mixture-of-Experts and cost-aware cascades to test-time search, tool use, ensembling, learned orchestration, and production gateways, then defines what a control plane actually does, maps three common patterns, and gives a builder checklist for auditing agent systems.",
+  "abstraction_examples": [
+    {
+      "original": "A client's internal claims-processing team had built a hand-written multi-agent workflow in which one agent extracted form fields, another validated policy rules against a proprietary underwriting API, and a third drafted denial letters using a fine-tuned model.",
+      "abstracted": "A multi-agent workflow in which one agent extracts structured data, another validates rules against an internal API, and a third drafts output using a domain-specific model."
+    },
+    {
+      "original": "The project used a custom evaluator that checked generated SQL against a private customer database with 340 tables before any result was shown to users.",
+      "abstracted": "A workflow uses a custom evaluator to check generated database queries against a large internal schema before returning results to users."
+    },
+    {
+      "original": "During a pilot, the team discovered that 12% of invoice agents triggered a high-risk tool call that required manager approval, but the approval rule was only enforced in one of three agent implementations.",
+      "abstracted": "During a pilot, the team found that a high-risk tool call requiring human approval was only enforced in some agent implementations."
+    }
+  ],
+  "privacy_acknowledgment": true,
+  "agent_involvement": "This proposal was drafted by an AI agent using public sources, with human review expected before publication.",
+  "draft_available": true
+}

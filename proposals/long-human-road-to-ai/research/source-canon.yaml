@@ -98,7 +98,7 @@ visual_reuse_values:
   - prohibited
 
 default_allow_list_reference:
-  config_path: "capabilities/aura-export/config.yaml"
+  config_path: "capabilities/article-lifecycle-router/aura-export/config.yaml"
   snapshot:
     - "github.com"
     - "arxiv.org"

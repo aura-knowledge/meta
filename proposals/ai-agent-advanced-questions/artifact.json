@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "title": "Beyond the First Conversation: Advanced Questions for New AI Agent Users",
+  "slug": "ai-agent-advanced-questions",
+  "thesis": "After their first AI-agent conversation, non-technical adults and teens need practical answers to common follow-up questions about trust, errors, privacy, prompts, automation, and choosing models.",
+  "primary_reader": "A non-technical adult or teen who has tried an AI agent once or twice and wants to use it more confidently without learning jargon.",
+  "intended_outcome": "The reader can recover from a wrong answer, protect their privacy, write clearer prompts, automate a small repeated task, and choose an AI model by task rather than hype.",
+  "artifact_fit": "This is a natural follow-up to the first-conversation recipe. It extends the same plain-language, exercise-based style into the next stage of AI literacy.",
+  "smallest_viable_version": "A single article with four Q&A sections (privacy, error recovery, better prompts, choosing models) and one printable practice card.",
+  "scope_risks": "The article could grow into a full prompting course or a model benchmark comparison. We will keep it focused on questions real beginners ask after one or two conversations.",
+  "alternatives_considered": "A single combined article with the first conversation recipe; rejected because the first article already has a clear 5-minute scope. A benchmark-heavy model guide; rejected because non-technical readers choose by task, not by scores.",
+  "audience": [
+    "general",
+    "students"
+  ],
+  "tags": [
+    "ai-agents",
+    "onboarding",
+    "non-technical",
+    "ai-literacy",
+    "follow-up",
+    "privacy",
+    "prompting",
+    "automation",
+    "model-choice"
+  ],
+  "maturity": "seed",
+  "claims": [
+    "New AI users quickly outgrow a starter prompt and need practical guidance on recovery from errors, privacy limits, and choosing models.",
+    "A question-and-answer format is an effective structure for a follow-up article because it matches how users actually think after their first conversation.",
+    "Each section should pair an explanation with one concrete exercise and one memorable rule of thumb.",
+    "Including non-US model examples reduces provider bias and reflects the global landscape of capable AI helpers.",
+    "The three most common chatbot use patterns are asking for guidance, doing a task, and expressing ideas; this framing helps beginners understand when an agent is a helper versus a worker.",
+    "Privacy and error recovery should come early in the article because they are the two risks most frequently cited in AI safety guidance for beginners.",
+    "A task-based model comparison is more useful to non-technical readers than a benchmark comparison because it connects model choice to everyday goals."
+  ],
+  "sources": [
+    {
+      "title": "TechRadar: OpenAI reveals how people use ChatGPT — 3 things we learned",
+      "url": "https://www.techradar.com/ai-platforms-assistants/chatgpt/openai-reveals-biggest-ever-study-of-how-people-are-using-chatgpt-here-are-3-things-weve-learned",
+      "type": "research",
+      "accessed": "2026-06-24"
+    },
+    {
+      "title": "Hathway: How to Use AI Safely: 10 Mistakes to Avoid for Secure Usage",
+      "url": "https://www.hathway.com/About/Blog/how-to-use-ai-safely",
+      "type": "safety-guide",
+      "accessed": "2026-06-24"
+    },
+    {
+      "title": "Trinity College: Security Tip: AI & Data Privacy Best Practices",
+      "url": "https://www.trincoll.edu/lits/technology/security/best-practices/security-tips/ai-data-privacy/",
+      "type": "safety-guide",
+      "accessed": "2026-06-24"
+    },
+    {
+      "title": "Privacy Commissioner for Personal Data, Hong Kong: 10 Tips for Users of AI Chatbots",
+      "url": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20230913.html",
+      "type": "safety-guide",
+      "accessed": "2026-06-24"
+    },
+    {
+      "title": "Tech Insider: ChatGPT vs Claude vs Gemini vs DeepSeek [2026]",
+      "url": "https://tech-insider.org/chatgpt-vs-claude-vs-deepseek-vs-gemini-2026/",
+      "type": "comparison",
+      "accessed": "2026-06-24"
+    },
+    {
+      "title": "Groundy: Chinese AI Models Compared: DeepSeek, Qwen, Kimi, Doubao, and Ernie",
+      "url": "https://groundy.com/articles/the-chinese-ai-model-ecosystem-deepseek-qwen-kimi-doubao-and-ernie-compared/",
+      "type": "comparison",
+      "accessed": "2026-06-24"
+    },
+    {
+      "title": "Future AI Path: 10 Everyday Tasks You Can Automate with AI Right Now",
+      "url": "https://futureaipath.com/ai-productivity/task-automation/10-everyday-tasks-you-can-automate-with-ai-right-now/",
+      "type": "guide",
+      "accessed": "2026-06-24"
+    },
+    {
+      "title": "OpenAI: ChatGPT tips",
+      "url": "https://openai.com/chatgpt/tips/",
+      "type": "product",
+      "accessed": "2026-06-24"
+    },
+    {
+      "title": "Anthropic: Prompt engineering overview",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
+      "type": "product",
+      "accessed": "2026-06-24"
+    },
+    {
+      "title": "DeepSeek: Getting started",
+      "url": "https://www.deepseek.com/",
+      "type": "product",
+      "accessed": "2026-06-24"
+    }
+  ],
+  "related_articles": [
+    "article:ai-agent-first-conversation"
+  ],
+  "sanitized_summary": "This follow-up article answers common advanced questions from non-technical adults and teens who have tried an AI agent once or twice. It covers what to do when the agent is wrong, how to keep conversations useful across sessions, when to trust the agent, how to write better prompts, simple automation, choosing between models, and a privacy checklist. The piece is structured as practical questions with exercises and rules of thumb.",
+  "abstraction_examples": [
+    {
+      "original": "After publishing the first conversation article, readers asked what to do next and how to handle mistakes.",
+      "abstracted": "The follow-up article addresses natural next-step questions from readers who have completed a first agent conversation."
+    },
+    {
+      "original": "We should include Chinese models like DeepSeek, Qwen, and Ernie so it is not US-centric.",
+      "abstracted": "The article includes non-US model examples such as DeepSeek, Qwen, and Ernie to reduce provider bias."
+    },
+    {
+      "original": "My friends and family keep asking which AI app they should download.",
+      "abstracted": "The article helps non-technical readers choose between common AI assistants based on the task they want to do."
+    }
+  ],
+  "privacy_acknowledgment": true,
+  "agent_involvement": "Drafted with AI agent assistance using the article-proposal-ideation workflow; research synthesized from public web sources; human author retains final judgment.",
+  "draft_available": false
+}

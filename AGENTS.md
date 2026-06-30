@@ -34,7 +34,7 @@ If the user has given a concrete task, skip this nudge and route directly. Do no
 
 ## Workflow
 
-1. **Capture in the private workspace first.** When you discover a finding in a client or personal project, draft it in that workspace and mark it `aura-export-candidate`. Load the `knowledge-garden-routing` skill for the full checklist.
+1. **Capture in the private workspace first.** When you discover a finding in a client or personal project, draft it in that workspace and mark it `aura-export-candidate`. Load `capabilities/article-lifecycle-router/knowledge-garden-routing/SKILL.md` for the full checklist.
 2. **Sanitize.** Run the privacy contract checklist and produce `abstraction_examples`.
 3. **Review by risk tier.** Use `docs/autonomy-policy.md` and `routing/autonomy-policy.yaml` to choose the minimum useful review gate. Do not require routine human input for low-risk work.
 4. **Route.**

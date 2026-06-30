@@ -1,11 +1,22 @@
 ---
 name: article-lifecycle-router
 description: Route Aura Knowledge article and correction work to the right lifecycle stage without loading every workflow. Use when a user asks to propose, ideate, brainstorm, research, scope, structure, outline, draft, review, finalize, publish, correct, audit, challenge a source, or otherwise work on an Aura Knowledge article or knowledge-garden contribution, including natural-language requests like "I have an article idea", "help me write this for Aura Knowledge", "turn this finding into an article", "review this draft", "fix an article claim", or "is this source good enough?"
+has-sub-skill: true
+sub-skills:
+  - article-proposal-ideation
+  - aura-export
+  - knowledge-garden-routing
 ---
 
 # Article Lifecycle Router
 
 Use this as the entry skill for Aura Knowledge article work. Keep the router small: identify the lifecycle stage, then read only the relevant reference file.
+
+This skill is a sub-skill bundle. For more specific stages, load:
+
+- `article-proposal-ideation/SKILL.md` — shape a rough idea before public routing.
+- `aura-export/SKILL.md` — export a sanitized finding from another workspace to Aura Knowledge.
+- `knowledge-garden-routing/SKILL.md` — route a private finding to the garden when the request is submission-only.
 
 ## Route
 

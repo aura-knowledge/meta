@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "title": "Listening to the Firehose: Can Voice-First, Two-Way Audio Become a Legitimate Assistive Medium?",
+  "slug": "audio-first-voice-consumption",
+  "thesis": "Voice-first, two-way audio agents are technically ready to become a useful complement to screen-based reading for knowledge workers, but only if designers treat them as assistive, user-controlled, and hearing-safe tools—not as replacements for reading or as always-listening ambient companions.",
+  "audience": ["builders", "researchers", "general"],
+  "tags": ["audio", "voice-interfaces", "ai-agents", "information-overload", "screen-fatigue", "human-computer-interaction", "ambient-computing", "attention-economy", "summarization", "accessibility"],
+  "maturity": "sprout",
+  "primary_reader": "Product designers, AI builders, and knowledge workers who want to understand when voice-first audio helps comprehension and when it adds new cognitive costs.",
+  "intended_outcome": "Readers leave with a cautious, research-informed design stance: voice-first audio is a legitimate assistive complement to reading when it is user-triggered, scoped, self-paced, transparent, and hearing-safe.",
+  "artifact_fit": "This topic bridges cognitive science, HCI, AI capabilities, and practical product design. An article can make the technical shift and the design risks concrete for a broad audience.",
+  "smallest_viable_version": "A 1,500-word article covering screen-fatigue prevalence, listening-vs-reading constraints, full-duplex voice feasibility, and a short trigger-based design checklist.",
+  "scope_risks": "Model capabilities, market figures, and platform affordances age quickly. Direct empirical research on two-way audio-agent comprehension is still sparse, so design recommendations must be framed as testable hypotheses.",
+  "alternatives_considered": "We considered focusing only on technical survey of full-duplex speech models, or only on screen-fatigue remedies. Either would be narrower but less useful; the cross-disciplinary framing is the contribution.",
+  "claims": [
+    "Heavy screen use is widespread among working-age adults and is associated with significant productivity and wellbeing costs, including digital eye strain.",
+    "Listening and reading impose different cognitive demands; audio is generally more transient and pace-dependent, making it a complement rather than a drop-in replacement for reading.",
+    "End-to-end, full-duplex spoken dialogue models have moved from research demos to publicly documented systems with low enough latency for natural turn-taking.",
+    "The value of voice-first audio agents depends more on interaction design—turn-taking, interruption, proactivity, and user agency—than on raw conversational naturalness.",
+    "Proactive and always-listening audio agents risk intrusiveness and attention capture; user-initiated or notification-triggered sessions better preserve agency.",
+    "Voice-first curation can amplify filter-bubble dynamics in a channel with fewer visual cues for verification, so transparency and user control over selection are essential.",
+    "A trigger-based, off-screen audio review layer is a promising near-term pattern, but it should be treated as a testable hypothesis rather than a proven product design."
+  ],
+  "sources": [
+    {
+      "title": "American Optometric Association & Deloitte Access Economics, The impact of unmanaged excessive screen time in the United States (2024)",
+      "url": "https://www.aoa.org/AOA/Documents/Eye%20Deserve%20More/Cost%20of%20Unmanaged%20Screen%20Time%20Report_FINAL.pdf",
+      "type": "report",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Kaur et al., Digital Eye Strain – A Comprehensive Review (2022)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9434525/",
+      "type": "journal-article",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Edison Research, The Infinite Dial 2024",
+      "url": "https://www.edisonresearch.com/the-infinite-dial-2024/",
+      "type": "report",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Jiang et al., Are working memory and behavioral attention equally important for both reading and listening comprehension? (2018)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6096896/",
+      "type": "journal-article",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Jiang, Kalyuga & Sweller, The Curious Case of Improving Foreign Language Listening Skills by Reading rather than Listening (2018)",
+      "url": "https://doi.org/10.1007/s10648-017-9427-1",
+      "type": "journal-article",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Mayer & Moreno, Nine ways to reduce cognitive load in multimedia learning (2003)",
+      "url": "https://doi.org/10.1207/S15326985EP3801_6",
+      "type": "journal-article",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Sweller, van Merriënboer & Paas, Cognitive Architecture and Instructional Design: 20 Years Later (2019)",
+      "url": "https://doi.org/10.1007/s10648-019-09465-5",
+      "type": "journal-article",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Ji et al., WavChat: A Survey of Spoken Dialogue Models (2024)",
+      "url": "https://arxiv.org/abs/2411.13577",
+      "type": "preprint",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Défossez et al., Moshi: a speech-text foundation model for real-time dialogue (2024)",
+      "url": "https://arxiv.org/abs/2410.00037",
+      "type": "preprint",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Kraus et al., The Role of Trust in Proactive Conversational Assistants (2021)",
+      "url": "https://doi.org/10.1109/ACCESS.2021.3103893",
+      "type": "journal-article",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Zargham et al., Understanding Circumstances for Desirable Proactive Behaviour of Voice Assistants: The Proactivity Dilemma (2022)",
+      "url": "https://doi.org/10.1145/3543829.3543834",
+      "type": "conference-paper",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Oh et al., Better to Ask Than Assume: Proactive Voice Assistants' Communication Strategies That Respect User Agency (2024)",
+      "url": "https://doi.org/10.1145/3613904.3642193",
+      "type": "conference-paper",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Li et al., Does Algorithmic Filtering Create a Filter Bubble? Evidence from Sina Weibo (2019)",
+      "url": "https://doi.org/10.5465/AMBPP.2019.14168abstract",
+      "type": "conference-proceeding",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Dentsu & Lumen Research, Audio Attention Economy Study (2023)",
+      "url": "https://lumen-research.com/blog/lumen-audio-attention-economy/",
+      "type": "report",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "World Health Organization, Deafness and hearing loss fact sheet",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/deafness-and-hearing-loss",
+      "type": "guidance",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Apple Support, Announce Notifications with Siri on AirPods or Beats",
+      "url": "https://support.apple.com/en-ca/102536",
+      "type": "documentation",
+      "accessed": "2026-06-26"
+    },
+    {
+      "title": "Apple Support, AirPods User Guide",
+      "url": "https://support.apple.com/guide/airpods/welcome/web",
+      "type": "documentation",
+      "accessed": "2026-06-26"
+    }
+  ],
+  "related_articles": [],
+  "sanitized_summary": "This article proposal explores whether voice-first, two-way audio agents can become a legitimate assistive medium for knowledge workers facing screen fatigue. It combines evidence on digital eye strain, reading-vs-listening cognition, full-duplex speech models, proactive-agent HCI, filter-bubble risks, and hearing health. The core recommendation is a cautious, user-triggered, off-screen audio review layer framed as a testable hypothesis rather than a proven design pattern.",
+  "abstraction_examples": [
+    {
+      "original": "A product team at a client firm wanted an always-on audio companion for reviewing internal Slack threads during commutes.",
+      "abstracted": "A hypothetical product team considered an always-on audio companion for reviewing work chat threads during commutes."
+    },
+    {
+      "original": "The original insight came from observing a senior engineer with presbyopia struggle with dense PDF reports on a small laptop screen.",
+      "abstracted": "The framing was inspired by the general observation that some users experience visual fatigue when reading dense documents on small screens."
+    }
+  ],
+  "privacy_acknowledgment": true,
+  "agent_involvement": "A drafting agent assembled the README, artifact metadata, and RESEARCH.md from an existing public research memo; a human reviewed the final package before submission.",
+  "draft_available": true
+}

@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "title": "AI, De-Mystified",
+  "slug": "ai-demystified",
+  "thesis": "AI terminology becomes more useful when each term is explained through plain language, older related concepts, practical examples, limitations, and academic roots instead of being treated as a fresh breakthrough every time.",
+  "primary_reader": "A curious builder, student, creator, or knowledge worker who uses AI tools and wants to understand new AI terms without memorizing jargon or buying into hype.",
+  "intended_outcome": "The reader can understand one AI concept at a time, compare it with ideas they already know, explain where it helps in practice, and identify what part of the term is real versus inflated.",
+  "artifact_fit": "A series of short articles fits better than a single guide because the learning goal is recurring literacy: each term deserves its own analogy, practical examples, anti-hype check, and academic bridge.",
+  "smallest_viable_version": "A series charter plus a first article on loops versus goals, using a repeatable article template and a light source seed for deeper research.",
+  "scope_risks": "The series could become a broad AI encyclopedia, a product comparison hub, or an academic survey. It should stay focused on one concept at a time with practical examples and clear boundaries.",
+  "alternatives_considered": "A separate website was considered, but Aura Knowledge is the better first home because the series is about knowledge literacy and durable concept-building. A microsite can follow later if the series gains its own audience.",
+  "audience": [
+    "general",
+    "students",
+    "builders"
+  ],
+  "tags": [
+    "ai-literacy",
+    "ai-agents",
+    "prompting",
+    "context-management",
+    "memory",
+    "learning",
+    "de-hype"
+  ],
+  "maturity": "seed",
+  "claims": [
+    "AI buzzwords become easier to evaluate when each term is compared with older concepts rather than introduced as an isolated novelty.",
+    "Long-running AI sessions are best understood as goal-directed systems that use loops, context, memory, and evaluation rather than as indefinite conversations.",
+    "A recurring anti-hype section can help readers separate practical value from branding without making the series cynical.",
+    "The first article should cover loops versus goals because that distinction clarifies later topics such as agents, memory, context management, tool use, and evaluations.",
+    "Short, repeatable articles are a better teaching format for this topic than one large guide because readers can learn and revisit one concept at a time."
+  ],
+  "sources": [
+    {
+      "title": "Sutton and Barto: Reinforcement Learning: An Introduction",
+      "url": "http://incompleteideas.net/book/the-book-2nd.html",
+      "type": "textbook",
+      "accessed": "2026-06-29"
+    },
+    {
+      "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+      "url": "https://arxiv.org/abs/2210.03629",
+      "type": "research",
+      "accessed": "2026-06-29"
+    },
+    {
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "url": "https://arxiv.org/abs/2005.11401",
+      "type": "research",
+      "accessed": "2026-06-29"
+    },
+    {
+      "title": "Self-Refine: Iterative Refinement with Self-Feedback",
+      "url": "https://arxiv.org/abs/2303.17651",
+      "type": "research",
+      "accessed": "2026-06-29"
+    },
+    {
+      "title": "OpenAI API documentation: Prompt caching",
+      "url": "https://platform.openai.com/docs/guides/prompt-caching",
+      "type": "product-docs",
+      "accessed": "2026-06-29"
+    },
+    {
+      "title": "Anthropic documentation: Prompt engineering overview",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
+      "type": "product-docs",
+      "accessed": "2026-06-29"
+    }
+  ],
+  "related_articles": [
+    "article:ai-agent-advanced-questions",
+    "article:long-human-road-to-ai"
+  ],
+  "sanitized_summary": "This proposal defines an Aura Knowledge series that explains modern AI terms one at a time using plain language, relevant analogies, practical examples, benefits, limitations, future use cases, and academic connections. The recommended first article is about loops versus goals in long-running AI sessions.",
+  "abstraction_examples": [
+    {
+      "original": "I want to learn these AI buzzwords regularly and later share the articles with others.",
+      "abstracted": "The series serves readers who want a reusable, public learning path for understanding AI terminology one concept at a time."
+    },
+    {
+      "original": "People keep creating a facade around AI terminology and I want to clarify it.",
+      "abstracted": "The series includes a recurring anti-hype check that separates practical value from branding or unnecessary complexity."
+    },
+    {
+      "original": "I am excited to learn briefly about these topics and then jump into details.",
+      "abstracted": "Each article starts with a brief explanation, then offers optional deeper sections for academic connections and advanced use cases."
+    }
+  ],
+  "privacy_acknowledgment": true,
+  "agent_involvement": "Drafted with AI agent assistance using the Aura article-proposal ideation workflow; human author retains final judgment.",
+  "draft_available": false
+}

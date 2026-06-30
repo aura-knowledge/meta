@@ -82,7 +82,7 @@ Source IDs are stable public interfaces.
 - Do not rename or recycle IDs.
 - If a source becomes unsuitable, keep the entry, set `status: deprecated`, and add replacement or deprecation notes.
 - Each source entry must include the required fields listed in `source_entry_contract.required_fields`.
-- Each source outside the default allow-list in `capabilities/aura-export/config.yaml` needs `public_access` and `access_notes` explaining why it is public and citeable.
+- Each source outside the default allow-list in `capabilities/article-lifecycle-router/aura-export/config.yaml` needs `public_access` and `access_notes` explaining why it is public and citeable.
 
 ## Analogy Boundary Rules
 
@@ -136,7 +136,7 @@ Sibling-agent plan review was requested before file edits. The review found one 
 - Restricted tertiary sources to simple chronology or orientation unless stronger sources or review flags are present.
 - Added executable cross-file validation for source IDs, enum values, analogy limits, visual provenance, deprecated sources, and required source fields.
 - Added source-canon lifecycle rules for immutable IDs, deprecation, replacement notes, and source-addition rationale.
-- Added public-access and access-notes requirements for public sources outside the default allow-list in `capabilities/aura-export/config.yaml`.
+- Added public-access and access-notes requirements for public sources outside the default allow-list in `capabilities/article-lifecycle-router/aura-export/config.yaml`.
 - Clarified the difference between `confidence` and `uncertainty`.
 
 Result: plan accepted with changes incorporated before implementation.
@@ -166,7 +166,7 @@ Run these from the repository root:
 ```bash
 python3 scripts/route-submission.py --type article-proposal --submission proposals/long-human-road-to-ai/article-proposal.yaml --dry-run
 python3 -m json.tool proposals/long-human-road-to-ai/artifact.json >/dev/null
-PYTHONPATH=capabilities/aura-export/src python3 -m pytest capabilities/aura-export/tests
+PYTHONPATH=capabilities/article-lifecycle-router/aura-export/src python3 -m pytest capabilities/article-lifecycle-router/aura-export/tests
 python3 scripts/validate-lhra-research.py
 ```
 

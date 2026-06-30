@@ -1,0 +1,87 @@
+schemaVersion: 1
+series: ai-delegation-orchestration
+season: 1
+status: draft
+updated: "2026-06-28"
+source_policy:
+  public_only: true
+  source_authority: proposals/ai-delegation-orchestration/RESEARCH.md
+  rule: Use public sources and keep private implementation experience abstract.
+reading_path:
+  - order: 1
+    slug: 01-from-conversation-to-delegation
+    title: "From Conversation to Delegation: Why AI Work Needs a Durable Record"
+    package_path: proposals/ai-delegation-orchestration/articles/01-from-conversation-to-delegation
+    role: Establish the core distinction between interaction modality, work primitive, and system-of-record artifact.
+    reader_question: Why is a chat transcript not enough once AI work becomes consequential?
+    bridge_from_previous: null
+    bridge_to_next: A delegation needs a durable record if it must survive time, review, handoff, and accountability.
+    visual_priority:
+      - conversation-to-delegation stack
+      - promotion threshold
+  - order: 2
+    slug: 02-the-delegation-record
+    title: "The Delegation Record: A Schema for Consequential AI Work"
+    package_path: proposals/ai-delegation-orchestration/articles/02-the-delegation-record
+    role: Define the record schema and show how it differs from summaries, tickets, issues, and PRs.
+    reader_question: What should a delegation record actually contain?
+    bridge_from_previous: Conversation can express intent, but a record must preserve the constraints.
+    bridge_to_next: Once records exist across many tasks, the operator needs to know which one needs control next.
+    visual_priority:
+      - delegation record anatomy
+      - summary vs record comparison
+  - order: 3
+    slug: 03-the-operator-cockpit-problem
+    title: "The Operator Cockpit Problem: Why More Traces Are Not Enough"
+    package_path: proposals/ai-delegation-orchestration/articles/03-the-operator-cockpit-problem
+    role: Explain next-best-control as the missing operator surface across active delegations.
+    reader_question: How should one person supervise many AI delegations without becoming the bottleneck?
+    bridge_from_previous: Records preserve state; cockpits route attention and control.
+    bridge_to_next: Control routing requires naming where decisions can be resolved.
+    visual_priority:
+      - active delegation cockpit
+      - signal to route table
+  - order: 4
+    slug: 04-control-loci-not-human-managers
+    title: "Control Loci, Not Human Managers: An Agent-Native Routing Model"
+    package_path: proposals/ai-delegation-orchestration/articles/04-control-loci-not-human-managers
+    role: Replace authority theater with explicit routing among executor, verifier, arbiter, policy, context refresh, and human review.
+    reader_question: Why should uncertainty not always escalate to the human?
+    bridge_from_previous: A cockpit sees that control is needed; control loci decide where it should go.
+    bridge_to_next: Long-running work needs repeatable routing loops, not one-off approvals.
+    visual_priority:
+      - control-locus router
+      - escalation boundary matrix
+  - order: 5
+    slug: 05-long-running-delegations
+    title: "Long-Running Delegations: How Agents Can Work for Hours Without Losing the Plot"
+    package_path: proposals/ai-delegation-orchestration/articles/05-long-running-delegations
+    role: Define lifecycle, checkpoints, self-remediation, interrupts, budgets, and stop conditions.
+    reader_question: What lets an agent continue without repeatedly asking the human?
+    bridge_from_previous: Control loci allow uncertainty to route without breaking the delegation.
+    bridge_to_next: Long-running work depends on reusable capabilities that can be swapped and improved.
+    visual_priority:
+      - long-running lifecycle
+      - interrupt quality loop
+  - order: 6
+    slug: 06-capability-contracts-for-agent-networks
+    title: "Capability Contracts for Agent Networks"
+    package_path: proposals/ai-delegation-orchestration/articles/06-capability-contracts-for-agent-networks
+    role: Show how capability contracts coordinate tools, agents, models, policies, telemetry, and replacement without copying human job titles.
+    reader_question: What should replace agent org charts and vague role prompts?
+    bridge_from_previous: Durable delegations need capabilities that can execute, verify, refresh, arbitrate, and enforce policy.
+    bridge_to_next: Capability networks must adapt to domain consequence, not assume one universal risk model.
+    visual_priority:
+      - capability network graph
+      - capability contract
+  - order: 7
+    slug: 07-commitment-boundaries-in-high-stakes-domains
+    title: "Commitment Boundaries in High-Stakes Domains"
+    package_path: proposals/ai-delegation-orchestration/articles/07-commitment-boundaries-in-high-stakes-domains
+    role: Transfer the framework into domains where preparation and commitment must be separated.
+    reader_question: How does delegation design change when AI output can affect rights, money, law, education, or public records?
+    bridge_from_previous: Capability networks become meaningful only when their contracts reflect domain risk.
+    bridge_to_next: null
+    visual_priority:
+      - domain control matrix
+      - evidence and commitment boundary

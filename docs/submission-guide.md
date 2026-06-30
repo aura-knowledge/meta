@@ -6,7 +6,7 @@ Use the [Article proposal issue form](https://github.com/aura-knowledge/meta/iss
 
 If you are working with an agent, start with the [article lifecycle router](../capabilities/article-lifecycle-router/SKILL.md). It routes article work through intake, research, structure, drafting, review, finalization, correction, or source-audit stages.
 
-If the idea is still rough, use the [article-proposal-ideation capability](../capabilities/article-proposal-ideation/README.md) privately before opening a public issue.
+If the idea is still rough, use the [article-proposal-ideation capability](../capabilities/article-lifecycle-router/article-proposal-ideation/README.md) privately before opening a public issue.
 
 Required fields:
 - **Title** and **thesis**

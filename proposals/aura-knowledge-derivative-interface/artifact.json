@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "feedback_type": "governance",
+  "summary": "Define an export/attribution contract so external products can consume Aura Knowledge articles without the organization owning derivative formats.",
+  "current_state": "Aura Knowledge articles are published primarily for human readers on the garden site. There is no stable machine-readable contract or policy for external reuse. Recent discussions about Medium syndication, Substack newsletters, AI-narrated podcasts, translations, and video markup are drifting toward being treated as internal organizational capabilities rather than separate products. This risks scope creep and entangles knowledge curation with media production.",
+  "proposed_change": "Document a structured export interface, attribution rules, freshness/lifecycle expectations, and a clear responsibility boundary: Aura Knowledge owns the source article; external products consume it. The existing audio-first-voice-consumption proposal should be treated as the first test case for an external consumer. Derivative-format work (text syndication, podcast, translation, video) should happen outside the core organization unless explicitly adopted as a core workflow after experimentation.",
+  "impact": "Keeps Aura Knowledge focused on its core mission: credible, sourced, durable knowledge. Lets derivative-format experiments move faster with their own success metrics and maintenance burden. Prevents media-production scope from slowing garden curation. Makes Aura Knowledge more agent-readable by design, which is a separate strategic benefit.",
+  "proposed_topic_stem": "governance/derivative-formats",
+  "privacy_acknowledgment": true,
+  "agent_involvement": "Drafted by an AI agent during a critical ideation session with the proposer; the proposer reviewed and approved the framing."
+}

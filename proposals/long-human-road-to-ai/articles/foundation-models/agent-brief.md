@@ -110,5 +110,5 @@ PY
 If package tests are relevant to the handoff, run:
 
 ```bash
-PYTHONPATH=capabilities/aura-export/src python3 -m pytest capabilities/aura-export/tests
+PYTHONPATH=capabilities/article-lifecycle-router/aura-export/src python3 -m pytest capabilities/article-lifecycle-router/aura-export/tests
 ```

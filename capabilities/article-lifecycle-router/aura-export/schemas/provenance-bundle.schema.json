@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aura-knowledge.github.io/meta/schemas/provenance-bundle.schema.json",
+  "title": "Aura Knowledge Submission Provenance Bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "origin_workspace_type",
+    "sanitization_steps",
+    "reviewer_agents",
+    "confidence_at_origin",
+    "export_decision_rationale"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "origin_workspace_type": {
+      "type": "string",
+      "enum": ["client", "personal", "research", "simulated"]
+    },
+    "sanitization_steps": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 16 }
+    },
+    "reviewer_agents": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "confidence_at_origin": {
+      "type": "string",
+      "enum": ["high", "medium", "low"]
+    },
+    "export_decision_rationale": { "type": "string", "minLength": 40 }
+  }
+}
