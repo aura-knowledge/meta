@@ -34,7 +34,9 @@ jobs:
             if (/\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/.test(body)) findings.push('Possible email address detected');
             if (/https?:\/\/[^\s]+\.(internal|corp|local|lan|vpn)(?:\/|:|$)/i.test(body)) findings.push('Possible internal URL detected');
             if (/\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\b/i.test(body)) findings.push('Possible UUID detected');
-            if (/\b[A-Za-z0-9_-]{32,}\b/.test(body)) findings.push('Possible high-entropy token detected');
+            // Mixed-case alphanumeric token with at least one uppercase letter and one digit.
+            // Catches API keys and access tokens while avoiding false positives on lowercase URL slugs.
+            if (/\b(?=[A-Za-z0-9_-]*[A-Z])(?=[A-Za-z0-9_-]*[0-9])[A-Za-z0-9_-]{32,}\b/.test(body)) findings.push('Possible high-entropy token detected');
             if (!/Original:/.test(body) || !/Abstracted:/.test(body)) findings.push('Abstraction examples may be missing');
             core.setOutput('findings', findings.join('\\n'));
             core.setOutput('pass', findings.length === 0 ? 'true' : 'false');
