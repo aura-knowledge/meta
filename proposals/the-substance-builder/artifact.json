@@ -11,7 +11,7 @@
   "primary_reader": "Ordinary Indian smartphone users—students, young professionals, parents—who want to shift from passive consumption to small, repeatable acts of creation and learning.",
   "intended_outcome": "Readers choose one small, repeatable act of creation or learning and identify one existing dead-time window in which to practice it.",
   "artifact_fit": "An article fits because the reusable value is a practical, low-framing approach to individual substance-building that bridges the diagnosis in Lane A and the stakes in Lane B.",
-  "smallest_viable_version": "A single 2,500–3,500 word practical article with concrete examples for students, workers, parents, and citizens.",
+  "smallest_viable_version": "A single 2,500–3,500 word practical article with concrete examples and historical analogies for students, workers, parents, and citizens.",
   "scope_risks": "The article could become a generic listicle, a tool review, or a repeat of Lane A/B arguments. It must stay focused on small daily practice.",
   "alternatives_considered": "A checklist or habit tracker could follow, but the first artifact needs the why and the how in narrative form.",
   "tags": [
@@ -50,8 +50,8 @@
       "accessed": "2026-07-04"
     },
     {
-      "title": "Duolingo: AI-powered language tutoring",
-      "url": "https://blog.duolingo.com/",
+      "title": "Duolingo: Introducing Duolingo Max",
+      "url": "https://blog.duolingo.com/duolingo-max/",
       "type": "product-blog",
       "accessed": "2026-07-04"
     },

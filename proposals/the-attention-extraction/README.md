@@ -48,7 +48,7 @@ The article weaves the diagnosis through five life stages, but it does not solve
 
 ## Sources and method
 
-This article draws on government surveys and releases (ASER 2024, NSSO Time Use Survey 2024, NCERT mental-health survey, Tele-MANAS/PIB, Economic Survey 2025–26 via official PIB and India Budget sources), peer-reviewed and academic studies (PMC/NIH, Gloria Mark/UC Irvine attention research), industry reports (Gallup, IAMAI-Kantar, IBEF), and investigative outlets (Alt News, Rest of World, TechPolicy.Press).
+This article draws on government surveys and releases (ASER 2024, NSSO Time Use Survey 2024, NCERT mental-health survey via PIB, Tele-MANAS/PIB, Economic Survey 2025–26 via official PIB and India Budget sources), peer-reviewed and academic studies (PMC/NIH, Gloria Mark/UC Irvine attention research), industry reports (Gallup, IAMAI-Kantar, IBEF), and investigative outlets (Alt News, Rest of World, TechPolicy.Press).
 
 The Economic Survey 2025–26 also proposes responses such as Tele-MANAS expansion and screen-free zones; this article cites only its diagnostic findings and leaves its recommendations for Lane D.
 

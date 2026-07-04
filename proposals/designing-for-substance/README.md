@@ -48,7 +48,7 @@ After reading, the reader should be able to name three design or policy levers t
 
 ## Sources and method
 
-This article draws on regulatory frameworks (EU Digital Services Act, India's IT Rules 2021), platform research (algorithmic curation studies, Mastodon/fediverse as a design alternative), public-interest technology writing, and historical regulatory analogies.
+This article draws on regulatory frameworks (EU Digital Services Act via the European Commission, India's Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 via MeitY), platform research (algorithmic curation studies, Mastodon/fediverse as a design alternative), public-interest technology writing, and historical regulatory analogies.
 
 ## Scope boundaries
 

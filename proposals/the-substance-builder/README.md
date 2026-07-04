@@ -47,7 +47,7 @@ After reading, the reader should be able to choose one small, repeatable act of 
 
 ## Sources and method
 
-This article draws on practice research (Anders Ericsson's work on deliberate practice, popularized in Cal Newport's writing on deep work and digital minimalism), product and education examples (Duolingo, Khan Academy, and public AI-tutoring deployments), and behavioral research on habit formation.
+This article draws on practice research (Anders Ericsson's work on deliberate practice, popularized in Cal Newport's writing on deep work and digital minimalism), product and education examples (Duolingo Max, Khan Academy, and public AI-tutoring deployments), and behavioral research on habit formation.
 
 ## Scope boundaries
 

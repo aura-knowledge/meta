@@ -12,7 +12,7 @@ India stands at a narrow generational window. It has the youngest large populati
 
 ## Why this article now
 
-NASSCOM estimates that AI could add $450–500 billion to India's GDP by FY2026, yet enterprise adoption is still maturing and the talent pipeline is uneven. At the same time, ASER 2024 finds that 76% of 14–16-year-olds use smartphones for social media while only 57% use them for education. The gap between possibility and practice is widening at exactly the moment the stakes are highest.
+NASSCOM's "Unlocking Value from Data and AI" report estimated that data and AI could add $450–500 billion to India's GDP by 2025. That projection is now a benchmark against which to measure adoption, rather than a current outcome. Enterprise adoption is still maturing and the talent pipeline is uneven. At the same time, ASER 2024 finds that 76% of 14–16-year-olds use smartphones for social media while only 57% use them for education. The gap between possibility and practice is widening at exactly the moment the stakes are highest.
 
 ## What the reader will understand
 
