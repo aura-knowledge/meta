@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "title": "The Substance Builder: How to Turn Dead Time into Small Acts of Creation",
+  "slug": "the-substance-builder",
+  "thesis": "Building substance is not about dramatic discipline or quitting the internet; it is about redirecting small windows of attention toward creation, learning, and teaching, using AI to lower the activation energy of starting.",
+  "audience": [
+    "students",
+    "builders",
+    "general"
+  ],
+  "primary_reader": "Ordinary Indian smartphone users—students, young professionals, parents—who want to shift from passive consumption to small, repeatable acts of creation and learning.",
+  "intended_outcome": "Readers choose one small, repeatable act of creation or learning and identify one existing dead-time window in which to practice it.",
+  "artifact_fit": "An article fits because the reusable value is a practical, low-framing approach to individual substance-building that bridges the diagnosis in Lane A and the stakes in Lane B.",
+  "smallest_viable_version": "A single 2,500–3,500 word practical article with concrete examples and historical analogies for students, workers, parents, and citizens.",
+  "scope_risks": "The article could become a generic listicle, a tool review, or a repeat of Lane A/B arguments. It must stay focused on small daily practice.",
+  "alternatives_considered": "A checklist or habit tracker could follow, but the first artifact needs the why and the how in narrative form.",
+  "tags": [
+    "ai-assisted-creation",
+    "deep-work",
+    "digital-minimalism",
+    "habit-formation",
+    "learning",
+    "productivity"
+  ],
+  "maturity": "seed",
+  "claims": [
+    "Substance is built through small, repeated acts of writing, coding, designing, translating, or teaching that compound over time.",
+    "AI lowers the activation energy for starting drafts, lessons, prototypes, and explanations.",
+    "The main cost of building substance is redirecting attention from consumption, not purchasing equipment or changing schedules dramatically.",
+    "Unfinished or unnoticed early projects still build the skill stack for later work.",
+    "Teaching an idea to someone else turns passive information into owned knowledge."
+  ],
+  "sources": [
+    {
+      "title": "Cal Newport: The Tao of Cal",
+      "url": "https://calnewport.com/the-tao-of-cal/",
+      "type": "blog-post",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "Cal Newport: Deep Work",
+      "url": "https://www.calnewport.com/books/deep-work/",
+      "type": "book",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "Anders Ericsson: The Role of Deliberate Practice in the Acquisition of Expert Performance",
+      "url": "https://psycnet.apa.org/record/1993-40718-001",
+      "type": "peer-reviewed-study",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "Duolingo: Introducing Duolingo Max",
+      "url": "https://blog.duolingo.com/duolingo-max/",
+      "type": "product-blog",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "Khan Academy: Khanmigo",
+      "url": "https://www.khanacademy.org/khan-labs/khanmigo",
+      "type": "product-page",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "BJ Fogg: Tiny Habits",
+      "url": "https://tinyhabits.com/",
+      "type": "book-website",
+      "accessed": "2026-07-04"
+    }
+  ],
+  "related_articles": [
+    "article:the-attention-extraction",
+    "article:the-generational-bet",
+    "article:designing-for-substance"
+  ],
+  "sanitized_summary": "This article provides a practical, low-friction approach to shifting from passive digital consumption to small daily acts of creation and learning. It draws on research about deliberate practice and deep work and shows how AI-assisted tools can lower the activation energy for students, workers, parents, and citizens to build substance in existing dead-time windows.",
+  "abstraction_examples": [
+    {
+      "original": "I use my commute to scroll Instagram and watch reels",
+      "abstracted": "A daily commute window currently spent on short-form video"
+    },
+    {
+      "original": "My child watches YouTube Kids for hours",
+      "abstracted": "A child spending long stretches on algorithmic video content"
+    }
+  ],
+  "privacy_acknowledgment": true,
+  "agent_involvement": "Proposal drafted with AI agent assistance; human author retains final judgment.",
+  "draft_available": false
+}

@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "title": "The Attention Extraction: How India's Digital Dividend Is Becoming a Cognitive Deficit",
+  "slug": "the-attention-extraction",
+  "thesis": "India's digital-access success has inverted: the same infrastructure that could have accelerated learning, production, and civic participation is now optimized to capture and monetize attention, producing measurable costs in cognition, mental health, economic output, and social trust—not because users are weak, but because the system is designed to keep them scrolling.",
+  "audience": [
+    "researchers",
+    "students",
+    "builders",
+    "policy",
+    "general"
+  ],
+  "primary_reader": "Indian citizens, educators, parents, and builders who sense that screen time has become excessive but have not yet seen the aggregated public evidence.",
+  "intended_outcome": "Readers can name three concrete, evidence-based costs of the attention economy in India and see that the problem is designed before it is personal.",
+  "artifact_fit": "An article fits because the reusable value is a sourced, compressed diagnosis that turns scattered public data into a coherent narrative before later articles prescribe solutions.",
+  "smallest_viable_version": "A single 2,500–3,500 word diagnosis built around eight to ten verified public data points, with no prescriptive advice.",
+  "scope_risks": "The article could expand into a white paper, drift into prescriptive territory, or overstate causation from correlational data. It must stay compressed, diagnosis-only, and carefully caveated.",
+  "alternatives_considered": "A data dashboard or annotated source list could supplement the article later, but the first artifact needs a narrative arc and human scenes.",
+  "tags": [
+    "attention-economy",
+    "india",
+    "digital-wellbeing",
+    "social-media",
+    "public-policy",
+    "mental-health"
+  ],
+  "maturity": "seed",
+  "claims": [
+    "India has near-universal digital access, but entertainment and social media use crowd out education and production among young users.",
+    "A large share of digital advertising revenue in India flows to foreign platforms, while local safety, quality signals, and creator sustainability lag behind.",
+    "Short-form feeds use variable rewards, infinite scroll, autoplay, and personalized recommendations to extend engagement beyond user intent.",
+    "The costs of the attention economy appear across attention spans, productivity, youth mental health, and social trust."
+  ],
+  "sources": [
+    {
+      "title": "PIB: Economic Survey 2025-26 Press Release",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2219931&reg=3&lang=2",
+      "type": "government-press-release",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "India Budget: Economic Survey 2025-26 Education and Health Chapter",
+      "url": "https://www.indiabudget.gov.in/economicsurvey/doc/eschapter/echap11.pdf",
+      "type": "government-report",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "IAMAI-Kantar: Internet in India Report 2024",
+      "url": "https://www.iamai.in/sites/default/files/research/Kantar_%20IAMAI%20report_2024_.pdf",
+      "type": "industry-report",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "ASER 2024 National Findings",
+      "url": "https://asercentre.org/wp-content/uploads/2022/12/ASER-2024-National-findings.pdf",
+      "type": "research-report",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "PIB: NCERT Mental Health and Well-being Survey of School Students",
+      "url": "https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=1993919",
+      "type": "government-press-release",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "NSSO Time Use Survey 2024 Factsheet",
+      "url": "https://www.mospi.gov.in/sites/default/files/publication_reports/TUS_Factsheet_25022025.pdf",
+      "type": "government-report",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "PIB Tele-MANAS Press Note",
+      "url": "https://www.pib.gov.in/PressNoteDetails.aspx?ModuleId=3&NoteId=153277",
+      "type": "government-press-release",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "PMC: The adverse impact of mobile phone short-form video addiction on attentional functions and self-control",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11236742/",
+      "type": "peer-reviewed-study",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "PMC: Social media and mental health among Indian adolescents",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11438920/",
+      "type": "peer-reviewed-study",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "Milli et al.: Engagement, User Satisfaction, and the Amplification of Divisive Content on Social Media (PNAS Nexus)",
+      "url": "https://doi.org/10.1093/pnasnexus/pgaf062",
+      "type": "peer-reviewed-study",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "Yale News: Likes and shares teach people to express more outrage online",
+      "url": "https://news.yale.edu/2021/08/13/likes-and-shares-teach-people-express-more-outrage-online",
+      "type": "university-news",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "Steelcase: Our 47-Second Attention Span with Gloria Mark (transcript)",
+      "url": "https://www.steelcase.com/research/articles/our-47-second-attention-span-with-gloria-mark-s5-ep3-transcript/",
+      "type": "interview-transcript",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "Gallup State of the Global Workplace: India Country-Level Data",
+      "url": "https://www.gallup.com/workplace/705650/state-global-workplace-india-country-level-data.aspx",
+      "type": "industry-report",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "IBEF: Tech giants generate over US$7.13 billion in advertising revenue in FY24",
+      "url": "https://www.ibef.org/news/tech-giants-generate-over-us-7-13-billion-rs-60-000-crore-in-advertising-revenue-in-fy24",
+      "type": "industry-report",
+      "accessed": "2026-07-04"
+    }
+  ],
+  "related_articles": [
+    "article:the-generational-bet",
+    "article:the-substance-builder",
+    "article:designing-for-substance"
+  ],
+  "sanitized_summary": "This article diagnoses how India's digital-access success has inverted into an attention-extraction economy. It uses public government, academic, and industry sources to show that entertainment and social media crowd out educational use among young people, advertising revenue concentrates in foreign platforms, feed design extends engagement beyond intent, and costs appear across attention spans, productivity, youth mental health, and social trust. The article stays diagnosis-only, uses historical analogies and life-phase scenes, and reserves solutions for follow-up articles.",
+  "abstraction_examples": [
+    {
+      "original": "I see this on Indian trains, buses, and airplanes",
+      "abstracted": "Public transit and shared waiting spaces in dense, mobile-first countries"
+    },
+    {
+      "original": "Young people with big headphones acting cool",
+      "abstracted": "A norm of private, audio-isolated behavior in shared physical spaces"
+    },
+    {
+      "original": "They must have picked it from the Western world",
+      "abstracted": "Global media norms that emphasize personal entertainment over incidental social contact"
+    },
+    {
+      "original": "Research folder at /Users/vishalsingh/Downloads/Kimi_Agent_Indian Media's Negative Impact",
+      "abstracted": "A private research compilation that has been summarized and sanitized for public citation"
+    }
+  ],
+  "privacy_acknowledgment": true,
+  "agent_involvement": "Proposal drafted and revised with AI agent assistance using sanitized public sources; human author retains final judgment.",
+  "draft_available": false
+}

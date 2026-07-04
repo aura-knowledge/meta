@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "title": "The Generational Bet: Will India Build the AI Age or Scroll Through It?",
+  "slug": "the-generational-bet",
+  "thesis": "India stands at a narrow generational window: it has the youngest large population on Earth, deep software talent, and universal access to AI-assisted tools, but the attention economy has trained a generation to consume before it creates. The next few years will determine whether India builds the AI age or merely scrolls through it.",
+  "audience": [
+    "students",
+    "builders",
+    "policy",
+    "general"
+  ],
+  "primary_reader": "Young Indian professionals, students, builders, and policymakers who understand that AI is important but have not yet connected it to their daily attention habits.",
+  "intended_outcome": "Readers see the AI opportunity as a habit problem, not a technology problem, and recognize that the next few years are a compounding bet on attention.",
+  "artifact_fit": "An article fits because the reusable value is a reframing: it connects the diagnosis in Lane A to the AI moment and motivates the practical work in Lane C without itself becoming a tutorial.",
+  "smallest_viable_version": "A single 2,500–3,500 word article built around six to eight public sources, with historical analogies and life-phase threads.",
+  "scope_risks": "The article could become a technology boosterism piece, a nationalist sermon, or a repeat of Lane A's diagnosis. It must stay focused on the opportunity-cost reframing.",
+  "alternatives_considered": "A manifesto or open letter could carry emotion but would lack the source grounding and life-phase specificity an article provides.",
+  "tags": [
+    "artificial-intelligence",
+    "india",
+    "generational-responsibility",
+    "attention-economy",
+    "deep-work",
+    "innovation"
+  ],
+  "maturity": "seed",
+  "claims": [
+    "AI has collapsed the cost of creation for individuals in research, writing, coding, designing, translating, and teaching.",
+    "The attention economy trained users to consume, and the default behavior has not caught up with AI's creative affordances.",
+    "The creator-economy incentive structure appears to reward reach and engagement more than substantive, educational, or slow-burn work.",
+    "The article argues that small daily choices about attention may compound, over years, into individual skill and, at scale, into national capacity."
+  ],
+  "sources": [
+    {
+      "title": "PIB: India's Youth Dividend in the AI Era",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2230044&reg=3&lang=1",
+      "type": "government-press-release",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "PIB: Transforming India with AI",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2209737&reg=3&lang=1",
+      "type": "government-press-release",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "NASSCOM: Unlocking Value from Data and AI – The India Opportunity",
+      "url": "https://nasscom.in/knowledge-center/publications/unlocking-value-data-and-ai-india-opportunity",
+      "type": "industry-report",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "NASSCOM-EY: AI Adoption Index",
+      "url": "https://www.ey.com/content/dam/ey-unified-site/ey-com/en-in/insights/ai/documents/ey-nasscom-ai-adoption-index.pdf",
+      "type": "industry-report",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "Linux Foundation: AI for Economic and Social Good in India",
+      "url": "https://www.linuxfoundation.org/hubfs/Research%20Reports/meta_osai_india_report_021626a.pdf?hsLang=en",
+      "type": "research-report",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "ASER 2024 National Findings",
+      "url": "https://asercentre.org/wp-content/uploads/2022/12/ASER-2024-National-findings.pdf",
+      "type": "research-report",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "BCG: India from Content to Commerce—Mapping India's Creator Economy",
+      "url": "https://www.bcg.com/publications/2025/india-from-content-to-commerce-mapping-indias-creator-economy",
+      "type": "industry-report",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "Stanford University: Global AI Vibrancy Tool",
+      "url": "https://aiindex.stanford.edu/data-governance/global-ai-vibrancy-tool/",
+      "type": "research-tool",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "OECD: The effects of generative AI on productivity, innovation and entrepreneurship",
+      "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/06/the-effects-of-generative-ai-on-productivity-innovation-and-entrepreneurship_da1d085d/b21df222-en.pdf",
+      "type": "research-report",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "Stanford HAI: AI Index Report 2025",
+      "url": "https://aiindex.stanford.edu/report/",
+      "type": "research-report",
+      "accessed": "2026-07-04"
+    }
+  ],
+  "related_articles": [
+    "article:the-attention-extraction",
+    "article:the-substance-builder",
+    "article:designing-for-substance"
+  ],
+  "sanitized_summary": "This article reframes India's attention-economy problem as an AI opportunity-cost problem. It argues that AI has collapsed the cost of individual creation while the attention economy has entrenched consumption habits, and that India's demographic dividend will be decided by whether young people build substantive things or remain passive consumers. Historical analogies and life-phase threads illustrate the compounding nature of the bet.",
+  "abstraction_examples": [
+    {
+      "original": "India ended up building Zomato, Swiggy, Ola, Uber, Rapido instead of deep tech",
+      "abstracted": "India's startup ecosystem has produced many convenience-aggregation platforms and fewer globally dominant deep-tech product categories"
+    },
+    {
+      "original": "My friend says we need a platform that rewards quality content",
+      "abstracted": "A hypothetical platform that weights creator rewards by content quality rather than engagement alone"
+    }
+  ],
+  "privacy_acknowledgment": true,
+  "agent_involvement": "Proposal drafted with AI agent assistance using public sources; human author retains final judgment.",
+  "draft_available": false
+}

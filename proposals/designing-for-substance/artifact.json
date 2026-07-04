@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "title": "Designing for Substance: Platform Incentives and the Attention Economy",
+  "slug": "designing-for-substance",
+  "thesis": "The attention economy is not inevitable; it is the product of specific design choices that could be redesigned. Building a substance-friendly internet requires new incentives, metrics, and accountability structures at the platform, regulatory, and civic levels.",
+  "audience": [
+    "builders",
+    "policy",
+    "researchers",
+    "general"
+  ],
+  "primary_reader": "Builders, designers, policymakers, and civic-minded citizens who want to understand how platform incentives could be shifted toward substance rather than extraction.",
+  "intended_outcome": "Readers can name three design or policy levers that could shift platform incentives toward substance and recognize that product alternatives are possible.",
+  "artifact_fit": "An article fits because the reusable value is a structured exploration of design alternatives and regulatory levers, not a product spec or a political manifesto.",
+  "smallest_viable_version": "A single 2,500–3,500 word exploratory article with five core claims, regulatory and design examples, and historical analogies.",
+  "scope_risks": "The article could become a product pitch, a partisan regulatory argument, or a repeat of Lane A's diagnosis. It must stay exploratory and grounded.",
+  "alternatives_considered": "A design brief or policy memo could follow, but the first artifact needs a readable, accessible exploration.",
+  "tags": [
+    "platform-design",
+    "regulation",
+    "attention-economy",
+    "digital-wellbeing",
+    "public-interest-technology",
+    "fediverse"
+  ],
+  "maturity": "seed",
+  "claims": [
+    "Engagement optimization is a design choice driven by business models, not an inevitable feature of social platforms.",
+    "Alternative metrics such as time well spent, creator sustainability, learning outcomes, and long-term flourishing can be measured and rewarded.",
+    "Accountability can emerge through regulation, public pressure, and user migration to better-designed platforms.",
+    "Substance-friendly design is a category that includes chronological feeds, user-chosen algorithms, expert curation, reputation systems, and friction against virality.",
+    "A substance-oriented platform would ask how to help users leave better than they arrived, rather than how to maximize time on platform."
+  ],
+  "sources": [
+    {
+      "title": "European Commission: Digital Services Act",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/digital-services-act",
+      "type": "government-policy",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "MeitY: Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 (updated 10.02.2026)",
+      "url": "https://www.meity.gov.in/static/uploads/2026/02/550681ab908f8afb135b0ad42816a1c9.pdf",
+      "type": "regulatory-text",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "ACM: Trouble in Paradise? Understanding Mastodon Admin's Motivations, Experiences, and Challenges Running Decentralised Social Media",
+      "url": "https://dl.acm.org/doi/pdf/10.1145/3687059",
+      "type": "peer-reviewed-study",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "arXiv preprint: Understanding Decentralized Social Feed Curation on Mastodon",
+      "url": "https://arxiv.org/html/2504.18817v1",
+      "type": "preprint",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "Milli et al.: Engagement, User Satisfaction, and the Amplification of Divisive Content on Social Media (PNAS Nexus)",
+      "url": "https://doi.org/10.1093/pnasnexus/pgaf062",
+      "type": "peer-reviewed-study",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "Yale News: Likes and shares teach people to express more outrage online",
+      "url": "https://news.yale.edu/2021/08/13/likes-and-shares-teach-people-express-more-outrage-online",
+      "type": "university-news",
+      "accessed": "2026-07-04"
+    },
+    {
+      "title": "Center for Humane Technology",
+      "url": "https://www.humanetech.com/",
+      "type": "organization-website",
+      "accessed": "2026-07-04"
+    }
+  ],
+  "related_articles": [
+    "article:the-attention-extraction",
+    "article:the-generational-bet",
+    "article:the-substance-builder"
+  ],
+  "sanitized_summary": "This article explores how platform incentives could be redesigned to reward substance over extraction. It examines regulatory levers such as the EU Digital Services Act and India's IT Rules, design alternatives such as chronological feeds and the fediverse, and historical analogies from public-health regulation and journalism. The article stays exploratory and does not pitch a single product or policy.",
+  "abstraction_examples": [
+    {
+      "original": "We need a platform that pays creators based on quality not likes",
+      "abstracted": "An incentive model that rewards creator output by quality signals rather than engagement metrics alone"
+    },
+    {
+      "original": "The government should ban infinite scroll and autoplay",
+      "abstracted": "Regulatory consideration of design patterns that extend engagement beyond user intent"
+    }
+  ],
+  "privacy_acknowledgment": true,
+  "agent_involvement": "Proposal drafted with AI agent assistance using public sources; human author retains final judgment.",
+  "draft_available": false
+}

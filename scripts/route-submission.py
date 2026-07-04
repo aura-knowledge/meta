@@ -32,7 +32,10 @@ PRIVACY_PATTERNS = [
     ("internal_url", re.compile(r"https?://[^\s]+\.(internal|corp|local|lan|vpn)(?:/|:|$)", re.I)),
     ("uuid", re.compile(r"\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\b", re.I)),
     ("aws_key", re.compile(r"AKIA[0-9A-Z]{16}")),
-    ("high_entropy_token", re.compile(r"\b[A-Za-z0-9_-]{32,}\b")),
+    # High-entropy token: mixed-case alphanumeric with at least one uppercase
+    # letter and one digit. This catches API keys and access tokens while
+    # avoiding false positives on lowercase URL slugs and path segments.
+    ("high_entropy_token", re.compile(r"\b(?=[A-Za-z0-9_-]*[A-Z])(?=[A-Za-z0-9_-]*[0-9])[A-Za-z0-9_-]{32,}\b")),
 ]
 
 ARTICLE_AUDIENCES = {"researchers", "students", "agents", "builders", "policy", "general"}
