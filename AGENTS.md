@@ -66,3 +66,7 @@ Users and maintainers may explicitly override the default with `manual`, `autono
 - `npm run check` or `scripts/validate-submission.py` if available.
 - Privacy scan passes with no project-specific leaks.
 - Lifecycle record created if your own organization requires it.
+
+## SDL commit-author provenance
+
+All commits in this repository must carry the `SDL-Commit-Author: capability-commit-author` trailer. This is enforced by a `commit-msg` hook in `.githooks/commit-msg`. For new clones, run `git config core.hooksPath .githooks` after checkout to enable the hook. To bypass (e.g. for history rewrites), set `SDL_COMMIT_AUTHOR_SKIP=1`.
