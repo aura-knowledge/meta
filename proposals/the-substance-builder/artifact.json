@@ -85,6 +85,7 @@
     }
   ],
   "privacy_acknowledgment": true,
-  "agent_involvement": "Proposal drafted with AI agent assistance; human author retains final judgment.",
-  "draft_available": false
+  "agent_involvement": "Proposal drafted and article package produced with AI agent assistance; human author retains final judgment.",
+  "draft_available": true,
+  "published_article_path": "aura-knowledge.github.io/content/articles/2026/the-substance-builder/"
 }
