@@ -5,8 +5,7 @@
   "thesis": "Long agent-driven software missions fail when one agent tries to hold the entire plan, execution runs without checkpoints, and process memory is lost between sessions. A bounded, queue-based project conductor externalizes state, executes dependency-ordered slices in isolated sessions, and feeds telemetry into a proposal-only self-improvement loop with mandatory human gates.",
   "audience": [
     "builders",
-    "researchers",
-    "agents"
+    "researchers"
   ],
   "primary_reader": "Engineering teams and agent operators who need to split multi-session software missions into bounded, reviewable, and governable slices.",
   "intended_outcome": "Readers can define a bounded conductor mission, decompose it into slices with authority envelopes, identify human handoff points, and apply the minimal schema to their own agent teams.",

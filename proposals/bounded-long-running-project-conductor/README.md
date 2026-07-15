@@ -142,6 +142,8 @@ The following JSON schema is the smallest useful shape for a conductor mission r
 }
 ```
 
+Slice-level `status` values (`pending | running | review | completed | failed`) are a subset of the full mission lifecycle. They describe the state of one slice inside a mission, not the mission as a whole.
+
 ## Relationship to other work
 
 This proposal is the Aura Knowledge public-facing counterpart of internal work on long-running project orchestration. The concrete capability implementation, factory provenance, and retrospective live in the stibdedlom infrastructure repository and are referenced here only at a high level.
