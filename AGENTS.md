@@ -14,6 +14,20 @@ This repository handles two public inputs for the Aura Knowledge organization:
 
 Everything here is public. Do not paste client names, project codenames, proprietary code, internal URLs, or personal information.
 
+## Default SDL routing
+
+This repository is governed through SDL (stibdedlom). The contract is
+agent-neutral: it works with Kimi, Claude, Cursor, headless scripts, and any
+future agent that can shell out to `sdl-orchestrator check`.
+
+SDL is active by default. The user does not need to invoke a magic phrase.
+Treat every user prompt as an invocation-policy `user_prompt`: inquiry may
+answer after routing, planning routes through governance, and execution routes
+to the selected capability or role with a lifecycle record plus isolated
+branch/worktree before mutation.
+
+To opt out for a bounded session or task, say `SDL off for this task`.
+
 ## Article lifecycle command
 
 When the user invokes `$aura-article`, `use aura-article`, `use Aura article flow`, or asks in natural language to propose, ideate, research, scope, structure, draft, review, finalize, publish, correct, audit, or challenge sources for an Aura Knowledge article, load and follow:
@@ -24,6 +38,8 @@ This is the canonical repo-local router skill. It selects the lifecycle stage be
 
 Claude users may also invoke `/aura-article`; this repository ships `.claude/commands/aura-article.md` for that environment. Kimi Code coverage is through this `AGENTS.md` file.
 
+Article lifecycle work continues to route through the repo-local article-lifecycle-router unless the user explicitly asks for SDL governance.
+
 ## SDL capability routing
 
 When the user invokes `$sdl`, `/sdl`, `use SDL`, `SDL mode`, `$capability-routing`, `/capability-routing`, `use capability-routing`, or asks to route work through SDL/stibdedlom, load and follow:
@@ -31,7 +47,61 @@ When the user invokes `$sdl`, `/sdl`, `use SDL`, `SDL mode`, `$capability-routin
 - `/Users/vishalsingh/.agents/skills/stibdedlom/SKILL.md`
 - `/Users/vishalsingh/.agents/skills/capability-routing/SKILL.md`
 
-Article lifecycle work continues to route through the repo-local article-lifecycle-router unless the user explicitly asks for SDL governance.
+## Project reference
+
+```text
+project://aura-knowledge/meta
+```
+
+## Memory boundary
+
+Project memory is stored out-of-band at:
+
+```text
+/Users/vishalsingh/.stibdedlom/project-memory/aura-knowledge/meta
+```
+
+No client data, secrets, or project memory may be committed to this repository.
+
+## Agent integration contract
+
+The repository declares its SDL contract in `.stibdedlom/manifest.yaml` under
+the `agent_integration` section. Any agent can discover:
+
+- `memory_root` — where project memory and trust material live.
+- `check_command` — how to invoke `sdl-orchestrator check`.
+- `attested` — whether mutations require a valid routing attestation.
+
+Example `sdl-orchestrator check` invocation:
+
+```text
+sdl-orchestrator check \
+  --tool file_write \
+  --tool-args '{"path": "docs/example.md", "content": "hello"}' \
+  --target-paths docs/example.md \
+  --task-ref issues/123 \
+  --intent-class execution
+```
+
+## Modes
+
+- **Attested mode** (`agent_integration.attested: true`): the agent has a valid
+  routing attestation for the current branch/task. Call `sdl-orchestrator check`
+  before every mutation. The kernel returns `allow`, `block`, or `escalate`.
+- **Unattested mode** (`agent_integration.attested: false`): only read-only and
+  diagnostic operations are permitted until an attestation is created.
+
+## Picking up a classified issue
+
+When an issue carries an SDL classification block, route it through SDL:
+
+```text
+/sdl-pickup <issue-url>
+```
+
+This extracts the classification block, routes the goal, and initializes a
+lifecycle record. Agents without `/sdl-pickup` support can create the lifecycle
+record manually via `scripts/lifecycle/new-record.sh` in the infra repo.
 
 ## Session start nudge
 
@@ -75,6 +145,14 @@ Users and maintainers may explicitly override the default with `manual`, `autono
 - `npm run check` or `scripts/validate-submission.py` if available.
 - Privacy scan passes with no project-specific leaks.
 - Lifecycle record created if your own organization requires it.
+
+## Authority
+
+- Live mutations require explicit bounded authorization.
+- Commits that change governed files must carry `SDL-Commit-Author` and
+  `SDL-Routing-Attestation` trailers.
+- Merges require independent review and merge-queue submission.
+- Promotion and provider dispatch follow the SDL lifecycle gates.
 
 ## SDL commit-author provenance
 
