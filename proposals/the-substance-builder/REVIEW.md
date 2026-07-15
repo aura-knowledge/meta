@@ -26,11 +26,11 @@ Self-review completed after inspecting the existing proposal package for issue #
 
 ## Readiness
 
-Ready for sibling-agent or maintainer review. The README.md and artifact.json were already complete; this review and research memo complete the package.
+Article package published. The article, agent brief, and structured artifact exist at `aura-knowledge.github.io/content/articles/2026/the-substance-builder/` and match the style of existing published articles. Proposal files have been updated to mark the draft as available and to record the published path. The issue can be closed once a maintainer confirms the published package.
 
 ---
 
-stage: review-finalization  
-next_action: sibling-agent or maintainer review  
+stage: published  
+next_action: maintainer closes issue #46 after verifying the published package  
 public_lane: article-proposal  
 privacy_status: clear

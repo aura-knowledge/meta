@@ -62,13 +62,19 @@ The proposal includes:
 - `README.md` — human-readable proposal narrative
 - `artifact.json` — structured metadata, claims, sources, relationships
 - `RESEARCH.md` — this research memo and source map
-- `REVIEW.md` — self-review findings
+- `REVIEW.md` — review findings and publication readiness
 
-The next action is sibling-agent or maintainer review before drafting.
+The publishable article package has been produced at `aura-knowledge.github.io/content/articles/2026/the-substance-builder/` and contains:
+
+- `article.md` — the full article
+- `agent.md` — the agent brief
+- `artifact.json` — the structured article artifact
+
+The next action is maintainer verification and closure of issue #46.
 
 ---
 
-stage: structure-drafting  
-next_action: sibling-agent or maintainer review, then outline/draft  
+stage: published  
+next_action: maintainer verifies published package and closes issue #46  
 public_lane: article-proposal  
 privacy_status: clear
