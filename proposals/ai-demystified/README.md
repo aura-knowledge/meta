@@ -138,4 +138,10 @@ Every article should ask:
 
 `seed`
 
-This proposal captures the series direction and first article path. It is not yet a researched article draft.
+This proposal captures the series direction and first article path. The series guide and first article have been published in Aura Knowledge; remaining articles follow the same template.
+
+## Publication Status
+
+- Series guide: [`content/articles/2026/ai-demystified/`](https://github.com/aura-knowledge/aura-knowledge.github.io/tree/main/content/articles/2026/ai-demystified/)
+- First article: [`content/articles/2026/loops-vs-goals/`](https://github.com/aura-knowledge/aura-knowledge.github.io/tree/main/content/articles/2026/loops-vs-goals/)
+- Subsequent articles in the series map are drafted and published as separate issues.
