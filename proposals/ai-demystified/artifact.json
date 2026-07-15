@@ -90,5 +90,12 @@
   ],
   "privacy_acknowledgment": true,
   "agent_involvement": "Drafted with AI agent assistance using the Aura article-proposal ideation workflow; human author retains final judgment.",
-  "draft_available": false
+  "draft_available": true,
+  "publication": {
+    "article_path": "aura-knowledge.github.io/content/articles/2026/ai-demystified/",
+    "first_article_path": "aura-knowledge.github.io/content/articles/2026/loops-vs-goals/",
+    "published_at": "2026-06-29",
+    "updated_at": "2026-07-15",
+    "note": "Series guide and first article (Loops vs Goals) published in Aura Knowledge."
+  }
 }
