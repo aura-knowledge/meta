@@ -56,7 +56,11 @@ ROUTING_ATTESTATION_SCHEMA_VERSION = "sdl-routing-attestation@2"
 SUPPORTED_ROUTING_ATTESTATION_VERSIONS = frozenset(
     {"sdl-routing-attestation@1", "sdl-routing-attestation@2"}
 )
-CLIENT_MANIFEST_SCHEMA_VERSION = "stibdedlom-client-manifest@1"
+# Client manifest schema versions accepted by the client hooks. New manifests are
+# @2 (current onboarding template); @1 is grandfathered for older client repos.
+SUPPORTED_CLIENT_MANIFEST_SCHEMA_VERSIONS = frozenset(
+    {"stibdedlom-client-manifest@1", "stibdedlom-client-manifest@2"}
+)
 INVOCATION_POLICY_SCHEMA_VERSION = "0.1.0"
 
 
@@ -1276,7 +1280,7 @@ def validate_schemas(repo_root: Path) -> dict[str, Any]:
         missing = [field for field in required if field not in manifest]
         if missing:
             errors.append({"path": ".stibdedlom/manifest.yaml", "reason": f"missing fields: {missing}"})
-        if manifest.get("schema_version") != CLIENT_MANIFEST_SCHEMA_VERSION:
+        if manifest.get("schema_version") not in SUPPORTED_CLIENT_MANIFEST_SCHEMA_VERSIONS:
             errors.append(
                 {
                     "path": ".stibdedlom/manifest.yaml",
