@@ -24,13 +24,17 @@ Self-review completed after inspecting the existing proposal package for issue #
 - Correlational data must be framed with appropriate caveats.
 - Some sources (e.g., Steelcase interview, IBEF report) are not peer-reviewed; label them accordingly.
 
+## Sibling-agent review
+
+A sibling agent inspected the proposal package against the Aura Knowledge article lifecycle and verified that the publishable article package already exists on `aura-knowledge.github.io` main at `content/articles/2026/the-attention-extraction/` (`article.md`, `agent.md`, `artifact.json`). The package passed `npm run validate` on the garden repo, uses only public sources, maintains the diagnosis-only scope, and preserves the privacy abstraction examples.
+
 ## Readiness
 
-Ready for sibling-agent or maintainer review. The README.md and artifact.json were already complete; this review and research memo complete the package.
+Ready for routing and issue closure. The proposal artifact has been updated to `draft_available: true` to reflect the existing published article package.
 
 ---
 
 stage: review-finalization  
-next_action: sibling-agent or maintainer review  
+next_action: maintainer acceptance / close meta#44  
 public_lane: article-proposal  
 privacy_status: clear
