@@ -39,6 +39,8 @@ EXEMPT_PATTERNS = [
     r"^\.stibdedlom/bin/",
     r"^\.stibdedlom/lib/",
     r"^\.stibdedlom/trust/",
+    r"^\.stibdedlom/manifest\.yaml$",
+    r"^\.stibdedlom/invocation-policy\.yaml$",
     r"^\.github/",
     r"^\.githooks/",
     r"^AGENTS\.md$",
