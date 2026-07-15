@@ -87,5 +87,7 @@
   ],
   "privacy_acknowledgment": true,
   "agent_involvement": "Proposal drafted with AI agent assistance using only public sources; human author retains final judgment. The privacy-check-failed label was addressed by removing or abstracting any detail not traceable to a public Apple research paper, newsroom post, developer document, or published independent analysis.",
-  "draft_available": false
+  "draft_available": true,
+  "published_article_path": "content/articles/2026/post-subscription-ai-assistant",
+  "published_article_url": "https://aura-knowledge.github.io/articles/post-subscription-ai-assistant/"
 }

@@ -40,7 +40,7 @@ Ready for sibling-agent or maintainer review. Not yet ready for final publicatio
 
 ---
 
-stage: review-finalization  
-next_action: sibling-agent or maintainer review  
-public_lane: article-proposal  
+stage: published
+next_action: maintainer acceptance / close meta#52
+public_lane: article-proposal
 privacy_status: clear
