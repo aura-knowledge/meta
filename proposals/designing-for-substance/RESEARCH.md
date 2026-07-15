@@ -65,11 +65,11 @@ The proposal includes:
 - `RESEARCH.md` — this research memo and source map
 - `REVIEW.md` — self-review findings
 
-The next action is sibling-agent or maintainer review before drafting.
+The article package has been published in the site repo at `content/articles/2026/designing-for-substance/`.
 
 ---
 
-stage: structure-drafting  
-next_action: sibling-agent or maintainer review, then outline/draft  
+stage: review-finalization  
+next_action: close proposal issue #47; schedule periodic source review  
 public_lane: article-proposal  
 privacy_status: clear

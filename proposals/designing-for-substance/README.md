@@ -56,6 +56,13 @@ This article draws on regulatory frameworks (EU Digital Services Act via the Eur
 - It does not re-argue the diagnosis (Lane A), the stakes (Lane B), or individual practice (Lane C).
 - It stays exploratory: identifying directions, not prescribing a single solution.
 
+## Publication status
+
+Article published in the site repo at `content/articles/2026/designing-for-substance/`:
+- `article.md` — full article
+- `agent.md` — agent brief
+- `artifact.json` — structured article artifact
+
 ## Roadmap context
 
 This is **Lane D** of a four-lane series:

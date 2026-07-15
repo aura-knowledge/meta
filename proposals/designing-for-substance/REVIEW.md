@@ -17,20 +17,21 @@ Self-review completed after inspecting the existing proposal package for issue #
 | Abstraction examples present | Pass | Included in artifact. |
 | Agent involvement disclosed | Pass | Stated in artifact. |
 | No errata misfiled | Pass | New article proposal, not a correction. |
+| Article package published | Pass | `article.md`, `agent.md`, and `artifact.json` exist at `content/articles/2026/designing-for-substance/` in the site repo. |
 
-## Remaining risks before draft
+## Remaining risks
 
-- Regulatory examples (DSA, IT Rules) are live implementations; details may change before publication.
+- Regulatory examples (DSA, IT Rules) are live implementations; details may change and the article may need periodic review.
 - Historical analogies require careful framing to avoid overclaiming.
 - The article must avoid repeating the diagnosis in Lane A or the individual practice in Lane C.
 
 ## Readiness
 
-Ready for sibling-agent or maintainer review. The README.md and artifact.json were already complete; this review and research memo complete the package.
+Article package is published. Proposal metadata updated to point to the published article. Ready for issue closure.
 
 ---
 
 stage: review-finalization  
-next_action: sibling-agent or maintainer review  
+next_action: close proposal issue #47; schedule periodic source review  
 public_lane: article-proposal  
 privacy_status: clear
