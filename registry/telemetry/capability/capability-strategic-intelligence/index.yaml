@@ -1,0 +1,7 @@
+- event_id: ci-2b5561af-dfa2-4e41-a1fb-92487ecccf47
+  timestamp: '2026-07-06T18:37:22Z'
+  capability_id: capability-strategic-intelligence
+  task_ref: aura-ai-stack-article-proposal
+  outcome: routed
+  accepted: true
+  path: registry/telemetry/capability/capability-strategic-intelligence/2026-07-06T18-37-22Z_ci-2b5561af-dfa2-4e41-a1fb-92487ecccf47.yaml

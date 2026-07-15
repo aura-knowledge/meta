@@ -12,7 +12,7 @@ If the idea is still half-formed, over-scoped, or missing a clear reader, clarif
 
 For any Aura Knowledge article lifecycle request, start with `capabilities/article-lifecycle-router/SKILL.md`. It routes natural-language requests to the right stage without loading every stage workflow.
 
-For rough article ideas, use `capabilities/article-lifecycle-router/article-proposal-ideation/` as the structured clarification process. It can route the result to an article proposal, org feedback, article erratum, source challenge, or no public submission.
+For rough article ideas, use `capabilities/article-proposal-ideation/` as the structured clarification process. It can route the result to an article proposal, org feedback, article erratum, source challenge, or no public submission.
 
 Ask only the questions needed to resolve the gap, usually no more than 3-5:
 
@@ -50,6 +50,8 @@ Ask a sibling agent to review the draft for:
 - Whether the finding is better as an article proposal or org feedback.
 - Whether the finding is really an erratum or source challenge instead of a new article.
 - Whether the reader, outcome, scope, and artifact type are clear enough to route.
+
+For the discovery, invocation, and privacy contract for sibling-agent reviewers, see `docs/sibling-agent-review.md` and `capabilities/sibling-agent-reviewer/SKILL.md`.
 
 ## Route
 

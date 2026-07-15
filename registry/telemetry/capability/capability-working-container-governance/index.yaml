@@ -1,0 +1,7 @@
+- event_id: ci-72a21f16-c97b-4c0f-b418-07d3c64382f8
+  timestamp: '2026-07-07T04:37:02Z'
+  capability_id: capability-working-container-governance
+  task_ref: aura-ai-stack-article-proposal
+  outcome: routed
+  accepted: true
+  path: registry/telemetry/capability/capability-working-container-governance/2026-07-07T04-37-02Z_ci-72a21f16-c97b-4c0f-b418-07d3c64382f8.yaml

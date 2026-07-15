@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aura-knowledge.github.io/meta/registry/telemetry/session/session-lifecycle-record.schema.json",
+  "title": "Aura Knowledge SDL Session Lifecycle Record",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_id",
+    "record_type",
+    "schema_version",
+    "session_title",
+    "issue_ref",
+    "start_time",
+    "end_time",
+    "status",
+    "objectives",
+    "completion_criteria",
+    "agents_involved",
+    "key_decisions",
+    "artifacts_produced",
+    "evidence",
+    "privacy_check"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique identifier for this lifecycle record."
+    },
+    "record_type": {
+      "type": "string",
+      "const": "sdl_session_lifecycle"
+    },
+    "schema_version": {
+      "type": "string",
+      "const": "session-lifecycle-record@1"
+    },
+    "session_title": {
+      "type": "string",
+      "minLength": 4
+    },
+    "issue_ref": {
+      "type": "string",
+      "description": "Primary issue that authorized or tracks this session."
+    },
+    "related_issues": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "start_time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "end_time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["planned", "active", "completed", "cancelled", "superseded"]
+    },
+    "sdl_classification": {
+      "type": "object",
+      "description": "SDL routing classification produced by route-goal.py or equivalent.",
+      "properties": {
+        "intent_class": { "type": "string" },
+        "capability": { "type": "string" },
+        "role": { "type": "string" },
+        "risk_tier": { "type": "integer", "minimum": 0, "maximum": 3 },
+        "autonomy": { "type": "string" }
+      }
+    },
+    "objectives": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 8 }
+    },
+    "completion_criteria": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 8 }
+    },
+    "agents_involved": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["role"],
+        "properties": {
+          "role": { "type": "string" },
+          "identity": { "type": "string" },
+          "responsibilities": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "key_decisions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["decision", "rationale"],
+        "properties": {
+          "decision": { "type": "string" },
+          "rationale": { "type": "string" },
+          "evidence_ref": { "type": "string" }
+        }
+      }
+    },
+    "artifacts_produced": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["description"],
+        "properties": {
+          "description": { "type": "string" },
+          "kind": { "type": "string" },
+          "location": { "type": "string" },
+          "pr_ref": { "type": "string" }
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "pull_requests": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["repo", "number", "title", "state"],
+            "properties": {
+              "repo": { "type": "string" },
+              "number": { "type": "integer" },
+              "title": { "type": "string" },
+              "state": { "type": "string" },
+              "url": { "type": "string", "format": "uri" }
+            }
+          }
+        },
+        "commits": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["sha", "repo", "message", "timestamp"],
+            "properties": {
+              "sha": { "type": "string", "minLength": 7 },
+              "repo": { "type": "string" },
+              "message": { "type": "string" },
+              "timestamp": { "type": "string", "format": "date-time" },
+              "sdl_commit_author": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "privacy_check": {
+      "type": "object",
+      "required": ["passed", "notes"],
+      "properties": {
+        "passed": { "type": "boolean" },
+        "notes": { "type": "string" },
+        "sanitized_items": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

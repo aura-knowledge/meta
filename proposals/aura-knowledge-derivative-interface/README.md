@@ -65,3 +65,5 @@ The `audio-first-voice-consumption` proposal is the natural pilot. If it is acce
 ## Next step
 
 Approve the principle that Aura Knowledge owns the source and external products own derivative formats. Then create a draft export contract in `meta/schemas/` or `meta/docs/` and reference it from the contributor and consumer guides.
+
+> Draft implementation created from this feedback: see `meta/docs/derivative-format-contract.md` and `meta/schemas/derivative-format-contract.schema.json`.

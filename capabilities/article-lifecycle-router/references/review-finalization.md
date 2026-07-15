@@ -2,6 +2,13 @@
 
 Use for self-review, sibling-agent review, privacy checks, readiness decisions, and publication package preparation.
 
+## Sibling-agent review contract
+
+For discovery, invocation, fallback, and privacy boundaries when running sibling-agent review, see:
+
+- `docs/sibling-agent-review.md`
+- `capabilities/sibling-agent-reviewer/SKILL.md`
+
 ## Review Checklist
 
 Check:

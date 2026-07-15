@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "title": "Bounded Long-Running Project Conductor for Agent Teams",
+  "slug": "bounded-long-running-project-conductor",
+  "thesis": "Long agent-driven software missions fail when one agent tries to hold the entire plan, execution runs without checkpoints, and process memory is lost between sessions. A bounded, queue-based project conductor externalizes state, executes dependency-ordered slices in isolated sessions, and feeds telemetry into a proposal-only self-improvement loop with mandatory human gates.",
+  "audience": [
+    "builders",
+    "researchers",
+    "agents"
+  ],
+  "primary_reader": "Engineering teams and agent operators who need to split multi-session software missions into bounded, reviewable, and governable slices.",
+  "intended_outcome": "Readers can define a bounded conductor mission, decompose it into slices with authority envelopes, identify human handoff points, and apply the minimal schema to their own agent teams.",
+  "artifact_fit": "The topic crosses orchestration, governance, and agent architecture; a durable reference note with a minimal schema is more useful than a one-off implementation guide.",
+  "smallest_viable_version": "A 1,000-word version covering the three failure modes, the slice/queue model, the safety boundaries, and the minimal schema.",
+  "scope_risks": "Tooling references (LangGraph, Temporal, AutoGen, CrewAI) may evolve quickly; the schema may need versioning as real implementations diverge.",
+  "alternatives_considered": "A pure chat-based multi-agent framework guide, or a deep dive into a single vendor product; both were rejected in favor of a vendor-neutral, governance-first pattern.",
+  "tags": [
+    "ai-agents",
+    "agent-orchestration",
+    "long-running-tasks",
+    "multi-agent-systems",
+    "governance",
+    "project-conductor",
+    "sdl"
+  ],
+  "maturity": "contested",
+  "claims": [
+    "Long agent-driven projects fail predictably from context collapse, unbounded execution, and loss of durable process memory.",
+    "A bounded conductor externalizes plan, state, and telemetry so that no single agent session must hold the whole mission.",
+    "Dependency-ordered slices executed in isolated branches or worktrees reduce blast radius and make review gates practical.",
+    "Append-only telemetry supports a proposal-only self-improvement loop; the conductor must never self-authorize new scope, budget, or promotion.",
+    "Human handoffs are mandatory at mission approval, high-risk slices, review failures, improvement proposals, and final promotion.",
+    "The minimal mission schema is sufficient to describe scope, slices, authority envelopes, telemetry, and improvement proposals in a machine-readable form."
+  ],
+  "sources": [
+    {
+      "title": "Anthropic, Building Effective Agents",
+      "url": "https://www.anthropic.com/research/building-effective-agents",
+      "type": "documentation",
+      "accessed": "2026-07-15"
+    },
+    {
+      "title": "LangGraph documentation",
+      "url": "https://langchain-ai.github.io/langgraph/",
+      "type": "documentation",
+      "accessed": "2026-07-15"
+    },
+    {
+      "title": "Temporal, Durable Execution Platform",
+      "url": "https://temporal.io/",
+      "type": "documentation",
+      "accessed": "2026-07-15"
+    },
+    {
+      "title": "Wikipedia, OODA loop",
+      "url": "https://en.wikipedia.org/wiki/OODA_loop",
+      "type": "reference",
+      "accessed": "2026-07-15"
+    },
+    {
+      "title": "Microsoft AutoGen",
+      "url": "https://github.com/microsoft/autogen",
+      "type": "repository",
+      "accessed": "2026-07-15"
+    },
+    {
+      "title": "CrewAI",
+      "url": "https://www.crewai.com/",
+      "type": "documentation",
+      "accessed": "2026-07-15"
+    }
+  ],
+  "related_articles": [
+    "article:agent-control-planes",
+    "article:ai-delegation-orchestration"
+  ],
+  "sanitized_summary": "This proposal argues that long agent-driven software missions need a bounded, queue-based conductor that keeps plan and state outside any single agent session, runs dependency-ordered slices in isolated branches, reviews each output, and routes telemetry into a proposal-only self-improvement loop. It defines lifecycle states, safety boundaries, mandatory human handoff points, and a minimal machine-readable mission schema.",
+  "abstraction_examples": [
+    {
+      "original": "A client team had a multi-week project where one agent held the entire codebase plan, repeatedly lost context, and rewrote decisions made in earlier sessions.",
+      "abstracted": "A multi-session software mission where state and decisions are not externalized, leading to repeated rework and lost context."
+    },
+    {
+      "original": "The conductor spawned a worker in a temporary worktree under /tmp/... to edit only the files listed in the slice authority envelope.",
+      "abstracted": "Each slice runs in an isolated workspace restricted to the paths named in its authority envelope."
+    },
+    {
+      "original": "After all slices passed review, the human maintainer promoted the resulting package to the main branch and closed the mission.",
+      "abstracted": "Final artifact promotion requires a human gate after all slices are reviewed and complete."
+    }
+  ],
+  "privacy_acknowledgment": true,
+  "agent_involvement": "This proposal was drafted by an AI agent from public sources and the associated public issue, with human review expected before publication.",
+  "draft_available": true
+}

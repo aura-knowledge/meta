@@ -1,0 +1,40 @@
+event_id: ci-2b5561af-dfa2-4e41-a1fb-92487ecccf47
+event_type: capability_invocation
+timestamp: '2026-07-06T18:37:22Z'
+capability_id: capability-strategic-intelligence
+task_ref: aura-ai-stack-article-proposal
+source:
+  repo_kind: client
+  project_id: aura-knowledge/meta
+  branch: main
+  actor: vishalsingh
+goal: "SDL govern a proposal for a new Aura Knowledge article: 'The Modern AI Stack:\
+  \ Demystifying the Architecture of Artificial Intelligence' \u2014 a 9-layer stack\
+  \ explainer with anchor examples (Nous Hermes, pi.dev, hermes-agent/OpenClaw, MCP,\
+  \ Claude Desktop) and a mapping table."
+intent: planning
+mode: single-capability
+authority:
+  allow_mutation: false
+  allowed_paths: []
+  approval_gate: null
+  branch_or_worktree_isolation: null
+context:
+  confidence: high
+  reason: 'best registry match: capability-strategic-intelligence (id match (1), purpose
+    match (3))'
+  primary_capability: capability-strategic-intelligence
+  selected_role: null
+outcome:
+  status: routed
+  selected_capability: capability-strategic-intelligence
+  selected_role: null
+performance:
+  elapsed_ms: 4917
+  token_actuals: null
+  budget_actuals: null
+downstream:
+  human_override: false
+  accepted: true
+  failed_runs: 0
+  lifecycle_record_created: false

@@ -1,0 +1,228 @@
+record_id: 720c77d8-987d-4ce0-b71a-dff4e4365ea2
+record_type: sdl_session_lifecycle
+schema_version: session-lifecycle-record@1
+session_title: "Attention-series session work: publication, TLDR refinement, and SDL provenance"
+issue_ref: aura-knowledge/meta#51
+related_issues:
+  - aura-knowledge/meta#43
+start_time: "2026-07-04T16:17:48Z"
+end_time: "2026-07-06T01:52:34Z"
+status: completed
+sdl_classification:
+  intent_class: execution
+  capability: capability-client-orchestrator
+  role: content-publisher
+  risk_tier: 2
+  autonomy: approval-required
+objectives:
+  - Publish the "Attention, Substance, and the AI Moment" article series on aura-knowledge.github.io.
+  - Expand the series from its seed set to 50 articles with cross-links and data visualizations.
+  - Create and refine a standalone TLDR entry-point article for readers who want the core argument first.
+  - Add structural bookmarks and a journey narrative to the series guide.
+  - Address post-publication review findings (visualizations and sibling-agent P1 items).
+  - Enforce SDL commit-author provenance across the site and meta repositories.
+completion_criteria:
+  - All referenced pull requests (#92-#101 on the site, #50 on meta) are merged.
+  - Series content, TLDR article, and visualizations are live on the public site.
+  - SDL-Commit-Author trailer is appended to every new commit by the commit-msg hook in both repos.
+  - No private session content, prompts, or personal data leak into public files.
+  - Retroactive SDL lifecycle record is filed in meta/registry/telemetry/.
+agents_involved:
+  - role: human-operator
+    identity: v-i-s-h-a-l
+    responsibilities:
+      - Directed session goals and approved publication scope.
+      - Merged pull requests and enabled the commit-msg hook.
+  - role: content-publisher
+    identity: aura-knowledge/article-lifecycle-router
+    responsibilities:
+      - Drafted, expanded, and cross-linked the 50-article series.
+      - Produced SVG/Mermaid visualizations and the TLDR article.
+  - role: review-agent
+    identity: sibling-agent reviewer
+    responsibilities:
+      - Flagged visualization and ordering issues after initial publication.
+  - role: provenance-hook
+    identity: capability-commit-author
+    responsibilities:
+      - Appended SDL-Commit-Author trailers to commits.
+      - Updated AGENTS.md with hook instructions.
+key_decisions:
+  - decision: Expand the seed series to 50 articles across six arcs.
+    rationale: A single, comprehensive arc provides a durable public reference and supports the article-series index UX.
+    evidence_ref: aura-knowledge/aura-knowledge.github.io#92
+  - decision: Add a standalone TLDR article instead of making it chapter 50.
+    rationale: The TLDR serves as an entry point for readers who will not read the full series; it must not be buried as the final chapter.
+    evidence_ref: aura-knowledge/aura-knowledge.github.io#97
+  - decision: Rewrite the TLDR as a personal-responsibility essay and broaden it to all ages.
+    rationale: Reader feedback showed the original framing was too narrow; a direct, age-agnostic call to action is more useful.
+    evidence_ref: aura-knowledge/aura-knowledge.github.io#98, aura-knowledge/aura-knowledge.github.io#99
+  - decision: Add data visualizations to the TLDR.
+    rationale: Charts make the opportunity-cost argument concrete and shareable.
+    evidence_ref: aura-knowledge/aura-knowledge.github.io#100
+  - decision: Enforce SDL-Commit-Author trailers via a commit-msg hook in both repos.
+    rationale: Retroactive governance requires durable provenance on every commit for SDL lifecycle compliance.
+    evidence_ref: aura-knowledge/aura-knowledge.github.io#101, aura-knowledge/meta#50
+artifacts_produced:
+  - description: '"Attention, Substance, and the AI Moment" 50-article series with cross-links and visualizations.'
+    kind: article-series
+    location: aura-knowledge.github.io/content/attention-substance-and-the-ai-moment/
+    pr_ref: aura-knowledge/aura-knowledge.github.io#92
+  - description: Series guide with journey bookmarks (Seeing the Trap, The Fork Ahead, The Path Out).
+    kind: navigation-page
+    pr_ref: aura-knowledge/aura-knowledge.github.io#93
+  - description: Standalone TLDR article with head-to-head comparison and data visualizations.
+    kind: article
+    pr_ref: aura-knowledge/aura-knowledge.github.io#99, aura-knowledge/aura-knowledge.github.io#100
+  - description: Commit-msg hook that appends SDL-Commit-Author trailers and updated AGENTS.md instructions.
+    kind: governance-tooling
+    location: .githooks/commit-msg
+    pr_ref: aura-knowledge/aura-knowledge.github.io#101, aura-knowledge/meta#50
+  - description: Retroactive SDL session lifecycle record.
+    kind: lifecycle-record
+    location: meta/registry/telemetry/session/2026-07-04T16-17-48Z_session-attention-series.yaml
+    pr_ref: aura-knowledge/meta#51
+evidence:
+  pull_requests:
+    - repo: aura-knowledge/aura-knowledge.github.io
+      number: 92
+      title: "feat(attention): expand series to 50 articles with visualizations and cross-links"
+      state: MERGED
+      url: https://github.com/aura-knowledge/aura-knowledge.github.io/pull/92
+    - repo: aura-knowledge/aura-knowledge.github.io
+      number: 93
+      title: "feat(attention): add journey bookmarks to series guide"
+      state: MERGED
+      url: https://github.com/aura-knowledge/aura-knowledge.github.io/pull/93
+    - repo: aura-knowledge/aura-knowledge.github.io
+      number: 94
+      title: "feat(attention): add TLDR summary article to the series"
+      state: MERGED
+      url: https://github.com/aura-knowledge/aura-knowledge.github.io/pull/94
+    - repo: aura-knowledge/aura-knowledge.github.io
+      number: 95
+      title: "chore: trigger Pages redeploy after transient failure"
+      state: MERGED
+      url: https://github.com/aura-knowledge/aura-knowledge.github.io/pull/95
+    - repo: aura-knowledge/aura-knowledge.github.io
+      number: 96
+      title: "fix(tldr): correct series order from 51 to 50"
+      state: MERGED
+      url: https://github.com/aura-knowledge/aura-knowledge.github.io/pull/96
+    - repo: aura-knowledge/aura-knowledge.github.io
+      number: 97
+      title: "fix(tldr): make TLDR a standalone article, not a series chapter"
+      state: MERGED
+      url: https://github.com/aura-knowledge/aura-knowledge.github.io/pull/97
+    - repo: aura-knowledge/aura-knowledge.github.io
+      number: 98
+      title: "rewrite(tldr): standalone personal-responsibility essay"
+      state: MERGED
+      url: https://github.com/aura-knowledge/aura-knowledge.github.io/pull/98
+    - repo: aura-knowledge/aura-knowledge.github.io
+      number: 99
+      title: "rewrite(tldr): broaden to all ages, add head-to-head comparison"
+      state: MERGED
+      url: https://github.com/aura-knowledge/aura-knowledge.github.io/pull/99
+    - repo: aura-knowledge/aura-knowledge.github.io
+      number: 100
+      title: "feat(tldr): add data visualizations to the standalone article"
+      state: MERGED
+      url: https://github.com/aura-knowledge/aura-knowledge.github.io/pull/100
+    - repo: aura-knowledge/aura-knowledge.github.io
+      number: 101
+      title: "chore: add SDL commit-author hook and provenance enforcement"
+      state: MERGED
+      url: https://github.com/aura-knowledge/aura-knowledge.github.io/pull/101
+    - repo: aura-knowledge/meta
+      number: 50
+      title: "chore: add SDL commit-author hook and provenance enforcement"
+      state: MERGED
+      url: https://github.com/aura-knowledge/meta/pull/50
+  commits:
+    - sha: 8fa49bc
+      repo: aura-knowledge/aura-knowledge.github.io
+      message: "publish: Attention, Substance, and the AI Moment series"
+      timestamp: "2026-07-04T16:17:48Z"
+      sdl_commit_author: capability-commit-author
+    - sha: d67e774
+      repo: aura-knowledge/aura-knowledge.github.io
+      message: "fix(visualizations): address review findings for Attention, Substance, and the AI Moment series"
+      timestamp: "2026-07-05T03:23:50Z"
+      sdl_commit_author: capability-commit-author
+    - sha: 2a20124
+      repo: aura-knowledge/aura-knowledge.github.io
+      message: "fix(review): address sibling-agent P1 findings post-publication"
+      timestamp: "2026-07-05T03:37:20Z"
+      sdl_commit_author: capability-commit-author
+    - sha: 3b6ab5b
+      repo: aura-knowledge/aura-knowledge.github.io
+      message: "feat(attention): expand series to 50 articles with data visualizations and cross-links (#92)"
+      timestamp: "2026-07-05T04:08:09Z"
+      sdl_commit_author: capability-commit-author
+    - sha: ba88986
+      repo: aura-knowledge/aura-knowledge.github.io
+      message: "feat(attention): add journey bookmarks to series guide (#93)"
+      timestamp: "2026-07-05T05:08:25Z"
+      sdl_commit_author: capability-commit-author
+    - sha: edbc22e
+      repo: aura-knowledge/aura-knowledge.github.io
+      message: "feat(attention): add TLDR summary article to the series (#94)"
+      timestamp: "2026-07-05T07:47:01Z"
+      sdl_commit_author: capability-commit-author
+    - sha: 17b82ad
+      repo: aura-knowledge/aura-knowledge.github.io
+      message: "chore: trigger Pages redeploy (#95)"
+      timestamp: "2026-07-05T07:50:18Z"
+      sdl_commit_author: capability-commit-author
+    - sha: 45b7cbf
+      repo: aura-knowledge/aura-knowledge.github.io
+      message: "fix(tldr): correct series order from 51 to 50 (#96)"
+      timestamp: "2026-07-05T08:02:09Z"
+      sdl_commit_author: capability-commit-author
+    - sha: a43c7cb
+      repo: aura-knowledge/aura-knowledge.github.io
+      message: "fix(tldr): make TLDR a standalone article, not a series chapter (#97)"
+      timestamp: "2026-07-05T08:33:55Z"
+      sdl_commit_author: capability-commit-author
+    - sha: 14661ea
+      repo: aura-knowledge/aura-knowledge.github.io
+      message: "rewrite(tldr): standalone personal-responsibility essay (#98)"
+      timestamp: "2026-07-05T09:43:05Z"
+      sdl_commit_author: capability-commit-author
+    - sha: e5f6c1c
+      repo: aura-knowledge/aura-knowledge.github.io
+      message: "rewrite(tldr): broaden to all ages, add head-to-head comparison (#99)"
+      timestamp: "2026-07-05T09:56:38Z"
+      sdl_commit_author: capability-commit-author
+    - sha: b9a1ca9
+      repo: aura-knowledge/aura-knowledge.github.io
+      message: "feat(tldr): add data visualizations to the standalone article (#100)"
+      timestamp: "2026-07-05T12:36:04Z"
+      sdl_commit_author: capability-commit-author
+    - sha: c0af6e4
+      repo: aura-knowledge/aura-knowledge.github.io
+      message: "chore: add SDL commit-author hook and provenance enforcement (#101)"
+      timestamp: "2026-07-06T01:51:49Z"
+      sdl_commit_author: capability-commit-author
+    - sha: a800f9f
+      repo: aura-knowledge/meta
+      message: "chore: add SDL commit-author hook and provenance enforcement (#50)"
+      timestamp: "2026-07-06T01:52:34Z"
+      sdl_commit_author: capability-commit-author
+privacy_check:
+  passed: true
+  notes: >
+    Record contains only public repository metadata (PR titles, commit messages,
+    public file paths, and public agent-role names). No private prompts, client
+    details, personal data, or proprietary project content are included. Commit
+    messages and PR bodies were reviewed and are already public on GitHub.
+  sanitized_items:
+    - Removed any local filesystem paths outside the repository (e.g., /Users/...).
+    - Referred to the human operator by public GitHub handle only.
+    - Used generic role names for agents instead of internal session identifiers.
+notes: >
+  This is a retroactive record. The session predates the SDL client onboarding
+  pull requests (#110 site, #56 meta), so routing attestations were not created
+  at execution time. The record is filed to satisfy SDL lifecycle-record
+  expectations for governed attention-series work.

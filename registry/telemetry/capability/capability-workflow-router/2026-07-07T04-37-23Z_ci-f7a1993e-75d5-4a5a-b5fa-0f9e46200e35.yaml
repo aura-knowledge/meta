@@ -1,0 +1,38 @@
+event_id: ci-f7a1993e-75d5-4a5a-b5fa-0f9e46200e35
+event_type: capability_invocation
+timestamp: '2026-07-07T04:37:23Z'
+capability_id: capability-workflow-router
+task_ref: aura-ai-stack-article-proposal
+source:
+  repo_kind: client
+  project_id: aura-knowledge/meta
+  branch: main
+  actor: vishalsingh
+goal: 'Post the completed sibling-agent review as a comment on Aura Knowledge issue
+  #54 (modern-ai-stack) and prepare the article publication package in proposals/modern-ai-stack/
+  for a future PR.'
+intent: execution
+mode: parallel
+authority:
+  allow_mutation: false
+  allowed_paths: []
+  approval_gate: null
+  branch_or_worktree_isolation: null
+context:
+  confidence: medium
+  reason: goal splits into independent subtasks mapped to distinct capabilities
+  primary_capability: null
+  selected_role: null
+outcome:
+  status: routed
+  selected_capability: null
+  selected_role: null
+performance:
+  elapsed_ms: 6955
+  token_actuals: null
+  budget_actuals: null
+downstream:
+  human_override: false
+  accepted: true
+  failed_runs: 0
+  lifecycle_record_created: false

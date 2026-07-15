@@ -22,7 +22,7 @@ Do **not** use this skill for findings that are proprietary, client-specific, or
 
 ## Process
 
-1. **Clarify privately when needed.** If the idea is half-formed, over-scoped, or lacks a clear reader, clarify it in the originating workspace before drafting a public submission. For rough article ideas, use `capabilities/article-lifecycle-router/article-proposal-ideation/`. Ask only the questions needed to resolve the gap, usually no more than 3-5:
+1. **Clarify privately when needed.** If the idea is half-formed, over-scoped, or lacks a clear reader, clarify it in the originating workspace before drafting a public submission. For rough article ideas, use `capabilities/article-proposal-ideation/` as an optional ideation step before capture. Ask only the questions needed to resolve the gap, usually no more than 3-5:
    - Who is the primary reader?
    - What should the reader understand, feel, or do afterward?
    - What problem does this solve for the reader?

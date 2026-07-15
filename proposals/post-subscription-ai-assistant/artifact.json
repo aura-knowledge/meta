@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "title": "Building the Post-Subscription AI Assistant with Apple Intelligence, PCC, and On-Device Models",
+  "slug": "post-subscription-ai-assistant",
+  "thesis": "The post-subscription AI assistant is possible because Apple turned the model into a replaceable backend. For small developers, the real moat is no longer model access; it is memory design, data integration, and orchestration inside Apple's privacy boundaries.",
+  "audience": [
+    "builders",
+    "students",
+    "general"
+  ],
+  "primary_reader": "Indie developers and small teams building AI-native assistants on Apple platforms who want to understand the free tier, privacy walls, and where the real product differentiation now lives.",
+  "intended_outcome": "Readers can map the Apple Intelligence model stack, understand the free PCC tier and its quota implications, explain why PCC statelessness forces memory design onto the device, and choose between on-device, PCC, and third-party model routing.",
+  "artifact_fit": "An article fits because the reusable value is a strategic framing of a newly public developer stack, not a tutorial, product spec, or marketing piece.",
+  "smallest_viable_version": "A single 2,500–3,500 word article with a model-stack table, a data-accessibility table, a build arc, and explicit citations to public Apple sources and independent research.",
+  "scope_risks": "The article could become an Apple product cheerleader, a speculative roadmap, or a tutorial disguised as strategy. It must stay centered, source-anchored, and privacy-conscious.",
+  "alternatives_considered": "A series of implementation guides could follow, but the first artifact needs the strategic framing and source map.",
+  "tags": [
+    "apple-intelligence",
+    "private-cloud-compute",
+    "ios-27",
+    "macos-27",
+    "on-device-ai",
+    "agentic-apps",
+    "indie-ai",
+    "privacy"
+  ],
+  "maturity": "seed",
+  "claims": [
+    "The model layer is commoditizing for Apple-platform developers: on-device inference is free, the free PCC tier covers most small developers, and third-party models plug into the same LanguageModelSession API.",
+    "Apple solved inference cost and privacy, but not context and memory; PCC is stateless by design, so any memory that persists across turns must live on the device or be explicitly resent by the app.",
+    "The new integration surface is the OS agent layer, not the app UI; App Intents 2.0 and MCP make an app callable by Siri and Core AI.",
+    "Privacy walls create product boundaries: HealthKit, Photos, Calendar, and Contacts are available with permission, while Messages, Mail, Safari history, Wallet transactions, and Screen Time telemetry are not generally readable.",
+    "The moat moves to context architecture: winners will combine on-device embeddings, local retrieval, user-permitted data, and careful hybrid routing."
+  ],
+  "sources": [
+    {
+      "title": "Apple ML Research: Introducing the Third Generation of Apple's Foundation Models",
+      "url": "https://machinelearning.apple.com/research/introducing-third-generation-of-apple-foundation-models",
+      "type": "research-report",
+      "accessed": "2026-07-15"
+    },
+    {
+      "title": "Apple Newsroom: WWDC26 — Apple unveils next generation of Apple Intelligence, Siri AI, and more",
+      "url": "https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/",
+      "type": "press-release",
+      "accessed": "2026-07-15"
+    },
+    {
+      "title": "Apple Developer: Private Cloud Compute",
+      "url": "https://developer.apple.com/private-cloud-compute/",
+      "type": "product-docs",
+      "accessed": "2026-07-15"
+    },
+    {
+      "title": "Dittmar et al.: Unlocking Apple's Private Cloud Compute (arXiv:2605.24239)",
+      "url": "https://arxiv.org/html/2605.24239v1",
+      "type": "peer-reviewed-study",
+      "accessed": "2026-07-15"
+    },
+    {
+      "title": "Stork.ai: WWDC 2026 graded — what Apple shipped in iOS 27",
+      "url": "https://www.stork.ai/blog/wwdc-2026-graded-what-apple-shipped-ios-27",
+      "type": "analysis",
+      "accessed": "2026-07-15"
+    },
+    {
+      "title": "Nerd Level Tech: Apple Foundation Models framework — Claude & Gemini",
+      "url": "https://nerdleveltech.com/apple-foundation-models-framework-claude-gemini",
+      "type": "analysis",
+      "accessed": "2026-07-15"
+    }
+  ],
+  "related_articles": [
+    "article:ai-demystified",
+    "article:the-substance-builder"
+  ],
+  "sanitized_summary": "This article explains how Apple Intelligence, Private Cloud Compute, and the Foundation Models / Core AI / App Intents 2.0 stack change what small developers can build without charging users for model APIs. It argues that the real moat shifts from model access to memory, data integration, and orchestration, and it maps Apple's privacy walls and public quota limits using only Apple's public research papers, newsroom posts, developer documentation, and published independent analysis.",
+  "abstraction_examples": [
+    {
+      "original": "We built an internal Apple-only prototype that used private HealthKit entitlements",
+      "abstracted": "A health-coach app using the publicly documented HealthKit permission model"
+    },
+    {
+      "original": "Our client wants Siri to read their users' emails and messages automatically",
+      "abstracted": "An assistant design constrained by the fact that Messages and Mail have no general read API for third-party apps"
+    }
+  ],
+  "privacy_acknowledgment": true,
+  "agent_involvement": "Proposal drafted with AI agent assistance using only public sources; human author retains final judgment. The privacy-check-failed label was addressed by removing or abstracting any detail not traceable to a public Apple research paper, newsroom post, developer document, or published independent analysis.",
+  "draft_available": false
+}

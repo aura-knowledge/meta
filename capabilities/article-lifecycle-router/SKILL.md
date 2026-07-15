@@ -14,7 +14,7 @@ Use this as the entry skill for Aura Knowledge article work. Keep the router sma
 
 This skill is a sub-skill bundle. For more specific stages, load:
 
-- `article-proposal-ideation/SKILL.md` — shape a rough idea before public routing.
+- `capabilities/article-proposal-ideation/SKILL.md` — shape a rough idea before public routing.
 - `aura-export/SKILL.md` — export a sanitized finding from another workspace to Aura Knowledge.
 - `knowledge-garden-routing/SKILL.md` — route a private finding to the garden when the request is submission-only.
 

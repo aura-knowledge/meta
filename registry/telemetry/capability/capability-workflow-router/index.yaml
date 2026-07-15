@@ -1,0 +1,14 @@
+- event_id: ci-ce55ef49-a18f-4902-868e-6a7921bc6ec6
+  timestamp: '2026-07-07T04:37:44Z'
+  capability_id: capability-workflow-router
+  task_ref: aura-ai-stack-article-proposal
+  outcome: routed
+  accepted: true
+  path: registry/telemetry/capability/capability-workflow-router/2026-07-07T04-37-44Z_ci-ce55ef49-a18f-4902-868e-6a7921bc6ec6.yaml
+- event_id: ci-f7a1993e-75d5-4a5a-b5fa-0f9e46200e35
+  timestamp: '2026-07-07T04:37:23Z'
+  capability_id: capability-workflow-router
+  task_ref: aura-ai-stack-article-proposal
+  outcome: routed
+  accepted: true
+  path: registry/telemetry/capability/capability-workflow-router/2026-07-07T04-37-23Z_ci-f7a1993e-75d5-4a5a-b5fa-0f9e46200e35.yaml

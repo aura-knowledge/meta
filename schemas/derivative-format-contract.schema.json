@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aura-knowledge.github.io/meta/schemas/derivative-format-contract.schema.json",
+  "title": "Aura Knowledge Derivative-Format Contract Declaration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "source_article_slug",
+    "source_canonical_url",
+    "derivative_format",
+    "producer_name",
+    "attribution_text",
+    "derivation_date",
+    "freshness_acknowledgment",
+    "no_endorsement_acknowledgment"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "source_article_slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "source_canonical_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "derivative_format": {
+      "type": "string",
+      "enum": [
+        "text-syndication",
+        "newsletter",
+        "audio-narration",
+        "audio-podcast",
+        "video",
+        "translation",
+        "summary",
+        "presentation-deck",
+        "paid-product",
+        "other"
+      ]
+    },
+    "producer_name": { "type": "string", "minLength": 2 },
+    "producer_contact": { "type": "string", "format": "email" },
+    "attribution_text": { "type": "string", "minLength": 16 },
+    "derivation_date": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "source_updated_at": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "refresh_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["check_frequency_days", "update_within_days", "remove_on_deprecation"],
+      "properties": {
+        "check_frequency_days": { "type": "integer", "minimum": 1 },
+        "update_within_days": { "type": "integer", "minimum": 1 },
+        "remove_on_deprecation": { "type": "boolean" }
+      }
+    },
+    "claim_boundaries": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["restates_only"],
+      "properties": {
+        "restates_only": { "type": "boolean" },
+        "new_claims_verified_and_labeled": { "type": "boolean" },
+        "translation_notes": { "type": "string" }
+      }
+    },
+    "license_compliance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_license", "commercial_use"],
+      "properties": {
+        "source_license": { "type": "string" },
+        "commercial_use": { "type": "boolean" },
+        "paywall": { "type": "boolean" }
+      }
+    },
+    "distribution": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "platforms": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "paid": { "type": "boolean" },
+        "paywall": { "type": "boolean" }
+      }
+    },
+    "freshness_acknowledgment": {
+      "type": "boolean",
+      "enum": [true]
+    },
+    "no_endorsement_acknowledgment": {
+      "type": "boolean",
+      "enum": [true]
+    },
+    "notes": { "type": "string", "maxLength": 2000 }
+  }
+}
