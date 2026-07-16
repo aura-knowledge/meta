@@ -11,3 +11,4 @@ proposals/<slug>/
 ```
 
 The artifact must validate against `schemas/article-proposal.schema.json`.
+<!-- ci workflow verification -->
