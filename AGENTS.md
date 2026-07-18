@@ -14,6 +14,14 @@ branch/worktree before mutation.
 
 To opt out for a bounded session or task, say `SDL off for this task`.
 
+## Session start nudge
+
+On the first assistant response in this repository, if the user has not given a concrete task, show exactly one short line:
+
+`Aura Knowledge ready. Common starts: propose or shape an article, export a private finding safely, improve organization workflow, review or prepare publication, or correct/challenge sources.`
+
+If the user has given a concrete task, skip this nudge and route directly. Do not load `capabilities/article-lifecycle-router/SKILL.md` only to produce the nudge; load it only after the user chooses article lifecycle work or asks for matching work in natural language.
+
 ## Project reference
 
 ```text
