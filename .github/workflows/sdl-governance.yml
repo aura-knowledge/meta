@@ -25,15 +25,19 @@ jobs:
           fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
+        # actions/setup-python's tool cache assumes a 'runner' user, which does
+        # not exist on this self-hosted machine. Use the machine's Homebrew
+        # python3 in a per-run venv instead.
+        run: |
+          echo "/opt/homebrew/bin" >> "$GITHUB_PATH"
+          python3 -m venv "$RUNNER_TEMP/sdl-venv"
+          echo "$RUNNER_TEMP/sdl-venv/bin" >> "$GITHUB_PATH"
 
       - name: Install Python dependencies
         # cryptography: ed25519 attestation verification in
         # .stibdedlom/lib/sdl_hooks.py (validate-attestations step; same fix
         # as aura-knowledge.github.io#123).
-        run: python3 -m pip install --user "pyyaml>=6.0" "cryptography>=42.0"
+        run: python3 -m pip install "pyyaml>=6.0" "cryptography>=42.0"
 
       - name: Resolve SDL surface pin
         # Symlinked clients carry .stibdedlom/{bin,lib,invocation-policy.yaml}
