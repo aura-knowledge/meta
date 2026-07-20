@@ -104,26 +104,24 @@ jobs:
           fetch-depth: 1
           persist-credentials: false
 
-      - name: Fetch SDL infra surface (gh auth)
-        # Self-hosted path: the runner's machine already authenticates to
-        # GitHub as the maintainer, so clone the pinned infra surface with gh
-        # instead of requiring a hand-provisioned PAT. Reading via git also
-        # avoids the runner service's TCC restriction on ~/Documents, which
-        # makes the absolute symlinks unreadable in the CI context.
-        if: steps.sdl-pin.outputs.symlinked == 'true' && steps.sdl-pin.outputs.gh_auth == 'true'
+      - name: Fetch SDL infra surface (repo history)
+        # The pinned surface (infra_commit_ref 9cf915b) was committed to this
+        # repository's history during the #68 vendoring. Materialize it from
+        # the repo's own history: no PAT, no machine keyring, and no access to
+        # TCC-restricted ~/Documents paths needed. External fetch paths below
+        # remain for the day the pin moves past the snapshot.
+        if: steps.sdl-pin.outputs.symlinked == 'true' && steps.sdl-pin.outputs.pin == '9cf915b85c6fd00f445e28fb4bca24a546265bc8'
         run: |
           set -euo pipefail
-          GH=/Users/vishalsingh/.local/bin/gh
-          rm -rf .sdl-infra-surface
-          # Plain git over HTTPS: the account's gh git_protocol is ssh, whose
-          # keys are unavailable to the headless runner service. The token is
-          # read from the machine keyring and never printed (computed in-shell).
-          TOKEN="$("$GH" auth token)"
-          git -c http.https://github.com/.extraheader="Authorization: Basic $(printf 'x-access-token:%s' "$TOKEN" | base64)" \
-            clone --depth 1 --no-checkout https://github.com/stibdedlom/infra.git .sdl-infra-surface
-          git -C .sdl-infra-surface -c http.https://github.com/.extraheader="Authorization: Basic $(printf 'x-access-token:%s' "$TOKEN" | base64)" \
-            fetch --depth 1 origin "${{ steps.sdl-pin.outputs.pin }}"
-          git -C .sdl-infra-surface checkout --detach FETCH_HEAD
+          for p in bin lib invocation-policy.yaml; do
+            if [ -L ".stibdedlom/$p" ]; then
+              rm ".stibdedlom/$p"
+              # Restore the real (vendored) files from the snapshot commit;
+              # this updates both index and worktree with directory contents.
+              git checkout 62523b05747c9135d30cc736b21ce25556910b69 -- ".stibdedlom/$p"
+              echo "materialized .stibdedlom/$p from repo history"
+            fi
+          done
 
       - name: Materialize SDL surface (symlinked clients)
         # Replace the dangling symlinks with real copies from the pinned infra
