@@ -1,0 +1,27 @@
+{
+  "schema_version": "sdl-routing-attestation@2",
+  "issue": 62,
+  "chain_id": "62",
+  "node_id": "62",
+  "goal": "maintenance: attention-series planning packets and capability-branch ancestry",
+  "allowed_paths": [
+    "planning"
+  ],
+  "envelope_hash": "sha256:fc700b8597785523d865f37a181f000d83b7f709e0f9920ca196d10333f2c9ab",
+  "policy_ref": ".stibdedlom/invocation-policy.yaml",
+  "manifest_path": ".stibdedlom/manifest.yaml",
+  "base_ref": "origin/main",
+  "created_at": "2026-07-20T06:34:34.417729+00:00",
+  "expires_at": "2026-07-27T06:34:34.417729+00:00",
+  "kid": "rk-2026-07-11-6ccdda79",
+  "algorithm": "ed25519",
+  "runtime_binding": {
+    "branch": "main",
+    "worktree_path": "/Users/vishalsingh/Documents/v-i-s-h-a-l/aura-knowledge/meta",
+    "base_sha": "130e63c19d5a5f33b3ea69be80efb0cfec644c84",
+    "base_ref": "origin/main",
+    "max_commits_ahead": 50
+  },
+  "capability": "capability-client-orchestrator",
+  "signature": "ed25519:ufnJOiCH3kMk2wHj24zc9GY1uaEKJY+fktrIlItDDGWB2ub7y7cznlYGxnc2sedSBFaZnDnOqiCAf4jFD9fzAw=="
+}
