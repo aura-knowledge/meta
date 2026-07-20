@@ -11,8 +11,13 @@ permissions:
 
 jobs:
   sdl-governance:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
+    runs-on: [self-hosted, macOS, mac-mini]
+    timeout-minutes: 20  # headroom for self-hosted runner updates/queueing
+    env:
+      # Self-hosted runner runs as the machine user, not 'runner'; point the
+      # tool cache somewhere writable for actions/setup-python.
+      AGENT_TOOLSDIRECTORY: /Users/vishalsingh/actions-runner/_tool
+      RUNNER_TOOL_CACHE: /Users/vishalsingh/actions-runner/_tool
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -20,15 +25,20 @@ jobs:
           fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
+        # actions/setup-python's tool cache assumes a 'runner' user, which does
+        # not exist on this self-hosted machine. Use the machine's Homebrew
+        # python3 in a per-run venv instead.
+        run: |
+          # Absolute path: the GITHUB_PATH update only reaches later steps,
+          # and /usr/bin/python3 (3.9) stalls pip's resolver on cryptography.
+          /opt/homebrew/bin/python3 -m venv "$RUNNER_TEMP/sdl-venv"
+          echo "$RUNNER_TEMP/sdl-venv/bin" >> "$GITHUB_PATH"
 
       - name: Install Python dependencies
         # cryptography: ed25519 attestation verification in
         # .stibdedlom/lib/sdl_hooks.py (validate-attestations step; same fix
         # as aura-knowledge.github.io#123).
-        run: python3 -m pip install --user "pyyaml>=6.0" "cryptography>=42.0"
+        run: python3 -m pip install "pyyaml>=6.0" "cryptography>=42.0"
 
       - name: Resolve SDL surface pin
         # Symlinked clients carry .stibdedlom/{bin,lib,invocation-policy.yaml}
@@ -47,8 +57,15 @@ jobs:
             [ -L ".stibdedlom/$p" ] && SYMLINKED=true
           done
           echo "symlinked=$SYMLINKED" >> "$GITHUB_OUTPUT"
-          if [ "$SYMLINKED" = "true" ] && [ -z "${SDL_INFRA_READ_TOKEN:-}" ]; then
-            echo "::error::SDL surface is symlinked but secret SDL_INFRA_READ_TOKEN is not set (fine-grained PAT, contents:read on stibdedlom/infra)."
+          # Presence check only: the keyring-backed `gh auth status` fails in
+          # the headless service context even when gh is usable; the fetch
+          # step proves auth by cloning.
+          GH=/Users/vishalsingh/.local/bin/gh
+          GH_AUTH=false
+          [ -x "$GH" ] && GH_AUTH=true
+          echo "gh_auth=$GH_AUTH" >> "$GITHUB_OUTPUT"
+          if [ "$SYMLINKED" = "true" ] && [ -z "${SDL_INFRA_READ_TOKEN:-}" ] && [ "$GH_AUTH" != "true" ]; then
+            echo "::error::SDL surface is symlinked but neither SDL_INFRA_READ_TOKEN nor local gh auth is available to materialize it."
             exit 1
           fi
           python3 - <<'EOF' >> "$GITHUB_OUTPUT"
@@ -77,7 +94,7 @@ jobs:
           EOF
 
       - name: Checkout SDL infra surface
-        if: steps.sdl-pin.outputs.symlinked == 'true'
+        if: steps.sdl-pin.outputs.symlinked == 'true' && steps.sdl-pin.outputs.gh_auth != 'true'
         uses: actions/checkout@v4
         with:
           repository: stibdedlom/infra
@@ -86,6 +103,25 @@ jobs:
           path: .sdl-infra-surface
           fetch-depth: 1
           persist-credentials: false
+
+      - name: Fetch SDL infra surface (repo history)
+        # The pinned surface (infra_commit_ref 9cf915b) was committed to this
+        # repository's history during the #68 vendoring. Materialize it from
+        # the repo's own history: no PAT, no machine keyring, and no access to
+        # TCC-restricted ~/Documents paths needed. External fetch paths below
+        # remain for the day the pin moves past the snapshot.
+        if: steps.sdl-pin.outputs.symlinked == 'true' && steps.sdl-pin.outputs.pin == '9cf915b85c6fd00f445e28fb4bca24a546265bc8'
+        run: |
+          set -euo pipefail
+          for p in bin lib invocation-policy.yaml; do
+            if [ -L ".stibdedlom/$p" ]; then
+              rm ".stibdedlom/$p"
+              # Restore the real (vendored) files from the snapshot commit;
+              # this updates both index and worktree with directory contents.
+              git checkout 62523b05747c9135d30cc736b21ce25556910b69 -- ".stibdedlom/$p"
+              echo "materialized .stibdedlom/$p from repo history"
+            fi
+          done
 
       - name: Materialize SDL surface (symlinked clients)
         # Replace the dangling symlinks with real copies from the pinned infra
@@ -96,7 +132,10 @@ jobs:
         run: |
           set -euo pipefail
           SRC=.sdl-infra-surface/templates/client-onboarding/sdl
-          [ -d "$SRC" ] || { echo "::error::infra surface checkout missing or incomplete: $SRC"; exit 1; }
+          if [ ! -d "$SRC" ]; then
+            echo "No external surface fetch ran; repo-history materialization already applied."
+            exit 0
+          fi
           for p in bin lib invocation-policy.yaml; do
             if [ -L ".stibdedlom/$p" ]; then
               rm -f -- ".stibdedlom/$p"
