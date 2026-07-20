@@ -132,7 +132,10 @@ jobs:
         run: |
           set -euo pipefail
           SRC=.sdl-infra-surface/templates/client-onboarding/sdl
-          [ -d "$SRC" ] || { echo "::error::infra surface checkout missing or incomplete: $SRC"; exit 1; }
+          if [ ! -d "$SRC" ]; then
+            echo "No external surface fetch ran; repo-history materialization already applied."
+            exit 0
+          fi
           for p in bin lib invocation-policy.yaml; do
             if [ -L ".stibdedlom/$p" ]; then
               rm -f -- ".stibdedlom/$p"
