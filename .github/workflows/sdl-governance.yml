@@ -29,8 +29,9 @@ jobs:
         # not exist on this self-hosted machine. Use the machine's Homebrew
         # python3 in a per-run venv instead.
         run: |
-          echo "/opt/homebrew/bin" >> "$GITHUB_PATH"
-          python3 -m venv "$RUNNER_TEMP/sdl-venv"
+          # Absolute path: the GITHUB_PATH update only reaches later steps,
+          # and /usr/bin/python3 (3.9) stalls pip's resolver on cryptography.
+          /opt/homebrew/bin/python3 -m venv "$RUNNER_TEMP/sdl-venv"
           echo "$RUNNER_TEMP/sdl-venv/bin" >> "$GITHUB_PATH"
 
       - name: Install Python dependencies
