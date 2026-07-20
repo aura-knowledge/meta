@@ -12,7 +12,7 @@ permissions:
 jobs:
   sdl-governance:
     runs-on: [self-hosted, macOS, mac-mini]
-    timeout-minutes: 10
+    timeout-minutes: 20  # headroom for self-hosted runner updates/queueing
     env:
       # Self-hosted runner runs as the machine user, not 'runner'; point the
       # tool cache somewhere writable for actions/setup-python.
