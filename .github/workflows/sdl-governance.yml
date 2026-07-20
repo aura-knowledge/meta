@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   sdl-governance:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, macOS, mac-mini]
     timeout-minutes: 10
     steps:
       - name: Checkout
@@ -44,7 +44,12 @@ jobs:
         run: |
           SYMLINKED=false
           for p in bin lib invocation-policy.yaml; do
-            [ -L ".stibdedlom/$p" ] && SYMLINKED=true
+            # Only dangling symlinks need the token + materialization. On the
+            # self-hosted runner the absolute symlinks resolve into the local
+            # infra checkout, which is the live surface we want to validate.
+            if [ -L ".stibdedlom/$p" ] && [ ! -e ".stibdedlom/$p" ]; then
+              SYMLINKED=true
+            fi
           done
           echo "symlinked=$SYMLINKED" >> "$GITHUB_OUTPUT"
           if [ "$SYMLINKED" = "true" ] && [ -z "${SDL_INFRA_READ_TOKEN:-}" ]; then
