@@ -54,16 +54,15 @@ jobs:
         run: |
           SYMLINKED=false
           for p in bin lib invocation-policy.yaml; do
-            # Only dangling symlinks need the token + materialization. On the
-            # self-hosted runner the absolute symlinks resolve into the local
-            # infra checkout, which is the live surface we want to validate.
-            if [ -L ".stibdedlom/$p" ] && [ ! -e ".stibdedlom/$p" ]; then
-              SYMLINKED=true
-            fi
+            [ -L ".stibdedlom/$p" ] && SYMLINKED=true
           done
           echo "symlinked=$SYMLINKED" >> "$GITHUB_OUTPUT"
-          if [ "$SYMLINKED" = "true" ] && [ -z "${SDL_INFRA_READ_TOKEN:-}" ]; then
-            echo "::error::SDL surface is symlinked but secret SDL_INFRA_READ_TOKEN is not set (fine-grained PAT, contents:read on stibdedlom/infra)."
+          GH=/Users/vishalsingh/.local/bin/gh
+          GH_AUTH=false
+          [ -x "$GH" ] && "$GH" auth status >/dev/null 2>&1 && GH_AUTH=true
+          echo "gh_auth=$GH_AUTH" >> "$GITHUB_OUTPUT"
+          if [ "$SYMLINKED" = "true" ] && [ -z "${SDL_INFRA_READ_TOKEN:-}" ] && [ "$GH_AUTH" != "true" ]; then
+            echo "::error::SDL surface is symlinked but neither SDL_INFRA_READ_TOKEN nor local gh auth is available to materialize it."
             exit 1
           fi
           python3 - <<'EOF' >> "$GITHUB_OUTPUT"
@@ -92,7 +91,7 @@ jobs:
           EOF
 
       - name: Checkout SDL infra surface
-        if: steps.sdl-pin.outputs.symlinked == 'true'
+        if: steps.sdl-pin.outputs.symlinked == 'true' && steps.sdl-pin.outputs.gh_auth != 'true'
         uses: actions/checkout@v4
         with:
           repository: stibdedlom/infra
@@ -101,6 +100,21 @@ jobs:
           path: .sdl-infra-surface
           fetch-depth: 1
           persist-credentials: false
+
+      - name: Fetch SDL infra surface (gh auth)
+        # Self-hosted path: the runner's machine already authenticates to
+        # GitHub as the maintainer, so clone the pinned infra surface with gh
+        # instead of requiring a hand-provisioned PAT. Reading via git also
+        # avoids the runner service's TCC restriction on ~/Documents, which
+        # makes the absolute symlinks unreadable in the CI context.
+        if: steps.sdl-pin.outputs.symlinked == 'true' && steps.sdl-pin.outputs.gh_auth == 'true'
+        run: |
+          set -euo pipefail
+          GH=/Users/vishalsingh/.local/bin/gh
+          rm -rf .sdl-infra-surface
+          "$GH" repo clone stibdedlom/infra .sdl-infra-surface -- --depth 1 --no-checkout
+          git -C .sdl-infra-surface fetch --depth 1 origin "${{ steps.sdl-pin.outputs.pin }}"
+          git -C .sdl-infra-surface checkout --detach FETCH_HEAD
 
       - name: Materialize SDL surface (symlinked clients)
         # Replace the dangling symlinks with real copies from the pinned infra
