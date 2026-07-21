@@ -65,7 +65,7 @@ jobs:
             [ -L ".stibdedlom/$p" ] && SYMLINKED=true
           done
           echo "symlinked=$SYMLINKED" >> "$GITHUB_OUTPUT"
-          python3 - <<'EOF' >> "$GITHUB_OUTPUT"
+          PIN=$(python3 - <<'EOF'
           import re, sys, yaml
           pin = "main"
           try:
@@ -87,10 +87,12 @@ jobs:
               # Legacy installs from non-git infra checkouts wrote this
               # literal; it is not a fetchable ref, so float to main.
               pin = "main"
-          print(f"pin={pin}")
+          print(pin)
           EOF
-          if [ "$SYMLINKED" = "true" ] && [ -z "${SDL_INFRA_READ_TOKEN:-}" ] && [ "${{ env.SNAPSHOT_PIN }}" != "${{ steps.sdl-pin.outputs.pin }}" ]; then
-            echo "::error::SDL surface is symlinked, the pin (${{ steps.sdl-pin.outputs.pin }}) is not covered by the repo-history snapshot, and SDL_INFRA_READ_TOKEN is not set. Re-vendor the surface at the new pin locally and update SNAPSHOT_PIN/SNAPSHOT_REF in this workflow."
+          )
+          echo "pin=$PIN" >> "$GITHUB_OUTPUT"
+          if [ "$SYMLINKED" = "true" ] && [ -z "${SDL_INFRA_READ_TOKEN:-}" ] && [ "${{ env.SNAPSHOT_PIN }}" != "$PIN" ]; then
+            echo "::error::SDL surface is symlinked, the pin ($PIN) is not covered by the repo-history snapshot, and SDL_INFRA_READ_TOKEN is not set. Re-vendor the surface at the new pin locally and update SNAPSHOT_PIN/SNAPSHOT_REF in this workflow."
             exit 1
           fi
 
