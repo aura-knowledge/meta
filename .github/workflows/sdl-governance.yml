@@ -13,11 +13,19 @@ jobs:
   sdl-governance:
     runs-on: [self-hosted, macOS, mac-mini]
     timeout-minutes: 20  # headroom for self-hosted runner updates/queueing
+    # Fork PRs must never execute on the self-hosted runner: its UID can read
+    # the SDL signing keys in project-memory and the maintainer's home dir
+    # (cross-agent review, zai/glm-5.2, 2026-07-20).
+    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
     env:
       # Self-hosted runner runs as the machine user, not 'runner'; point the
       # tool cache somewhere writable for actions/setup-python.
       AGENT_TOOLSDIRECTORY: /Users/vishalsingh/actions-runner/_tool
       RUNNER_TOOL_CACHE: /Users/vishalsingh/actions-runner/_tool
+      # Pin covered by the repo-history surface snapshot (the #68 vendoring
+      # commit). A pin bump past this requires re-vendoring; see the assert step.
+      SNAPSHOT_PIN: 9cf915b85c6fd00f445e28fb4bca24a546265bc8
+      SNAPSHOT_REF: 62523b05747c9135d30cc736b21ce25556910b69
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -57,18 +65,7 @@ jobs:
             [ -L ".stibdedlom/$p" ] && SYMLINKED=true
           done
           echo "symlinked=$SYMLINKED" >> "$GITHUB_OUTPUT"
-          # Presence check only: the keyring-backed `gh auth status` fails in
-          # the headless service context even when gh is usable; the fetch
-          # step proves auth by cloning.
-          GH=/Users/vishalsingh/.local/bin/gh
-          GH_AUTH=false
-          [ -x "$GH" ] && GH_AUTH=true
-          echo "gh_auth=$GH_AUTH" >> "$GITHUB_OUTPUT"
-          if [ "$SYMLINKED" = "true" ] && [ -z "${SDL_INFRA_READ_TOKEN:-}" ] && [ "$GH_AUTH" != "true" ]; then
-            echo "::error::SDL surface is symlinked but neither SDL_INFRA_READ_TOKEN nor local gh auth is available to materialize it."
-            exit 1
-          fi
-          python3 - <<'EOF' >> "$GITHUB_OUTPUT"
+          PIN=$(python3 - <<'EOF'
           import re, sys, yaml
           pin = "main"
           try:
@@ -90,11 +87,17 @@ jobs:
               # Legacy installs from non-git infra checkouts wrote this
               # literal; it is not a fetchable ref, so float to main.
               pin = "main"
-          print(f"pin={pin}")
+          print(pin)
           EOF
+          )
+          echo "pin=$PIN" >> "$GITHUB_OUTPUT"
+          if [ "$SYMLINKED" = "true" ] && [ -z "${SDL_INFRA_READ_TOKEN:-}" ] && [ "${{ env.SNAPSHOT_PIN }}" != "$PIN" ]; then
+            echo "::error::SDL surface is symlinked, the pin ($PIN) is not covered by the repo-history snapshot, and SDL_INFRA_READ_TOKEN is not set. Re-vendor the surface at the new pin locally and update SNAPSHOT_PIN/SNAPSHOT_REF in this workflow."
+            exit 1
+          fi
 
       - name: Checkout SDL infra surface
-        if: steps.sdl-pin.outputs.symlinked == 'true' && steps.sdl-pin.outputs.gh_auth != 'true'
+        if: steps.sdl-pin.outputs.symlinked == 'true' && steps.sdl-pin.outputs.pin != env.SNAPSHOT_PIN
         uses: actions/checkout@v4
         with:
           repository: stibdedlom/infra
@@ -108,9 +111,10 @@ jobs:
         # The pinned surface (infra_commit_ref 9cf915b) was committed to this
         # repository's history during the #68 vendoring. Materialize it from
         # the repo's own history: no PAT, no machine keyring, and no access to
-        # TCC-restricted ~/Documents paths needed. External fetch paths below
-        # remain for the day the pin moves past the snapshot.
-        if: steps.sdl-pin.outputs.symlinked == 'true' && steps.sdl-pin.outputs.pin == '9cf915b85c6fd00f445e28fb4bca24a546265bc8'
+        # TCC-restricted ~/Documents paths needed. A pin bump past SNAPSHOT_PIN
+        # fails fast with remediation instructions (assert step below); the
+        # PAT-based checkout above remains the fallback when a token exists.
+        if: steps.sdl-pin.outputs.symlinked == 'true' && steps.sdl-pin.outputs.pin == env.SNAPSHOT_PIN
         run: |
           set -euo pipefail
           for p in bin lib invocation-policy.yaml; do
@@ -118,7 +122,7 @@ jobs:
               rm ".stibdedlom/$p"
               # Restore the real (vendored) files from the snapshot commit;
               # this updates both index and worktree with directory contents.
-              git checkout 62523b05747c9135d30cc736b21ce25556910b69 -- ".stibdedlom/$p"
+              git checkout ${{ env.SNAPSHOT_REF }} -- ".stibdedlom/$p"
               echo "materialized .stibdedlom/$p from repo history"
             fi
           done
@@ -141,6 +145,15 @@ jobs:
               rm -f -- ".stibdedlom/$p"
               cp -R "$SRC/$p" ".stibdedlom/$p"
               echo "materialized .stibdedlom/$p"
+            fi
+          done
+
+      - name: Assert SDL surface is materialized
+        run: |
+          for p in bin lib invocation-policy.yaml; do
+            if [ -L ".stibdedlom/$p" ]; then
+              echo "::error::.stibdedlom/$p is still a symlink. The pin (${{ steps.sdl-pin.outputs.pin }}) is not covered by the repo-history snapshot and no external fetch path is available. Re-vendor the surface at the new pin locally (commit the surface files), update the snapshot ref in this workflow, and push."
+              exit 1
             fi
           done
 
